@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 2rem;
+
+    @media screen and (min-width: 992px){
+        flex-direction: row;
+    }
+}
+
+.questionContainer {
+    padding: 1rem;
+    border: 1px dotted white;
+    border-radius: 0.25rem;
+    width: 100%;
+    max-width: 30rem;
+    align-self: stretch;
+
+    .questionTitle {
+        color: white;
+        letter-spacing: -0.25px;
+        margin-bottom: 1rem;
+    }
+
+    .questionDescription, .questionPoint {
+        color: white;
+        letter-spacing: -0.2px;
+        font-size: 0.85rem;
+
+        @media screen and (min-width: 992px){
+            font-size: 0.95rem;
+        }
+    }
+
+    .questionPoints {
+        margin: 0.5rem 0;
+
+        .questionPoint {
+            margin: 0.25rem 0;
+        }
+    }
+}
+
+.formContainer {
+    padding: 1rem;
+    border: 1px dotted white;
+    border-radius: 0.25rem;
+    max-width: 25rem;
+    width: 100%;
+}
+
+.tosFormGroup {
+    display: flex;
+    gap: 1rem;
+}
