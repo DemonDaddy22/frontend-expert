@@ -1,0 +1,16 @@
+.label {
+    display: block;
+    margin: 0.25rem 0;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+
+    @media screen and (min-width: 992px) {
+        font-size: 0.9rem;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 1rem;
+    }
+}
