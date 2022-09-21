@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "env CI=true react-scripts test",
     "test:ci": "env CI=true react-scripts test --passWithNoTests",
     "test:cov": "env CI=true react-scripts test --coverage",
     "eject": "react-scripts eject",
