@@ -1,0 +1,21 @@
+@mixin spacing ($padding: 0, $margin: 0) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin square ($size, $bg: none, $borderRadius: 0) {
+  height: $size;
+  width: $size;
+
+  @if $bg != none {
+    background: $bg;
+  }
+
+  @if $borderRadius != 0 {
+    border-radius: $borderRadius;
+  }
+}
+
+@mixin circle ($size, $bg) {
+  @include square($size, $bg, 50%);
+}

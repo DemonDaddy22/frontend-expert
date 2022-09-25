@@ -1,9 +1,11 @@
+@import '../../../constants/theme.scss';
+
 .button {
     background-color: transparent;
     padding: 0.75rem 1rem;
     border-radius: 0.25rem;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid $white;
+    color: $white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 

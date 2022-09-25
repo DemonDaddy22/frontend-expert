@@ -1,3 +1,10 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.page {
+    @include square(100%, $project-bg-1);
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -13,22 +20,26 @@
 
 .questionContainer {
     padding: 1rem;
-    border: 1px dotted white;
+    border: 1px dotted rgba($color: $white, $alpha: 0.5);
     border-radius: 0.25rem;
     width: 100%;
     max-width: 30rem;
     align-self: stretch;
 
     .questionTitle {
-        color: white;
+        color: $project-header-1;
         letter-spacing: -0.25px;
         margin-bottom: 1rem;
     }
 
     .questionDescription, .questionPoint {
-        color: white;
+        color: rgba($color: $white, $alpha: 0.9);
         letter-spacing: -0.2px;
         font-size: 0.85rem;
+
+        strong {
+            color: $project-highlight-1;
+        }
 
         @media screen and (min-width: 992px){
             font-size: 0.95rem;
@@ -46,7 +57,7 @@
 
 .formContainer {
     padding: 1rem;
-    border: 1px dotted white;
+    border: 1px dotted rgba($color: $white, $alpha: 0.5);
     border-radius: 0.25rem;
     max-width: 25rem;
     width: 100%;
