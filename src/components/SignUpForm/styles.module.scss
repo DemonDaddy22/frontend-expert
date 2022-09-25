@@ -1,9 +1,8 @@
 @import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
 
 .page {
-    height: 100%;
-    width: 100%;
-    background-color: $project-bg-1;
+    @include square(100%, $project-bg-1);
 }
 
 .container {

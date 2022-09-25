@@ -1,7 +1,9 @@
+@import '../../../constants/theme.scss';
+
 .label {
     display: block;
     margin: 0.25rem 0;
-    color: white;
+    color: $white;
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0.25px;
