@@ -2,10 +2,10 @@ import React from 'react';
 import classes from './styles.module.scss';
 
 const Label: React.FC<LabelProps> = (props) => {
-  const { children, className } = props;
+  const { children, className, ...restProps } = props;
 
   return (
-    <label className={`${classes.label} ${className}`} {...props}>
+    <label className={`${classes.label} ${className}`} {...restProps}>
       {children}
     </label>
   );
