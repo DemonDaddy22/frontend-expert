@@ -1,8 +1,21 @@
 $black: #000000;
 $white: #FFFFFF;
+$light: #F4F5F6;
 $dark: #0D0E0E;
 
 // Project 1
 $project-bg-1: linear-gradient(50deg, #051A30 0%, #111012 100%);
 $project-header-1: #FE9226;
 $project-highlight-1: #FF929B;
+
+$LIGHT: (
+  accentColor1: $white,
+  accentColor2: $light,
+);
+
+$DARK: (
+  accentColor1: $black,
+  accentColor2: $dark,
+);
+
+$themes: ($LIGHT, $DARK);

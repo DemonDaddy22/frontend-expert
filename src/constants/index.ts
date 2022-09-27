@@ -1,4 +1,4 @@
-export const THEME: { [key: string]: Theme} = Object.freeze({
+export const THEME: { [key in Theme]: Theme} = Object.freeze({
   LIGHT: 'LIGHT',
   DARK: 'DARK',
 });

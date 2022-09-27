@@ -1,5 +1,7 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FELocalStoragePrefix, THEME } from '../constants';
+import { COLORS, THEME_COLORS } from '../constants/theme';
+import { isEmptyString } from '../utils';
 
 const ThemeContextValue: IThemeContextValue = {
   theme: THEME.DARK,
@@ -20,6 +22,7 @@ const ThemeContextProvider: React.FC<Props> = ({ children }) => {
     const isLightTheme = theme === THEME.LIGHT;
     const themeToSet = isLightTheme ? THEME.DARK : THEME.LIGHT;
     setTheme(themeToSet);
+    document.documentElement.setAttribute('theme-mode', themeToSet);
     localStorage.setItem(
       `${FELocalStoragePrefix}-theme`,
       JSON.stringify(themeToSet)
@@ -27,10 +30,17 @@ const ThemeContextProvider: React.FC<Props> = ({ children }) => {
   }, [theme]);
 
   const getThemeValue = useCallback((key: string) => {
-      // TODO - get themed value from a constant THEME object
-      return '';
-    }, [theme]
-  );
+    const themeObject = THEME_COLORS?.[theme as keyof typeof THEME_COLORS];
+    return !isEmptyString(themeObject?.[key]) ? themeObject[key] : COLORS.LIGHT;
+  }, [theme]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('theme-mode', theme);
+    localStorage.setItem(
+      `${FELocalStoragePrefix}-theme`,
+      JSON.stringify(theme)
+    );
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, getThemeValue }}>
