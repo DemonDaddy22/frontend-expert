@@ -2,5 +2,6 @@
   "workbench.colorCustomizations": {
     "statusBar.background": "#562F7E",
     "statusBar.foreground": "#E7E7E7"
-  }
+  },
+  "editor.guides.bracketPairs": true
 }

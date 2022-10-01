@@ -8,9 +8,7 @@ module.exports = {
     },
     requireConfigFile: false,
     sourceType: 'module',
-    babelOptions: {
-      presets: ['@babel/preset-react', '@babel/preset-typescript'],
-    },
+    babelOptions: { presets: ['@babel/preset-react', '@babel/preset-typescript'] },
   },
   env: {
     es6: true,

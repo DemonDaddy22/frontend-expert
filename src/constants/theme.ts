@@ -14,4 +14,4 @@ export const THEME_COLORS: { [key in Theme]: ITheme } = {
     accentColor1: COLORS.BLACK,
     accentColor2: COLORS.DARK,
   },
-}
+};
