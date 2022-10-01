@@ -1,4 +1,6 @@
-interface Props {}
+interface Props {
+  children?: React.ReactNode;
+}
 
 interface LabelProps
   extends React.DetailedHTMLProps<
