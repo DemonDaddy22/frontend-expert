@@ -41,7 +41,7 @@
   letter-spacing: -0.25px;
   font-size: 1rem;
   color: $project-table-header-2;
-  
+
   @media screen and (min-width: 992px) {
     font-size: 1.1rem;
     @include spacing(1rem 1.5rem);
@@ -53,7 +53,7 @@
   border: 1px dotted $project-table-header-2;
   font-size: 0.9rem;
   color: $black;
-  
+
   @media screen and (min-width: 992px) {
     font-size: 1rem;
     @include spacing(1rem 1.5rem);
