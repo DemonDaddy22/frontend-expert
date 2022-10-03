@@ -1,0 +1,61 @@
+@import '../../utils/mixins.scss';
+
+.page {
+  @include square(100%, $project-bg-2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.tableContainer {
+  border: 1px solid $project-table-header-2;
+  border-collapse: separate;
+}
+
+.tableCaption {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $project-table-header-2;
+  letter-spacing: -0.75px;
+  margin-bottom: 0.3rem;
+  text-align: left;
+
+  @media  screen and (min-width: 992px) {
+    font-size: 1.75rem;
+  }
+}
+
+.tableCellHeading {
+  @include spacing(0.75rem 1rem);
+  border: 1px dotted $project-table-header-2;
+  letter-spacing: -0.25px;
+  font-size: 1rem;
+  color: $project-table-header-2;
+  
+  @media screen and (min-width: 992px) {
+    font-size: 1.1rem;
+    @include spacing(1rem 1.5rem);
+  }
+}
+
+.tableCellData {
+  @include spacing(0.75rem 1rem);
+  border: 1px dotted $project-table-header-2;
+  font-size: 0.9rem;
+  color: $black;
+  
+  @media screen and (min-width: 992px) {
+    font-size: 1rem;
+    @include spacing(1rem 1.5rem);
+  }
+}
