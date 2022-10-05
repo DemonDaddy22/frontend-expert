@@ -17,45 +17,85 @@
   }
 }
 
+.questionContainer {
+  padding: 1rem;
+  border: 1px dotted rgba($color: $dark, $alpha: 0.5);
+  border-radius: 0.25rem;
+  width: 100%;
+  max-width: 30rem;
+  align-self: stretch;
+
+  .questionTitle {
+    color: $project-header-1;
+    letter-spacing: -0.25px;
+    margin-bottom: 1rem;
+  }
+
+  .questionDescription {
+    color: $dark;
+    letter-spacing: -0.2px;
+    font-size: 0.85rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 0.95rem;
+    }
+  }
+
+  .questionPoints {
+    margin: 0.5rem 0;
+
+    .questionPoint {
+      color: $dark;
+      letter-spacing: -0.2px;
+      font-size: 0.85rem;
+      margin: 0.25rem 0;
+
+      @media screen and (min-width: 992px) {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
 .tableContainer {
   border: 1px solid $project-table-header-2;
   border-collapse: separate;
-}
 
-.tableCaption {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: $project-table-header-2;
-  letter-spacing: -0.75px;
-  margin-bottom: 0.3rem;
-  text-align: left;
+  .tableCaption {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $project-table-header-2;
+    letter-spacing: -0.75px;
+    margin-bottom: 0.3rem;
+    text-align: left;
 
-  @media  screen and (min-width: 992px) {
-    font-size: 1.75rem;
+    @media screen and (min-width: 992px) {
+      font-size: 1.75rem;
+    }
   }
-}
 
-.tableCellHeading {
-  @include spacing(0.75rem 1rem);
-  border: 1px dotted $project-table-header-2;
-  letter-spacing: -0.25px;
-  font-size: 1rem;
-  color: $project-table-header-2;
-
-  @media screen and (min-width: 992px) {
-    font-size: 1.1rem;
-    @include spacing(1rem 1.5rem);
-  }
-}
-
-.tableCellData {
-  @include spacing(0.75rem 1rem);
-  border: 1px dotted $project-table-header-2;
-  font-size: 0.9rem;
-  color: $black;
-
-  @media screen and (min-width: 992px) {
+  .tableCellHeading {
+    @include spacing(0.75rem 1rem);
+    border: 1px dotted $project-table-header-2;
+    letter-spacing: -0.25px;
     font-size: 1rem;
-    @include spacing(1rem 1.5rem);
+    color: $project-table-header-2;
+
+    @media screen and (min-width: 992px) {
+      font-size: 1.1rem;
+      @include spacing(1rem 1.5rem);
+    }
+  }
+
+  .tableCellData {
+    @include spacing(0.75rem 1rem);
+    border: 1px dotted $project-table-header-2;
+    font-size: 0.9rem;
+    color: $black;
+
+    @media screen and (min-width: 992px) {
+      font-size: 1rem;
+      @include spacing(1rem 1.5rem);
+    }
   }
 }
