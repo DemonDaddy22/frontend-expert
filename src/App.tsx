@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import SignUpForm from './components/SignUpForm';
+import ItemCart from './components/ItemCart';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <SignUpForm />
+        <ItemCart />
       </div>
     </ThemeContextProvider>
   );
