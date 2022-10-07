@@ -1,22 +1,5 @@
 @import '../../utils/mixins.scss';
 
-.page {
-  @include square(100%, $project-bg-2);
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 4rem 2rem;
-
-  @media screen and (min-width: 992px) {
-    flex-direction: row;
-  }
-}
-
 .questionContainer {
   padding: 1rem;
   border: 1px dotted rgba($color: $dark, $alpha: 0.5);
@@ -26,7 +9,7 @@
   align-self: stretch;
 
   .questionTitle {
-    color: $project-header-1;
+    color: $project-header-2;
     letter-spacing: -0.25px;
     margin-bottom: 1rem;
   }
