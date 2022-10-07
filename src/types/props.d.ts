@@ -27,3 +27,11 @@ interface FormGroupProps {
   className?: string;
   children: React.ReactNode;
 }
+
+interface ProjectPageProps extends Props {
+  background?: string;
+  pageStyle?: React.CSSProperties;
+  pageClassName?: string;
+  containerStyle?: React.CSSProperties;
+  containerClassName?: string;
+}

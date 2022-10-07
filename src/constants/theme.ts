@@ -15,3 +15,12 @@ export const THEME_COLORS: { [key in Theme]: ITheme } = {
     accentColor2: COLORS.DARK,
   },
 };
+
+export const PROJECT_COLORS: { [key: string]: { [key: string]: string } } = {
+  PROJECT1: {
+    background: 'linear-gradient(50deg, #051A30 0%, #111012 100%)',
+  },
+  PROJECT2: {
+    background: 'linear-gradient(68.3deg,  rgba(245, 177, 97, 1) 0.4%, rgba(236, 54, 110, 1) 100.2%)',
+  },
+};
