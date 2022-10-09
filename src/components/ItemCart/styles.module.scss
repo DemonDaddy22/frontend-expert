@@ -1,41 +1,21 @@
 @import '../../utils/mixins.scss';
+@import '../../constants/theme.scss';
 
-.questionContainer {
-  padding: 1rem;
-  border: 1px dotted rgba($color: $dark, $alpha: 0.5);
-  border-radius: 0.25rem;
-  width: 100%;
-  max-width: 30rem;
-  align-self: stretch;
+.questionTitle {
+  color: $project-header-2;
+}
 
-  .questionTitle {
-    color: $project-header-2;
-    letter-spacing: -0.25px;
-    margin-bottom: 1rem;
-  }
+.questionPoints {
+  margin: 0.5rem 0;
 
-  .questionDescription {
+  .questionPoint {
     color: $dark;
     letter-spacing: -0.2px;
     font-size: 0.85rem;
+    margin: 0.25rem 0;
 
     @media screen and (min-width: 992px) {
       font-size: 0.95rem;
-    }
-  }
-
-  .questionPoints {
-    margin: 0.5rem 0;
-
-    .questionPoint {
-      color: $dark;
-      letter-spacing: -0.2px;
-      font-size: 0.85rem;
-      margin: 0.25rem 0;
-
-      @media screen and (min-width: 992px) {
-        font-size: 0.95rem;
-      }
     }
   }
 }
@@ -43,6 +23,7 @@
 .tableContainer {
   border: 1px solid $project-table-header-2;
   border-collapse: separate;
+  align-self: stretch;
 
   .tableCaption {
     font-size: 1.5rem;
