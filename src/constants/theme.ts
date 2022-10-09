@@ -18,9 +18,12 @@ export const THEME_COLORS: { [key in Theme]: ITheme } = {
 
 export const PROJECT_COLORS: { [key: string]: { [key: string]: string } } = {
   PROJECT1: {
-    background: 'linear-gradient(50deg, #051A30 0%, #111012 100%)',
+    background: `linear-gradient(50deg, #180E15 0%, ${COLORS.BLACK} 100%)`,
   },
   PROJECT2: {
-    background: 'linear-gradient(68.3deg,  rgba(245, 177, 97, 1) 0.4%, rgba(236, 54, 110, 1) 100.2%)',
+    background: `linear-gradient(50deg, #111B1C 0%, ${COLORS.BLACK} 100%)`,
+  },
+  PROJECT3: {
+    background: `linear-gradient(50deg, #13141B 0%, ${COLORS.BLACK} 100%)`,
   },
 };
