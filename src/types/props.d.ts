@@ -35,3 +35,13 @@ interface ProjectPageProps extends Props {
   containerStyle?: React.CSSProperties;
   containerClassName?: string;
 }
+
+interface QuestionDetailsProps extends Props {
+  title: string;
+  containerStyle?: React.CSSProperties;
+  containerClassName?: string;
+  titleStyle?: React.CSSProperties;
+  titleClassName?: string;
+  descriptionStyle?: React.CSSProperties;
+  descriptionClassName?: string;
+}
