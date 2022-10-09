@@ -13,7 +13,9 @@
   }
 
   .questionPoints {
-    margin: 0.5rem 0;
+    @include spacing(0.75rem 0.5rem 0.75rem 2rem, 0.5rem 0);
+    background-color: $project-list-bg-1;
+    border-radius: 0.25rem;
 
     .questionPoint {
       color: $light;

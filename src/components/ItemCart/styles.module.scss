@@ -6,10 +6,12 @@
 }
 
 .questionPoints {
-  margin: 0.5rem 0;
+  @include spacing(0.75rem 0.5rem 0.75rem 2rem, 0.5rem 0);
+  background-color: $project-list-bg-2;
+  border-radius: 0.25rem;
 
   .questionPoint {
-    color: $dark;
+    color: $light;
     letter-spacing: -0.2px;
     font-size: 0.85rem;
     margin: 0.25rem 0;
@@ -21,7 +23,7 @@
 }
 
 .tableContainer {
-  border: 1px solid $project-table-header-2;
+  border: 1px solid rgba($color: $light, $alpha: 0.5);
   border-collapse: separate;
   align-self: stretch;
 
@@ -40,7 +42,7 @@
 
   .tableCellHeading {
     @include spacing(0.75rem 1rem);
-    border: 1px dotted $project-table-header-2;
+    border: 1px dotted rgba($color: $project-table-header-2, $alpha: 0.3);
     letter-spacing: -0.25px;
     font-size: 1rem;
     color: $project-table-header-2;
@@ -53,9 +55,9 @@
 
   .tableCellData {
     @include spacing(0.75rem 1rem);
-    border: 1px dotted $project-table-header-2;
+    border: 1px dotted rgba($color: $project-table-header-2, $alpha: 0.3);
     font-size: 0.9rem;
-    color: $black;
+    color: $white;
 
     @media screen and (min-width: 992px) {
       font-size: 1rem;

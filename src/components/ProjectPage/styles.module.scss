@@ -2,6 +2,7 @@
 
 .page {
   @include square(100%);
+  overflow-y: auto;
 }
 
 .contentContainer {

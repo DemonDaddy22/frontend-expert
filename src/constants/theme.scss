@@ -4,14 +4,22 @@ $light: #F4F5F6;
 $dark: #0D0E0E;
 
 // Project 1
-$project-bg-1: linear-gradient(50deg, #051A30 0%, #111012 100%);
-$project-header-1: #FE9226;
-$project-highlight-1: #FF929B;
+$project-bg-1: linear-gradient(50deg, #180E15 0%, $black 100%);
+$project-header-1: #F89D42;
+$project-list-bg-1: #8A3D43;
+$project-highlight-1: $white;
 
 // Project 2
-$project-bg-2: linear-gradient(68.3deg,  rgba(245, 177, 97, 1) 0.4%, rgba(236, 54, 110, 1) 100.2%);
-$project-table-header-2: #0B1D3F;
-$project-header-2: #125852;
+$project-bg-2: linear-gradient(50deg, #111B1C 0%, $black 100%);
+$project-table-header-2: #F9EA76;
+$project-list-bg-2: #6C2E82;
+$project-header-2: #DE90FA;
+
+// project-3
+$project-bg-3: linear-gradient(50deg, #13141B 0%, $black 100%);
+$project-header-3: #55C1E2;
+$project-list-bg-3: #A3F545;
+$project-section-title-3: #BEF57F;
 
 $LIGHT: (
   accentColor1: $white,
