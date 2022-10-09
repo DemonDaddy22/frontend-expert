@@ -1,58 +1,46 @@
 @import '../../utils/mixins.scss';
+@import '../../constants/theme.scss';
 
 .questionContainer {
-    padding: 1rem;
-    border: 1px dotted rgba($color: $white, $alpha: 0.5);
-    border-radius: 0.25rem;
-    width: 100%;
-    max-width: 30rem;
-    align-self: stretch;
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
 
-    .questionTitle {
-        color: $project-header-1;
-        letter-spacing: -0.25px;
-        margin-bottom: 1rem;
+  .questionTitle {
+    color: $project-header-1;
+  }
+
+  .questionDescription {
+    color: $light;
+  }
+
+  .questionPoints {
+    margin: 0.5rem 0;
+
+    .questionPoint {
+      color: $light;
+      letter-spacing: -0.2px;
+      font-size: 0.85rem;
+      margin: 0.25rem 0;
+
+      strong {
+        color: $project-highlight-1;
+      }
+
+      @media screen and (min-width: 992px) {
+        font-size: 0.95rem;
+      }
     }
-
-    .questionDescription {
-        color: $light;
-        letter-spacing: -0.2px;
-        font-size: 0.85rem;
-
-        @media screen and (min-width: 992px) {
-            font-size: 0.95rem;
-        }
-    }
-
-    .questionPoints {
-        margin: 0.5rem 0;
-
-        .questionPoint {
-            color: $light;
-            letter-spacing: -0.2px;
-            font-size: 0.85rem;
-            margin: 0.25rem 0;
-
-            strong {
-                color: $project-highlight-1;
-            }
-
-            @media screen and (min-width: 992px) {
-                font-size: 0.95rem;
-            }
-        }
-    }
+  }
 }
 
 .formContainer {
-    padding: 1rem;
-    border: 1px dotted rgba($color: $white, $alpha: 0.5);
-    border-radius: 0.25rem;
-    max-width: 25rem;
-    width: 100%;
+  padding: 1rem;
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  max-width: 25rem;
+  width: 100%;
 }
 
 .tosFormGroup {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
+import QuestionDetails from '../QuestionDetails';
 import Button from '../UI/Button';
 import FormGroup from '../UI/FormGroup';
 import Input from '../UI/Input';
@@ -10,11 +11,13 @@ import classes from './styles.module.scss';
 const SignUpForm: React.FC<Props> = () => {
   return (
     <ProjectPage background={PROJECT_COLORS.PROJECT1.background}>
-      <section className={classes.questionContainer}>
-        <h2 className={classes.questionTitle}>Sign-Up Form</h2>
-        <p className={classes.questionDescription}>
-          Implement a sign-up form in HTML with the following six input fields, each with an appropriate label:
-        </p>
+      <QuestionDetails
+        title='Sign-Up Form'
+        titleClassName={classes.questionTitle}
+        containerClassName={classes.questionContainer}
+        descriptionClassName={classes.questionDescription}
+      >
+        <p>Implement a sign-up form in HTML with the following six input fields, each with an appropriate label:</p>
         <ol className={classes.questionPoints}>
           <li className={classes.questionPoint}>
             <strong>Username</strong>, a required text input field
@@ -35,11 +38,11 @@ const SignUpForm: React.FC<Props> = () => {
             <strong>I agree to the TOS</strong>, a required checkbox input field
           </li>
         </ol>
-        <p className={classes.questionDescription}>
+        <p>
           There should also be a <strong>Sign Up</strong> button at the bottom of the form. When clicked on (and if
           required fields have been filled), the button should submit the form using default browser behaviour.
         </p>
-      </section>
+      </QuestionDetails>
       <form className={classes.formContainer}>
         <FormGroup>
           <Label htmlFor='username'>Username</Label>
