@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import SpaghettiRecipe from './components/SpaghettiRecipe';
+import BlogPost from './components/BlogPost';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <SpaghettiRecipe />
+        <BlogPost />
       </div>
     </ThemeContextProvider>
   );
