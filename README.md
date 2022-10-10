@@ -10,8 +10,8 @@
 
 1. [SignUpForm](./src/components/SignUpForm/README.md): Implement a sign-up form in HTML with some given prerequisites.
 2. [ItemCart](./src/components/ItemCart/README.md): Implement an item cart in HTML with static data.
-3. [Spaghetti Recipe](./src/components/SpaghettiRecipe/README.md): You've been provided with a recipe for spaghetti as raw text, and you need to convert this recipe into a
-   properly marked-up HTML file.
+3. [Spaghetti Recipe](./src/components/SpaghettiRecipe/README.md): You've been provided with a recipe for spaghetti as raw text, and you need to convert this recipe into a properly marked-up HTML file.
+4. [Blog Post](./src/components/BlogPost/README.md): You've been provided with a blog post as raw text, and you need to convert this post into a properly marked-up HTML file.
 
 <br />
 <br />

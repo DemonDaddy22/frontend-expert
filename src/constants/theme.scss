@@ -3,6 +3,8 @@ $white: #FFFFFF;
 $light: #F4F5F6;
 $dark: #0D0E0E;
 
+$grey-1: #505050;
+
 // Project 1
 $project-bg-1: linear-gradient(50deg, #180E15 0%, $black 100%);
 $project-header-1: #F89D42;
@@ -20,6 +22,12 @@ $project-bg-3: linear-gradient(50deg, #13141B 0%, $black 100%);
 $project-header-3: #55C1E2;
 $project-list-bg-3: #A3F545;
 $project-section-title-3: #BEF57F;
+
+// project-4
+$project-bg-4: linear-gradient(50deg, #13130E 0%, $black 100%);
+$project-header-4: #F870A0;
+$project-section-header-4: #ce8bfb;
+$project-highlight-4: #2D1883;
 
 $LIGHT: (
   accentColor1: $white,

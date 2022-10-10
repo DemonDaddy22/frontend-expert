@@ -1,0 +1,87 @@
+@import '../../utils/mixins.scss';
+@import '../../constants/theme.scss';
+
+.questionTitle {
+  color: $project-header-4;
+}
+
+.questionDescriptionParagraph {
+  @include spacing ($margin: 0.5rem 0);
+
+  & .questionDescriptionHighlight {
+    @include spacing (0 0.25rem);
+    background-color: $project-highlight-4;
+    border-radius: 0.25rem;
+  }
+}
+
+.blogContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  align-self: stretch;
+  max-width: 40rem;
+
+  .blogTitle {
+    color: $project-header-4;
+    font-size: 1.75rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 2rem;
+    }
+  }
+
+  .blogCaption {
+    @include spacing (0.25rem 0);
+    color: $white;
+    display: inline-block;
+    text-align: start;
+  }
+
+  .blogSection {
+    @include spacing (1rem 0);
+
+    .blogSectionTitle {
+      @include spacing ($margin: 0 0 0.25rem 0);
+      color: $project-section-header-4;
+    }
+
+    .blogSectionContent {
+      color: rgba($color: $light, $alpha: 0.85);
+      font-size: 0.9rem;
+
+      @media screen and (min-width: 992px) {
+        font-size: 0.95rem;
+      }
+    }
+
+    .blogLink {
+      color: $project-header-4;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: $white;
+        text-shadow: 3px 3px 6px rgba($color: $project-header-4, $alpha: 0.75);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .blogSectionDivider {
+    @include spacing ($margin: 0.5rem 0);
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, $grey-1, $dark);
+  }
+
+  .blogFooter {
+    @include spacing ($margin: 0.5rem 0 0);
+    color: rgba($color: $white, $alpha: 0.6);
+    float: right;
+    font-size: 0.9rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 0.95rem;
+    }
+  }
+}

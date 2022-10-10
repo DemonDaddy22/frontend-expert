@@ -12,6 +12,11 @@
   .questionTitle {
     letter-spacing: -0.25px;
     margin-bottom: 1rem;
+    font-size: 1.75rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 2rem;
+    }
   }
 
   .questionDescription {

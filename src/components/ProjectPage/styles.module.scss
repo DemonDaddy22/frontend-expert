@@ -6,12 +6,12 @@
 }
 
 .contentContainer {
+  @include spacing (4rem 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 4rem 2rem;
 
   @media screen and (min-width: 992px) {
     flex-direction: row;
