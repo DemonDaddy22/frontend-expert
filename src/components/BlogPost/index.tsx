@@ -34,7 +34,7 @@ const BlogPost: React.FC<Props> = () => {
           </span>{' '}
           should be marked up as strong text, and <span className={classes.questionDescriptionHighlight}>Web 4.0</span>{' '}
           should be emphasized. In the second section, the word{' '}
-          <span className={classes.questionDescriptionHighlight}>AlgoExpert</span> should be a link to
+          <span className={classes.questionDescriptionHighlight}>AlgoExpert</span> should be a link to{' '}
           <span className={classes.questionDescriptionHighlight}>https://algoexpert.io</span>, and it should open in a
           new tab.
         </p>
