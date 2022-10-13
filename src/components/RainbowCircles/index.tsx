@@ -4,7 +4,6 @@ import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
 
-// TODO - update the circle values to use em for better calculations
 const RainbowCircles: React.FC<Props> = () => {
   return (
     <ProjectPage background={PROJECT_COLORS.PROJECT5.background}>
