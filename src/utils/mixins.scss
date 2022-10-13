@@ -18,7 +18,7 @@
   }
 }
 
-@mixin circle ($size, $bg) {
+@mixin circle ($size, $bg: none) {
   @include square($size, $bg, 50%);
 }
 

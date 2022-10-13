@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import BlogPost from './components/BlogPost';
+import RainbowCircles from './components/RainbowCircles';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <BlogPost />
+        <RainbowCircles />
       </div>
     </ThemeContextProvider>
   );
