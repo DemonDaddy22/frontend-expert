@@ -1,0 +1,11 @@
+@import '../../../utils/mixins.scss';
+
+.colourBlock {
+  @include circle (0.7rem);
+  @include spacing ($margin: 0 0.5rem 0 0.25rem);
+  display: inline-block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -72,10 +72,4 @@
       @include spacing ($margin: 0.5rem 0);
     }
   }
-
-  .questionPointBox {
-    @include circle (0.75rem);
-    @include spacing ($margin: 0 0.5rem 0 0.25rem);
-    display: inline-block;
-  }
 }
