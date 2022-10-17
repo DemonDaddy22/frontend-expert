@@ -1,0 +1,68 @@
+import React from 'react';
+import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import ProjectPage from '../ProjectPage';
+import QuestionDetails from '../QuestionDetails';
+import classes from './styles.module.scss';
+
+const Navbar: React.FC<Props> = () => {
+  return (
+    <ProjectPage background={PROJECT_COLORS.PROJECT6.background} containerClassName={classes.pageContainer}>
+      <nav className={classes.navbar}>
+        <ul className={classes.navItems}>
+          <li>Product</li>
+          <li>Testimonials</li>
+          <li>Pricing</li>
+        </ul>
+        <ul className={classes.navItems}>
+          <li>Team</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+      <QuestionDetails
+        title='Navbar'
+        containerClassName={classes.questionDetails}
+        titleClassName={classes.questionTitle}>
+        <p className={classes.questionDescriptionParagraph}>
+          You're given an HTML file for the top navigation bar of a website. The navigation bar consists of two
+          unordered lists, containing three and two list items, respectively.
+        </p>
+        <p className={classes.questionDescriptionParagraph}>Style this navigation bar as follows:</p>
+        <ul className={classes.questionDescriptionPoints}>
+          <li>
+            The navigation bar should be a horizontal bar, spanning the entire width of its parent; all of its list
+            items should be displayed in a single row.
+          </li>
+          <li>
+            The first unordered list (containing Product, Testimonials, and Pricing) should appear on the far left side
+            of the navigation bar. The second unordered list (containing Team and Contact Us) should appear on the far
+            right side of the navigation bar.
+          </li>
+          <li>
+            The navigation bar should have a background color of #265EF7
+            <span className={classes.questionPointBox} style={{ backgroundColor: '#265EF7' }}></span>and a white
+            <span className={classes.questionPointBox} style={{ backgroundColor: `${COLORS.WHITE}` }}></span>font color.
+          </li>
+          <li>
+            The unordered lists should have no margin or padding. However, the individual list items should have
+            vertical padding equal to their font size and horizontal padding equal to their font size multiplied by 1.5;
+            their font size should be 16px.
+          </li>
+          <li>
+            Hovering over a list item should change its background color to #1E87B5
+            <span className={classes.questionPointBox} style={{ backgroundColor: '#1E87B5' }}></span>and the mouse
+            cursor to a pointer.
+          </li>
+          <li>
+            There should be a solid, #F4F5F6
+            <span className={classes.questionPointBox} style={{ backgroundColor: '#F4F5F6' }}></span>, 2px border
+            separating the list items. However this border shouldn't appear on the right side of Pricing or on the left
+            side of Team.
+          </li>
+          <li>The individual list items shouldn't have bullet points next to them.</li>
+        </ul>
+      </QuestionDetails>
+    </ProjectPage>
+  );
+};
+
+export default Navbar;
