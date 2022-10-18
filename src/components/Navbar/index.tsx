@@ -2,6 +2,7 @@ import React from 'react';
 import { COLORS, PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
+import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
 
 const Navbar: React.FC<Props> = () => {
@@ -39,8 +40,10 @@ const Navbar: React.FC<Props> = () => {
           </li>
           <li>
             The navigation bar should have a background color of #265EF7
-            <span className={classes.questionPointBox} style={{ backgroundColor: '#265EF7' }}></span>and a white
-            <span className={classes.questionPointBox} style={{ backgroundColor: `${COLORS.WHITE}` }}></span>font color.
+            <ColourBlock colour='#265EF7' />
+            and a white
+            <ColourBlock colour={COLORS.WHITE} />
+            font color.
           </li>
           <li>
             The unordered lists should have no margin or padding. However, the individual list items should have
@@ -49,14 +52,13 @@ const Navbar: React.FC<Props> = () => {
           </li>
           <li>
             Hovering over a list item should change its background color to #1E87B5
-            <span className={classes.questionPointBox} style={{ backgroundColor: '#1E87B5' }}></span>and the mouse
-            cursor to a pointer.
+            <ColourBlock colour='#1E87B5' />
+            and the mouse cursor to a pointer.
           </li>
           <li>
             There should be a solid, #F4F5F6
-            <span className={classes.questionPointBox} style={{ backgroundColor: '#F4F5F6' }}></span>, 2px border
-            separating the list items. However this border shouldn't appear on the right side of Pricing or on the left
-            side of Team.
+            <ColourBlock colour={COLORS.LIGHT} />, 2px border separating the list items. However this border shouldn't
+            appear on the right side of Pricing or on the left side of Team.
           </li>
           <li>The individual list items shouldn't have bullet points next to them.</li>
         </ul>

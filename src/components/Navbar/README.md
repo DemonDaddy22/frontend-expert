@@ -17,7 +17,6 @@ Style this navigation bar as follows:
   vertical padding equal to their font size and horizontal padding equal to their font size multiplied by 1.5;
   their font size should be 16px.
 - Hovering over a list item should change its background color to #1E87B5 and the mouse cursor to a pointer.
-- There should be a solid, #F4F5F6, 2px border
-  separating the list items. However this border shouldn't appear on the right side of Pricing or on the left
-  side of Team.
+- There should be a solid, #F4F5F6, 2px border separating the list items. However this border shouldn't
+  appear on the right side of Pricing or on the left side of Team.
 - The individual list items shouldn't have bullet points next to them.

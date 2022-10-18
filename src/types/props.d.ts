@@ -45,3 +45,9 @@ interface QuestionDetailsProps extends Props {
   descriptionStyle?: React.CSSProperties;
   descriptionClassName?: string;
 }
+
+interface ColourBlockProps {
+  colour: string;
+  className?: string;
+  style?: React.CSSProperties;
+}

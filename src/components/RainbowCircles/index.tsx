@@ -2,6 +2,7 @@ import React from 'react';
 import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
+import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
 
 const RainbowCircles: React.FC<Props> = () => {
@@ -21,37 +22,37 @@ const RainbowCircles: React.FC<Props> = () => {
           <li className={classes.questionPoint}>
             <div className={classes.questionPointWrapper}>
               300px by 300px, #ff0000
-              <span className={classes.questionPointBox} style={{ backgroundColor: '#ff0000' }}></span>
+              <ColourBlock colour='#FF0000' />
             </div>
           </li>
           <li className={classes.questionPoint}>
             <div className={classes.questionPointWrapper}>
               250px by 250px, #ffa500
-              <span className={classes.questionPointBox} style={{ backgroundColor: '#ffa500' }}></span>
+              <ColourBlock colour='#FFA500' />
             </div>
           </li>
           <li className={classes.questionPoint}>
             <div className={classes.questionPointWrapper}>
               200px by 200px, #ffff00
-              <span className={classes.questionPointBox} style={{ backgroundColor: '#fff000' }}></span>
+              <ColourBlock colour='#FFFF00' />
             </div>
           </li>
           <li className={classes.questionPoint}>
             <div className={classes.questionPointWrapper}>
               150px by 150px, #008000
-              <span className={classes.questionPointBox} style={{ backgroundColor: '#008000' }}></span>
+              <ColourBlock colour='#008000' />
             </div>
           </li>
           <li className={classes.questionPoint}>
             <div className={classes.questionPointWrapper}>
               100px by 100px, #0000ff
-              <span className={classes.questionPointBox} style={{ backgroundColor: '#0000ff' }}></span>
+              <ColourBlock colour='#0000FF' />
             </div>
           </li>
           <li className={classes.questionPoint}>
             <div className={classes.questionPointWrapper}>
               50px by 50px, #800080
-              <span className={classes.questionPointBox} style={{ backgroundColor: '#800080' }}></span>
+              <ColourBlock colour='#800080' />
             </div>
           </li>
         </ul>

@@ -14,11 +14,6 @@
   display: flex;
   align-items: center;
   gap: 0.35rem;
-
-  .questionPointBox {
-    @include circle (0.8rem);
-    display: inline-block;
-  }
 }
 
 .circlesContainer {
