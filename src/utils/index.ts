@@ -5,8 +5,7 @@
  * @returns `boolean` indicating whether `value` is an empty string
  *
  */
-export const isEmptyString = <T>(value: string | T): boolean =>
-  typeof value !== 'string' || !value?.trim()?.length;
+export const isEmptyString = <T>(value: string | T): boolean => typeof value !== 'string' || !value?.trim()?.length;
 
 /**
  *
@@ -16,9 +15,7 @@ export const isEmptyString = <T>(value: string | T): boolean =>
  *
  */
 export const isValidNumber = <T>(value: number | string | T): boolean =>
-  ['number', 'string'].includes(typeof value) &&
-  value !== '' &&
-  !isNaN(Number(value));
+  ['number', 'string'].includes(typeof value) && value !== '' && !isNaN(Number(value));
 
 /**
  *
@@ -38,10 +35,7 @@ export const isEmptyList = <T>(obj: Array<T> | T): boolean =>
  *
  */
 export const isEmptyObject = <T>(obj: Object | T): boolean =>
-  !obj ||
-  typeof obj !== 'object' ||
-  Array.isArray(obj) ||
-  Object.keys(obj).length === 0;
+  !obj || typeof obj !== 'object' || Array.isArray(obj) || Object.keys(obj).length === 0;
 
 /**
  *
@@ -51,12 +45,8 @@ export const isEmptyObject = <T>(obj: Object | T): boolean =>
  * @returns truncated `value` if its length is greater than or equal to `length`
  *
  */
-export const truncateStringToLength = (
-  value: string,
-  length: number
-): string => {
-  if (isEmptyString(value) || !isValidNumber(length) || length <= 0)
-    return value;
+export const truncateStringToLength = (value: string, length: number): string => {
+  if (isEmptyString(value) || !isValidNumber(length) || length <= 0) return value;
   return value?.length <= length ? value : `${value?.substring(0, length)}...`;
 };
 
@@ -70,3 +60,21 @@ export const truncateStringToLength = (
  */
 export const createListOfSize = (size: number, start: number = 1): number[] =>
   size > 0 ? Array.from(Array(size)).map(() => start++) : [];
+
+  /**
+ *
+ * @function copyTextToClipboard - Copies `text` to the clipboard
+ * @param {string} text - specifies the text to be copied
+ * @returns promise of a boolean value depicting whether the copy was successful
+ *
+ */
+export const copyTextToClipboard = async (text: string = ''): Promise<boolean> => {
+  if (isEmptyString(text)) return false;
+
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (err) {
+    return false;
+  }
+};

@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
+import { copyTextToClipboard } from '../../../utils';
 import classes from './styles.module.scss';
 
 const ColourBlock: React.FC<ColourBlockProps> = (props) => {
   const { colour, className = '', style = {} } = props;
 
   const handleBlockClick = useCallback(() => {
-    console.log(colour);
+    copyTextToClipboard(colour);
   }, [colour]);
 
   return (
