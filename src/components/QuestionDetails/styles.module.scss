@@ -31,4 +31,9 @@
       font-size: 0.95rem;
     }
   }
+
+  & p,
+  & li {
+    @include spacing ($margin: 0.5rem 0);
+  }
 }

@@ -5,11 +5,6 @@
   color: $project-header-5;
 }
 
-.questionDescriptionParagraph {
-  @include spacing ($margin: 0.5rem 0);
-
-}
-
 .questionPointWrapper {
   display: flex;
   align-items: center;

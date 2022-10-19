@@ -23,12 +23,12 @@ const Navbar: React.FC<Props> = () => {
         title='Navbar'
         containerClassName={classes.questionDetails}
         titleClassName={classes.questionTitle}>
-        <p className={classes.questionDescriptionParagraph}>
+        <p>
           You're given an HTML file for the top navigation bar of a website. The navigation bar consists of two
           unordered lists, containing three and two list items, respectively.
         </p>
-        <p className={classes.questionDescriptionParagraph}>Style this navigation bar as follows:</p>
-        <ul className={classes.questionDescriptionPoints}>
+        <p>Style this navigation bar as follows:</p>
+        <ul>
           <li>
             The navigation bar should be a horizontal bar, spanning the entire width of its parent; all of its list
             items should be displayed in a single row.
