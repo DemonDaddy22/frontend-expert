@@ -8,11 +8,11 @@ const BlogPost: React.FC<Props> = () => {
   return (
     <ProjectPage background={PROJECT_COLORS.PROJECT4.background}>
       <QuestionDetails title='Blog Post' titleClassName={classes.questionTitle}>
-        <p className={classes.questionDescriptionParagraph}>
+        <p>
           You've been provided with a blog post as raw text, and you need to convert this post into a properly marked-up
           HTML file.
         </p>
-        <p className={classes.questionDescriptionParagraph}>
+        <p>
           The post should have a primary heading of{' '}
           <span className={classes.questionDescriptionHighlight}>Introducing AlgoCoin</span> with a tagline of{' '}
           <span className={classes.questionDescriptionHighlight}>
@@ -20,14 +20,14 @@ const BlogPost: React.FC<Props> = () => {
           </span>
           .
         </p>
-        <p className={classes.questionDescriptionParagraph}>
+        <p>
           The post should be treated as an article with two sections, titled{' '}
           <span className={classes.questionDescriptionHighlight}>What is AlgoCoin?</span> and{' '}
           <span className={classes.questionDescriptionHighlight}>Where Do I Start?</span>, respectively. Each section
           should have a paragraph of text (the text directly below the respective section title in the starting code),
           and the sections should be divided by a horizontal rule.
         </p>
-        <p className={classes.questionDescriptionParagraph}>
+        <p>
           In the first section, the text{' '}
           <span className={classes.questionDescriptionHighlight}>
             proof-of-inverted-binary-tree consensus algorithm
@@ -38,15 +38,15 @@ const BlogPost: React.FC<Props> = () => {
           <span className={classes.questionDescriptionHighlight}>https://algoexpert.io</span>, and it should open in a
           new tab.
         </p>
-        <p className={classes.questionDescriptionParagraph}>
+        <p>
           Finally, the post should have a footer at the bottom with the text{' '}
           <span className={classes.questionDescriptionHighlight}>Copyright 3022 AlgoCoin. All rights reserved.</span>.
         </p>
-        <p className={classes.questionDescriptionParagraph}>Your HTML code should use proper semantic markup.</p>
+        <p>Your HTML code should use proper semantic markup.</p>
       </QuestionDetails>
       <article className={classes.blogContainer}>
         <h1 className={classes.blogTitle}>Introducing AlgoCoin</h1>
-        <caption className={classes.blogCaption}>The future of decentralized meme currency is here</caption>
+        <p className={classes.blogCaption}>The future of decentralized meme currency is here</p>
         <section className={classes.blogSection}>
           <h2 className={classes.blogSectionTitle}>What is AlgoCoin?</h2>
           <p className={classes.blogSectionContent}>

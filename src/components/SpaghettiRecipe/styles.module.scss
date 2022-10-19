@@ -5,20 +5,12 @@
   color: $project-header-3;
 }
 
-.questionDescriptionParagraph {
-  @include spacing ($margin: 1rem 0);
-}
-
 .questionDescriptionUnorderedList,
 .questionDescriptionOrderedList {
   @include spacing (0.5rem 0);
   background-color: rgba($color: $project-list-bg-3, $alpha: 0.5);
   border-radius: 0.25rem;
 
-}
-
-li {
-  @include spacing (0.2rem 0);
 }
 
 .questionDescriptionUnorderedList li {

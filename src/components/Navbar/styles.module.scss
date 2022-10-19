@@ -62,14 +62,4 @@
   .questionTitle {
     color: $project-header-6;
   }
-
-  .questionDescriptionParagraph {
-    @include spacing ($margin: 0.5rem 0);
-  }
-
-  .questionDescriptionPoints {
-    & li {
-      @include spacing ($margin: 0.5rem 0);
-    }
-  }
 }

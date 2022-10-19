@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Navbar from './components/Navbar';
+import PigEmoji from './components/PigEmoji';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <Navbar />
+        <PigEmoji />
       </div>
     </ThemeContextProvider>
   );
