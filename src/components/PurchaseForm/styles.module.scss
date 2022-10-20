@@ -1,0 +1,18 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+  }
+}
+
+.questionTitle {
+  color: $project-header-8;
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0 0.25rem);
+  background-color: $project-highlight-8;
+  border-radius: 0.25rem;
+}
