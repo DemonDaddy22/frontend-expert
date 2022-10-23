@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import PigEmoji from './components/PigEmoji';
+import PurchaseForm from './components/PurchaseForm';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <PigEmoji />
+        <PurchaseForm />
       </div>
     </ThemeContextProvider>
   );
