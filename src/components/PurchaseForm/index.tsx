@@ -33,11 +33,11 @@ const PurchaseForm: React.FC<Props> = () => {
               <li>
                 Each list item in the stepper should have its corresponding item number above its text content, and this
                 number should be inside of a circle with a white
-                <ColourBlock colour={COLORS.WHITE} /> background color, a width of 30px, 8px of bottom margin, a
-                font-size of 24px, and a solid, black
-                <ColourBlock colour={COLORS.BLACK} className={classes.colorBlockBorder} />, 4px border. The number inside of the circle should be
-                horizontally and vertically centered, and the circle should be horizontally centered above the text
-                content.
+                <ColourBlock colour={COLORS.WHITE} />
+                background color, a width of 30px, 8px of bottom margin, a font-size of 24px, and a solid, black
+                <ColourBlock colour={COLORS.BLACK} className={classes.colorBlockBorder} />, 4px border. The number
+                inside of the circle should be horizontally and vertically centered, and the circle should be
+                horizontally centered above the text content.
               </li>
               <li>
                 The number-circle for the list item with the{' '}
