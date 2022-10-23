@@ -1,9 +1,21 @@
 @import '../../constants/theme.scss';
 @import '../../utils/mixins.scss';
 
+$circle-width: 32px;
+$circle-border-width: 4px;
+$circle-divider-height: 4px;
+
 .questionDetails {
   @media screen and (min-width: 992px) {
     max-width: 40rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 55rem;
+  }
+
+  @media screen and (min-width: 1500px) {
+    max-width: 70rem;
   }
 }
 
@@ -15,4 +27,132 @@
   @include spacing (0 0.25rem);
   background-color: $project-highlight-8;
   border-radius: 0.25rem;
+}
+
+.colorBlockBorder {
+  border: 1px solid rgba($color: $light, $alpha: 0.25);
+}
+
+.formContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  gap: 1rem;
+
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+  }
+
+  ol {
+    @include spacing (0);
+    display: flex;
+    transform: scale(0.75);
+
+    @media screen and (min-width: 768px){
+      transform: scale(1);
+    }
+
+    li {
+      @include spacing (0 1rem);
+      counter-increment: product-count;
+      position: relative;
+      list-style: none;
+      color: $white;
+      text-align: center;
+
+      &::before {
+        @include circle ($circle-width, $grey-2);
+        @include spacing ($margin: 0 auto 0.5rem);
+        content: counter(product-count);
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: $circle-border-width solid $light;
+        box-sizing: content-box;
+      }
+
+      &:not(:last-of-type)::after {
+        position: absolute;
+        content: '';
+        background-color: $light;
+        height: $circle-divider-height;
+        width: calc(100% - #{$circle-width} + 16px); // 16px is corresponding to the padding added to each list item
+        left: calc(50% + #{($circle-width / 2) + ($circle-border-width)});
+        top: calc(#{($circle-width / 2) + ($circle-border-width) - #{$circle-divider-height / 2}
+        }
+
+      );
+    }
+  }
+
+  .selected {
+    &::before {
+      background-color: $project-product-selected;
+    }
+  }
+}
+
+ul {
+  @include spacing (0);
+  align-self: stretch;
+
+  li {
+    @include spacing (0.75rem, 0.75rem 0);
+    list-style: none;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: $grey-2;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+
+    label {
+      @include spacing ($margin: 0 0 0 0.5rem);
+      font-weight: bold;
+    }
+  }
+}
+
+.productBlue {
+  color: $project-product-blue;
+  border-left: 5px solid $project-product-blue;
+
+  input {
+    accent-color: $project-product-blue;
+  }
+}
+
+.productRed {
+  color: $project-product-red;
+  border-left: 5px solid $project-product-red;
+
+  input {
+    accent-color: $project-product-red;
+  }
+}
+
+.productOrange {
+  color: $project-product-orange;
+  border-left: 5px solid $project-product-orange;
+
+  input {
+    accent-color: $project-product-orange;
+  }
+}
+
+.productGreen {
+  color: $project-product-green;
+  border-left: 5px solid $project-product-green;
+
+  input {
+    accent-color: $project-product-green;
+  }
+}
 }

@@ -35,7 +35,7 @@ const PurchaseForm: React.FC<Props> = () => {
                 number should be inside of a circle with a white
                 <ColourBlock colour={COLORS.WHITE} /> background color, a width of 30px, 8px of bottom margin, a
                 font-size of 24px, and a solid, black
-                <ColourBlock colour={COLORS.BLACK} />, 4px border. The number inside of the circle should be
+                <ColourBlock colour={COLORS.BLACK} className={classes.colorBlockBorder} />, 4px border. The number inside of the circle should be
                 horizontally and vertically centered, and the circle should be horizontally centered above the text
                 content.
               </li>
@@ -68,20 +68,20 @@ const PurchaseForm: React.FC<Props> = () => {
                 mapping:
                 <ul>
                   <li>
-                    <span className={classes.questionDescriptionHighlight}>.blue-product</span>: #626EE3
-                    <ColourBlock colour='#626EE3' />
+                    <span className={classes.questionDescriptionHighlight}>.blue-product</span>: #8C96F6
+                    <ColourBlock colour='#8C96F6' />
                   </li>
                   <li>
-                    <span className={classes.questionDescriptionHighlight}>.red-product</span>: #890023
-                    <ColourBlock colour='#890023' />
+                    <span className={classes.questionDescriptionHighlight}>.red-product</span>: #E64970
+                    <ColourBlock colour='#E64970' />
                   </li>
                   <li>
                     <span className={classes.questionDescriptionHighlight}>.orange-product</span>: #F37F1B
                     <ColourBlock colour='#F37F1B' />
                   </li>
                   <li>
-                    <span className={classes.questionDescriptionHighlight}>.green-product</span>: #11967E
-                    <ColourBlock colour='#11967E' />
+                    <span className={classes.questionDescriptionHighlight}>.green-product</span>: #25B59B
+                    <ColourBlock colour='#25B59B' />
                   </li>
                 </ul>
               </li>
@@ -94,7 +94,7 @@ const PurchaseForm: React.FC<Props> = () => {
             The "Continue" button should be aligned to the right side of the{' '}
             <span className={classes.questionDescriptionHighlight}>.wrapper</span>, with 12px of padding, a font-size of
             16px, a border radius of 8px, a background color of #02203C
-            <ColourBlock colour='#02203C' />
+            <ColourBlock colour='#02203C' className={classes.colorBlockBorder} />
             and a white
             <ColourBlock colour={COLORS.WHITE} />
             text color. For convenience, the starting code includes variables with most of the specified pixel values
@@ -102,6 +102,32 @@ const PurchaseForm: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <section className={classes.formContainer}>
+        <ol>
+          <li className={classes.selected}>Product Selection</li>
+          <li>Payment Method</li>
+          <li>Payment Form</li>
+          <li>Purchase Success</li>
+        </ol>
+        <ul>
+          <li className={classes.productBlue}>
+            <input type='checkbox' id='algoExpert' />
+            <label htmlFor='algoExpert'>AlgoExpert</label>
+          </li>
+          <li className={classes.productRed}>
+            <input type='checkbox' id='systemsExpert' />
+            <label htmlFor='systemsExpert'>SystemsExpert</label>
+          </li>
+          <li className={classes.productOrange}>
+            <input type='checkbox' id='mlExpert' />
+            <label htmlFor='mlExpert'>MLExpert</label>
+          </li>
+          <li className={classes.productGreen}>
+            <input type='checkbox' id='frontendExpert' />
+            <label htmlFor='frontendExpert'>FrontendExpert</label>
+          </li>
+        </ul>
+      </section>
     </ProjectPage>
   );
 };
