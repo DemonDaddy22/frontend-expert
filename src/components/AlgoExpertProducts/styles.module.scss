@@ -69,7 +69,10 @@
   .systemsExpert {
     background-color: $project-product-red;
     grid-area: systems;
-    align-self: center;
+    
+    @media screen and (min-width: 992px) {
+      align-self: center;
+    }
   }
 
   .mlExpert {
@@ -84,6 +87,10 @@
   .frontendExpert {
     background-color: $project-product-green;
     grid-area: frontend;
+
+    @media screen and (min-width: 992px) {
+      align-self: flex-end;
+    }
   }
 
   .programmingExpert {
@@ -92,6 +99,7 @@
 
     @media screen and (min-width: 992px) {
       @include spacing ($margin: 0 0 0 0.75rem);
+      height: 5rem;
     }
   }
 }
