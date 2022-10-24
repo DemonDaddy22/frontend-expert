@@ -16,6 +16,7 @@
 6. [Navbar](./src/components/Navbar/README.md): You're given an HTML file for the top navigation bar of a website, style the navigation bar as per the given conditions.
 7. [PigEmoji](./src/components/PigEmoji/README.md): You're given an HTML file with the markup for a pig emoji. Using only CSS, style the HTML to have the appearance of a pig emoji.
 8. [PurchaseForm](./src/components/PurchaseForm/README.md): You're given an HTML file with the markup for a purchase form, similar to the actual purchase form on AlgoExpert. Using only CSS, style the purchase form.
+9. [AlgooExpertProducts](./src/components/AlgooExpertProducts/README.md): You're given an HTML file containing divs representing AlgoExpert's products. Using only CSS, align the products in three rows.
 
 <br />
 <br />
