@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import PurchaseForm from './components/PurchaseForm';
+import AlgoExpertProducts from './components/AlgoExpertProducts';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <PurchaseForm />
+        <AlgoExpertProducts />
       </div>
     </ThemeContextProvider>
   );
