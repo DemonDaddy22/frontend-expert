@@ -1,0 +1,97 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.questionTitle {
+  color: $project-header-9;
+}
+
+.wrapper {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  @media screen and (min-width: 992px) {
+    max-width: 30rem;
+  }
+}
+
+.productsContainer {
+  width: 100%;
+  display: grid;
+  row-gap: 0.25rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "systems"
+    "ml"
+    "algo"
+    "frontend"
+    "programming";
+  
+  @media screen and (min-width: 992px) {
+    row-gap: 1.5rem;
+    grid-template-columns: 4fr 1fr 2fr 3fr;
+    grid-template-areas:
+      "systems systems . ml"
+      "algo algo algo algo"
+      "frontend programming programming programming";
+  }
+
+  .product {
+    @include spacing (0.25rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 3rem;
+    
+    @media screen and (min-width: 992px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .algoExpert {
+    background-color: $project-product-blue;
+    grid-area: algo;
+    
+    @media screen and (min-width: 992px) {
+      @include spacing ($margin: 0 auto);
+      width: 75%;
+    }
+  }
+
+  .systemsExpert {
+    background-color: $project-product-red;
+    grid-area: systems;
+    align-self: center;
+  }
+
+  .mlExpert {
+    background-color: $project-product-orange;
+    grid-area: ml;
+
+    @media screen and (min-width: 992px) {
+      height: 5rem;
+    }
+  }
+
+  .frontendExpert {
+    background-color: $project-product-green;
+    grid-area: frontend;
+  }
+
+  .programmingExpert {
+    background-color: $project-product-bright-red;
+    grid-area: programming;
+
+    @media screen and (min-width: 992px) {
+      @include spacing ($margin: 0 0 0 0.75rem);
+    }
+  }
+}
