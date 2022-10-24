@@ -31,7 +31,7 @@
     "algo"
     "frontend"
     "programming";
-  
+
   @media screen and (min-width: 992px) {
     row-gap: 1.5rem;
     grid-template-columns: 4fr 1fr 2fr 3fr;
@@ -50,7 +50,7 @@
     font-weight: bold;
     font-size: 1rem;
     height: 3rem;
-    
+
     @media screen and (min-width: 992px) {
       font-size: 1.1rem;
     }
@@ -59,7 +59,7 @@
   .algoExpert {
     background-color: $project-product-blue;
     grid-area: algo;
-    
+
     @media screen and (min-width: 992px) {
       @include spacing ($margin: 0 auto);
       width: 75%;
@@ -69,7 +69,7 @@
   .systemsExpert {
     background-color: $project-product-red;
     grid-area: systems;
-    
+
     @media screen and (min-width: 992px) {
       align-self: center;
     }
