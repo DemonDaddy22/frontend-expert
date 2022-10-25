@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import AlgoExpertProducts from './components/AlgoExpertProducts';
+import RobotEmoji from './components/RobotEmoji';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <AlgoExpertProducts />
+        <RobotEmoji />
       </div>
     </ThemeContextProvider>
   );
