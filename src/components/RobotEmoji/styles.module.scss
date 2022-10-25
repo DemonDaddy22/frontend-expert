@@ -1,0 +1,140 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 50rem;
+  }
+}
+
+.questionTitle {
+  color: $project-header-10;
+}
+
+.colourBlockBorder {
+  border: 1px solid rgba($color: $light, $alpha: 0.25);
+}
+
+.emojiContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 20rem;
+
+  @media screen and (min-width: 992px) {
+    max-width: 30rem;
+  }
+
+  .head {
+    @include square (9.5rem, $project-emoji-bg, 1.25rem);
+    border: 0.3rem solid $project-emoji-border;
+    position: relative;
+
+    .light {
+      position: absolute;
+      left: 50%;
+      top: calc(-1.9rem - 0.5rem - 0.3rem);
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .stick {
+        width: 0.6rem;
+        height: 1rem;
+        margin-top: -0.5rem;
+        background-color: $project-emoji-stick-bg;
+      }
+
+      .bulb {
+        @include circle (1.9rem, $project-emoji-bulb-bg);
+        z-index: 0;
+        animation: glow 6s ease-in-out infinite;
+      }
+    }
+
+    .ear {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0.6rem;
+      height: 3.15rem;
+      background-color: $project-emoji-ear-bg;
+
+      &:first-child {
+        left: calc(-0.6rem - 0.3rem);
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+      }
+
+      &:last-child {
+        right: calc(-0.6rem - 0.3rem);
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+      }
+    }
+
+    .eyes {
+      position: absolute;
+      top: 1.5rem;
+      width: 100%;
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+
+      .eye {
+        @include circle (2.2rem, $white);
+        border: 0.3rem solid $project-emoji-eye-border;
+      }
+    }
+
+    .nose {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-bottom: 1.9rem solid $project-emoji-ear-bg;
+      border-left: 0.95rem solid transparent;
+      border-right: 0.95rem solid transparent;
+    }
+
+    .mouth {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translate(-50%, 5%);
+      width: 6.25rem;
+      height: 1.5rem;
+      background-color: $project-emoji-mouth-bg;
+      border: 1px solid $black;
+      border-radius: 1.25rem;
+      display: flex;
+      justify-content: space-around;
+
+      .tooth {
+        width: 0.3rem;
+        background-color: $black;
+      }
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: none;
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba($color: $project-emoji-bulb-bg, $alpha: 0.8), 0 0 24px rgba($color: $project-emoji-bulb-bg, $alpha: 0.5), 0 0 32px rgba($color: $project-emoji-bulb-bg, $alpha: 0.2);
+  }
+
+  100% {
+    box-shadow: none;
+  }
+}
