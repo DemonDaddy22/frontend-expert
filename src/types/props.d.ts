@@ -51,3 +51,16 @@ interface ColourBlockProps {
   className?: string;
   style?: React.CSSProperties;
 }
+
+interface NotificationCardProps {
+  imgSrc: string;
+  name: string;
+  description: string;
+  time: string;
+}
+
+interface DividerProps {
+  isVertical?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+}

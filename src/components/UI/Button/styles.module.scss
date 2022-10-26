@@ -1,15 +1,19 @@
 @import '../../../constants/theme.scss';
+@import '../../../utils/mixins.scss';
 
 .button {
-    background-color: transparent;
-    padding: 0.75rem 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid $white;
-    color: $white;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  @include theme (color, accent1);
+  @include theme (border, accent1, 1px solid);
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    @include theme (background-color, accent1);
+    @include theme (color, contrast1);
+    cursor: pointer;
+  }
 }

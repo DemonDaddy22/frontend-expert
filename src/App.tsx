@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import RobotEmoji from './components/RobotEmoji';
+import NotificationsMenu from './components/NotificationsMenu';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <RobotEmoji />
+        <NotificationsMenu />
       </div>
     </ThemeContextProvider>
   );

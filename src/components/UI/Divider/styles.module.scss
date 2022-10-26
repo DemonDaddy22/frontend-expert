@@ -1,0 +1,16 @@
+@import '../../../constants/theme.scss';
+@import '../../../utils/mixins.scss';
+
+.dividerHorizontal {
+  @include spacing ($margin: 0.25rem 0);
+  @include theme ($property: background-color, $key: divider, $transition: 0.25s);
+  height: 1px;
+  align-self: stretch;
+}
+
+.dividerVertical {
+  @include spacing ($margin: 0 0.25rem);
+  @include theme ($property: background-color, $key: divider, $transition: 0.25s);
+  width: 1px;
+  align-self: stretch;
+}
