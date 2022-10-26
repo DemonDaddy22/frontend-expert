@@ -7,47 +7,47 @@ $grey-1: #505050;
 $grey-2: #2F2F2F;
 
 // Project 1
-$project-bg-1: linear-gradient(50deg, #180E15 0%, $black 100%);
+$project-bg-1: linear-gradient(40deg, #1C1019 0%, $black 100%);
 $project-header-1: #F89D42;
 $project-list-bg-1: #8A3D43;
 $project-highlight-1: $white;
 
 // Project 2
-$project-bg-2: linear-gradient(50deg, #111B1C 0%, $black 100%);
+$project-bg-2: linear-gradient(40deg, #121D1E 0%, $black 100%);
 $project-table-header-2: #B48BB8;
 $project-list-bg-2: #6C2E82;
 $project-header-2: #DE90FA;
 
 // project-3
-$project-bg-3: linear-gradient(50deg, #13141B 0%, $black 100%);
+$project-bg-3: linear-gradient(40deg, #13141C 0%, $black 100%);
 $project-header-3: #55C1E2;
 $project-list-bg-3: #A3F545;
 $project-section-title-3: #BEF57F;
 
 // project-4
-$project-bg-4: linear-gradient(50deg, #13130E 0%, $black 100%);
+$project-bg-4: linear-gradient(40deg, #14140E 0%, $black 100%);
 $project-header-4: #F870A0;
 $project-section-header-4: #ce8bfb;
 $project-highlight-4: #2D1883;
 
 // project-5
-$project-bg-5: linear-gradient(30deg, #120E14 0%, $black 100%);
+$project-bg-5: linear-gradient(40deg, #170E1B 0%, $black 100%);
 $project-header-5: #63FACA;
 
 // project-6
-$project-bg-6: linear-gradient(30deg, #0A0E06 0%, $black 100%);
+$project-bg-6: linear-gradient(40deg, #0F1508 0%, $black 100%);
 $project-header-6: #C5FFE4;
 $project-navbar-bg-6: #0038A8;
 $project-navbar-hover-bg-6: #1E87B5;
 
 // project-7
-$project-bg-7: linear-gradient(30deg, #10060C 0%, $black 100%);
+$project-bg-7: linear-gradient(40deg, #1C0A14 0%, $black 100%);
 $project-header-7: #FF6395;
 $project-pig-head-7: #FFC0CB;
 $project-pig-nose-7: #F57187;
 
 // project-8
-$project-bg-8: linear-gradient(40deg, #0A1422 0%, $black 100%);
+$project-bg-8: linear-gradient(40deg, #0B1524 0%, $black 100%);
 $project-header-8: #FCFFA2;
 $project-highlight-8: #8A8441;
 $project-product-blue: #8C96F6;
@@ -62,7 +62,7 @@ $project-bg-9: linear-gradient(40deg, #0D2212 0%, $black 100%);
 $project-header-9: #D7F151;
 
 // project-10
-$project-bg-10: linear-gradient(60deg, #12100A 0%, $black 100%);
+$project-bg-10: linear-gradient(40deg, #1A170D 0%, $black 100%);
 $project-header-10: #EDC473;
 $project-emoji-bg: #A4D9EB;
 $project-emoji-border: #9BBCC2;
@@ -72,14 +72,21 @@ $project-emoji-ear-bg: #C90A0A;
 $project-emoji-eye-border: #00B3FF;
 $project-emoji-mouth-bg: #DEDEDE;
 
+// project-11
+$project-bg-11: linear-gradient(40deg, #032423 0%, $black 100%);
+$project-header-11: #21C58F;
+$project-highlight-11: #1C5743;
+
 $LIGHT: (
-  accentColor1: $white,
-  accentColor2: $light,
+  accent1: $white,
+  accent2: $light,
+  divider: rgba($color: $white, $alpha: 0.1),
 );
 
 $DARK: (
-  accentColor1: $black,
-  accentColor2: $dark,
+  accent1: $black,
+  accent2: $dark,
+  divider: rgba($color: $black, $alpha: 0.1),
 );
 
 $themes: ($LIGHT, $DARK);

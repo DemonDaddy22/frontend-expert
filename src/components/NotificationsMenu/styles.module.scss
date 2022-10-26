@@ -1,0 +1,43 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+  }
+}
+
+.questionTitle {
+  color: $project-header-11;
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0.05rem 0.25rem);
+  background-color: $project-highlight-11;
+  border-radius: 0.25rem;
+  font-size: 0.95em;
+}
+
+.notificationsContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  @media screen and (min-width: 992px) {
+    max-width: 20rem;
+  }
+
+  .notificationsHeader {
+    color: $white;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+.colourBlockBorder {
+  border: 1px solid rgba($color: $light, $alpha: 0.25);
+}
