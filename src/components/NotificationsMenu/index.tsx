@@ -2,6 +2,7 @@ import React from 'react';
 import { COLORS, PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
+import Button from '../UI/Button';
 import ColourBlock from '../UI/ColourBlock';
 import Divider from '../UI/Divider';
 import NotificationCard from './components/NotificationCard';
@@ -93,6 +94,7 @@ const NotificationsMenu: React.FC<Props> = () => {
           description='started a new position as CEO at AlgoExpert. Congratulate him!'
           time='4 years ago'
         />
+        <Button>View More</Button>
       </section>
     </ProjectPage>
   );

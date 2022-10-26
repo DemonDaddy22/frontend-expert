@@ -80,12 +80,16 @@ $project-highlight-11: #1C5743;
 $LIGHT: (
   accent1: $white,
   accent2: $light,
+  contrast1: $black,
+  contrast2: $dark,
   divider: rgba($color: $white, $alpha: 0.15),
 );
 
 $DARK: (
   accent1: $black,
   accent2: $dark,
+  contrast1: $white,
+  contrast2: $light,
   divider: rgba($color: $black, $alpha: 0.15),
 );
 
