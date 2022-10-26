@@ -21,14 +21,14 @@
     flex-direction: column;
     flex: 1;
     gap: 0.25rem;
-    
+
     .cardDescription {
       @include spacing (0.2rem 0);
       color: $light;
       font-size: 0.9rem;
       letter-spacing: -0.1px;
       flex: 1;
-  
+
       .cardName {
         font-weight: bold;
         letter-spacing: 0;
