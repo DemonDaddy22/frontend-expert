@@ -3,16 +3,17 @@ export const COLORS: { [key: string]: string } = {
   WHITE: '#FFFFFF',
   LIGHT: '#F4F5F6',
   DARK: '#0D0E0E',
+  BLUE1: '#02203C',
 };
 
 export const THEME_COLORS: { [key in Theme]: ITheme } = {
   LIGHT: {
-    accentColor1: COLORS.WHITE,
-    accentColor2: COLORS.LIGHT,
+    accent1: COLORS.WHITE,
+    accent2: COLORS.LIGHT,
   },
   DARK: {
-    accentColor1: COLORS.BLACK,
-    accentColor2: COLORS.DARK,
+    accent1: COLORS.BLACK,
+    accent2: COLORS.DARK,
   },
 };
 
@@ -49,5 +50,8 @@ export const PROJECT_COLORS: { [key: string]: { [key: string]: string } } = {
   },
   PROJECT11: {
     background: `linear-gradient(40deg, #032423 0%, ${COLORS.BLACK} 100%)`,
+  },
+  PROJECT12: {
+    background: `linear-gradient(40deg, #110F31 0%, ${COLORS.BLACK} 100%)`,
   },
 };

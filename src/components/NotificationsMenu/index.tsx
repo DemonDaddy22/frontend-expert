@@ -55,7 +55,7 @@ const NotificationsMenu: React.FC<Props> = () => {
             The "View More" button is 10px below the bottom notification. This button has the same width as the
             notifications, and it is horizontally centered. This button has a font-size of 16px, a border-radius of
             10px, 10px of padding on all sides, a background color of #02203C
-            <ColourBlock colour='#02203C' className={classes.colourBlockBorder} />
+            <ColourBlock colour={COLORS.BLUE1} className={classes.colourBlockBorder} />
             and a text color of white
             <ColourBlock colour={COLORS.WHITE} />.
           </li>

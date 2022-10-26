@@ -6,6 +6,26 @@ $dark: #0D0E0E;
 $grey-1: #505050;
 $grey-2: #2F2F2F;
 
+$blue-1: #02203C;
+
+$LIGHT: (
+  accent1: $white,
+  accent2: $light,
+  contrast1: $black,
+  contrast2: $dark,
+  divider: rgba($color: $white, $alpha: 0.15),
+);
+
+$DARK: (
+  accent1: $black,
+  accent2: $dark,
+  contrast1: $white,
+  contrast2: $light,
+  divider: rgba($color: $black, $alpha: 0.15),
+);
+
+$themes: ($LIGHT, $DARK);
+
 // Project 1
 $project-bg-1: linear-gradient(40deg, #1C1019 0%, $black 100%);
 $project-header-1: #F89D42;
@@ -77,20 +97,7 @@ $project-bg-11: linear-gradient(40deg, #032423 0%, $black 100%);
 $project-header-11: #21C58F;
 $project-highlight-11: #1C5743;
 
-$LIGHT: (
-  accent1: $white,
-  accent2: $light,
-  contrast1: $black,
-  contrast2: $dark,
-  divider: rgba($color: $white, $alpha: 0.15),
-);
-
-$DARK: (
-  accent1: $black,
-  accent2: $dark,
-  contrast1: $white,
-  contrast2: $light,
-  divider: rgba($color: $black, $alpha: 0.15),
-);
-
-$themes: ($LIGHT, $DARK);
+// project-12
+$project-bg-12: linear-gradient(40deg, #110F31 0%, $black 100%);
+$project-header-12: #7467CB;
+$project-highlight-12: #322C5A;

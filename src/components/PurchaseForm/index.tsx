@@ -94,7 +94,7 @@ const PurchaseForm: React.FC<Props> = () => {
             The "Continue" button should be aligned to the right side of the{' '}
             <span className={classes.questionDescriptionHighlight}>.wrapper</span>, with 12px of padding, a font-size of
             16px, a border radius of 8px, a background color of #02203C
-            <ColourBlock colour='#02203C' className={classes.colorBlockBorder} />
+            <ColourBlock colour={COLORS.BLUE1} className={classes.colorBlockBorder} />
             and a white
             <ColourBlock colour={COLORS.WHITE} />
             text color. For convenience, the starting code includes variables with most of the specified pixel values
