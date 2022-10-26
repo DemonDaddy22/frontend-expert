@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import NotificationsMenu from './components/NotificationsMenu';
+import AlgoExpertLogo from './components/AlgoExpertLogo';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <NotificationsMenu />
+        <AlgoExpertLogo />
       </div>
     </ThemeContextProvider>
   );

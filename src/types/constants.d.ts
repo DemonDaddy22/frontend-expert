@@ -5,6 +5,6 @@ interface IThemeKeys {
 }
 
 interface ITheme extends IThemeKeys {
-  accentColor1: string;
-  accentColor2: string;
+  accent1: string;
+  accent2: string;
 };
