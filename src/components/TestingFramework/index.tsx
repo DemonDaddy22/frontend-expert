@@ -1,4 +1,6 @@
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -174,11 +176,9 @@ const TestingFramework: React.FC<Props> = () => {
         </p>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Usage #1</h3>
-          <section className={classes.codeBlock}>
-            <pre>
-              <code>{SampleUsage1}</code>
-            </pre>
-          </section>
+          <SyntaxHighlighter language='javascript' style={monokai} showLineNumbers className={classes.codeBlock}>
+            {SampleUsage1}
+          </SyntaxHighlighter>
         </div>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Output #1</h3>
@@ -194,11 +194,9 @@ const TestingFramework: React.FC<Props> = () => {
         </div>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Usage #2</h3>
-          <section className={classes.codeBlock}>
-            <pre>
-              <code>{SampleUsage2}</code>
-            </pre>
-          </section>
+          <SyntaxHighlighter language='javascript' style={monokai} showLineNumbers className={classes.codeBlock}>
+            {SampleUsage2}
+          </SyntaxHighlighter>
         </div>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Output #2</h3>
