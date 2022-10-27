@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import AlgoExpertLogo from './components/AlgoExpertLogo';
+import TestingFramework from './components/TestingFramework';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <AlgoExpertLogo />
+        <TestingFramework />
       </div>
     </ThemeContextProvider>
   );
