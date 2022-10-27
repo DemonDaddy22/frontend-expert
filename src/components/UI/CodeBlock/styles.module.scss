@@ -1,0 +1,20 @@
+@import '../../../utils/mixins.scss';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & div {
+    position: absolute;
+    right: 1rem;
+    top: 1.75rem;
+  }
+}
+
+.codeBlock {
+  @include spacing (0.25rem 0.5rem);
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  flex: 1;
+}

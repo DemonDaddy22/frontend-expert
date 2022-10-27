@@ -2,25 +2,14 @@ interface Props {
   children?: React.ReactNode;
 }
 
-interface LabelProps
-  extends React.DetailedHTMLProps<
-    React.LabelHTMLAttributes<HTMLLabelElement>,
-    HTMLLabelElement
-  > {}
+interface LabelProps extends React.DetailedHTMLProps<React.LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement> {}
 
-interface InputProps
-  extends React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  > {
-    fullWidth?: boolean;
-  }
+interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+  fullWidth?: boolean;
+}
 
 interface ButtonProps
-  extends React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {}
+  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
 
 interface FormGroupProps {
   style?: React.CSSProperties;
@@ -63,4 +52,19 @@ interface DividerProps {
   isVertical?: boolean;
   className?: string;
   style?: React.CSSProperties;
+}
+
+interface CodeBlockProps extends SyntaxHighlighterProps {
+  codeString: string;
+  language?: string;
+  showLineNumbers?: boolean;
+  className?: string;
+  containerClassName?: string;
+  style?: { [key: string]: React.CSSProperties };
+}
+
+interface ClipboardProps {
+  color?: string;
+  height?: number;
+  width?: number;
 }
