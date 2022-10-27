@@ -13,6 +13,16 @@
     max-height: 90vh;
     overflow-y: auto;
   }
+
+  & li {
+    @include spacing ($margin: 0.5rem -0.5rem);
+  }
+}
+
+.questionDescription {
+  @include spacing (0 0.25rem);
+  word-break: break-word;
+  white-space: break-spaces;
 }
 
 .questionTitle {
@@ -30,10 +40,14 @@
 }
 
 .codeBlock {
-  @include spacing (0.25rem 0.5rem, 1rem 0);
+  @include spacing (0.5rem 0.75rem);
   overflow-x: auto;
   border-radius: 0.5rem;
   background-color: $project-code-13;
+
+  @media screen and (min-width: 992px) {
+    @include spacing (0.75rem 1rem);
+  }
 }
 
 .caseWrapper {
@@ -43,11 +57,10 @@
 
 .codeWrapper {
   @include spacing (0.5rem 0);
-
 }
 
 .codeBlockHeader {
-  @include spacing (0, 0 0 -0.5rem 0);
+  @include spacing (0.5rem 0);
   color: $white;  
 }
 
@@ -67,4 +80,22 @@
   padding: 0.1rem 0 !important;
   margin: 0 !important;
   font-size: 0.9rem;
+}
+
+.solutionContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  align-self: stretch;
+  flex: 1;
+  
+  @media screen and (min-width: 992px) {
+    overflow-y: auto;
+    max-width: 60rem;
+  }
+}
+
+.fullHeight {
+  @include spacing (0, 0);
+  height: 100%;
 }

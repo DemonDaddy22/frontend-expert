@@ -1,36 +1,10 @@
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
+import CodeBlock from '../UI/CodeBlock';
+import { sampleUsage1, sampleUsage2, solutionCode } from './codeBlocks';
 import classes from './styles.module.scss';
-
-const SampleUsage1 = `describe('Passing Test Suite', () => {
-  it('Passing Test Case #1', () => {
-    expect('foo').toExist();
-    expect(1 + 1).toBe(2);
-  });
-
-  it('Passing Test Case #2', () => {
-    expect({}).toBeType('object');
-  });
-});`;
-
-const SampleUsage2 = `describe('Failing Test Suite', () => {
-  it('Passing Test Case', () => {
-    expect(0).toBe(0);
-  });
-
-  it('Failing Test Case', () => {
-    expect(true).toBe(true);
-    expect(true).toBe(false);
-  });
-
-  it('Unreachable Test Case', () => {
-    expect('foo').toBe('bar');
-  });
-});`;
 
 const TestingFramework: React.FC<Props> = () => {
   return (
@@ -38,7 +12,9 @@ const TestingFramework: React.FC<Props> = () => {
       <QuestionDetails
         title='Testing Framework'
         titleClassName={classes.questionTitle}
-        containerClassName={classes.questionDetails}>
+        containerClassName={classes.questionDetails}
+        descriptionClassName={classes.questionDescription}
+      >
         <p>Implement the following three functions of a basic JavaScript testing framework:</p>
         <ol>
           <li>
@@ -176,9 +152,7 @@ const TestingFramework: React.FC<Props> = () => {
         </p>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Usage #1</h3>
-          <SyntaxHighlighter language='javascript' style={monokai} showLineNumbers className={classes.codeBlock}>
-            {SampleUsage1}
-          </SyntaxHighlighter>
+          <CodeBlock codeString={sampleUsage1} />
         </div>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Output #1</h3>
@@ -194,9 +168,7 @@ const TestingFramework: React.FC<Props> = () => {
         </div>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Usage #2</h3>
-          <SyntaxHighlighter language='javascript' style={monokai} showLineNumbers className={classes.codeBlock}>
-            {SampleUsage2}
-          </SyntaxHighlighter>
+          <CodeBlock codeString={sampleUsage2} />
         </div>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Output #2</h3>
@@ -214,6 +186,9 @@ const TestingFramework: React.FC<Props> = () => {
           </section>
         </div>
       </QuestionDetails>
+      <section className={classes.solutionContainer}>
+      <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} />
+      </section>
     </ProjectPage>
   );
 };
