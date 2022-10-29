@@ -4,6 +4,7 @@ import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { copyTextToClipboard } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
 import ClipBoardChecked from '../../Icons/ClipboardChecked';
+import IconButton from '../IconButton';
 import classes from './styles.module.scss';
 
 const CodeBlock: React.FC<CodeBlockProps> = (props) => {
@@ -36,9 +37,9 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
       >
         {codeString}
       </SyntaxHighlighter>
-      <div onClick={handleCopyClick}>
+      <IconButton onClick={handleCopyClick} className={classes.iconButton}>
         {isCopied ? <ClipBoardChecked /> : <ClipBoard />}
-      </div>
+      </IconButton>
     </section>
   );
 };

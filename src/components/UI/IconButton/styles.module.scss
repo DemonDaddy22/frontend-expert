@@ -1,0 +1,25 @@
+@import '../../../utils/mixins.scss';
+
+.button {
+  @include theme (background-color, iconButton);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  filter: brightness(80%);
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(100%);
+    box-shadow: 0 4px 6px rgba($color: $black, $alpha: 0.25);
+  }
+
+  &:disabled {
+    cursor: auto;
+    filter: brightness(60%);
+    box-shadow: none;
+  }
+}

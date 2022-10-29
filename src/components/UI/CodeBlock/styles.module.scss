@@ -5,10 +5,10 @@
   display: flex;
   flex-direction: column;
 
-  & div {
+  & .iconButton {
     position: absolute;
-    right: 1rem;
-    top: 1.75rem;
+    right: 0.75rem;
+    top: 0.75rem;
   }
 }
 

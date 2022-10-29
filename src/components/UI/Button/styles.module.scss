@@ -16,4 +16,9 @@
     @include theme (color, contrast1);
     cursor: pointer;
   }
+
+  &:disabled {
+    cursor: auto;
+    filter: brightness(80%);
+  }
 }
