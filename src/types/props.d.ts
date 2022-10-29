@@ -68,3 +68,8 @@ interface ClipboardProps {
   height?: number;
   width?: number;
 }
+
+interface IconButtonProps
+  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+    size?: number;
+  }

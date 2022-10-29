@@ -15,6 +15,7 @@ $LIGHT: (
   contrast1: $black,
   contrast2: $dark,
   divider: rgba($color: $white, $alpha: 0.15),
+  iconButton: rgba($color: $black, $alpha: 0.1),
 );
 
 $DARK: (
@@ -23,6 +24,7 @@ $DARK: (
   contrast1: $white,
   contrast2: $light,
   divider: rgba($color: $black, $alpha: 0.15),
+  iconButton: rgba($color: $white, $alpha: 0.1),
 );
 
 $themes: ($LIGHT, $DARK);
