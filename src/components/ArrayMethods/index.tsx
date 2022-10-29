@@ -17,7 +17,7 @@ const ArrayMethods: React.FC<Props> = () => {
       >
         <p>
           Without calling <span className={classes.questionDescriptionHighlight}>Array.prototype.map()</span>,{' '}
-          <span className={classes.questionDescriptionHighlight}>Array.prototype.filter()</span>,
+          <span className={classes.questionDescriptionHighlight}>Array.prototype.filter()</span>,{' '}
           <span className={classes.questionDescriptionHighlight}>Array.prototype.reduce()</span>, or{' '}
           <span className={classes.questionDescriptionHighlight}>Array.prototype.forEach()</span>, implement the
           following three similar functions on the Array prototype:

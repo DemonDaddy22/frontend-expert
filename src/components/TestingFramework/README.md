@@ -4,14 +4,14 @@ _Tag_: **JavaScript**
 
 Implement the following three functions of a basic JavaScript testing framework:
 
-1. `describe` - This function defines a test suite of related test cases. It takes in a string testSuiteName and a callback func, which makes one or more calls to it.
+1. `describe` - This function defines a test suite of related test cases. It takes in a string `testSuiteName` and a callback `func`, which makes one or more calls to `it`.
 
-2. `it` - This function defines a single test case in a test suite and is called within a describe's callback func. It takes in a string testCaseName and its own callback func, which makes one or more calls to expect.
+2. `it` - This function defines a single test case in a test suite and is called within a `describe`'s callback `func`. It takes in a string `testCaseName` and its own callback `func`, which makes one or more calls to `expect`.
 
-3. `expect` - This function defines a single check in a test case and is called within an it's callback func. It takes in an arbitrary parameteractual and returns an object with the following three functions that are used to compare actual to other values:
-   1. `expect(actual).toExist()`: This function checks that actual is neither null nor undefined.
-   2. `expect(actual).toBe(expected)`: This function checks that actual is strictly equal to expected.
-   3. `expect(actual).toBeType(type)`: This function checks that actual is of the type type, which can be any string returned by the typeof operator.
+3. `expect` - This function defines a single check in a test case and is called within an `it`'s callback `func`. It takes in an arbitrary parameter `actual` and returns an object with the following three functions that are used to compare `actual` to other values:
+   1. `expect(actual).toExist()`: This function checks that `actual` is neither `null` nor `undefined`.
+   2. `expect(actual).toBe(expected)`: This function checks that `actual` is strictly equal to `expected`.
+   3. `expect(actual).toBeType(type)`: This function checks that `actual` is of the type `type`, which can be any string returned by the `typeof` operator.
 
 As a test suite and its test cases are executed, they should print the following strings:
 
@@ -43,17 +43,17 @@ As a test suite and its test cases are executed, they should print the following
 
 When a check fails, the following things should happen:
 
-1. The relevant expect function should throw the appropriate errorMessage.
-2. The relevant it function should throw an arbitrary error, and its execution should stop.
-3. The relevant describe function should print the failure string with console.error (all other strings should be printed with console.log), and its execution should stop.
+1. The relevant `expect` function should throw the appropriate `errorMessage`.
+2. The relevant `it` function should throw an arbitrary error, and its execution should stop.
+3. The relevant `describe` function should print the failure string with `console.error` (all other strings should be printed with `console.log`), and its execution should stop.
 
 For the sake of simplicity:
 
 - All output strings should be in lowercase letters, with no punctuation whatsoever.
-- No modifications should be made to testSuiteName and testCaseName values (they shouldn't be lowercased).
-- When actual and expected values are printed within error messages, they should be stringified withJSON.stringify().
+- No modifications should be made to `testSuiteName` and `testCaseName` values (they shouldn't be lowercased).
+- When `actual` and `expected` values are printed within error messages, they should be stringified with `JSON.stringify()`.
 
-Note that this question's tests naturally check that console.log and console.error are correctly called; this means that debugging your solution with console.log will unavoidably make your solution fail some tests.
+Note that this question's tests naturally check that `console.log` and `console.error` are correctly called; this means that debugging your solution with `console.log` will unavoidably make your solution fail some tests.
 
 ### Sample Usage #1
 
