@@ -40,7 +40,7 @@ const TestingFramework: React.FC<Props> = () => {
             <div className={classes.break} />
             This function defines a single check in a test case and is called within an{' '}
             <span className={classes.questionDescriptionHighlight}>it</span>'s callback{' '}
-            <span className={classes.questionDescriptionHighlight}>func</span>. It takes in an arbitrary parameter
+            <span className={classes.questionDescriptionHighlight}>func</span>. It takes in an arbitrary parameter{' '}
             <span className={classes.questionDescriptionHighlight}>actual</span> and returns an object with the
             following three functions that are used to compare{' '}
             <span className={classes.questionDescriptionHighlight}>actual</span> to other values:
@@ -139,7 +139,7 @@ const TestingFramework: React.FC<Props> = () => {
           <li>
             When <span className={classes.questionDescriptionHighlight}>actual</span> and{' '}
             <span className={classes.questionDescriptionHighlight}>expected</span> values are printed within error
-            messages, they should be stringified with
+            messages, they should be stringified with{' '}
             <span className={classes.questionDescriptionHighlight}>JSON.stringify()</span>.
           </li>
         </ul>
