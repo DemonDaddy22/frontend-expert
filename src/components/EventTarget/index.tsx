@@ -41,7 +41,7 @@ const EventTarget: React.FC<Props> = () => {
               A target should be able to have multiple event listeners for the same event (for example,{' '}
               <span className={classes.questionDescriptionHighlight}>onClick1</span> and{' '}
               <span className={classes.questionDescriptionHighlight}>onClick2</span>, both attached to the{' '}
-              <span className={classes.questionDescriptionHighlight}>'click'</span>
+              <span className={classes.questionDescriptionHighlight}>'click'</span>{' '}
               event). However, adding the same exact event listener twice (with the same event and the same callback)
               should have no effect.
             </p>
@@ -56,7 +56,7 @@ const EventTarget: React.FC<Props> = () => {
             <p>
               For example,{' '}
               <span className={classes.questionDescriptionHighlight}>target.removeEventListener('click', onClick)</span>{' '}
-              should undo the effects of the
+              should undo the effects of the{' '}
               <span className={classes.questionDescriptionHighlight}>addEventListener</span> call in the bullet point
               above.
             </p>
@@ -78,7 +78,7 @@ const EventTarget: React.FC<Props> = () => {
               functions invoked.
             </p>
             <p>
-              For example, given the event listener added in the first bullet point and assuming it hadn't been removed,
+              For example, given the event listener added in the first bullet point and assuming it hadn't been removed,{' '}
               <span className={classes.questionDescriptionHighlight}>dispatchEvent('click')</span> would call{' '}
               <span className={classes.questionDescriptionHighlight}>onClick</span>.
             </p>
