@@ -16,13 +16,15 @@
 6. [Navbar](./src/components/Navbar/README.md): You're given an HTML file for the top navigation bar of a website, style the navigation bar as per the given conditions.
 7. [PigEmoji](./src/components/PigEmoji/README.md): You're given an HTML file with the markup for a pig emoji. Using only CSS, style the HTML to have the appearance of a pig emoji.
 8. [PurchaseForm](./src/components/PurchaseForm/README.md): You're given an HTML file with the markup for a purchase form, similar to the actual purchase form on AlgoExpert. Using only CSS, style the purchase form.
-9. [AlgooExpertProducts](./src/components/AlgooExpertProducts/README.md): You're given an HTML file containing divs representing AlgoExpert's products. Using only CSS, align the products in three rows.
+9. [AlgoExpertProducts](./src/components/AlgoExpertProducts/README.md): You're given an HTML file containing divs representing AlgoExpert's products. Using only CSS, align the products in three rows.
 10. [RobotEmoji](./src/components/RobotEmoji/README.md): You're given an HTML file with the markup for a robot head emoji. Using only CSS, style the HTML to have the appearance of a robot emoji.
-11. [AlgoExpertLogo](./src/components/AlgoExpertLogo/README.md): You're given an HTML file containing the markup for the AlgoExpert logo. Using only CSS, replicate the logo.
-12. [TestingFramework](./src/components/TestingFramework/README.md): Implement the following three functions of a basic JavaScript testing framework: `describe`, `it` and `expect` based on the given requirements.
-13. [ArrayMethods](./src/components/ArrayMethods/README.md): Without calling Array.prototype.map(), Array.prototype.filter(),Array.prototype.reduce(), or Array.prototype.forEach(), implement the following `myMap`, `myFilter` and `myReduce` on the Array prototype.
-14. [EventTarget](./src/components/EventTarget/README.md): Implement an EventTarget class (similar to the EventTarget interface of the DOM), which keeps track of event listeners and dispatches events.
-15. [Debounce](./src/components/Debounce/README.md): Write a debounce function that takes in a required callback function, a required delay in milliseconds, and an optional immediate boolean, which defaults to false.
+11. [NotificationsMenu](./src/components/NotificationsMenu/README.md): You're given an HTML file containing the markup for a notifications menu. Using only CSS, replicate the expected output.
+12. [AlgoExpertLogo](./src/components/AlgoExpertLogo/README.md): You're given an HTML file containing the markup for the AlgoExpert logo. Using only CSS, replicate the logo.
+13. [TestingFramework](./src/components/TestingFramework/README.md): Implement the following three functions of a basic JavaScript testing framework: `describe`, `it` and `expect` based on the given requirements.
+14. [ArrayMethods](./src/components/ArrayMethods/README.md): Without calling Array.prototype.map(), Array.prototype.filter(),Array.prototype.reduce(), or Array.prototype.forEach(), implement the following functions - `myMap`, `myFilter` and `myReduce` on the Array prototype.
+15. [EventTarget](./src/components/EventTarget/README.md): Implement an EventTarget class (similar to the EventTarget interface of the DOM), which keeps track of event listeners and dispatches events.
+16. [Debounce](./src/components/Debounce/README.md): Write a debounce function that takes in a required callback function, a required delay in milliseconds, and an optional immediate boolean, which defaults to false.
+17. [ThisBinding](./src/components/ThisBinding/README.md): Without calling `Function.prototype.call`, `Function.prototype.apply` or `Function.prototype.bind`, implement the following three similar functions - `myCall`, `myApply` and `myBind` on the Function prototype.
 
 <br />
 <br />
