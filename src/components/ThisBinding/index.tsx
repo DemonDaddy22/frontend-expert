@@ -16,7 +16,7 @@ const ThisBinding: React.FC<Props> = () => {
         descriptionClassName={classes.questionDescription}>
         <p>
           Without calling <span className={classes.questionDescriptionHighlight}>Function.prototype.call</span>,{' '}
-          <span className={classes.questionDescriptionHighlight}>Function.prototype.apply</span> or
+          <span className={classes.questionDescriptionHighlight}>Function.prototype.apply</span> or{' '}
           <span className={classes.questionDescriptionHighlight}>Function.prototype.bind</span>, implement the following
           three similar functions on the Function prototype:
         </p>
@@ -41,7 +41,7 @@ const ThisBinding: React.FC<Props> = () => {
             <div className={classes.break} />
             <p>
               <span className={classes.questionDescriptionHighlight}>myApply</span> should call the original function
-              with <span className={classes.questionDescriptionHighlight}>thisContext</span> bound to the function's
+              with <span className={classes.questionDescriptionHighlight}>thisContext</span> bound to the function's{' '}
               <span className={classes.questionDescriptionHighlight}>this</span> keyword, passing all of the values in
               the <span className={classes.questionDescriptionHighlight}>args</span> array as individual arguments to
               the function.
