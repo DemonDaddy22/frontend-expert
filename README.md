@@ -22,6 +22,7 @@
 12. [TestingFramework](./src/components/TestingFramework/README.md): Implement the following three functions of a basic JavaScript testing framework: `describe`, `it` and `expect` based on the given requirements.
 13. [ArrayMethods](./src/components/ArrayMethods/README.md): Without calling Array.prototype.map(), Array.prototype.filter(),Array.prototype.reduce(), or Array.prototype.forEach(), implement the following `myMap`, `myFilter` and `myReduce` on the Array prototype.
 14. [EventTarget](./src/components/EventTarget/README.md): Implement an EventTarget class (similar to the EventTarget interface of the DOM), which keeps track of event listeners and dispatches events.
+15. [Debounce](./src/components/Debounce/README.md): Write a debounce function that takes in a required callback function, a required delay in milliseconds, and an optional immediate boolean, which defaults to false.
 
 <br />
 <br />
