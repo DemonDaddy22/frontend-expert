@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import EventTarget from './components/EventTarget';
+import Debounce from './components/Debounce';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <EventTarget />
+        <Debounce />
       </div>
     </ThemeContextProvider>
   );
