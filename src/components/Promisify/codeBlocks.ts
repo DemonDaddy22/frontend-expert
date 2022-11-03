@@ -13,7 +13,7 @@ export const promisifiedAdder = `const promisifiedAdder = promisify(adder);
 promisifiedAdder(1, 2)
   .then(console.log)  // This would log 3
   .catch(console.error);
-  
+
 promisifiedAdder(1, 'foobar')
   .then(console.log)
   .catch(console.error);  // An error would be caught and logged
