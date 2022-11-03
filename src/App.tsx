@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import ThisBinding from './components/ThisBinding';
+import Promisify from './components/Promisify';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <ThisBinding />
+        <Promisify />
       </div>
     </ThemeContextProvider>
   );
