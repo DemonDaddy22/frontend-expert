@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { copyTextToClipboard } from '../../../utils';
+import { copyTextToClipboard, isEmptyString } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
 import ClipBoardChecked from '../../Icons/ClipboardChecked';
 import IconButton from '../IconButton';
@@ -26,7 +26,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     setTimeout(() => setIsCopied(false), 2500);
   }, [codeString]);
 
-  return (
+  return !isEmptyString(codeString) ? (
     <section className={`${classes.wrapper} ${containerClassName}`}>
       <SyntaxHighlighter
         language={language}
@@ -41,7 +41,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
         {isCopied ? <ClipBoardChecked /> : <ClipBoard />}
       </IconButton>
     </section>
-  );
+  ) : null;
 };
 
 export default CodeBlock;

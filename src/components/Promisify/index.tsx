@@ -13,7 +13,8 @@ const Promisify: React.FC<Props> = () => {
         title='Promisify'
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
-        descriptionClassName={classes.questionDescription}>
+        descriptionClassName={classes.questionDescription}
+      >
         <p>
           Write a <span className={classes.questionDescriptionHighlight}>promisify</span> function (similar to the{' '}
           <span className={classes.questionDescriptionHighlight}>util.promisify</span> Node.js function) that takes in a
