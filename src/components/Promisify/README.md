@@ -9,7 +9,7 @@ The `callback` function can take in any number of parameters, but its last param
 For example, the following `adder` function could be passed to the `promisify` function:
 
 ```javascript
-function adder (x, y, handleErrorAndValue) {
+function adder(x, y, handleErrorAndValue) {
   const value = x + y;
   if (typeof value !== 'number') {
     const error = new Error('Not a number');
@@ -30,12 +30,10 @@ Below is an example of the promisified `adder` function in action:
 const promisifiedAdder = promisify(adder);
 
 promisifiedAdder(1, 2)
-  .then(console.log)  // This would log 3
+  .then(console.log) // This would log 3
   .catch(console.error);
-  
-promisifiedAdder(1, 'foobar')
-  .then(console.log)
-  .catch(console.error);  // An error would be caught and logged
+
+promisifiedAdder(1, 'foobar').then(console.log).catch(console.error); // An error would be caught and logged
 ```
 
 To be clear, in order to properly call the main `callback` function (`adder`, in the example above), you'll need to implement the `handleErrorAndValue` function, which will have to be passed to the main `callback` function as its last argument.
