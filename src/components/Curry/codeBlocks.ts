@@ -13,7 +13,7 @@ curriedSum(1, 2)(3); // [Function]`;
 export const solutionCode = `const curry = (callback) => {
   function curried (...args) {
     if (!args.length) return callback.apply(this, args);
-    
+
     return (...newArgs) => {
       if (!newArgs.length) {
         return callback.apply(this, args);
