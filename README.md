@@ -26,6 +26,7 @@
 16. [Debounce](./src/components/Debounce/README.md): Write a debounce function that takes in a required callback function, a required delay in milliseconds, and an optional immediate boolean, which defaults to false.
 17. [ThisBinding](./src/components/ThisBinding/README.md): Without calling `Function.prototype.call`, `Function.prototype.apply` or `Function.prototype.bind`, implement the following three similar functions - `myCall`, `myApply` and `myBind` on the Function prototype.
 18. [Promisify](./src/components/Promisify/README.md): Write a promisify function (similar to the `util.promisify` Node.js function) that takes in a required callback function and returns a new "promisifed" version of that function.
+19. [Throttle](./src/components/Throttle/README.md): Write a throttle function that takes in a required callback function and a required delay in milliseconds.
 
 <br />
 <br />
