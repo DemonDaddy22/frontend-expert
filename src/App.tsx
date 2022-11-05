@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Throttle from './components/Throttle';
+import Curry from './components/Curry';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <Throttle />
+        <Curry />
       </div>
     </ThemeContextProvider>
   );
