@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Promisify from './components/Promisify';
+import Throttle from './components/Throttle';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <Promisify />
+        <Throttle />
       </div>
     </ThemeContextProvider>
   );

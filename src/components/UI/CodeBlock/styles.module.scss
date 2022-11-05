@@ -13,7 +13,7 @@
 }
 
 .codeBlock {
-  @include spacing (0.25rem 0.5rem);
+  padding: 1rem 0.75rem !important;
   overflow-x: auto;
   border-radius: 0.5rem;
   flex: 1;
