@@ -28,6 +28,7 @@
 18. [Promisify](./src/components/Promisify/README.md): Write a promisify function (similar to the `util.promisify` Node.js function) that takes in a required callback function and returns a new "promisifed" version of that function.
 19. [Throttle](./src/components/Throttle/README.md): Write a throttle function that takes in a required callback function and a required delay in milliseconds.
 20. [Curry](./src/components/Curry/README.md): Write a curry function that takes in a required callback function and returns a curried version of that function.
+21. [PromiseMethods](./src/components/PromiseMethods/README.md): Without calling `Promise.race()`, `Promise.any()`, `Promise.all()`, `Promise.allSettled()`, implement the following four similar functions on the native Promise object.
 
 <br />
 <br />

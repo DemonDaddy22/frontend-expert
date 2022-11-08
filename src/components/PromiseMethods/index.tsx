@@ -13,7 +13,8 @@ const PromiseMethods: React.FC<Props> = () => {
         title='Promise Methods'
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
-        descriptionClassName={classes.questionDescription}>
+        descriptionClassName={classes.questionDescription}
+      >
         <p>
           Without calling <span className={classes.questionDescriptionHighlight}>Promise.race()</span>,{' '}
           <span className={classes.questionDescriptionHighlight}>Promise.any()</span>,{' '}
