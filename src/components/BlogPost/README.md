@@ -1,4 +1,4 @@
-# BlogPost
+# Blog Post
 
 _Tag_: **HTML**
 

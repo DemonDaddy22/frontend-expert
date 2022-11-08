@@ -1,4 +1,4 @@
-# AlgoExpertLogo
+# AlgoExpert Logo
 
 _Tag_: **CSS**
 
