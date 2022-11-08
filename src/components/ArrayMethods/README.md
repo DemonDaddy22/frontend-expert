@@ -1,4 +1,4 @@
-# ArrayMethods
+# Array Methods
 
 _Tag_: **JavaScript**
 

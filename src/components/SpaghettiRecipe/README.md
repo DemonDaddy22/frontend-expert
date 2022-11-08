@@ -1,4 +1,4 @@
-# SpaghettiRecipe
+# Spaghetti Recipe
 
 _Tag_: **HTML**
 

@@ -1,4 +1,4 @@
-# NotificationsMenu
+# Notifications Menu
 
 _Tag_: **CSS**
 

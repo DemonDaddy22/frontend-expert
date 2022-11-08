@@ -1,4 +1,4 @@
-# ThisBinding
+# This Binding
 
 _Tag_: **JavaScript**
 

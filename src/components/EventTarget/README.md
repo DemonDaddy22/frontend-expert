@@ -1,4 +1,4 @@
-# EventTarget
+# Event Target
 
 _Tag_: **JavaScript**
 
