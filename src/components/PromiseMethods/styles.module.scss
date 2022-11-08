@@ -22,7 +22,7 @@
 }
 
 .questionTitle {
-  color: $project-header-19;
+  color: $project-header-21;
 }
 
 .break {
@@ -31,8 +31,19 @@
 
 .questionDescriptionHighlight {
   @include spacing (0 0.25rem);
-  background-color: $project-highlight-19;
+  background-color: $project-highlight-21;
   border-radius: 0.25rem;
+}
+
+.codeBlock {
+  @include spacing (0.5rem 0.75rem);
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background-color: $project-code-21;
+
+  @media screen and (min-width: 992px) {
+    @include spacing (0.75rem 1rem);
+  }
 }
 
 .codeWrapper {
@@ -42,6 +53,16 @@
 .codeBlockHeader {
   @include spacing (0.5rem 0);
   color: $white;
+}
+
+.comment {
+  color: $grey-3;
+}
+
+.output {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: $project-output-21;
 }
 
 .solutionContainer {
@@ -54,6 +75,7 @@
   @media screen and (min-width: 992px) {
     overflow-y: auto;
     max-width: 60rem;
+    max-height: 85vh;
   }
 }
 

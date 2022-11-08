@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Curry from './components/Curry';
+import PromiseMethods from './components/PromiseMethods';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <Curry />
+        <PromiseMethods />
       </div>
     </ThemeContextProvider>
   );
