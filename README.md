@@ -29,6 +29,7 @@
 19. [Throttle](./src/components/Throttle/README.md): Write a throttle function that takes in a required callback function and a required delay in milliseconds.
 20. [Curry](./src/components/Curry/README.md): Write a curry function that takes in a required callback function and returns a curried version of that function.
 21. [PromiseMethods](./src/components/PromiseMethods/README.md): Without calling `Promise.race()`, `Promise.any()`, `Promise.all()`, `Promise.allSettled()`, implement the following four similar functions on the native Promise object.
+22. [DeepEquals](./src/components/DeepEquals/README.md): Write a deepEquals function that takes in two required values and returns if those two values are deeply equal to each other.
 
 <br />
 <br />
