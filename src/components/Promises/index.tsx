@@ -13,7 +13,8 @@ const Promises: React.FC<Props> = () => {
         title='Promises'
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
-        descriptionClassName={classes.questionDescription}>
+        descriptionClassName={classes.questionDescription}
+      >
         <p>
           Write a <span className={classes.questionDescriptionHighlight}>MyPromise</span> class based on the native{' '}
           <span className={classes.questionDescriptionHighlight}>Promise</span> built-in class.
