@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import DeepEquals from './components/DeepEquals';
+import Promises from './components/Promises';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <DeepEquals />
+        <Promises />
       </div>
     </ThemeContextProvider>
   );
