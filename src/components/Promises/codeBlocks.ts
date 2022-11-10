@@ -95,7 +95,7 @@ class MyPromise {
           }
         });
       };
-      
+
       switch (this.#state) {
         case PROMISE_STATES.FULFILLED:
           fulfilledCallback();
