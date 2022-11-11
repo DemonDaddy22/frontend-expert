@@ -31,6 +31,7 @@
 21. [PromiseMethods](./src/components/PromiseMethods/README.md): Without calling `Promise.race()`, `Promise.any()`, `Promise.all()`, `Promise.allSettled()`, implement the following four similar functions on the native Promise object.
 22. [DeepEquals](./src/components/DeepEquals/README.md): Write a deepEquals function that takes in two required values and returns if those two values are deeply equal to each other.
 23. [Promises](./src/components/Promises/README.md): Write a MyPromise class based on the native Promise built-in class.
+24. [Flatten](./src/components/Flatten/README.md): Write a flatten function that takes in a value and returns a flattened version of that value.
 
 <br />
 <br />
