@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Flatten from './components/Flatten';
+import CorrespondingNode from './components/CorrespondingNode';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <Flatten />
+        <CorrespondingNode />
       </div>
     </ThemeContextProvider>
   );
