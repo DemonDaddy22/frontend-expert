@@ -1,0 +1,64 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.pageContainer {
+  @media screen and (min-width: 992px) {
+    overflow-y: hidden;
+  }
+}
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.questionDescription {
+  @include spacing (0 0.25rem);
+  word-break: break-word;
+  white-space: break-spaces;
+}
+
+.questionTitle {
+  color: $project-header-25;
+}
+
+.break {
+  @include spacing ($margin: 0.5rem 0);
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0 0.25rem);
+  background-color: $project-highlight-25;
+  border-radius: 0.25rem;
+}
+
+.codeWrapper {
+  @include spacing (0.5rem 0);
+}
+
+.codeBlockHeader {
+  @include spacing (0.5rem 0);
+  color: $white;
+}
+
+.solutionContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  align-self: stretch;
+  flex: 1;
+
+  @media screen and (min-width: 992px) {
+    overflow-y: auto;
+    max-width: 60rem;
+    max-height: 85vh;
+  }
+}
+
+.fullHeight {
+  @include spacing (0, 0);
+  height: 100%;
+}
