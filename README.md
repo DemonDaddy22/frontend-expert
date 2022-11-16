@@ -33,6 +33,7 @@
 23. [Promises](./src/components/Promises/README.md): Write a MyPromise class based on the native Promise built-in class.
 24. [Flatten](./src/components/Flatten/README.md): Write a flatten function that takes in a value and returns a flattened version of that value.
 25. [CorrespondingNode](./src/components/CorrespondingNode/README.md): Write a correspondingNode function that takes in three DOM Elements. The first two parameters represent the root nodes of two different DOM trees. The third parameter is a node within the first DOM tree.
+26. [Memoize](./src/components/Memoize/README.md): Write a memoize function that takes in a required callback function and an optional resolver function. The memoize function returns a memoized version of the callback function.
 
 <br />
 <br />
