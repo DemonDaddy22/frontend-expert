@@ -34,6 +34,7 @@
 24. [Flatten](./src/components/Flatten/README.md): Write a flatten function that takes in a value and returns a flattened version of that value.
 25. [CorrespondingNode](./src/components/CorrespondingNode/README.md): Write a correspondingNode function that takes in three DOM Elements. The first two parameters represent the root nodes of two different DOM trees. The third parameter is a node within the first DOM tree.
 26. [Memoize](./src/components/Memoize/README.md): Write a memoize function that takes in a required callback function and an optional resolver function. The memoize function returns a memoized version of the callback function.
+27. [CreateDOM](./src/components/CreateDOM/README.md): Write a createDom function that takes in a required root parameter, which is an object representation of a DOM tree's root node or a string representation of a text node.
 
 <br />
 <br />
