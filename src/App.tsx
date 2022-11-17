@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Memoize from './components/Memoize';
+import CreateDOM from './components/CreateDOM';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <Memoize />
+        <CreateDOM />
       </div>
     </ThemeContextProvider>
   );
