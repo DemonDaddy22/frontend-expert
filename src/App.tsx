@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import CreateDOM from './components/CreateDOM';
+import TrendingStocks from './components/TrendingStocks';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <CreateDOM />
+        <TrendingStocks />
       </div>
     </ThemeContextProvider>
   );
