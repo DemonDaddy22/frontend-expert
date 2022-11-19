@@ -35,6 +35,7 @@
 25. [CorrespondingNode](./src/components/CorrespondingNode/README.md): Write a correspondingNode function that takes in three DOM Elements. The first two parameters represent the root nodes of two different DOM trees. The third parameter is a node within the first DOM tree.
 26. [Memoize](./src/components/Memoize/README.md): Write a memoize function that takes in a required callback function and an optional resolver function. The memoize function returns a memoized version of the callback function.
 27. [CreateDOM](./src/components/CreateDOM/README.md): Write a createDom function that takes in a required root parameter, which is an object representation of a DOM tree's root node or a string representation of a text node.
+28. [TrendingStocks](./src/components/TrendingStocks/README.md): Write an asynchronous trendingStocks function that takes in a required integer n and returns data about the top n US-based stocks by market cap.
 
 <br />
 <br />
