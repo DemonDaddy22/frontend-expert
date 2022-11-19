@@ -1,9 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { COLORS } from '../../../constants/theme';
 import { copyTextToClipboard, isEmptyString } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
 import ClipBoardChecked from '../../Icons/ClipboardChecked';
+import Button from '../Button';
 import IconButton from '../IconButton';
 import classes from './styles.module.scss';
 
@@ -13,6 +15,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     showLineNumbers = true,
     language = 'javascript',
     canCopy = true,
+    hideCode = false,
     className = '',
     containerClassName = '',
     style = monokai,
@@ -20,6 +23,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
   } = props;
 
   const [isCopied, setIsCopied] = useState(false);
+  const [isCodeHidden, setIsCodeHidden] = useState(hideCode);
 
   const handleCopyClick = useCallback(() => {
     setIsCopied(true);
@@ -27,20 +31,34 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     setTimeout(() => setIsCopied(false), 2500);
   }, [codeString]);
 
+  const handleRevealCode = useCallback(() => {
+    setIsCodeHidden(false);
+  }, []);
+
+  useEffect(() => {
+    setIsCodeHidden(hideCode);
+  }, [hideCode]);
+
   return !isEmptyString(codeString) ? (
     <section className={`${classes.wrapper} ${containerClassName}`}>
       <SyntaxHighlighter
         language={language}
         style={style}
         showLineNumbers={showLineNumbers}
-        className={`${classes.codeBlock} ${className}`}
-        {...restProps}>
+        className={`${classes.codeBlock} ${className} ${isCodeHidden ? classes.blurredOverlay : ''}`}
+        {...restProps}
+      >
         {codeString}
       </SyntaxHighlighter>
-      {canCopy ? (
+      {!isCodeHidden && canCopy ? (
         <IconButton onClick={handleCopyClick} className={classes.iconButton}>
           {isCopied ? <ClipBoardChecked /> : <ClipBoard />}
         </IconButton>
+      ) : null}
+      {isCodeHidden ? (
+        <Button onClick={handleRevealCode} className={classes.revealCodeButton} color={COLORS.WHITE}>
+          Show Solution
+        </Button>
       ) : null}
     </section>
   ) : null;

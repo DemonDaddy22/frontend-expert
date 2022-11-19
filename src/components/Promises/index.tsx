@@ -141,7 +141,7 @@ const Promises: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
-        <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} />
+        <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
       </section>
     </ProjectPage>
   );
