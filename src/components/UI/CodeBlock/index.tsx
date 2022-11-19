@@ -12,6 +12,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     codeString,
     showLineNumbers = true,
     language = 'javascript',
+    canCopy = true,
     className = '',
     containerClassName = '',
     style = monokai,
@@ -33,13 +34,14 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
         style={style}
         showLineNumbers={showLineNumbers}
         className={`${classes.codeBlock} ${className}`}
-        {...restProps}
-      >
+        {...restProps}>
         {codeString}
       </SyntaxHighlighter>
-      <IconButton onClick={handleCopyClick} className={classes.iconButton}>
-        {isCopied ? <ClipBoardChecked /> : <ClipBoard />}
-      </IconButton>
+      {canCopy ? (
+        <IconButton onClick={handleCopyClick} className={classes.iconButton}>
+          {isCopied ? <ClipBoardChecked /> : <ClipBoard />}
+        </IconButton>
+      ) : null}
     </section>
   ) : null;
 };

@@ -58,6 +58,7 @@ interface CodeBlockProps extends SyntaxHighlighterProps {
   codeString: string;
   language?: string;
   showLineNumbers?: boolean;
+  canCopy?: boolean;
   className?: string;
   containerClassName?: string;
   style?: { [key: string]: React.CSSProperties };
