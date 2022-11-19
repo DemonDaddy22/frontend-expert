@@ -10,6 +10,13 @@
     right: 0.75rem;
     top: 0.75rem;
   }
+
+  & .revealCodeButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .codeBlock {
@@ -18,4 +25,8 @@
   border-radius: 0.5rem;
   flex: 1;
   min-height: 5rem;
+}
+
+.blurredOverlay {
+  filter: blur(10px);
 }
