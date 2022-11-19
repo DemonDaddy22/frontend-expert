@@ -103,7 +103,7 @@ const ThisBinding: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
-        <CodeBlock containerClassName={classes.fullHeight} codeString={solutionCode} />
+        <CodeBlock containerClassName={classes.fullHeight} codeString={solutionCode} hideCode />
       </section>
     </ProjectPage>
   );
