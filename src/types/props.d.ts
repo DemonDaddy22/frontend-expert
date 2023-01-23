@@ -75,3 +75,7 @@ interface IconButtonProps
   extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     size?: number;
   }
+
+interface ISTestimonialProps {
+  message: string;
+}

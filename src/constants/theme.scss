@@ -16,6 +16,8 @@ $LIGHT: (
   contrast2: $dark,
   divider: rgba($color: $white, $alpha: 0.15),
   iconButton: rgba($color: $black, $alpha: 0.1),
+  grey1: rgba(225, 225, 225, 0.25),
+  grey2: rgba(240, 240, 240, 0.2),
   blue1: #214789,
   red1: #9D092B,
   green1: #60A911,
@@ -29,6 +31,8 @@ $DARK: (
   contrast2: $light,
   divider: rgba($color: $black, $alpha: 0.15),
   iconButton: rgba($color: $white, $alpha: 0.1),
+  grey1: rgba(100, 100, 100, 0.25),
+  grey2: rgba(75, 75, 75, 0.2),
   blue1: #7CB9E8,
   red1: #F55757,
   green1: #93F30C,
@@ -206,3 +210,10 @@ $project-header-28: #8C80F8;
 $project-highlight-28: #382CA1;
 $project-code-28: #2A284A;
 $project-output-28: #D6D3F7;
+
+// project-29
+$project-bg-29: linear-gradient(40deg, #0F242C 0%, $black 100%);
+$project-header-29: #5DACD7;
+$project-highlight-29: #115D9C;
+$project-code-29: #062F4A;
+$project-output-29: #D6EBF6;
