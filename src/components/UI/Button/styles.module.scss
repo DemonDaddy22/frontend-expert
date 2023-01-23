@@ -1,24 +1,98 @@
 @import '../../../constants/theme.scss';
 @import '../../../utils/mixins.scss';
 
-.button {
-  @include theme (color, accent1);
-  @include theme (border, accent1, 1px solid);
+.buttonBase {
   background-color: transparent;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
+  border-style: double;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: bold;
 
   &:hover {
-    @include theme (background-color, accent1);
-    @include theme (color, contrast1);
     cursor: pointer;
   }
 
   &:disabled {
     cursor: auto;
     filter: brightness(80%);
+  }
+}
+
+.button {
+  composes: buttonBase;
+  @include theme (color, accent1);
+  @include theme (border, accent1, 1px solid);
+
+  &:hover {
+    @include theme (background-color, accent1);
+    @include theme (color, contrast1);
+  }
+}
+
+.buttonWhite {
+  composes: buttonBase;
+  border-color: $white;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $dark;
+  }
+}
+
+.buttonBlack {
+  composes: buttonBase;
+  border-color: $black;
+  color: $black;
+
+  &:hover {
+    background-color: $black;
+    color: $light;
+  }
+}
+
+.buttonBlue {
+  composes: buttonBase;
+  @include theme (color, blue1);
+  @include theme (border, blue1, 1px solid);
+
+  &:hover {
+    @include theme (background-color, blue1);
+    @include theme (color, contrast1);
+  }
+}
+
+.buttonRed {
+  composes: buttonBase;
+  @include theme (color, red1);
+  @include theme (border, red1, 1px solid);
+
+  &:hover {
+    @include theme (background-color, red1);
+    @include theme (color, contrast1);
+  }
+}
+
+.buttonGreen {
+  composes: buttonBase;
+  @include theme (color, green1);
+  @include theme (border, green1, 1px solid);
+
+  &:hover {
+    @include theme (background-color, green1);
+    @include theme (color, accent1);
+  }
+}
+
+.buttonYellow {
+  composes: buttonBase;
+  @include theme (color, yellow1);
+  @include theme (border, yellow1, 1px solid);
+
+  &:hover {
+    @include theme (background-color, yellow1);
+    @include theme (color, accent1);
   }
 }

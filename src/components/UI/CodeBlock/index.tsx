@@ -1,11 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { COLORS } from '../../../constants/theme';
 import { copyTextToClipboard, isEmptyString } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
 import ClipBoardChecked from '../../Icons/ClipboardChecked';
-import Button from '../Button';
+import { ButtonWhite } from '../Button';
 import IconButton from '../IconButton';
 import classes from './styles.module.scss';
 
@@ -56,9 +55,9 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
         </IconButton>
       ) : null}
       {isCodeHidden ? (
-        <Button onClick={handleRevealCode} className={classes.revealCodeButton} color={COLORS.WHITE}>
+        <ButtonWhite onClick={handleRevealCode} className={classes.revealCodeButton}>
           Show Solution
-        </Button>
+        </ButtonWhite>
       ) : null}
     </section>
   ) : null;
