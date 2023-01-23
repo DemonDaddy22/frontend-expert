@@ -16,6 +16,10 @@ $LIGHT: (
   contrast2: $dark,
   divider: rgba($color: $white, $alpha: 0.15),
   iconButton: rgba($color: $black, $alpha: 0.1),
+  blue1: #214789,
+  red1: #9D092B,
+  green1: #60A911,
+  yellow1: #D9C913,
 );
 
 $DARK: (
@@ -25,6 +29,10 @@ $DARK: (
   contrast2: $light,
   divider: rgba($color: $black, $alpha: 0.15),
   iconButton: rgba($color: $white, $alpha: 0.1),
+  blue1: #7CB9E8,
+  red1: #F55757,
+  green1: #93F30C,
+  yellow1: #F2E639,
 );
 
 $themes: ($LIGHT, $DARK);
