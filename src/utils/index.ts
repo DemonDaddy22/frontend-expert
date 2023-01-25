@@ -1,3 +1,5 @@
+import { LOREM_IPSUM } from "../constants";
+
 /**
  *
  * @function isEmptyString - Checks if passed value is an empty string or not
@@ -61,7 +63,7 @@ export const truncateStringToLength = (value: string, length: number): string =>
 export const createListOfSize = (size: number, start: number = 1): number[] =>
   size > 0 ? Array.from(Array(size)).map(() => start++) : [];
 
-  /**
+/**
  *
  * @function copyTextToClipboard - Copies `text` to the clipboard
  * @param {string} text - specifies the text to be copied
@@ -77,4 +79,15 @@ export const copyTextToClipboard = async (text: string = ''): Promise<boolean> =
   } catch (err) {
     return false;
   }
+};
+
+/**
+ *
+ * @function getLoremIpsum - Gets a random lorem ipsum text from a constant array
+ * @returns string value of the lorem ipsum text
+ *
+ */
+export const getLoremIpsum = (): string => {
+  const randomIndex = Math.floor(Math.random() * LOREM_IPSUM.length);
+  return LOREM_IPSUM[randomIndex];
 };

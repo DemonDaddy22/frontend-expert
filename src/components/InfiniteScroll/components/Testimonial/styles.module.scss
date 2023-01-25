@@ -1,0 +1,11 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.testimonial {
+  @include spacing (0.5rem);
+  @include theme (background-color, grey1);
+  @include theme (color, contrast2);
+  padding-right: 0.75rem;
+  border-radius: 0.25rem;
+  border-left: 0.25rem solid $project-highlight-29;
+}

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { FELocalStoragePrefix, THEME } from '../constants';
+import { FE_LOCAL_STORAGE_PREFIX, THEME } from '../constants';
 import { COLORS, THEME_COLORS } from '../constants/theme';
 import { isEmptyString } from '../utils';
 
@@ -10,7 +10,7 @@ const ThemeContextValue: IThemeContextValue = {
 };
 
 const getThemeFromStore = (themeDefaultValue = THEME.DARK) => (
-  JSON.parse(localStorage.getItem(`${FELocalStoragePrefix}-theme`) ?? 'null') ?? themeDefaultValue
+  JSON.parse(localStorage.getItem(`${FE_LOCAL_STORAGE_PREFIX}-theme`) ?? 'null') ?? themeDefaultValue
 );
 
 export const ThemeContext = React.createContext(ThemeContextValue);
@@ -24,7 +24,7 @@ const ThemeContextProvider: React.FC<Props> = ({ children }) => {
     setTheme(themeToSet);
     document.documentElement.setAttribute('theme-mode', themeToSet);
     localStorage.setItem(
-      `${FELocalStoragePrefix}-theme`,
+      `${FE_LOCAL_STORAGE_PREFIX}-theme`,
       JSON.stringify(themeToSet)
     );
   }, [theme]);
@@ -37,7 +37,7 @@ const ThemeContextProvider: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     document.documentElement.setAttribute('theme-mode', theme);
     localStorage.setItem(
-      `${FELocalStoragePrefix}-theme`,
+      `${FE_LOCAL_STORAGE_PREFIX}-theme`,
       JSON.stringify(theme)
     );
   }, []);

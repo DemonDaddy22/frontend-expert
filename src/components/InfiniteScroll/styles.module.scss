@@ -1,0 +1,103 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.pageContainer {
+  @media screen and (min-width: 992px) {
+    overflow-y: hidden;
+  }
+}
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.questionDescription {
+  @include spacing (0 0.25rem);
+  word-break: break-word;
+  white-space: break-spaces;
+}
+
+.questionTitle {
+  color: $project-header-29;
+}
+
+.break {
+  @include spacing ($margin: 0.5rem 0);
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0 0.25rem);
+  background-color: $project-highlight-29;
+  border-radius: 0.25rem;
+}
+
+.codeWrapper {
+  @include spacing (0.5rem 0);
+}
+
+.codeBlockHeader {
+  @include spacing (0.5rem 0);
+  color: $white;
+}
+
+.solutionContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  overflow-y: hidden;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 992px) {
+    max-height: 85vh;
+    width: 30rem;
+  }
+}
+
+.fullHeight {
+  @include spacing (0, 0);
+  height: 100%;
+}
+
+.codeBlock {
+  @include spacing (0.5rem 0.75rem);
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background-color: $project-code-29;
+
+  @media screen and (min-width: 992px) {
+    @include spacing (0.75rem 1rem);
+  }
+}
+
+.solutionHeader {
+  color: $project-header-29;
+  letter-spacing: -0.25px;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+
+  @media screen and (min-width: 992px) {
+    font-size: 2rem;
+  }
+}
+
+.testimonialsContainer {
+  @include spacing (1rem 0.75rem);
+  @include theme (background-color, grey2);
+  border-radius: 0.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.note {
+  color: $grey-4;
+  font-size: 0.9em;
+}
