@@ -55,7 +55,7 @@
   
   @media screen and (min-width: 992px) {
     max-height: 85vh;
-    max-width: 30rem;
+    width: 30rem;
   }
 }
 
@@ -95,4 +95,9 @@
   flex-direction: column;
   gap: 0.75rem;
   flex: 1;
+}
+
+.note {
+  color: $grey-4;
+  font-size: 0.9em;
 }

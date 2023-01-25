@@ -76,6 +76,7 @@ interface IconButtonProps
     size?: number;
   }
 
-interface ISTestimonialProps {
-  message: string;
+interface ITestimonial {
+  id: string;
+  name: string;
 }

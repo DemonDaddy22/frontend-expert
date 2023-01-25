@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback, useRef, useState } from 'react';
+import { AE_TESTIMONIALS } from '../../constants';
 import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -6,8 +7,32 @@ import CodeBlock from '../UI/CodeBlock';
 import { sampleCode, sampleResponse } from './codeBlocks';
 import Testimonial from './components/Testimonial';
 import classes from './styles.module.scss';
+import useFetchTestimonials from './useFetchTestimonials';
 
 const InfiniteScroll: React.FC<Props> = () => {
+  const [page, setPage] = useState<number>(0);
+
+  const { testimonials, hasNext } = useFetchTestimonials(AE_TESTIMONIALS.LIMIT, page);
+
+  const lastTestimonialObserver = useRef<IntersectionObserver>();
+
+  const lastTestimonialRef = useCallback(
+    (node: HTMLParagraphElement) => {
+      if (lastTestimonialObserver.current) {
+        lastTestimonialObserver.current.disconnect();
+      }
+      lastTestimonialObserver.current = new IntersectionObserver((entries) => {
+        if (entries?.[0]?.isIntersecting && hasNext) {
+          setPage((prevPage) => prevPage + 1);
+        }
+      });
+      if (node) {
+        lastTestimonialObserver.current.observe(node);
+      }
+    },
+    [hasNext]
+  );
+
   return (
     <ProjectPage background={PROJECT_COLORS.PROJECT29.background} containerClassName={classes.pageContainer}>
       <QuestionDetails
@@ -95,15 +120,22 @@ const InfiniteScroll: React.FC<Props> = () => {
             supported in our testing environment).
           </li>
         </ul>
+        <p className={classes.note}>
+          (Please note - There is a cross origin issue with the actual API. So, in order to implement the functionality, using a dummy
+          API to fetch random data.)
+        </p>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
         <h2 className={classes.solutionHeader}>Testimonials</h2>
         <main className={classes.testimonialsContainer}>
-          <Testimonial message='AlgoExpert was my go-to course to ace those coding interviews. I really liked the depth of explanation in the video tutorials and the user-friendly interface. I guess AlgoExpert and a lot of hard work makes everything possible (journey from pre-sales to development)!' />
-          <Testimonial message='AlgoExpert was my go-to course to ace those coding interviews. I really liked the depth of explanation in the video tutorials and the user-friendly interface. I guess AlgoExpert and a lot of hard work makes everything possible (journey from pre-sales to development)!' />
-          <Testimonial message='AlgoExpert was my go-to course to ace those coding interviews. I really liked the depth of explanation in the video tutorials and the user-friendly interface. I guess AlgoExpert and a lot of hard work makes everything possible (journey from pre-sales to development)!' />
-          <Testimonial message='AlgoExpert was my go-to course to ace those coding interviews. I really liked the depth of explanation in the video tutorials and the user-friendly interface. I guess AlgoExpert and a lot of hard work makes everything possible (journey from pre-sales to development)!' />
-          <Testimonial message='AlgoExpert was my go-to course to ace those coding interviews. I really liked the depth of explanation in the video tutorials and the user-friendly interface. I guess AlgoExpert and a lot of hard work makes everything possible (journey from pre-sales to development)!' />
+          {testimonials?.map((testimonial, index) => (
+            <Testimonial
+              ref={index === testimonials.length - 1 ? lastTestimonialRef : null}
+              key={`${testimonial.id}-${index}`}
+              id={testimonial.id}
+              name={testimonial.name}
+            />
+          ))}
         </main>
       </section>
     </ProjectPage>
