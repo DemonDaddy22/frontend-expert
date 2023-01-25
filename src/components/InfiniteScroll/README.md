@@ -6,7 +6,7 @@ You're given an API endpoint that returns a list of AlgoExpert testimonials (yes
 
 The API expects GET requests at this URL:
 
-```https://api.frontendexpert.io/api/fe/testimonials```
+`https://api.frontendexpert.io/api/fe/testimonials`
 
 Since there might be a lot of testimonials, you'll have to use the API endpoint's pagination functionality to repeatedly fetch a limited number of testimonials at a time. Specifically, the API accepts the following two query parameters:
 
@@ -15,7 +15,7 @@ Since there might be a lot of testimonials, you'll have to use the API endpoint'
 
 For example, this would be a valid URL to request:
 
-```https://api.frontendexpert.io/api/fe/testimonials?limit=2&after=55```
+`https://api.frontendexpert.io/api/fe/testimonials?limit=2&after=55`
 
 The API responds with a JSON object containing two keys: a `"hasNext"` boolean, which will be `false` if the response includes the last testimonial in the database, and a `"testimonials"` array, which contains testimonial objects, each with a string `"message"` and a unique string `"id"`, to be used as the `after` query parameter.
 
