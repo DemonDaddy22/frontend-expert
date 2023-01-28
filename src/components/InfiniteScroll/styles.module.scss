@@ -59,11 +59,6 @@
   }
 }
 
-.fullHeight {
-  @include spacing (0, 0);
-  height: 100%;
-}
-
 .codeBlock {
   @include spacing (0.5rem 0.75rem);
   overflow-x: auto;

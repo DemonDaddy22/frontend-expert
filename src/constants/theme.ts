@@ -4,6 +4,12 @@ export const COLORS: { [key: string]: string } = {
   LIGHT: '#F4F5F6',
   DARK: '#0D0E0E',
   BLUE1: '#02203C',
+  BLUE2: '#0C3F6F',
+  BLUE3: '#8CC4F9',
+  GREEN1: '#233B08',
+  GREEN2: '#9AE346',
+  RED1: '#5E0618',
+  RED2: '#F44064',
 };
 
 export const THEME_COLORS: { [key in Theme]: ITheme } = {
@@ -104,5 +110,8 @@ export const PROJECT_COLORS: { [key: string]: { [key: string]: string } } = {
   },
   PROJECT29: {
     background: `linear-gradient(40deg, #0F242C 0%, ${COLORS.BLACK} 100%)`,
+  },
+  PROJECT30: {
+    background: `linear-gradient(40deg, #190A02 0%, ${COLORS.BLACK} 100%)`,
   },
 };

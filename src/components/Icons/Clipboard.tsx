@@ -1,7 +1,7 @@
 import React from 'react';
 import { COLORS } from '../../constants/theme';
 
-const ClipBoard: React.FC<ClipboardProps> = (props) => {
+const ClipBoard: React.FC<IconProps> = (props) => {
   const { color = COLORS.WHITE, height = 24, width = 24 } = props;
 
   return (

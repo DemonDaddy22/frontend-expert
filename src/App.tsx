@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import InfiniteScroll from './components/InfiniteScroll';
+import StopWatch from './components/StopWatch';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <InfiniteScroll />
+        <StopWatch />
       </div>
     </ThemeContextProvider>
   );

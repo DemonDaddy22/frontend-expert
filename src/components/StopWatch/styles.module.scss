@@ -1,0 +1,116 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.pageContainer {
+  @media screen and (min-width: 992px) {
+    overflow-y: hidden;
+  }
+}
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.questionDescription {
+  @include spacing (0 0.25rem);
+  word-break: break-word;
+  white-space: break-spaces;
+}
+
+.questionTitle {
+  color: $project-header-30;
+}
+
+.break {
+  @include spacing ($margin: 0.5rem 0);
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0 0.25rem);
+  background-color: $project-highlight-30;
+  border-radius: 0.25rem;
+}
+
+.solutionContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  overflow-y: hidden;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 992px) {
+    max-height: 85vh;
+    width: 30rem;
+  }
+}
+
+.watch {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 8px solid $project-30-watch-border;
+  box-shadow: 0 0 8px rgba($color: $white, $alpha: 0.1), 0 0 16px rgba($color: $project-30-watch-border, $alpha: 0.75), 0 0 28px rgba($color: $project-30-watch-border, $alpha: 0.4), 0 0 52px rgba($color: $project-30-watch-border, $alpha: 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (min-width: 992px) {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .timer {
+    color: $light;
+    text-shadow: 0 0 24px rgba($color: $project-30-watch-border, $alpha: 0.75);
+    font-size: 1.75rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .controls {
+    display: flex;
+    gap: 1rem;
+
+    .controlStart {
+      background-color: $green-1;
+    }
+
+    .controlStop {
+      background-color: $red-1;
+    }
+
+    .controlReset {
+      background-color: $blue-2;
+    }
+  }
+}
+
+.watchGlow {
+  animation: glow 1s infinite ease both;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px rgba($color: $white, $alpha: 0.1), 0 0 16px rgba($color: $project-30-watch-border, $alpha: 0.75), 0 0 28px rgba($color: $project-30-watch-border, $alpha: 0.4), 0 0 52px rgba($color: $project-30-watch-border, $alpha: 0.15);
+  }
+
+  50% {
+    box-shadow: 0 0 10px rgba($color: $white, $alpha: 0.1), 0 0 20px rgba($color: $project-30-watch-border, $alpha: 0.85), 0 0 36px rgba($color: $project-30-watch-border, $alpha: 0.5), 0 0 64px rgba($color: $project-30-watch-border, $alpha: 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 8px rgba($color: $white, $alpha: 0.1), 0 0 16px rgba($color: $project-30-watch-border, $alpha: 0.75), 0 0 28px rgba($color: $project-30-watch-border, $alpha: 0.4), 0 0 52px rgba($color: $project-30-watch-border, $alpha: 0.15);
+  }
+}

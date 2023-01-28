@@ -9,6 +9,14 @@ $grey-3: #777777;
 $grey-4: #B7B7B7;
 
 $blue-1: #02203C;
+$blue-2: #0C3F6F;
+$blue-3: #8CC4F9;
+
+$green-1: #233B08;
+$green-2: #9AE346;
+
+$red-1: #5E0618;
+$red-2: #F44064;
 
 $LIGHT: (
   accent1: $white,
@@ -217,4 +225,9 @@ $project-bg-29: linear-gradient(40deg, #0F242C 0%, $black 100%);
 $project-header-29: #5DACD7;
 $project-highlight-29: #115D9C;
 $project-code-29: #062F4A;
-$project-output-29: #D6EBF6;
+
+// project-30
+$project-bg-30: linear-gradient(40deg, #190A02 0%, $black 100%);
+$project-header-30: #DF7C43;
+$project-highlight-30: #983104;
+$project-30-watch-border: #F46E26;
