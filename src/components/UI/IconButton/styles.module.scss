@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: none;
-  filter: brightness(80%);
+  filter: brightness(85%);
 
   &:hover {
     cursor: pointer;
@@ -19,7 +19,7 @@
 
   &:disabled {
     cursor: auto;
-    filter: brightness(60%);
+    filter: brightness(50%);
     box-shadow: none;
   }
 }

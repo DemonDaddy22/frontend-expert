@@ -125,9 +125,9 @@ const InfiniteScroll: React.FC<Props> = () => {
           API to fetch random data.)
         </p>
       </QuestionDetails>
-      <section className={classes.solutionContainer}>
+      <main className={classes.solutionContainer}>
         <h2 className={classes.solutionHeader}>Testimonials</h2>
-        <main className={classes.testimonialsContainer}>
+        <section className={classes.testimonialsContainer}>
           {testimonials?.map((testimonial, index) => (
             <Testimonial
               ref={index === testimonials.length - 1 ? lastTestimonialRef : null}
@@ -136,8 +136,8 @@ const InfiniteScroll: React.FC<Props> = () => {
               name={testimonial.name}
             />
           ))}
-        </main>
-      </section>
+        </section>
+      </main>
     </ProjectPage>
   );
 };

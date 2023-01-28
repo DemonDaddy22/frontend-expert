@@ -65,7 +65,7 @@ interface CodeBlockProps extends SyntaxHighlighterProps {
   style?: { [key: string]: React.CSSProperties };
 }
 
-interface ClipboardProps {
+interface IconProps {
   color?: string;
   height?: number;
   width?: number;
