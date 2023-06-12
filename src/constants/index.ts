@@ -16,3 +16,5 @@ export const AE_TESTIMONIALS: { [key: string]: any } = {
   API_URI: 'https://api.instantwebtools.net/v1/passenger',
   LIMIT: 10,
 };
+
+export const NO_OP: () => void = () => {};
