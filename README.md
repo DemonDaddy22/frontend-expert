@@ -38,6 +38,7 @@
 28. [TrendingStocks](./src/components/TrendingStocks/README.md): Write an asynchronous trendingStocks function that takes in a required integer n and returns data about the top n US-based stocks by market cap.
 29. [InfiniteScroll](./src/components/InfiniteScroll/README.md): You're given an API endpoint that returns a list of AlgoExpert testimonials, and you have to fetch and display these testimonials on the page.
 30. [StopWatch](./src/components/StopWatch/README.md): You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using JavaScript.
+31. [TicTacToe](./src/components/TicTacToe/README.md): You're given HTML and CSS files for a simple Tic Tac Toe board, and you need to make the board functional using JavaScript.
 
 <br />
 <br />

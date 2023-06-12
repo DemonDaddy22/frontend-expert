@@ -7,6 +7,7 @@ import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import IconButton from '../UI/IconButton';
 import classes from './styles.module.scss';
+import { NO_OP } from '../../constants';
 
 const CONTROL_BUTTON_SIZE = 28;
 
@@ -139,21 +140,21 @@ const StopWatch: React.FC<Props> = () => {
           <div className={classes.controls}>
             <IconButton
               ref={startControlButtonRef}
-              onClick={handleTimerStart}
+              onClick={!startControlButtonRef.current?.disabled ? handleTimerStart : NO_OP}
               className={classes.controlStart}
               size={CONTROL_BUTTON_SIZE * 1.5}>
               <Play color={COLORS.GREEN2} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
             <IconButton
               ref={stopControlButtonRef}
-              onClick={handleTimerStop}
+              onClick={!stopControlButtonRef.current?.disabled ? handleTimerStop : NO_OP}
               className={classes.controlStop}
               size={CONTROL_BUTTON_SIZE * 1.5}>
               <Stop color={COLORS.RED2} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
             <IconButton
               ref={resetControlButtonRef}
-              onClick={handleTimerReset}
+              onClick={!resetControlButtonRef.current?.disabled ? handleTimerReset : NO_OP}
               className={classes.controlReset}
               size={CONTROL_BUTTON_SIZE * 1.5}>
               <Reset color={COLORS.BLUE3} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />

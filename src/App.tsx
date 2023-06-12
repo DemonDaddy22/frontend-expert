@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import StopWatch from './components/StopWatch';
+import TicTacToe from './components/TicTacToe';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <StopWatch />
+        <TicTacToe />
       </div>
     </ThemeContextProvider>
   );
