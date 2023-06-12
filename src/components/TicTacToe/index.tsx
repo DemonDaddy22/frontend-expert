@@ -64,9 +64,9 @@ const TicTacToe: React.FC<Props> = () => {
     setMoves((prevMoves) => {
       const currPlayerMoves = [...prevMoves[currPlayer]];
       currPlayerMoves.push(tileIndex);
-      
+
       const updatedMovesCount = movesCount + 1;
-  
+
       const isPlayerWon = isVictoryMove(currPlayerMoves);
       if (!isPlayerWon) {
         setMovesCount(updatedMovesCount);
