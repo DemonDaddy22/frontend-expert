@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import TicTacToe from './components/TicTacToe';
+import TodoList from './components/TodoList';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className="container">
-        <TicTacToe />
+        <TodoList />
       </div>
     </ThemeContextProvider>
   );
