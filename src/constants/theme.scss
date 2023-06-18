@@ -23,10 +23,12 @@ $LIGHT: (
   accent2: $light,
   contrast1: $black,
   contrast2: $dark,
+  contrast3: rgba($color: $dark, $alpha: 0.75),
   divider: rgba($color: $white, $alpha: 0.15),
   iconButton: rgba($color: $black, $alpha: 0.1),
   grey1: rgba(225, 225, 225, 0.25),
   grey2: rgba(240, 240, 240, 0.2),
+  grey3: rgba(200, 200, 200, 0.5),
   blue1: #214789,
   red1: #9D092B,
   green1: #60A911,
@@ -38,10 +40,12 @@ $DARK: (
   accent2: $dark,
   contrast1: $white,
   contrast2: $light,
+  contrast3: rgba($color: $light, $alpha: 0.75),
   divider: rgba($color: $black, $alpha: 0.15),
   iconButton: rgba($color: $white, $alpha: 0.1),
   grey1: rgba(100, 100, 100, 0.25),
   grey2: rgba(75, 75, 75, 0.2),
+  grey3: rgba(75, 75, 75, 0.6),
   blue1: #7CB9E8,
   red1: #F55757,
   green1: #93F30C,
@@ -238,3 +242,11 @@ $project-header-31: #DBE85F;
 $project-highlight-31: #6E730A;
 $project-31-game-bg-1: #51B357;
 $project-31-game-bg-2: #1C6021;
+
+// project-32
+$project-bg-32: linear-gradient(40deg, #0D051D 0%, $black 100%);
+$project-header-32: #BC9BF9;
+$project-highlight-32: #520A9F;
+$project-32-wrapper-bg-1: #0F0C29;
+$project-32-wrapper-bg-2: #24243E;
+$project-32-todo-bg: #515198;

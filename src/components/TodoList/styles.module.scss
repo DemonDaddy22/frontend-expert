@@ -1,0 +1,130 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.pageContainer {
+  @media screen and (min-width: 992px) {
+    overflow-y: hidden;
+  }
+}
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.questionDescription {
+  @include spacing (0 0.25rem);
+  word-break: break-word;
+  white-space: break-spaces;
+}
+
+.questionTitle {
+  color: $project-header-32;
+}
+
+.break {
+  @include spacing ($margin: 0.5rem 0);
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0 0.25rem);
+  background-color: $project-highlight-32;
+  border-radius: 0.25rem;
+}
+
+.solutionContainer {
+  @include spacing (1rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  overflow-y: hidden;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 992px) {
+    max-height: 85vh;
+    width: 35rem;
+  }
+}
+
+.todoListWrapper {
+  @include spacing (1rem, 1rem);
+  background: $project-32-wrapper-bg-1;
+  background: -webkit-linear-gradient(to top, $project-32-wrapper-bg-2, $project-32-wrapper-bg-1);
+  background: linear-gradient(to top, $project-32-wrapper-bg-2, $project-32-wrapper-bg-1);
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  min-height: 30rem;
+  overflow-y: auto;
+}
+
+.todoListHeader {
+  color: $white;
+  font-size: 1.75rem;
+  letter-spacing: -0.6px;
+  text-align: center;
+
+  @media screen and (min-width: 992px) {
+    font-size: 2.5rem;
+  }
+}
+
+.todoListInputWrapper {
+  @include spacing ($margin: 1rem 0);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.addButton {
+  width: 100%;
+
+  @media screen and (min-width: 992px) {
+    width: 8rem;
+  }
+}
+
+.todosWrapper {
+  @include spacing ($margin: 1rem 0);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todoItem {
+  @include spacing (0.5rem 0.75rem);
+  background-color: $project-32-todo-bg;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba($color: $black, $alpha: 0.9) 0px 1px 0px, rgba($color: $black, $alpha: 0.75) 0px 1px 2px;
+
+  &:hover {
+    box-shadow: none;
+    filter: brightness(0.9);
+  }
+}
+
+.todoItemText {
+  color: rgba($color: $white, $alpha: 1);
+  flex: 1;
+}
+
+.todoItemSelected {
+  color: rgba($color: $white, $alpha: 0.75);
+  text-decoration: line-through;
+}

@@ -39,6 +39,7 @@
 29. [InfiniteScroll](./src/components/InfiniteScroll/README.md): You're given an API endpoint that returns a list of AlgoExpert testimonials, and you have to fetch and display these testimonials on the page.
 30. [StopWatch](./src/components/StopWatch/README.md): You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using JavaScript.
 31. [TicTacToe](./src/components/TicTacToe/README.md): You're given HTML and CSS files for a simple Tic Tac Toe board, and you need to make the board functional using JavaScript.
+32. [TodoList](./src/components/TodoList/README.md): You're given HTML and CSS files for a simple todo list, and you need to make the todo list functional using JavaScript.
 
 <br />
 <br />
