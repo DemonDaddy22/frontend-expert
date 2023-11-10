@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useState } from 'react';
+import { debounce } from 'lodash';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -6,22 +7,61 @@ import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleCode, sampleResponse } from './codeBlocks';
 import { RAPID_MOVIESDB_HOST } from '../../constants';
-
-// TODO - create a fetch movie data custom hook
-// TODO - use input component for keywords
-// TODO - create menu and menu item components
+import { isEmptyObject, isEmptyString } from '../../utils';
+import Menu from '../UI/Menu';
+import Input from '../UI/Input';
 
 const TypeAhead: React.FC<Props> = () => {
-  useEffect(() => {
-    fetch(`https://${RAPID_MOVIESDB_HOST}/titles/search/keyword/fast`, {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY ?? '',
-        'X-RapidAPI-Host': RAPID_MOVIESDB_HOST,
-      },
-    })
-      .then((res) => res.json())
-      .then(console.log);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [keyword, setKeyword] = useState('');
+  const [results, setResults] = useState<IMenuItem[]>([]);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchTypeAheadData = useCallback(debounce(async (keyword: string) => {
+    if (isEmptyString(keyword)) {
+      setResults([]);
+      return;
+    }
+    try {
+      const response = await fetch(`https://${RAPID_MOVIESDB_HOST}/titles/search/title/${keyword}`, {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY ?? '',
+          'X-RapidAPI-Host': RAPID_MOVIESDB_HOST,
+        },
+      });
+      const data = await response.json();
+      const results: TypeAheadResponse[] = data?.results ?? [];
+      const typeaheadResults = results?.map((item) => ({
+        id: item?.id,
+        title: item?.titleText?.text,
+        data: {
+          title: item?.titleText?.text,
+          type: item?.titleType?.text,
+          releaseDate: item?.releaseDate,
+          image: item?.primaryImage?.url,
+        },
+      })) ?? [];
+
+      setIsMenuOpen(true);
+      setResults(typeaheadResults);
+      setError(null);
+    } catch (err: any) {
+      setResults([]);
+      setError(err?.message ?? 'Something went wrong!');
+    }
+  }, 500), []);
+
+  const handleKeywordChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.currentTarget.value;
+    setKeyword(value);
+    fetchTypeAheadData(value);
+  }, [fetchTypeAheadData]);
+
+  const handleItemClick = useCallback((item: IMenuItem) => {
+    if (!isEmptyObject(item)) {
+      setKeyword(item.title ?? item.data?.title);
+    }
   }, []);
 
   return (
@@ -95,7 +135,23 @@ const TypeAhead: React.FC<Props> = () => {
           don't call <span className={classes.questionDescriptionHighlight}>window.fetch()</span>).
         </p>
       </QuestionDetails>
-      <section className={classes.solutionContainer}></section>
+      <section className={classes.solutionContainer}>
+        <Input
+          type='text'
+          placeholder='Search for a movie or TV series...'
+          className={classes.searchInput}
+          value={keyword}
+          onChange={handleKeywordChange}
+        />
+        <Menu
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+          onItemClick={handleItemClick}
+          items={results}
+          className={classes.menuContainer}
+          defaultTitle={error ?? 'Try searching for something else...'}
+        />
+      </section>
     </ProjectPage>
   );
 };
