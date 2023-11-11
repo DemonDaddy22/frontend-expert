@@ -1,0 +1,27 @@
+@import '../../../constants/theme.scss';
+@import '../../../utils/mixins.scss';
+
+.item {
+  cursor: pointer;
+  list-style: none;
+  @include theme (background-color, accent2);
+  @include spacing (0.75rem 1rem);
+  transition: all 0.25s;
+
+  @media screen and (min-width: 992px) {
+    @include spacing (1rem 1.25rem);
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.itemTitle {
+  font-size: 0.9rem;
+  @include theme (color, contrast2);
+
+  @media screen and (min-width: 992px) {
+    font-size: 1rem;
+  }
+}

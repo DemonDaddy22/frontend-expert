@@ -80,3 +80,29 @@ interface ITestimonial {
   id: string;
   name: string;
 }
+
+interface IMenuItem {
+  id: string;
+  title?: string;
+  data?: { [key: string]: any };
+}
+
+interface MenuProps {
+  defaultTitle?: string;
+  items: Array<IMenuItem>;
+  isOpen: boolean;
+  shouldCloseOnItemClick?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  onClose: () => void;
+  onItemClick: (item: IMenuItem) => void;
+  renderItem?: (item: IMenuItem) => React.ReactNode;
+}
+
+interface MenuItemProps {
+  item: IMenuItem;
+  className?: string;
+  style?: React.CSSProperties;
+  onItemClick: (item: IMenuItem) => void;
+  renderItem?: (item: IMenuItem) => React.ReactNode;
+}
