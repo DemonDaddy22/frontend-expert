@@ -15,10 +15,7 @@ The API responds with a JSON array of strings, each of which is a glossary-term 
 For example, the URL above might respond with:
 
 ```json
-[
-  "Accessibility",
-  "Accessibility Tree"
-]
+["Accessibility", "Accessibility Tree"]
 ```
 
 When the user stops typing into the typeahead for 500ms, a request should be made to the API to get suggestions for the text that's currently typed into the typeahead input field.
