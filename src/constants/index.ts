@@ -17,4 +17,6 @@ export const AE_TESTIMONIALS: { [key: string]: any } = {
   LIMIT: 10,
 };
 
+export const RAPID_MOVIESDB_HOST: string = 'moviesdatabase.p.rapidapi.com';
+
 export const NO_OP: () => void = () => {};

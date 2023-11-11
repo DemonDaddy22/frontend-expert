@@ -40,6 +40,7 @@
 30. [StopWatch](./src/components/StopWatch/README.md): You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using JavaScript.
 31. [TicTacToe](./src/components/TicTacToe/README.md): You're given HTML and CSS files for a simple Tic Tac Toe board, and you need to make the board functional using JavaScript.
 32. [TodoList](./src/components/TodoList/README.md): You're given HTML and CSS files for a simple todo list, and you need to make the todo list functional using JavaScript.
+33. [TypeAhead](./src/components/TypeAhead/README.md): You're given an API endpoint that returns a list of FrontendExpert glossary terms that start with a given string, and you have to use this API to implement a search typeahead. Due to CORS, we cannot access the FrontendExpert API here so instead using a free movies API, which can be found [here](https://rapidapi.com/SAdrian/api/moviesdatabase).
 
 <br />
 <br />
