@@ -131,8 +131,7 @@ const TypeAhead: React.FC<Props> = () => {
         </p>
         <p>
           You should use the global <span className={classes.questionDescriptionHighlight}>fetch()</span> method to make
-          requests to the API (call <span className={classes.questionDescriptionHighlight}>fetch()</span> directly;
-          don't call <span className={classes.questionDescriptionHighlight}>window.fetch()</span>).
+          requests to the API.
         </p>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
