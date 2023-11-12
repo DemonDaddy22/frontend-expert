@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import TierList from './components/TierList';
+import Toasts from './components/Toasts';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <TierList />
+        <Toasts />
       </div>
     </ThemeContextProvider>
   );

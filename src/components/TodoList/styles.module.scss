@@ -52,6 +52,10 @@
   }
 }
 
+.codeWrapper {
+  @include spacing (0.5rem 0);
+}
+
 .todoListWrapper {
   @include spacing (1rem, 1rem);
   background: $project-32-wrapper-bg-1;
