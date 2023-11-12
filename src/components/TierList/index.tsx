@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import { PROJECT_COLORS } from '../../constants/theme';
 
 const TierList: React.FC<Props> = () => {
+  const unrankedDropZone = useRef<HTMLDivElement>(null);
+  const draggedItem = useRef<HTMLDivElement | null>(null);
+
+  const handleItemDoubleClick = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const item = event.currentTarget;
+    const parent = item.parentElement;
+    if (parent !== unrankedDropZone.current) {
+      unrankedDropZone.current?.appendChild(item);
+    }
+  }, []);
+
+  const handleItemDragStart = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const item = event.currentTarget;
+    draggedItem.current = item;
+  }, []);
+
+  const handleItemDrop = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const dropZone = event.currentTarget;
+    if (draggedItem.current && draggedItem.current?.parentElement !== dropZone) {
+      dropZone?.appendChild(draggedItem.current);
+    }
+  }, []);
+
+  const handleItemDragOver = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    event?.preventDefault();
+  }, []);
+
   return (
     <ProjectPage background={PROJECT_COLORS.PROJECT34.background} containerClassName={classes.pageContainer}>
       <QuestionDetails
@@ -44,22 +71,41 @@ const TierList: React.FC<Props> = () => {
       <section className={classes.solutionContainer}>
         <div className={classes.tier}>
           <h3 className={classes.tierTitle}>A Tier</h3>
-          <div className={classes.dropZone}></div>
+          <div className={classes.dropZone} onDrop={handleItemDrop} onDragOver={handleItemDragOver}></div>
         </div>
         <div className={classes.tier}>
           <h3 className={classes.tierTitle}>B Tier</h3>
-          <div className={classes.dropZone}></div>
+          <div className={classes.dropZone} onDrop={handleItemDrop} onDragOver={handleItemDragOver}></div>
         </div>
         <div className={classes.tier}>
           <h3 className={classes.tierTitle}>C Tier</h3>
-          <div className={classes.dropZone}></div>
+          <div className={classes.dropZone} onDrop={handleItemDrop} onDragOver={handleItemDragOver}></div>
         </div>
         <div className={`${classes.tier} ${classes.tierUnranked}`}>
           <h3 className={classes.tierTitle}>Unranked</h3>
-          <div className={classes.dropZone}>
-            <div className={`${classes.item} ${classes.itemBlue}`} draggable />
-            <div className={`${classes.item} ${classes.itemRed}`} draggable />
-            <div className={`${classes.item} ${classes.itemGreen}`} draggable />
+          <div
+            className={classes.dropZone}
+            ref={unrankedDropZone}
+            onDrop={handleItemDrop}
+            onDragOver={handleItemDragOver}>
+            <div
+              className={`${classes.item} ${classes.itemBlue}`}
+              draggable
+              onDoubleClick={handleItemDoubleClick}
+              onDragStart={handleItemDragStart}
+            />
+            <div
+              className={`${classes.item} ${classes.itemRed}`}
+              draggable
+              onDoubleClick={handleItemDoubleClick}
+              onDragStart={handleItemDragStart}
+            />
+            <div
+              className={`${classes.item} ${classes.itemGreen}`}
+              draggable
+              onDoubleClick={handleItemDoubleClick}
+              onDragStart={handleItemDragStart}
+            />
           </div>
         </div>
       </section>
