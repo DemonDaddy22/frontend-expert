@@ -1,0 +1,43 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../constants/theme.scss';
+
+.toast {
+  @include spacing (1rem 0.75rem);
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  border-radius: 0.25rem;
+  background-color: $project-highlight-35;
+  animation: slideIn 0.15s ease-in both;
+}
+
+.toastSuccess {
+  background-color: $green-3;
+}
+
+.toastError {
+  background-color: $red-3;
+}
+
+.message {
+  color: $white;
+  font-size: 1rem;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

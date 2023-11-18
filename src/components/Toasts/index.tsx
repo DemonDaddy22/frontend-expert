@@ -1,12 +1,48 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleToastItem } from './codeBlock';
+import ToastCreator from './components/ToastCreator';
+import Toast from './components/Toast';
+
+// TODO - handle toasts animation using framer
 
 const Toasts: React.FC<Props> = () => {
+  const [toasts, setToasts] = useState<IToast[]>([]);
+
+  const handleRemoveToast = useCallback((id: number) => {
+    setToasts((prevToasts) => {
+      const toastIndex = prevToasts.findIndex((item) => item.id === id);
+      if (toastIndex >= 0) {
+        clearTimeout(prevToasts[toastIndex].timeoutId);
+        const updatedToasts = [...prevToasts.slice(0, toastIndex), ...prevToasts.slice(toastIndex + 1)];
+        return updatedToasts;
+      }
+      return prevToasts;
+    });
+  }, []);
+
+  const handleAddToast = useCallback((toast: IToast) => {
+    setToasts((prevToasts) => {
+      const toastTimeOutId = setTimeout(() => handleRemoveToast(toast.id), toast.duration);
+      return [{ ...toast, timeoutId: toastTimeOutId }, ...prevToasts];
+    });
+  }, []);
+
+  const handleClearToasts = useCallback(() => {
+    setToasts((prevToasts) => {
+      prevToasts.forEach(({ timeoutId }) => {
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+      });
+      return [];
+    });
+  }, []);
+
   return (
     <ProjectPage background={PROJECT_COLORS.PROJECT35.background} containerClassName={classes.pageContainer}>
       <QuestionDetails
@@ -73,7 +109,14 @@ const Toasts: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
-      <section className={classes.solutionContainer}></section>
+      <section className={classes.solutionContainer}>
+        <ToastCreator addToast={handleAddToast} clearToasts={handleClearToasts} />
+        <div className={classes.toastsContainer}>
+          {toasts.map((toast) => (
+            <Toast key={toast.id} toast={toast} onRemove={handleRemoveToast} />
+          ))}
+        </div>
+      </section>
     </ProjectPage>
   );
 };
