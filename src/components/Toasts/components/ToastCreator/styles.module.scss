@@ -1,0 +1,32 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.container {
+  @include spacing (0 1rem);
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: $project-35-container-bg;
+}
+
+.options {
+  @include spacing ($margin: 0.25rem 0);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.typeContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.buttonsContainer {
+  @include spacing ($margin: 1rem 0);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}

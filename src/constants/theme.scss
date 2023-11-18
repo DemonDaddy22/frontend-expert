@@ -14,9 +14,11 @@ $blue-3: #8CC4F9;
 
 $green-1: #233B08;
 $green-2: #9AE346;
+$green-3:#29C01B;
 
 $red-1: #5E0618;
 $red-2: #F44064;
+$red-3: #E33526;
 
 $LIGHT: (
   accent1: $white,
@@ -262,3 +264,9 @@ $project-output-33: #E6D295;
 $project-bg-34: linear-gradient(40deg, #190410 0%, $black 100%);
 $project-header-34: #F06187;
 $project-highlight-34: #D10E42;
+
+// project-35
+$project-bg-35: linear-gradient(40deg, #02141C 0%, $black 100%);
+$project-header-35: #13ACD7;
+$project-highlight-35: #1A435F;
+$project-35-container-bg: #13232D;

@@ -42,6 +42,7 @@
 32. [TodoList](./src/components/TodoList/README.md): You're given HTML and CSS files for a simple todo list, and you need to make the todo list functional using JavaScript.
 33. [TypeAhead](./src/components/TypeAhead/README.md): You're given an API endpoint that returns a list of FrontendExpert glossary terms that start with a given string, and you have to use this API to implement a search typeahead. Due to CORS, we cannot access the FrontendExpert API here so instead using a free movies API, which can be found [here](https://rapidapi.com/SAdrian/api/moviesdatabase).
 34. [TierList](./src/components/TierList/README.md): You're given HTML and CSS files for a simple tier list, and you need to make the tier list functional using JavaScript.
+35. [Toasts](./src/components/Toasts/README.md): You're given HTML and CSS files for a simple toast system, and you need to make the toast system functional using JavaScript.
 
 <br />
 <br />

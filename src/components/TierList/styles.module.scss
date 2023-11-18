@@ -55,22 +55,30 @@
 
 .tier {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   border: 0.25rem solid $grey-3;
 
   &:not(:first-of-type) {
     border-top: none;
   }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .tierTitle {
   color: $white;
-  border-right: 0.25rem solid $grey-3;
   flex: 1;
+  border-bottom: 0.25rem solid $grey-3;
+  text-align: center;
   @include spacing (1rem 1.5rem);
 
   @media screen and (min-width: 1200px) {
+    border-bottom: none;
+    border-right: 0.25rem solid $grey-3;
+    text-align: initial;
     font-size: 1.5rem;
   }
 }
@@ -87,6 +95,7 @@
   align-items: center;
   flex: 3;
   gap: 1rem;
+  min-height: 4rem;
 }
 
 .item {
