@@ -67,10 +67,10 @@ const Sudoku: React.FC<Props> = () => {
   useEffect(() => {
     const cells = document.querySelectorAll('td');
     const numberControls = document.querySelectorAll('.control');
-  
+
     cells.forEach((cell) => cell.addEventListener('click', handleCellSelection));
     numberControls.forEach((control) => control.addEventListener('click', handleNumberControlSelection));
-    
+
     return () => {
       cells.forEach((cell) => cell.removeEventListener('click', handleCellSelection));
       numberControls.forEach((control) => control.removeEventListener('click', handleNumberControlSelection));
