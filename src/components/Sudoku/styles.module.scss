@@ -1,0 +1,179 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.pageContainer {
+  @media screen and (min-width: 992px) {
+    overflow-y: hidden;
+  }
+}
+
+.questionDetails {
+  @media screen and (min-width: 992px) {
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.questionDescription {
+  @include spacing (0 0.25rem);
+  word-break: break-word;
+  white-space: break-spaces;
+
+  a {
+    color: $project-highlight-36;
+  }
+}
+
+.questionTitle {
+  color: $project-header-36;
+}
+
+.questionDescriptionHighlight {
+  @include spacing (0 0.25rem);
+  background-color: $project-highlight-36;
+  border-radius: 0.25rem;
+}
+
+.solutionContainer {
+  @include spacing (2rem);
+  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  border-radius: 0.25rem;
+  overflow-y: hidden;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media screen and (min-width: 992px) {
+    @include spacing (4rem 2rem);
+    max-height: 85vh;
+    width: 35rem;
+  }
+}
+
+.sudokuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.board {
+  border-collapse: collapse;
+}
+
+.boardColumnGroup {
+  border: 0.25rem solid $dark;
+}
+
+.boardRow {
+  &:nth-of-type(3n) {
+    border-bottom: 0.25rem solid $dark;
+  }
+}
+
+.cell {
+  @include square (2.5rem, $light);
+  position: relative;
+  border: 1px solid $dark;
+  padding: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: $dark;
+  cursor: pointer;
+  background-clip: padding-box;
+  overflow: hidden;
+
+  @media screen and (min-width: 1200px) {
+    @include square (2.75rem, $light);
+    font-size: 1.25rem;
+  }
+}
+
+.givenNumber {
+  cursor: default;
+  background-color: $grey-5;
+}
+
+.candidates {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 0.5rem;
+  color: $project-36-candidates;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 0.6rem;
+  }
+}
+
+.controls {
+  @include spacing (0.75rem);
+  margin-left: 0.25rem;
+  height: fit-content;
+  border: 0.25px solid $dark;
+  background-color: $light;
+  align-self: flex-start;
+}
+
+.numberControls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.numberControl {
+  @include square (3rem, $grey-5);
+  font-size: 1.5rem;
+  border: 1px solid $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:focus, &:active {
+    filter: brightness(0.9);
+  }
+}
+
+.candidateSwitch {
+  appearance: none;
+  width: 100%;
+  height: 2.5rem;
+  position: relative;
+  border-radius: 1.5rem !important;
+  margin-top: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $blue-2 !important;
+  transition: 0.2s;
+
+  &::before {
+    @include square (1.8rem, $white, 50%);
+    content: "Candidate Move              Normal Move";
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 0.9rem);
+    left: 0.25rem;
+    font-weight: bold;
+    white-space: pre;
+    font-size: 0.85rem;
+    text-indent: -115px;
+    color: $white;
+    transition: 0.2s;
+  }
+
+  &:checked {
+    background-color: $green-3 !important;
+
+    &::before {
+      left: calc(100% - 1.8rem - 0.25rem);
+    }
+  }
+}
