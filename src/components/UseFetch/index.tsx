@@ -55,11 +55,11 @@ const UseFetch: React.FC<Props> = () => {
         </p>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Usage</h3>
-          <CodeBlock language='react' codeString={sampleUsage} />
+          <CodeBlock codeString={sampleUsage} />
         </div>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
-        <CodeBlock language='react' codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
+        <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
       </section>
     </ProjectPage>
   );
