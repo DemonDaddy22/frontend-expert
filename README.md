@@ -44,6 +44,7 @@
 34. [TierList](./src/components/TierList/README.md): You're given HTML and CSS files for a simple tier list, and you need to make the tier list functional using JavaScript.
 35. [Toasts](./src/components/Toasts/README.md): You're given HTML and CSS files for a simple toast system, and you need to make the toast system functional using JavaScript.
 36. [Sudoku](./src/components/Sudoku/README.md): You're given HTML and CSS files for a Sudoku game based on The [New York Times Number Puzzles](https://www.nytimes.com/puzzles/sudoku), and you need to make the game functional using JavaScript.
+37. [UseFetch](./src/components/UseFetch/README.md): Write a `useFetch` custom hook that takes in a required `url` as a string or URL object. This parameter should be directly passed to the native JavaScript `fetch` function.
 
 <br />
 <br />
