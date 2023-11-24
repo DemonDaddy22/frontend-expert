@@ -1,0 +1,91 @@
+export const sampleUsage = `function Fetcher() {
+  const { responseJSON, isLoading, error } = useFetch(url);
+  const [url, setUrl] = useState('');
+  return (
+    <>
+      <input value={url} onChange={(e) => setUrl(e.target.value)} />
+      {
+        error ? <p>Error: {error}</p> :
+        isLoading ? <p>Loading...</p> :
+        <p>Response: {responseJSON}</p>
+      }
+    </>
+  );
+}`;
+
+export const solutionCode = `// use fetch hook
+
+import { useEffect, useReducer } from 'react';
+
+interface IUseFetchState {
+  responseJSON: { [key: string]: any } | null;
+  isLoading: boolean;
+  error: any;
+}
+
+interface IAction {
+  type: string;
+  value: any;
+}
+
+const reducer = (state: IUseFetchState, action: IAction) => {
+  const { type, value } = action;
+
+  switch (type) {
+    case 'setResponseJSON':
+      return {
+        ...state,
+        responseJSON: value,
+        error: null,
+      };
+    case 'setIsLoading':
+      return {
+        ...state,
+        isLoading: value,
+      };
+    case 'setError':
+      return {
+        ...state,
+        error: value,
+      };
+    default:
+      return state;
+  }
+};
+
+const useFetch = (url: string) => {
+  const [state, dispatch] = useReducer(reducer, {
+    responseJSON: null,
+    isLoading: false,
+    error: null,
+  });
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
+
+    const fetchResponse = async () => {
+      dispatch({ type: 'setIsLoading', value: true });
+      try {
+        const response = await fetch(url, { signal });
+        const json = await response.json();
+        dispatch({ type: 'setResponseJSON', value: json });
+      } catch (err) {
+        dispatch({ type: 'setError', value: err });
+      } finally {
+        dispatch({ type: 'setIsLoading', value: false });
+      }
+    };
+
+    fetchResponse();
+
+    return () => {
+      controller.abort();
+    };
+  }, [url]);
+
+  return { ...state };
+};
+
+export default useFetch;
+`;
