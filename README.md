@@ -45,6 +45,7 @@
 35. [Toasts](./src/components/Toasts/README.md): You're given HTML and CSS files for a simple toast system, and you need to make the toast system functional using JavaScript.
 36. [Sudoku](./src/components/Sudoku/README.md): You're given HTML and CSS files for a Sudoku game based on The [New York Times Number Puzzles](https://www.nytimes.com/puzzles/sudoku), and you need to make the game functional using JavaScript.
 37. [UseFetch](./src/components/UseFetch/README.md): Write a `useFetch` custom hook that takes in a required `url` as a string or URL object. This parameter should be directly passed to the native JavaScript `fetch` function.
+38. [UseLocalStorage](./src/components/UseLocalStorage/README.md): Write a `useLocalStorage` custom hook that takes in a required `key` as a string, and an optional `initialValue`.
 
 <br />
 <br />
