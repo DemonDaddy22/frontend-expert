@@ -1,4 +1,4 @@
-import { LOREM_IPSUM } from "../constants";
+import { LOREM_IPSUM } from '../constants';
 
 /**
  *
