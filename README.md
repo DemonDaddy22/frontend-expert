@@ -46,6 +46,7 @@
 36. [Sudoku](./src/components/Sudoku/README.md): You're given HTML and CSS files for a Sudoku game based on The [New York Times Number Puzzles](https://www.nytimes.com/puzzles/sudoku), and you need to make the game functional using JavaScript.
 37. [UseFetch](./src/components/UseFetch/README.md): Write a `useFetch` custom hook that takes in a required `url` as a string or URL object. This parameter should be directly passed to the native JavaScript `fetch` function.
 38. [UseLocalStorage](./src/components/UseLocalStorage/README.md): Write a `useLocalStorage` custom hook that takes in a required `key` as a string, and an optional `initialValue`.
+39. [UseStateWithHistory](./src/components/UseStateWithHistory/README.md): Write a `useStateWithHistory` custom hook that takes in an `initialState` value. Calling `useStateWithHistory` should work the same as `useState`, but with an added history with the ability to scroll through previous state values.
 
 <br />
 <br />

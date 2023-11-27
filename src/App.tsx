@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import UseLocalStorage from './components/UseLocalStorage';
+import UseStateWithHistory from './components/UseStateWithHistory';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <UseLocalStorage />
+        <UseStateWithHistory />
       </div>
     </ThemeContextProvider>
   );
