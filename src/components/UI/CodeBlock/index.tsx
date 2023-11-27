@@ -1,14 +1,17 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import SyntaxHighlighter, { SyntaxHighlighterProps } from 'react-syntax-highlighter';
+import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { copyTextToClipboard, isEmptyString } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
 import ClipBoardChecked from '../../Icons/ClipboardChecked';
 import { ButtonWhite } from '../Button';
 import IconButton from '../IconButton';
 import classes from './styles.module.scss';
+import { COLORS } from '../../../constants/theme';
 
-const CodeBlock: React.FC<CodeBlockProps> = (props) => {
+interface Props extends CodeBlockProps, Partial<SyntaxHighlighterProps> {}
+
+const CodeBlock: React.FC<Props> = (props) => {
   const {
     codeString,
     showLineNumbers = true,
@@ -17,7 +20,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     hideCode = false,
     className = '',
     containerClassName = '',
-    style = monokai,
+    style = atomOneDarkReasonable,
     ...restProps
   } = props;
 
@@ -45,6 +48,7 @@ const CodeBlock: React.FC<CodeBlockProps> = (props) => {
         style={style}
         showLineNumbers={showLineNumbers}
         className={`${classes.codeBlock} ${className} ${isCodeHidden ? classes.blurredOverlay : ''}`}
+        lineNumberStyle={{ color: COLORS.WHITE_WITH_OPACITY_40 }}
         {...restProps}
       >
         {codeString}

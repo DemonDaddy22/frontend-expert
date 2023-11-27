@@ -54,7 +54,7 @@ interface DividerProps {
   style?: React.CSSProperties;
 }
 
-interface CodeBlockProps extends SyntaxHighlighterProps {
+interface CodeBlockProps {
   codeString: string;
   language?: string;
   showLineNumbers?: boolean;
