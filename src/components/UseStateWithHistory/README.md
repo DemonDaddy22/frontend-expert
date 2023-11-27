@@ -26,7 +26,7 @@ const [
   setValue, // function
   goBack, // function
   goForward, // function
-  history // [10]
+  history, // [10]
 ] = useStateWithHistory(10);
 
 setValue(15); // value=15, history=[10, 15]
