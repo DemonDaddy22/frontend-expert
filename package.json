@@ -29,7 +29,8 @@
     "test:cov": "env CI=true react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,7 @@
     "@types/react-syntax-highlighter": "^15.5.5",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "husky": "^8.0.0"
   }
 }
