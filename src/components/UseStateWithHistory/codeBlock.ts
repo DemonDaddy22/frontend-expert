@@ -19,7 +19,9 @@ goForward(); // value=30, history=[10, 15, 20, 25, 30]
 goForward(); // value=30, history=[10, 15, 20, 25, 30]
 `;
 
-export const solutionCode = `import { useCallback, useReducer } from 'react';
+export const solutionCode = `// useStateWithHistory hook
+
+import { useCallback, useReducer } from 'react';
 
 interface IState<T> {
   value: T;

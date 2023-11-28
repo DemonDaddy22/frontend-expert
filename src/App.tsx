@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import UseStateWithHistory from './components/UseStateWithHistory';
+import UseInterval from './components/UseInterval';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <UseStateWithHistory />
+        <UseInterval />
       </div>
     </ThemeContextProvider>
   );
