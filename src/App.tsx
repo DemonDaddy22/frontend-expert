@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import UseInterval from './components/UseInterval';
+import UseWindowSize from './components/UseWindowSize';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <UseInterval />
+        <UseWindowSize />
       </div>
     </ThemeContextProvider>
   );
