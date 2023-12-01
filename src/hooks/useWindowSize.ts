@@ -1,9 +1,3 @@
-export const sampleUsage = `
-const {width, height} = useWindowSize();
-`;
-
-export const solutionCode = `// useWindowSize hook
-
 import { useEffect, useReducer } from 'react';
 import { throttle } from 'lodash';
 
@@ -61,4 +55,3 @@ const useWindowSize = () => {
 };
 
 export default useWindowSize;
-`;

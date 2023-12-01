@@ -24,11 +24,11 @@ const UseWindowSize: React.FC<Props> = () => {
         </p>
         <ul>
           <li>
-            width: The Current <span className={classes.questionDescriptionHighlight}>innerWidth</span> of the window as
+            <strong>width</strong>: The Current <span className={classes.questionDescriptionHighlight}>innerWidth</span> of the window as
             a number.
           </li>
           <li>
-            height: The Current <span className={classes.questionDescriptionHighlight}>innerHeight</span> of the window
+            <strong>height</strong>: The Current <span className={classes.questionDescriptionHighlight}>innerHeight</span> of the window
             as a number.
           </li>
         </ul>
