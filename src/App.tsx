@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import UseMap from './components/UseMap';
+import TipCalculator from './components/TipCalculator';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <UseMap />
+        <TipCalculator />
       </div>
     </ThemeContextProvider>
   );
