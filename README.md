@@ -51,6 +51,7 @@
 40. [UseInterval](./src/components/UseInterval/README.md): Write a `useInterval` custom hook that takes in a required `callback` function, and an optional `delay` as a number in milliseconds.
 41. [UseWindowSize](./src/components/UseWindowSize/README.md): Write a `useWindowSize` custom hook used to track changes to the size of the browser window.
 42. [UseMap](./src/components/UseMap/README.md): Write a `useMap` custom hook that works as a wrapper around the native JavaScript `Map` object.
+43. [TipCalculator](./src/components/TipCalculator/README.md): You're given a CSS file for a tip calculator, and you need to implement the component using React.
 
 <br />
 <br />
