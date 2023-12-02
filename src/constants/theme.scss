@@ -2,6 +2,7 @@ $black: #000000;
 $white: #FFFFFF;
 $light: #F4F5F6;
 $dark: #0D0E0E;
+$transparent: #00000000;
 
 $grey-1: #505050;
 $grey-2: #2F2F2F;
@@ -308,3 +309,8 @@ $project-highlight-41: #600519;
 $project-bg-42: linear-gradient(40deg, #221803 0%, $black 100%);
 $project-header-42: #FCBA2B;
 $project-highlight-42: #604905;
+
+// project-43
+$project-bg-43: linear-gradient(40deg, #082029 0%, $black 100%);
+$project-header-43: #60BFEE;
+$project-highlight-43: #0C4150;
