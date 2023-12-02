@@ -50,6 +50,7 @@
 39. [UseStateWithHistory](./src/components/UseStateWithHistory/README.md): Write a `useStateWithHistory` custom hook that takes in an `initialState` value. Calling `useStateWithHistory` should work the same as `useState`, but with an added history with the ability to scroll through previous state values.
 40. [UseInterval](./src/components/UseInterval/README.md): Write a `useInterval` custom hook that takes in a required `callback` function, and an optional `delay` as a number in milliseconds.
 41. [UseWindowSize](./src/components/UseWindowSize/README.md): Write a `useWindowSize` custom hook used to track changes to the size of the browser window.
+42. [UseMap](./src/components/UseMap/README.md): Write a `useMap` custom hook that works as a wrapper around the native JavaScript `Map` object.
 
 <br />
 <br />
