@@ -29,6 +29,11 @@
     @include theme (background-color, accent1);
     @include theme (color, contrast1);
   }
+
+  &:disabled {
+    @include theme (color, accent1);
+    background-color: transparent !important;
+  }
 }
 
 .buttonWhite {
@@ -39,6 +44,11 @@
   &:hover {
     background-color: $white;
     color: $dark;
+  }
+
+  &:disabled {
+    color: $white;
+    background-color: transparent !important;
   }
 }
 
@@ -51,6 +61,11 @@
     background-color: $black;
     color: $light;
   }
+
+  &:disabled {
+    color: $black;
+    background-color: transparent !important;
+  }
 }
 
 .buttonBlue {
@@ -61,6 +76,11 @@
   &:hover {
     @include theme (background-color, blue1);
     @include theme (color, contrast1);
+  }
+
+  &:disabled {
+    @include theme (color, blue1);
+    background-color: transparent !important;
   }
 }
 
@@ -73,6 +93,11 @@
     @include theme (background-color, red1);
     @include theme (color, contrast1);
   }
+
+  &:disabled {
+    @include theme (color, red1);
+    background-color: transparent !important;
+  }
 }
 
 .buttonGreen {
@@ -84,6 +109,11 @@
     @include theme (background-color, green1);
     @include theme (color, accent1);
   }
+
+  &:disabled {
+    @include theme (color, green1);
+    background-color: transparent !important;
+  }
 }
 
 .buttonYellow {
@@ -94,5 +124,10 @@
   &:hover {
     @include theme (background-color, yellow1);
     @include theme (color, accent1);
+  }
+
+  &:disabled {
+    @include theme (color, yellow1);
+    background-color: transparent !important;
   }
 }
