@@ -1,0 +1,10 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.container {
+  @include spacing (1.5rem);
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  background-color: rgba($color: $project-highlight-44, $alpha: 0.5);
+}

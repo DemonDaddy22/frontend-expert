@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import TipCalculator from './components/TipCalculator';
+import PhoneInput from './components/PhoneInput';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <TipCalculator />
+        <PhoneInput />
       </div>
     </ThemeContextProvider>
   );
