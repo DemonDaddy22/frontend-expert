@@ -9,7 +9,7 @@
 
 .questionDetails {
   @media screen and (min-width: 992px) {
-    max-width: 40rem;
+    max-width: 50rem;
     max-height: 85vh;
     overflow-y: auto;
   }
@@ -63,7 +63,7 @@
 
   @media screen and (min-width: 992px) {
     overflow-y: auto;
-    max-width: 40rem;
+    max-width: 30rem;
     max-height: 85vh;
     display: flex;
     flex-direction: column;
