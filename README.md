@@ -53,6 +53,7 @@
 42. [UseMap](./src/components/UseMap/README.md): Write a `useMap` custom hook that works as a wrapper around the native JavaScript `Map` object.
 43. [TipCalculator](./src/components/TipCalculator/README.md): You're given a CSS file for a tip calculator, and you need to implement the component using React.
 44. [PhoneInput](./src/components/PhoneInput/README.md): You're given a CSS file for a phone input, and you need to implement the component using React.
+45. [CryptoPrices](./src/components/CryptoPrices/README.md): You're given a CSS file for a component displaying cryptocurrency prices, and you need to implement the component using React.
 
 <br />
 <br />
