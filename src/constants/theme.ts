@@ -175,4 +175,7 @@ export const PROJECT_COLORS = {
   PROJECT44: {
     background: `linear-gradient(40deg, #0E0534 0%, ${COLORS.BLACK} 100%)`,
   },
+  PROJECT45: {
+    background: `linear-gradient(40deg, #240606 0%, ${COLORS.BLACK} 100%)`,
+  },
 };
