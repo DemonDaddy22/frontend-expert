@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import PhoneInput from './components/PhoneInput';
+import CryptoPrices from './components/CryptoPrices';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <PhoneInput />
+        <CryptoPrices />
       </div>
     </ThemeContextProvider>
   );

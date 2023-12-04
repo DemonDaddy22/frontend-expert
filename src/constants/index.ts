@@ -12,9 +12,15 @@ export const LOREM_IPSUM: Array<string> = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus suspendisse faucibus interdum posuere lorem ipsum. Aliquam eleifend mi in nulla posuere sollicitudin. Turpis massa sed elementum tempus.'
 ];
 
-export const AE_TESTIMONIALS: { [key: string]: any } = {
+export const AE_TESTIMONIALS = {
   API_URI: 'https://api.instantwebtools.net/v1/passenger',
   LIMIT: 10,
+};
+
+export const CRYPTO_PRICES_CONFIG = {
+  PAGE_SIZE: 10,
+  TOTAL_SIZE: 30,
+  API_URI: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false&locale=en',
 };
 
 export const RAPID_MOVIESDB_HOST: string = 'moviesdatabase.p.rapidapi.com';
