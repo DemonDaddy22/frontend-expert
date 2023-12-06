@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import CryptoPrices from './components/CryptoPrices';
+import QuestionList from './components/QuestionList';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <CryptoPrices />
+        <QuestionList />
       </div>
     </ThemeContextProvider>
   );

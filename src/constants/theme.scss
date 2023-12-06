@@ -1,7 +1,9 @@
 $black: #000000;
+$dark: #0D0E0E;
+
 $white: #FFFFFF;
 $light: #F4F5F6;
-$dark: #0D0E0E;
+
 $transparent: #00000000;
 
 $grey-1: #505050;
@@ -9,6 +11,7 @@ $grey-2: #2F2F2F;
 $grey-3: #777777;
 $grey-4: #B7B7B7;
 $grey-5: #CFCFCF;
+$grey-6: #EFEFEF;
 
 $blue-1: #02203C;
 $blue-2: #0C3F6F;
@@ -22,6 +25,11 @@ $red-1: #5E0618;
 $red-2: #F44064;
 $red-3: #E33526;
 $red-4: #FF6868;
+
+$yellow-1: #F4D33E;
+$yellow-2:#DBB311;
+$yellow-3:#8B7006;
+$yellow-4:#EFDE7E;
 
 $LIGHT: (
   accent1: $white,
@@ -326,3 +334,9 @@ $project-bg-45: linear-gradient(40deg, #240606 0%, $black 100%);
 $project-header-45: #FE7135;
 $project-highlight-45: #8A1C04;
 $project-code-45: #430202;
+
+// project-46
+$project-bg-46: linear-gradient(40deg, #0C2603 0%, $black 100%);
+$project-header-46: #35FE3C;
+$project-highlight-46: #066509;
+$project-code-46: #053F0B;

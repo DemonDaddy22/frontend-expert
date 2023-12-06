@@ -1,4 +1,4 @@
-type ICryptoPricesActionType = 'UPDATE_PAGE' | 'UPDATE_DATA' | 'UPDATE_ERROR';
+type CryptoPricesActionType = 'UPDATE_PAGE' | 'UPDATE_DATA' | 'UPDATE_ERROR';
 
 interface ICryptoPricesData {
   symbol: string;
@@ -17,6 +17,6 @@ interface ICryptoPricesState {
 }
 
 interface ICryptoPricesAction {
-  type: ICryptoPricesActionType;
+  type: CryptoPricesActionType;
   value: any;
 }

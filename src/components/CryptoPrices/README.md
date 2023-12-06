@@ -1,4 +1,4 @@
-# Tip Calculator
+# Crypto Prices
 
 _Tag_: **React**
 
