@@ -26,3 +26,9 @@ export const CRYPTO_PRICES_CONFIG = {
 export const RAPID_MOVIESDB_HOST: string = 'moviesdatabase.p.rapidapi.com';
 
 export const NO_OP: () => void = () => {};
+
+export const QUESTION_LIST_SUBMISSION_STATUS = Object.freeze({
+  CORRECT: 'CORRECT',
+  INCORRECT: 'INCORRECT',
+  PARTIALLY_CORRECT: 'PARTIALLY_CORRECT',
+});

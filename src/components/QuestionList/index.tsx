@@ -5,6 +5,7 @@ import QuestionDetails from '../QuestionDetails';
 import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage } from './codeBlock';
+import QuestionSections from './components/QuestionSections';
 
 const QuestionList: React.FC<Props> = () => {
   return (
@@ -54,7 +55,7 @@ const QuestionList: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
-        <p>Solution</p>
+        <QuestionSections />
       </section>
     </ProjectPage>
   );

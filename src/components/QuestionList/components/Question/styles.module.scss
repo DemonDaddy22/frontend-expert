@@ -1,0 +1,50 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: $grey-6;
+  overflow: hidden;
+  flex: 1;
+  min-width: 15rem;
+}
+
+.name {
+  @include spacing (0.75rem 0);
+  flex: 1;
+  font-size: 1.1rem;
+  letter-spacing: -0.25px;
+  font-weight: 600;
+  color: $blue-2;
+}
+
+.endBlock {
+  width: 2rem;
+  background-color: $blue-2;
+  align-self: stretch;
+}
+
+.status {
+  @include square (1rem, $grey-6, 50%);
+  margin-left: 0.5rem;
+  border: 1px solid $grey-4;
+
+  &.statusCorrect {
+    background-color: $green-3;
+    border-color: $transparent;
+  }
+
+  &.statusIncorrect {
+    background-color: $red-3;
+    border-color: $transparent;
+  }
+
+  &.statusPartiallyCorrect {
+    background-color: $yellow-2;
+    border-color: $transparent;
+  }
+}

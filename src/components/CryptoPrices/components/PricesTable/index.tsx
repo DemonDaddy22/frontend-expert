@@ -4,7 +4,7 @@ import { CRYPTO_PRICES_CONFIG } from '../../../../constants';
 import { isEmptyList } from '../../../../utils';
 import { ButtonWhite } from '../../../UI/Button';
 
-const ACTION_TYPE: { [key in ICryptoPricesActionType]: ICryptoPricesActionType } = Object.freeze({
+const ACTION_TYPE: { [key in CryptoPricesActionType]: CryptoPricesActionType } = Object.freeze({
   UPDATE_PAGE: 'UPDATE_PAGE',
   UPDATE_DATA: 'UPDATE_DATA',
   UPDATE_ERROR: 'UPDATE_ERROR',
