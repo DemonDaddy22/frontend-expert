@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import QuestionList from './components/QuestionList';
+import Quiz from './components/Quiz';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <QuestionList />
+        <Quiz />
       </div>
     </ThemeContextProvider>
   );

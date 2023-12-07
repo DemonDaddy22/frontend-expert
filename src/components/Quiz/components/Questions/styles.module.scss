@@ -1,0 +1,16 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.container {
+  @include spacing (1rem);
+  border-radius: 0.5rem;
+  background-color: rgba($color: $project-code-47, $alpha: 0.25);
+}
+
+.buttonsContainer {
+  @include spacing (1rem 0 0);
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  gap: 0.5rem;
+}

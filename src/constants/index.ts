@@ -32,3 +32,8 @@ export const QUESTION_LIST_SUBMISSION_STATUS = Object.freeze({
   INCORRECT: 'INCORRECT',
   PARTIALLY_CORRECT: 'PARTIALLY_CORRECT',
 });
+
+export const QUIZ_CONFIG = {
+  TOTAL_QUESTIONS: 3,
+  API_URI: 'https://opentdb.com/api.php?amount=3&type=multiple',
+};
