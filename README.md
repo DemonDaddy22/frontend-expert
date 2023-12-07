@@ -55,6 +55,7 @@
 44. [PhoneInput](./src/components/PhoneInput/README.md): You're given a CSS file for a phone input, and you need to implement the component using React.
 45. [CryptoPrices](./src/components/CryptoPrices/README.md): You're given a CSS file for a component displaying cryptocurrency prices, and you need to implement the component using React.
 46. [QuestionList](./src/components/QuestionList/README.md): You're given a CSS file for the FrontendExpert question list, and you need to implement the component using React.
+47. [Quiz](./src/components/Quiz/README.md): You're given a CSS file for a multiple choice quiz, and you need to implement the component using React.
 
 <br />
 <br />
