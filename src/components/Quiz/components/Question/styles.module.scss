@@ -1,0 +1,57 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.title {
+  font-size: 1.25rem;
+  color: $light;
+
+  @media screen and (min-width: 992px) {
+    font-size: 1.5rem;
+  }
+}
+
+.description {
+  @include spacing ($margin: 1rem 0);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.75rem;
+  
+  & .category {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $yellow-4;
+  }
+
+  & .difficulty {
+    @include spacing (0.1rem 0.25rem);
+    border-radius: 0.25rem;
+    background-color: $yellow-3;
+    color: $yellow-4;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin: 0 !important;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+
+  &.optionCorrect {
+    background-color: rgba($color: $green-3, $alpha: 0.25);
+  }
+
+  &.optionIncorrect {
+    background-color: rgba($color: $red-3, $alpha: 0.25);
+  }
+}

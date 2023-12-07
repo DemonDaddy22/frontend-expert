@@ -36,7 +36,7 @@ const reducer = (state: IUseFetchState, action: IAction) => {
   }
 };
 
-const useFetch = (url: string) => {
+const useFetch = (url: string, options: RequestInit = {}, abortRequest: boolean = true) => {
   const [state, dispatch] = useReducer(reducer, {
     responseJSON: null,
     isLoading: false,
@@ -50,7 +50,7 @@ const useFetch = (url: string) => {
     const fetchResponse = async () => {
       dispatch({ type: 'setIsLoading', value: true });
       try {
-        const response = await fetch(url, { signal });
+        const response = await fetch(url, { signal: abortRequest ? signal : null, ...options });
         const json = await response.json();
         dispatch({ type: 'setResponseJSON', value: json });
       } catch (err) {
@@ -63,9 +63,11 @@ const useFetch = (url: string) => {
     fetchResponse();
 
     return () => {
-      controller.abort();
+      if (abortRequest) {
+        controller.abort();
+      }
     };
-  }, [url]);
+  }, [url, JSON.stringify(options), abortRequest]);
 
   return { ...state };
 };
