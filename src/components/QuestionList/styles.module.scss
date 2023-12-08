@@ -68,3 +68,7 @@
     font-size: 2rem;
   }
 }
+
+.codeWrapper {
+  @include spacing (0.5rem 0);
+}

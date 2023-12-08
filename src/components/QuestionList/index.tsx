@@ -18,7 +18,7 @@ const QuestionList: React.FC<Props> = () => {
         <p>
           You're given a CSS file for the FrontendExpert question list, and you need to implement the component using
           React. Although the actual data for questions and submissions would be available in the FrontendExpert API,
-          but do CORS, we'll be using data replicas to implement the exercise.
+          but because of CORS, we'll be using data replicas to implement the exercise.
         </p>
         <p>
           The component should render a fragment containing all of the categories. Each category is a div with a heading

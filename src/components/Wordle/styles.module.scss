@@ -22,12 +22,12 @@
 }
 
 .questionTitle {
-  color: $project-header-47;
+  color: $project-header-48;
 }
 
 .questionDescriptionHighlight {
   @include spacing (0 0.25rem);
-  background-color: $project-highlight-47;
+  background-color: $project-highlight-48;
   border-radius: 0.25rem;
 }
 
@@ -43,20 +43,6 @@
   @media screen and (min-width: 992px) {
     max-height: 85vh;
     width: 50rem;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.codeBlock {
-  @include spacing (0.5rem 0.75rem);
-  overflow-x: auto;
-  border-radius: 0.5rem;
-  background-color: $project-code-47;
-  color: $white;
-
-  @media screen and (min-width: 992px) {
-    @include spacing (0.75rem 1rem);
   }
 }
 
