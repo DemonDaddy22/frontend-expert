@@ -17,13 +17,13 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  
+
   @media screen and (min-width: 992px){
     height: 4rem;
     width: 4rem;
     font-size: 2rem;
   }
- 
+
   &.boxCorrect {
     background-color: rgba($color: $green-3, $alpha: 0.4);
   }
