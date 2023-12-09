@@ -91,3 +91,17 @@ export const getLoremIpsum = (): string => {
   const randomIndex = Math.floor(Math.random() * LOREM_IPSUM.length);
   return LOREM_IPSUM[randomIndex];
 };
+
+/**
+ *
+ * @function getRandomListIndex - Gets a random index from array of length 'n'
+ * @returns number value of the index
+ *
+ */
+export const getRandomListIndex = <T>(list: Array<T>): number => {
+  if (isEmptyList(list)) {
+    return -1;
+  }
+  const randomIndex = Math.floor(Math.random() * (list.length));
+  return randomIndex;
+};

@@ -1,0 +1,36 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.box {
+  @include square (3rem, rgba($color: $dark, $alpha: 0.75), 0.25rem);
+  border: 1px solid $grey-2;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 992px){
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+  }
+
+  &.boxCorrect {
+    background-color: rgba($color: $green-3, $alpha: 0.4);
+  }
+  &.boxClose {
+    background-color: rgba($color: $yellow-1, $alpha: 0.5);
+  }
+  &.boxIncorrect {
+    background-color: rgba($color: $red-3, $alpha: 0.5);
+  }
+}
