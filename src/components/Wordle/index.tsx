@@ -16,8 +16,9 @@ const Wordle: React.FC<Props> = () => {
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}>
         <p>
-          You're given a CSS file for a clone of the popular game Wordle, and you need to implement the component using
-          React.
+          You're given a CSS file for a clone of the popular game{' '}
+          <a href='https://www.nytimes.com/games/wordle/index.html'>Wordle</a>, and you need to implement the component
+          using React.
         </p>
         <p>
           The rules of Wordle are fairly simple. A 5 letter word will be chosen at random, and the player has 6 guesses
