@@ -37,3 +37,9 @@ export const QUIZ_CONFIG = {
   TOTAL_QUESTIONS: 3,
   API_URI: 'https://opentdb.com/api.php?amount=3&type=multiple',
 };
+
+export const WORDLE_CONFIG = {
+  BOARD_SIZE: 6,
+  ROW_SIZE: 5,
+  ALPHABET_REGEX: /^[A-Z]{1}$/i,
+};

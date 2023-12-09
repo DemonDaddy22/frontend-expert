@@ -5,6 +5,7 @@ import QuestionDetails from '../QuestionDetails';
 import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage1, sampleUsage2 } from './codeBlock';
+import Board from './components/Board';
 
 const Wordle: React.FC<Props> = () => {
   return (
@@ -81,7 +82,7 @@ const Wordle: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <section className={classes.solutionContainer}>
-        <p>Wordle</p>
+        <Board />
       </section>
     </ProjectPage>
   );
