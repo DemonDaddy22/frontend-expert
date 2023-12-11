@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Wordle from './components/Wordle';
+import Memory from './components/Memory';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <Wordle />
+        <Memory />
       </div>
     </ThemeContextProvider>
   );

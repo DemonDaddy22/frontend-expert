@@ -43,3 +43,9 @@ export const WORDLE_CONFIG = {
   ROW_SIZE: 5,
   ALPHABET_REGEX: /^[A-Z]{1}$/i,
 };
+
+export const MEMORY_CONFIG = {
+  TILES_MAP: { red: 'red', blue: 'blue', yellow: 'yellow', green: 'green' },
+  TILES: ['red', 'yellow', 'green', 'blue'],
+  BOARD_SIZE: 8,
+};
