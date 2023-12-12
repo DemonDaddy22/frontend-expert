@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Memory from './components/Memory';
+import ConnectFour from './components/ConnectFour';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <ThemeContextProvider>
       <div className='container'>
-        <Memory />
+        <ConnectFour />
       </div>
     </ThemeContextProvider>
   );
