@@ -21,6 +21,7 @@
 .board {
   display: flex;
   flex-direction: row;
+  border: 0.5px solid $grey-1;
 }
 
 .column {
@@ -30,7 +31,7 @@
 
 .tile {
   @include square (3rem, rgba($color: $white, $alpha: 0.05));
-  border: 1px solid $grey-1;
+  border: 0.5px solid $grey-1;
   display: flex;
   align-items: center;
   justify-content: center;
