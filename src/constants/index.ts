@@ -49,3 +49,13 @@ export const MEMORY_CONFIG = {
   TILES: ['red', 'yellow', 'green', 'blue'],
   BOARD_SIZE: 8,
 };
+
+export const CONNECT_FOUR_CONFIG = {
+  MAX_ROWS: 6,
+  MAX_COLS: 7,
+  COUNT_TO_WIN: 4,
+  PLAYERS: {
+    P1: 1,
+    P2: 2,
+  },
+};

@@ -1,0 +1,60 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: $white;
+
+  @media screen and (min-width: 992px) {
+    font-size: 3rem;
+  }
+}
+
+.board {
+  display: flex;
+  flex-direction: row;
+  border: 0.5px solid $grey-1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile {
+  @include square (3rem, rgba($color: $white, $alpha: 0.05));
+  border: 0.5px solid $grey-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.player {
+  @include square (2rem, $transparent, 50%);
+
+  @media screen and (min-width: 1200px) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &.playerOne {
+    background-color: rgba($color: $red-2, $alpha: 0.75);
+  }
+
+  &.playerTwo {
+    background-color: rgba($color: $blue-3, $alpha: 0.9);
+  }
+}
