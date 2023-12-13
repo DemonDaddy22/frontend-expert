@@ -1,6 +1,6 @@
 export const sampleUsage1 = `<div class="board">
   <div class="column">
-    <div class="tile"></div> 
+    <div class="tile"></div>
     ... <!-- 6 total tiles -->
     <div class="tile"></div>
   </div>
@@ -8,7 +8,7 @@ export const sampleUsage1 = `<div class="board">
   <div class="column">
     <div class="tile"></div>
     ... <!-- 6 total tiles -->
-    <div class="tile"></div> 
+    <div class="tile"></div>
   </div>
 </div>`;
 
