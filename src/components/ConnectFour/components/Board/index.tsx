@@ -138,7 +138,7 @@ const Board: React.FC<Props> = () => {
     <div className={classes.game}>
       {isGameOver && (
         <h1 className={classes.title}>
-          Player {isPlayerOneTurn ? CONNECT_FOUR_CONFIG.PLAYERS.P1 : CONNECT_FOUR_CONFIG.PLAYERS.P2} Wins!
+          Player {isPlayerOneTurn ? CONNECT_FOUR_CONFIG.PLAYERS.P1 : CONNECT_FOUR_CONFIG.PLAYERS.P2} Wins
         </h1>
       )}
       <div className={classes.board}>

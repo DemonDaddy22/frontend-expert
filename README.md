@@ -58,6 +58,7 @@
 47. [Quiz](./src/components/Quiz/README.md): You're given a CSS file for a multiple choice quiz, and you need to implement the component using React.
 48. [Wordle](./src/components/Wordle/README.md): You're given a CSS file for a clone of the popular game [Wordle](https://www.nytimes.com/games/wordle/index.html), and you need to implement the component using React.
 49. [Memory](./src/components/Memory/README.md): You're given a CSS file for a memory game, and you need to implement the component using React.
+50. [ConnectFour](./src/components/ConnectFour/README.md): You're given a CSS file for a Connect Four game, and you need to implement the component using React.
 
 <br />
 <br />
