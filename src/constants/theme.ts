@@ -42,6 +42,14 @@ export const THEME_COLORS: { [key in Theme]: ITheme } = {
   },
 };
 
+export const PROJECT_NAV_ITEM_COLORS = {
+  HOME: '#11CC55',
+  GITHUB: '#F05C85',
+  USER: '#44BBFF',
+  LIGHT: '#D9D140',
+  DARK: '#AFBB42',
+};
+
 export const PROJECT_COLORS = {
   PROJECT1: {
     background: `linear-gradient(40deg, #1C1019 0%, ${COLORS.BLACK} 100%)`,
