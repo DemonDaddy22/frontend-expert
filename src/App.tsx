@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.scss';
-import ConnectFour from './components/ConnectFour';
-import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
-    <ThemeContextProvider>
-      <div className='container'>
-        <ConnectFour />
-      </div>
-    </ThemeContextProvider>
+    <div className='container'>
+      <h1>Home Page coming soon...</h1>
+    </div>
   );
 }
 
