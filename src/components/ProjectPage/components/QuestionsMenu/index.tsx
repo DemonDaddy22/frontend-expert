@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classes from './styles.module.scss';
 import Divider from '../../../UI/Divider';
 import { QUESTIONS_INFO } from '../../../../constants/questions';
@@ -14,7 +14,12 @@ const QuestionsMenu: React.FC<Props> = () => {
       <ul className={classes.menuItems}>
         {QUESTIONS_INFO.map((question) => (
           <li key={question.id} className={classes.menuListItem}>
-            <Link to={`fe/exercise/${question.id}`} className={classes.menuItem}>{question.name}</Link>
+            <NavLink
+              to={`fe/exercise/${question.id}`}
+              className={({ isActive }) => isActive ? classes.menuItemActive : classes.menuItem}
+            >
+              {question.name}
+            </NavLink>
           </li>
         ))}
       </ul>
