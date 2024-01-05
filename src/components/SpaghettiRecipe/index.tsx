@@ -1,12 +1,12 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const SpaghettiRecipe: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT3.background}>
+    <ProjectPage>
       <QuestionDetails title='Spaghetti Recipe' titleClassName={classes.questionTitle}>
         <p>
           You've been provided with a recipe for spaghetti as raw text, and you need to convert this recipe into a
@@ -42,7 +42,8 @@ const SpaghettiRecipe: React.FC<Props> = () => {
           under the second instruction. Your HTML code should use proper semantic markup.
         </p>
       </QuestionDetails>
-      <main className={classes.recipeContainer}>
+      <Divider />
+      <section className={classes.recipeContainer}>
         <header>
           <h1 className={classes.recipeTitle}>Spaghetti Recipe</h1>
         </header>
@@ -71,7 +72,7 @@ const SpaghettiRecipe: React.FC<Props> = () => {
             <li>Enjoy!</li>
           </ol>
         </section>
-      </main>
+      </section>
     </ProjectPage>
   );
 };

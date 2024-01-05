@@ -2,13 +2,13 @@ import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlock';
+import Divider from '../UI/Divider';
 
 const UseInterval: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT40.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Use Interval'
         titleClassName={classes.questionTitle}
@@ -47,8 +47,9 @@ const UseInterval: React.FC<Props> = () => {
           <CodeBlock codeString={sampleUsage} />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
-        <CodeBlock language='typescript' codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
+        <CodeBlock language='typescript' codeString={solutionCode} hideCode />
       </section>
     </ProjectPage>
   );

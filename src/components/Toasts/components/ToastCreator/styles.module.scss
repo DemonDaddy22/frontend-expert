@@ -2,10 +2,10 @@
 @import '../../../../utils/mixins.scss';
 
 .container {
-  @include spacing (0 1rem);
+  @include theme (background-color, ePrimaryMuted);
+  @include spacing (1rem);
   border-radius: 0.5rem;
   width: 100%;
-  background-color: $project-35-container-bg;
 }
 
 .options {

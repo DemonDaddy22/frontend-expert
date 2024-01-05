@@ -1,13 +1,14 @@
 import React from 'react';
-import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const PurchaseForm: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT8.background}>
+    <ProjectPage>
       <QuestionDetails
         title='Purchase Form'
         titleClassName={classes.questionTitle}
@@ -102,6 +103,7 @@ const PurchaseForm: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.formContainer}>
         <ol>
           <li className={classes.selected}>Product Selection</li>

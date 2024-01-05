@@ -2,7 +2,6 @@ import React, { useCallback, useState, ChangeEvent } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleTodoItem } from './codeBlocks';
 import Input from '../UI/Input';
@@ -10,6 +9,7 @@ import { ButtonBlue } from '../UI/Button';
 import IconButton from '../UI/IconButton';
 import Trash from '../Icons/Trash';
 import { isEmptyString } from '../../utils';
+import Divider from '../UI/Divider';
 
 // TODO - on clicking a todo item, user can strike it off and it moves below the non striked out items
 // TODO - animate TODOs in the view
@@ -92,7 +92,7 @@ const TodoList: React.FC<Props> = () => {
   }, [handleAddTodo]);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT32.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Todo List'
         titleClassName={classes.questionTitle}
@@ -132,6 +132,7 @@ const TodoList: React.FC<Props> = () => {
           <CodeBlock codeString={sampleTodoItem} language='xml' />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <div className={classes.todoListWrapper}>
           <h1 className={classes.todoListHeader}>Todo List</h1>

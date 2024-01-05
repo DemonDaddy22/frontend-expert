@@ -2,9 +2,9 @@ import React, { useCallback, useEffect } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import Input from '../UI/Input';
 import './vanillaStyles.css';
+import Divider from '../UI/Divider';
 
 const Sudoku: React.FC<Props> = () => {
   const getGivenNumberCell = useCallback(
@@ -78,7 +78,7 @@ const Sudoku: React.FC<Props> = () => {
   }, [handleCellSelection, handleNumberControlSelection]);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT36.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Sudoku'
         titleClassName={classes.questionTitle}
@@ -137,6 +137,7 @@ const Sudoku: React.FC<Props> = () => {
           <li>If no cell is selected, clicking the number controls should have no effect.</li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <div className={classes.sudokuContainer}>
           <table className={classes.board} role='grid'>

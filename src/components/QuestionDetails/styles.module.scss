@@ -2,38 +2,30 @@
 @import '../../utils/mixins.scss';
 
 .questionContainer {
-  @include spacing(1rem);
-  border: 1px dotted rgba($color: $light, $alpha: 0.5);
-  border-radius: 0.25rem;
-  width: 100%;
-  align-self: stretch;
+  max-width: 50rem;
 
-  @media screen and (min-width: 992px) {
-    max-width: 30rem;
-  }
-
-  .questionTitle {
+  & .questionTitle {
     letter-spacing: -0.25px;
     margin-bottom: 1rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
 
-    @media screen and (min-width: 992px) {
-      font-size: 2rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 2.5rem;
     }
   }
 
-  .questionDescription {
-    color: rgba($color: $light, $alpha: 0.85);
+  & .questionDescription {
     letter-spacing: -0.2px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
 
-    @media screen and (min-width: 992px) {
-      font-size: 0.95rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1rem;
     }
   }
 
   & p,
   & li {
-    @include spacing ($margin: 0.5rem 0);
+    @include theme (color, contrast1Opacity90);
+    @include spacing ($margin: 0.75rem 0);
   }
 }

@@ -6,26 +6,19 @@ $circle-border-width: 4px;
 $circle-divider-height: 4px;
 
 .questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 55rem;
-  }
-
-  @media screen and (min-width: 1500px) {
-    max-width: 70rem;
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }
 
 .questionTitle {
-  color: $project-header-8;
+  @include theme (color, ePrimary);
 }
 
 .questionDescriptionHighlight {
   @include spacing (0.05em 0.25rem);
-  background-color: $project-highlight-8;
+  @include theme (background-color, eSecondaryDeep);
+  @include theme (color, contrast1Opacity90);
   border-radius: 0.25rem;
   font-size: 0.95em;
 }
@@ -35,8 +28,7 @@ $circle-divider-height: 4px;
 }
 
 .formContainer {
-  @include spacing (1rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  @include spacing (2rem);
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -45,115 +37,110 @@ $circle-divider-height: 4px;
   align-self: stretch;
   flex: 1;
   gap: 1rem;
+  max-width: 50rem;
 
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-  }
-
-  ol {
+  & ol {
     @include spacing (0);
     display: flex;
     transform: scale(0.75);
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       transform: scale(1);
     }
 
-    li {
+    & li {
       @include spacing (0 1rem);
+      @include theme (color, contrast1);
       counter-increment: product-count;
       position: relative;
       list-style: none;
-      color: $white;
       text-align: center;
 
       &::before {
-        @include circle ($circle-width, $grey-2);
+        @include circle ($circle-width, $grey-3);
         @include spacing ($margin: 0 auto 0.5rem);
+        @include theme (border, contrast2, $circle-border-width solid);
+        @include theme (color, contrast1);
         content: counter(product-count);
         font-size: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: $circle-border-width solid $light;
         box-sizing: content-box;
       }
 
       &:not(:last-of-type)::after {
+        @include theme (background-color, contrast1Opacity80);
         position: absolute;
         content: '';
-        background-color: $light;
         height: $circle-divider-height;
         width: calc(100% - #{$circle-width} + 16px); // 16px is corresponding to the padding added to each list item
         left: calc(50% + #{($circle-width / 2) + ($circle-border-width)});
-        top: calc(#{($circle-width / 2) + ($circle-border-width) - #{$circle-divider-height / 2}
-        }
+        top: calc(#{($circle-width / 2) + ($circle-border-width) - ($circle-divider-height / 2)});
+      }
+    }
 
-      );
+    & .selected {
+      &::before {
+        background-color: $eProductSelected;
+      }
     }
   }
 
-  .selected {
-    &::before {
-      background-color: $project-product-selected;
+  ul {
+    @include spacing (0);
+    align-self: stretch;
+
+    & li {
+      @include spacing (0.75rem, 0.75rem 0);
+      @include theme (background-color, grey3);
+      list-style: none;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      box-sizing: content-box;
+
+      & label {
+        @include spacing ($margin: 0 0 0 0.5rem);
+        font-weight: bold;
+      }
     }
   }
-}
 
-ul {
-  @include spacing (0);
-  align-self: stretch;
+  .productBlue {
+    color: $eProductBlue;
+    border-left: 5px solid $eProductBlue;
 
-  li {
-    @include spacing (0.75rem, 0.75rem 0);
-    list-style: none;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    background-color: $grey-2;
-    display: flex;
-    align-items: center;
-    box-sizing: content-box;
-
-    label {
-      @include spacing ($margin: 0 0 0 0.5rem);
-      font-weight: bold;
+    & input {
+      accent-color: $eProductBlue;
     }
   }
-}
 
-.productBlue {
-  color: $project-product-blue;
-  border-left: 5px solid $project-product-blue;
+  .productRed {
+    color: $eProductRed;
+    border-left: 5px solid $eProductRed;
 
-  input {
-    accent-color: $project-product-blue;
+    & input {
+      accent-color: $eProductRed;
+    }
   }
-}
 
-.productRed {
-  color: $project-product-red;
-  border-left: 5px solid $project-product-red;
+  .productOrange {
+    color: $eProductOrange;
+    border-left: 5px solid $eProductOrange;
 
-  input {
-    accent-color: $project-product-red;
+    & input {
+      accent-color: $eProductOrange;
+    }
   }
-}
 
-.productOrange {
-  color: $project-product-orange;
-  border-left: 5px solid $project-product-orange;
+  .productGreen {
+    color: $eProductGreen;
+    border-left: 5px solid $eProductGreen;
 
-  input {
-    accent-color: $project-product-orange;
+    & input {
+      accent-color: $eProductGreen;
+    }
   }
-}
-
-.productGreen {
-  color: $project-product-green;
-  border-left: 5px solid $project-product-green;
-
-  input {
-    accent-color: $project-product-green;
-  }
-}
 }

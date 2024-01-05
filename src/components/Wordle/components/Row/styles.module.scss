@@ -8,9 +8,12 @@
 }
 
 .box {
-  @include square (3rem, rgba($color: $dark, $alpha: 0.75), 0.25rem);
-  border: 1px solid $grey-2;
-  color: $white;
+  @include theme (background-color, accent1Opacity80);
+  @include theme (border, grey1, 1px solid);
+  @include theme (color, contrast1);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +21,9 @@
   font-weight: bold;
   text-transform: uppercase;
 
-  @media screen and (min-width: 992px){
+  @media screen and (min-width: 1200px){
+    height: 4rem;
+    width: 4rem;
     height: 4rem;
     width: 4rem;
     font-size: 2rem;

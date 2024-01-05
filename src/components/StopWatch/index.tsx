@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import Play from '../Icons/Play';
 import Reset from '../Icons/Reset';
 import Stop from '../Icons/Stop';
@@ -8,6 +7,8 @@ import QuestionDetails from '../QuestionDetails';
 import IconButton from '../UI/IconButton';
 import classes from './styles.module.scss';
 import { NO_OP } from '../../constants';
+import Divider from '../UI/Divider';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const CONTROL_BUTTON_SIZE = 28;
 
@@ -15,6 +16,8 @@ let watchTimerId: NodeJS.Timeout;
 let startTime = Date.now();
 
 const StopWatch: React.FC<Props> = () => {
+  const { getThemeValue } = useContext(ThemeContext);
+
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [timerText, setTimerText] = useState('00:00:000');
   const [isTimerRunning, setIsTimerRunning] = useState(false);
@@ -82,7 +85,7 @@ const StopWatch: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT30.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Stop Watch'
         titleClassName={classes.questionTitle}
@@ -134,6 +137,7 @@ const StopWatch: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <main className={classes.solutionContainer}>
         <section className={`${classes.watch} ${isTimerRunning && classes.watchGlow}`}>
           <h4 className={classes.timer}>{timerText}</h4>
@@ -143,21 +147,21 @@ const StopWatch: React.FC<Props> = () => {
               onClick={!startControlButtonRef.current?.disabled ? handleTimerStart : NO_OP}
               className={classes.controlStart}
               size={CONTROL_BUTTON_SIZE * 1.5}>
-              <Play color={COLORS.GREEN2} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
+              <Play color={getThemeValue('green1')} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
             <IconButton
               ref={stopControlButtonRef}
               onClick={!stopControlButtonRef.current?.disabled ? handleTimerStop : NO_OP}
               className={classes.controlStop}
               size={CONTROL_BUTTON_SIZE * 1.5}>
-              <Stop color={COLORS.RED2} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
+              <Stop color={getThemeValue('red1')} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
             <IconButton
               ref={resetControlButtonRef}
               onClick={!resetControlButtonRef.current?.disabled ? handleTimerReset : NO_OP}
               className={classes.controlReset}
               size={CONTROL_BUTTON_SIZE * 1.5}>
-              <Reset color={COLORS.BLUE3} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
+              <Reset color={getThemeValue('blue1')} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
           </div>
         </section>

@@ -34,6 +34,7 @@ $yellow-4:#EFDE7E;
 $LIGHT: (
   accent1: $white,
   accent2: $light,
+  accent3: #F7F7F7,
   contrast1: $black,
   contrast2: $dark,
   accent1Opacity10: rgba(255, 255, 255, 0.1),
@@ -55,21 +56,44 @@ $LIGHT: (
   contrast1Opacity80: rgba(0, 0, 0, 0.8),
   contrast1Opacity90: rgba(0, 0, 0, 0.9),
   contrast3: rgba($color: $dark, $alpha: 0.75),
-  divider: rgba($color: $white, $alpha: 0.15),
+  divider: rgba($color: $dark, $alpha: 0.1),
   iconButton: rgba($color: $black, $alpha: 0.1),
   grey1: rgba(225, 225, 225, 0.25),
   grey2: rgba(240, 240, 240, 0.2),
   grey3: rgba(200, 200, 200, 0.5),
+  grey4: rgba(230, 230, 230, 1),
+  grey5: rgba(240, 240, 240, 1),
+  grey6: rgba(100, 100, 100, 1),
   blue1: #214789,
   red1: #9D092B,
   green1: #60A911,
   yellow1: #D9C913,
+  blue2: #B9D1FB,
+  red2: #F4AABB,
+  green2: #C9F699,
+  yellow2: #F5ED95,
   errorScreenBG: linear-gradient(40deg, #DFE6F3, #E5DAF6, $light),
+
+  // ------ exercise values ------
+  ePrimary: #1F9FC5,
+  ePrimaryMuted: #E4EFF1,
+  ePrimaryContrast: #062237,
+  ePrimaryDeep: #1690EE,
+  ePrimaryDark: #092F4D,
+  eSecondary: #75D30B,
+  eSecondaryMuted: #E7EDE0,
+  eSecondaryContrast: #043825,
+  eSecondaryDeep: #0FBE7E,
+  eSecondaryDark: #083626,
+
+  eSignupForm: rgba(215, 215, 215, 0.25),
+  eTodoItem: #4A0B91,
 );
 
 $DARK: (
   accent1: $black,
   accent2: $dark,
+  accent3: #171717,
   contrast1: $white,
   contrast2: $light,
   accent1Opacity10: rgba(0, 0, 0, 0.1),
@@ -91,311 +115,56 @@ $DARK: (
   contrast1Opacity80: rgba(255, 255, 255, 0.8),
   contrast1Opacity90: rgba(255, 255, 255, 0.9),
   contrast3: rgba($color: $light, $alpha: 0.75),
-  divider: rgba($color: $black, $alpha: 0.15),
+  divider: rgba($color: $light, $alpha: 0.1),
   iconButton: rgba($color: $white, $alpha: 0.1),
   grey1: rgba(100, 100, 100, 0.25),
   grey2: rgba(75, 75, 75, 0.2),
   grey3: rgba(75, 75, 75, 0.6),
+  grey4: rgba(50, 50, 50, 1),
+  grey5: rgba(30, 30, 30, 1),
+  grey6: rgba(150, 150, 150, 1),
   blue1: #7CB9E8,
   red1: #F55757,
   green1: #93F30C,
   yellow1: #F2E639,
+  blue2: #08275D,
+  red2: #5C0A1D,
+  green2: #1F3408,
+  yellow2: #3D390A,
   errorScreenBG: linear-gradient(40deg, #021026, #0E021F, $dark),
+
+  // ------ exercise values ------
+  ePrimary: #55C1E2,
+  ePrimaryMuted: #19232A,
+  ePrimaryContrast: #B7DDFB,
+  ePrimaryDeep: #16517F,
+  ePrimaryDark: #052C49,
+  eSecondary: #A3F545,
+  eSecondaryMuted: #141F18,
+  eSecondaryContrast: #BEF6D2,
+  eSecondaryDeep: #106244,
+  eSecondaryDark: #042519,
+
+  eSignupForm: rgba(0, 0, 0, 0.25),
+  eTodoItem: #722DC0,
 );
 
 $themes: ($LIGHT, $DARK);
 
-// Project 1
-$project-bg-1: linear-gradient(40deg, #1C1019 0%, $black 100%);
-$project-header-1: #F89D42;
-$project-list-bg-1: #8A3D43;
-$project-highlight-1: $white;
-
-// Project 2
-$project-bg-2: linear-gradient(40deg, #121D1E 0%, $black 100%);
-$project-table-header-2: #B48BB8;
-$project-list-bg-2: #6C2E82;
-$project-header-2: #DE90FA;
-
-// project-3
-$project-bg-3: linear-gradient(40deg, #13141C 0%, $black 100%);
-$project-header-3: #55C1E2;
-$project-list-bg-3: #A3F545;
-$project-section-title-3: #BEF57F;
-
-// project-4
-$project-bg-4: linear-gradient(40deg, #14140E 0%, $black 100%);
-$project-header-4: #F870A0;
-$project-section-header-4: #CE8BFB;
-$project-highlight-4: #2D1883;
-
-// project-5
-$project-bg-5: linear-gradient(40deg, #170E1B 0%, $black 100%);
-$project-header-5: #63FACA;
-
-// project-6
-$project-bg-6: linear-gradient(40deg, #0F1508 0%, $black 100%);
-$project-header-6: #C5FFE4;
-$project-navbar-bg-6: #0038A8;
-$project-navbar-hover-bg-6: #1E87B5;
-
-// project-7
-$project-bg-7: linear-gradient(40deg, #1C0A14 0%, $black 100%);
-$project-header-7: #FF6395;
-$project-pig-head-7: #FFC0CB;
-$project-pig-nose-7: #F57187;
-
-// project-8
-$project-bg-8: linear-gradient(40deg, #0B1524 0%, $black 100%);
-$project-header-8: #FCFFA2;
-$project-highlight-8: #8A8441;
-$project-product-blue: #8C96F6;
-$project-product-red: #E64970;
-$project-product-orange: #F37F1B;
-$project-product-bright-red: #F21B3E;
-$project-product-green: #25B59B;
-$project-product-selected: #279600;
-
-// project-9
-$project-bg-9: linear-gradient(40deg, #0D2212 0%, $black 100%);
-$project-header-9: #D7F151;
-
-// project-10
-$project-bg-10: linear-gradient(40deg, #1A170D 0%, $black 100%);
-$project-header-10: #EDC473;
-$project-emoji-bg: #A4D9EB;
-$project-emoji-border: #9BBCC2;
-$project-emoji-stick-bg: #808080;
-$project-emoji-bulb-bg: #FFA500;
-$project-emoji-ear-bg: #C90A0A;
-$project-emoji-eye-border: #00B3FF;
-$project-emoji-mouth-bg: #DEDEDE;
-
-// project-11
-$project-bg-11: linear-gradient(40deg, #032423 0%, $black 100%);
-$project-header-11: #21C58F;
-$project-highlight-11: #1C5743;
-
-// project-12
-$project-bg-12: linear-gradient(40deg, #110F31 0%, $black 100%);
-$project-header-12: #7467CB;
-$project-highlight-12: #322C5A;
-
-// project-13
-$project-bg-13: linear-gradient(40deg, #180F10 0%, $black 100%);
-$project-header-13: #E95B3F;
-$project-highlight-13: #66123F;
-$project-code-13: #4F1E25;
-$project-output-13: #F48462;
-
-// project-14
-$project-bg-14: linear-gradient(40deg, #122530 0%, $black 100%);
-$project-header-14: #68A4DD;
-$project-highlight-14: #194165;
-$project-code-14: #0E4050;
-$project-output-14: #ADCEED;
-
-// project-15
-$project-bg-15: linear-gradient(40deg, #1E1329 0%, $black 100%);
-$project-header-15: #D275EC;
-$project-highlight-15: #3B2463;
-$project-code-15: #2B2647;
-$project-output-15: #D8C2F3;
-
-// project-16
-$project-bg-16: linear-gradient(40deg, #0A2016 0%, $black 100%);
-$project-header-16: #5BD34B;
-$project-highlight-16: #345316;
-
-// project-17
-$project-bg-17: linear-gradient(40deg, #1E140C 0%, $black 100%);
-$project-header-17: #F9CA52;
-$project-highlight-17: #733D00;
-$project-code-17: #3A1900;
-$project-output-17: #F9E1AE;
-
-// project-18
-$project-bg-18: linear-gradient(40deg, #200512 0%, $black 100%);
-$project-header-18: #EE4D91;
-$project-highlight-18: #730F2A;
-
-// project-19
-$project-bg-19: linear-gradient(40deg, #0D172B 0%, $black 100%);
-$project-header-19: #67D3EE;
-$project-highlight-19: #043E5D;
-
-// project-20
-$project-bg-20: linear-gradient(40deg, #051B10 0%, $black 100%);
-$project-header-20: #70DF6E;
-$project-highlight-20: #1E590D;
-
-// project-21
-$project-bg-21: linear-gradient(40deg, #060B21 0%, $black 100%);
-$project-header-21: #A683F2;
-$project-highlight-21: #560A65;
-$project-code-21: #280836;
-$project-output-21: #DCC2EE;
-
-// project-22
-$project-bg-22: linear-gradient(40deg, #1E0403 0%, $black 100%);
-$project-header-22: #EA8B7A;
-$project-highlight-22: #66170C;
-
-// project-23
-$project-bg-23: linear-gradient(40deg, #17180A 0%, $black 100%);
-$project-header-23: #D6F283;
-$project-highlight-23: #293905;
-$project-code-23: #181F04;
-$project-output-23: #E5EEC2;
-
-// project-24
-$project-bg-24: linear-gradient(40deg, #051D23 0%, $black 100%);
-$project-header-24: #23F5F5;
-$project-highlight-24: #114445;
-
-// project-25
-$project-bg-25: linear-gradient(40deg, #231C03 0%, $black 100%);
-$project-header-25: #F5CF3A;
-$project-highlight-25: #8C7105;
-
-// project-26
-$project-bg-26: linear-gradient(40deg, #1E051A 0%, $black 100%);
-$project-header-26: #F980EA;
-$project-highlight-26: #6D1067;
-
-// project-27
-$project-bg-27: linear-gradient(40deg, #0B1D0F 0%, $black 100%);
-$project-header-27: #86F68D;
-$project-highlight-27: #104420;
-
-// project-28
-$project-bg-28: linear-gradient(40deg, #160922 0%, $black 100%);
-$project-header-28: #8C80F8;
-$project-highlight-28: #382CA1;
-$project-code-28: #2A284A;
-$project-output-28: #D6D3F7;
-
-// project-29
-$project-bg-29: linear-gradient(40deg, #0F242C 0%, $black 100%);
-$project-header-29: #5DACD7;
-$project-highlight-29: #115D9C;
-$project-code-29: #062F4A;
-
-// project-30
-$project-bg-30: linear-gradient(40deg, #190A02 0%, $black 100%);
-$project-header-30: #DF7C43;
-$project-highlight-30: #983104;
-$project-30-watch-border: #F46E26;
-
-// project-31
-$project-bg-31: linear-gradient(40deg, #171902 0%, $black 100%);
-$project-header-31: #DBE85F;
-$project-highlight-31: #6E730A;
-$project-31-game-bg-1: #51B357;
-$project-31-game-bg-2: #1C6021;
-
-// project-32
-$project-bg-32: linear-gradient(40deg, #0D051D 0%, $black 100%);
-$project-header-32: #BC9BF9;
-$project-highlight-32: #520A9F;
-$project-32-wrapper-bg-1: #0F0C29;
-$project-32-wrapper-bg-2: #24243E;
-$project-32-todo-bg: #515198;
-
-// project-33
-$project-bg-33: linear-gradient(40deg, #1F1907 0%, $black 100%);
-$project-header-33: #DFC063;
-$project-highlight-33: #795E0C;
-$project-code-33: #282009;
-$project-output-33: #E6D295;
-
-// project-34
-$project-bg-34: linear-gradient(40deg, #190410 0%, $black 100%);
-$project-header-34: #F06187;
-$project-highlight-34: #D10E42;
-
-// project-35
-$project-bg-35: linear-gradient(40deg, #02141C 0%, $black 100%);
-$project-header-35: #13ACD7;
-$project-highlight-35: #1A435F;
-$project-35-container-bg: #13232D;
-
-// project-36
-$project-bg-36: linear-gradient(40deg, #091505 0%, $black 100%);
-$project-header-36: #4FE045;
-$project-highlight-36: #0E7231;
-$project-36-selected-cell-bg: #A8EC9B;
-$project-36-candidates: #061802;
-
-// project-37
-$project-bg-37: linear-gradient(40deg, #241408 0%, $black 100%);
-$project-header-37: #EE7E3D;
-$project-highlight-37: #6D1F0C;
-
-// project-38
-$project-bg-38: linear-gradient(40deg, #130729 0%, $black 100%);
-$project-header-38: #D789F5;
-$project-highlight-38: #451168;
-
-// project-39
-$project-bg-39: linear-gradient(40deg, #1B2202 0%, $black 100%);
-$project-header-39: #CDE06D;
-$project-highlight-39: #424304;
-
-// project-40
-$project-bg-40: linear-gradient(40deg, #042520 0%, $black 100%);
-$project-header-40: #24F9C3;
-$project-highlight-40: #155750;
-
-// project-41
-$project-bg-41: linear-gradient(40deg, #29010C 0%, $black 100%);
-$project-header-41: #FF356E;
-$project-highlight-41: #600519;
-
-// project-42
-$project-bg-42: linear-gradient(40deg, #221803 0%, $black 100%);
-$project-header-42: #FCBA2B;
-$project-highlight-42: #604905;
-
-// project-43
-$project-bg-43: linear-gradient(40deg, #082029 0%, $black 100%);
-$project-header-43: #60BFEE;
-$project-highlight-43: #0C4150;
-
-// project-44
-$project-bg-44: linear-gradient(40deg, #0E0534 0%, $black 100%);
-$project-header-44: #A692FF;
-$project-highlight-44: #190860;
-
-// project-45
-$project-bg-45: linear-gradient(40deg, #240606 0%, $black 100%);
-$project-header-45: #FE7135;
-$project-highlight-45: #8A1C04;
-$project-code-45: #430202;
-
-// project-46
-$project-bg-46: linear-gradient(40deg, #0C2603 0%, $black 100%);
-$project-header-46: #35FE3C;
-$project-highlight-46: #066509;
-$project-code-46: #053F0B;
-
-// project-47
-$project-bg-47: linear-gradient(40deg, #200627 0%, $black 100%);
-$project-header-47: #D179F7;
-$project-highlight-47: #630B8C;
-$project-code-47: #3F1544;
-
-// project-48
-$project-bg-48: linear-gradient(40deg, #202002 0%, $black 100%);
-$project-header-48: #E7DC81;
-$project-highlight-48: #6D6E1A;
-
-// project-49
-$project-bg-49: linear-gradient(40deg, #270618 0%, $black 100%);
-$project-header-49: #FD6183;
-$project-highlight-49: #650B35;
-
-// project-50
-$project-bg-50: linear-gradient(40deg, #041328 0%, $black 100%);
-$project-header-50: #7AAAF3;
-$project-highlight-50: #153F6C;
+$eStopWatch: #F46E26;
+$ePigHead: #FFC0CB;
+$ePigNose: #F57187;
+$eProductBlue: #8C96F6;
+$eProductRed: #E64970;
+$eProductOrange: #F37F1B;
+$eProductBrightRed: #F21B3E;
+$eProductGreen: #25B59B;
+$eProductSelected: #279600;
+$eEmojiBg: #A4D9EB;
+$eEmojiBorder: #9BBCC2;
+$eEmojiStickBg: #808080;
+$eEmojiBulbBg: #FFA500;
+$eEmojiEarBg: #C90A0A;
+$eEmojiEyeBorder: #00B3FF;
+$eEmojiMouthBg: #DEDEDE;
+$eCandidates: #061802;

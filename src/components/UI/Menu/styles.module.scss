@@ -2,12 +2,12 @@
 @import '../../../utils/mixins.scss';
 
 .menu {
+  @include theme (border, grey1, 1px solid);
   border-radius: 0.25rem;
   min-width: 15rem;
   overflow: hidden;
   padding: 0;
   z-index: 10000;
-  @include theme (border, grey1, 1px solid);
 
   & .menuItem {
     @include theme (border-bottom, grey1, 1px solid);
@@ -19,12 +19,12 @@
 }
 
 .defaultItem {
+  @include theme (color, contrast2);
+  @include theme (background-color, accent2);
+  @include theme (border, grey1, 1px solid);
   border-radius: 0.25rem;
   min-width: 15rem;
   overflow: hidden;
   z-index: 10000;
   padding: 2rem;
-  @include theme (color, contrast2);
-  @include theme (background-color, accent2);
-  @include theme (border, grey1, 1px solid);
 }

@@ -41,6 +41,8 @@ const PhoneInputField: React.FC<Props> = () => {
       if (!isEmptyString(phoneToSet)) {
         setPhone(phoneToSet);
       }
+    } else {
+      setPhone(phoneToSet);
     }
   }, []);
 

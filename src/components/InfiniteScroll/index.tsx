@@ -1,6 +1,4 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { AE_TESTIMONIALS } from '../../constants';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
@@ -8,11 +6,13 @@ import { sampleCode, sampleResponse } from './codeBlocks';
 import Testimonial from './components/Testimonial';
 import classes from './styles.module.scss';
 import useFetchTestimonials from './useFetchTestimonials';
+import Divider from '../UI/Divider';
+import { isEmptyList } from '../../utils';
 
 const InfiniteScroll: React.FC<Props> = () => {
   const [page, setPage] = useState<number>(0);
 
-  const { testimonials, hasNext } = useFetchTestimonials(AE_TESTIMONIALS.LIMIT, page);
+  const { testimonials, hasNext } = useFetchTestimonials(page);
 
   const lastTestimonialObserver = useRef<IntersectionObserver>();
 
@@ -34,7 +34,7 @@ const InfiniteScroll: React.FC<Props> = () => {
   );
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT29.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Infinite Scroll'
         titleClassName={classes.questionTitle}
@@ -95,7 +95,7 @@ const InfiniteScroll: React.FC<Props> = () => {
           file. Once testimonials have been displayed on the page, the HTML should look like this:
         </p>
         <div className={classes.codeWrapper}>
-          <CodeBlock codeString={sampleCode} language='html' />
+          <CodeBlock codeString={sampleCode} language='xml' />
         </div>
         <p>
           Regarding exact functionality, you should fetch 5 testimonials and append them to the testimonial container as
@@ -125,19 +125,23 @@ const InfiniteScroll: React.FC<Props> = () => {
           API to fetch random data.)
         </p>
       </QuestionDetails>
-      <main className={classes.solutionContainer}>
-        <h2 className={classes.solutionHeader}>Testimonials</h2>
-        <section className={classes.testimonialsContainer}>
-          {testimonials?.map((testimonial, index) => (
-            <Testimonial
-              ref={index === testimonials.length - 1 ? lastTestimonialRef : null}
-              key={`${testimonial.id}-${index}`}
-              id={testimonial.id}
-              name={testimonial.name}
-            />
-          ))}
-        </section>
-      </main>
+      <Divider />
+      {!isEmptyList(testimonials) && (
+        <main className={classes.solutionContainer}>
+          <h2 className={classes.solutionHeader}>Testimonials</h2>
+          <section className={classes.testimonialsContainer}>
+            {testimonials.map((testimonial, index) => (
+              <Testimonial
+                ref={index === testimonials.length - 1 ? lastTestimonialRef : null}
+                key={`${testimonial.id}-${index}`}
+                id={testimonial.id}
+                name={testimonial.name}
+                avatar={testimonial.avatar}
+              />
+            ))}
+          </section>
+        </main>
+      )}
     </ProjectPage>
   );
 };

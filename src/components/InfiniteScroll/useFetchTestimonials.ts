@@ -1,40 +1,35 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { AE_TESTIMONIALS } from '../../constants';
 
-const useFetchTestimonials = (size: number, page: number) => {
+const useFetchTestimonials = (page: number) => {
   const [testimonials, setTestimonials] = useState<Array<ITestimonial>>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
   const [hasNext, setHasNext] = useState(false);
 
   useEffect(() => {
-    let cancel;
     setLoading(true);
-    axios
-      .get(AE_TESTIMONIALS.API_URI, {
-        withCredentials: false,
-        params: { size, page },
-        cancelToken: new axios.CancelToken((c) => (cancel = c)),
+    fetch(`${AE_TESTIMONIALS.API_URI}?page=${page}`, {
+        mode: 'cors',
       })
+      .then((res) => res.json())
       .then((res) => {
         setTestimonials((prevTestimonials) => [
           ...prevTestimonials,
-          ...(res.data?.data?.map((testimonial: any) => ({
-            name: testimonial?.name ?? '',
-            id: testimonial?._id ?? '',
+          ...(res?.data?.map((testimonial: any) => ({
+            name: `${testimonial?.first_name} ${testimonial?.last_name}`.trim() || '',
+            avatar: testimonial?.avatar || '',
+            id: testimonial?.id || '',
           })) ?? []),
         ]);
-        setHasNext(page < res.data?.totalPages);
+        setHasNext(page < res?.total_pages);
         setError(null);
       })
       .catch((err) => {
-        if (!axios.isCancel(err)) {
-          setError(err);
-        }
+        setError(err);
       })
       .finally(() => setLoading(false));
-  }, [size, page]);
+  }, [page]);
 
   return { testimonials, loading, error, hasNext };
 };

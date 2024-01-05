@@ -3,13 +3,13 @@ import { debounce } from 'lodash';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleCode, sampleResponse } from './codeBlocks';
 import { RAPID_MOVIESDB_HOST } from '../../constants';
 import { isEmptyObject, isEmptyString } from '../../utils';
 import Menu from '../UI/Menu';
 import Input from '../UI/Input';
+import Divider from '../UI/Divider';
 
 const TypeAhead: React.FC<Props> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,7 +65,7 @@ const TypeAhead: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT33.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Type Ahead'
         titleClassName={classes.questionTitle}
@@ -134,6 +134,7 @@ const TypeAhead: React.FC<Props> = () => {
           requests to the API.
         </p>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <Input
           type='text'

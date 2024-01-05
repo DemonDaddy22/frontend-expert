@@ -14,9 +14,9 @@ const QuestionDetails: React.FC<QuestionDetailsProps> = (props) => {
   } = props;
   return (
     <section className={`${classes.questionContainer} ${containerClassName}`} style={containerStyle}>
-      <h2 className={`${classes.questionTitle} ${titleClassName}`} style={titleStyle}>
+      <h1 className={`${classes.questionTitle} ${titleClassName}`} style={titleStyle}>
         {title}
-      </h2>
+      </h1>
       <div className={`${classes.questionDescription} ${descriptionClassName}`} style={descriptionStyle}>
         {children}
       </div>

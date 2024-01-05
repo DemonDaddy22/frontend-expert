@@ -2,13 +2,13 @@ import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import { CRYPTO_PRICES_CONFIG } from '../../constants';
 import PricesTable from './components/PricesTable';
+import Divider from '../UI/Divider';
 
 const CryptoPrices: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT45.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Crypto Prices'
         titleClassName={classes.questionTitle}
@@ -35,6 +35,7 @@ const CryptoPrices: React.FC<Props> = () => {
           first page, and the next button should be disabled on the last page.
         </p>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <PricesTable />
       </section>

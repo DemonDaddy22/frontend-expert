@@ -2,11 +2,11 @@ import React, { useCallback, useState } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleToastItem } from './codeBlock';
 import ToastCreator from './components/ToastCreator';
 import Toast from './components/Toast';
+import Divider from '../UI/Divider';
 
 // TODO - handle toasts animation using framer
 
@@ -44,7 +44,7 @@ const Toasts: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT35.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Toasts'
         titleClassName={classes.questionTitle}
@@ -109,6 +109,7 @@ const Toasts: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <ToastCreator addToast={handleAddToast} clearToasts={handleClearToasts} />
         <div className={classes.toastsContainer}>

@@ -1,14 +1,14 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlocks';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const Flatten: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT24.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Flatten'
         titleClassName={classes.questionTitle}
@@ -55,8 +55,9 @@ const Flatten: React.FC<Props> = () => {
           <CodeBlock codeString={sampleUsage} />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
-        <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
+        <CodeBlock codeString={solutionCode} hideCode />
       </section>
     </ProjectPage>
   );

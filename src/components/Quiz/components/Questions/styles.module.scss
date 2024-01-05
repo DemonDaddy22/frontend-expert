@@ -3,8 +3,8 @@
 
 .container {
   @include spacing (1rem);
+  @include theme (background-color, ePrimaryMuted);
   border-radius: 0.5rem;
-  background-color: rgba($color: $project-code-47, $alpha: 0.25);
 }
 
 .buttonsContainer {

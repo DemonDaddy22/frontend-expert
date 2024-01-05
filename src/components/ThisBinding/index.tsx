@@ -1,14 +1,14 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlocks';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const ThisBinding: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT17.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='This Binding'
         titleClassName={classes.questionTitle}
@@ -102,8 +102,9 @@ const ThisBinding: React.FC<Props> = () => {
           </section>
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
-        <CodeBlock containerClassName={classes.fullHeight} codeString={solutionCode} hideCode />
+        <CodeBlock codeString={solutionCode} hideCode />
       </section>
     </ProjectPage>
   );

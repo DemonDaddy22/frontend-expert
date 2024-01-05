@@ -1,12 +1,12 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const BlogPost: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT4.background}>
+    <ProjectPage>
       <QuestionDetails title='Blog Post' titleClassName={classes.questionTitle}>
         <p>
           You've been provided with a blog post as raw text, and you need to convert this post into a properly marked-up
@@ -16,7 +16,7 @@ const BlogPost: React.FC<Props> = () => {
           The post should have a primary heading of{' '}
           <span className={classes.questionDescriptionHighlight}>Introducing AlgoCoin</span> with a tagline of{' '}
           <span className={classes.questionDescriptionHighlight}>
-            The future of decentralized meme currency is here.
+            The future of decentralized meme currency is here
           </span>
           .
         </p>
@@ -44,6 +44,7 @@ const BlogPost: React.FC<Props> = () => {
         </p>
         <p>Your HTML code should use proper semantic markup.</p>
       </QuestionDetails>
+      <Divider />
       <article className={classes.blogContainer}>
         <h1 className={classes.blogTitle}>Introducing AlgoCoin</h1>
         <p className={classes.blogCaption}>The future of decentralized meme currency is here</p>
@@ -58,7 +59,7 @@ const BlogPost: React.FC<Props> = () => {
             invert 420 binary trees.
           </p>
         </section>
-        <hr className={classes.blogSectionDivider} />
+        <Divider />
         <section className={classes.blogSection}>
           <h2 className={classes.blogSectionTitle}>Where Do I Start?</h2>
           <p className={classes.blogSectionContent}>

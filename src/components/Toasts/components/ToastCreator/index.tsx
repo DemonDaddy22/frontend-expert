@@ -3,7 +3,7 @@ import classes from './styles.module.scss';
 import Input from '../../../UI/Input';
 import FormGroup from '../../../UI/FormGroup';
 import Label from '../../../UI/Label';
-import { ButtonBlue, ButtonWhite } from '../../../UI/Button';
+import { ButtonBlue, ButtonRed } from '../../../UI/Button';
 import { isEmptyString, isValidNumber } from '../../../../utils';
 
 const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) => {
@@ -89,7 +89,7 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
       </FormGroup>
       <div className={classes.buttonsContainer}>
         <ButtonBlue onClick={handleAddToast}>Add Toast</ButtonBlue>
-        <ButtonWhite onClick={clearToasts}>Clear Toasts</ButtonWhite>
+        <ButtonRed onClick={clearToasts}>Clear Toasts</ButtonRed>
       </div>
     </section>
   );

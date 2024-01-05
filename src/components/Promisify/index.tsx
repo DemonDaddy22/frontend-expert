@@ -1,14 +1,14 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
 import { adder, contextExample, promisifiedAdder, solutionCode } from './codeBlocks';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const Promisify: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT18.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Promisify'
         titleClassName={classes.questionTitle}
@@ -78,8 +78,9 @@ const Promisify: React.FC<Props> = () => {
           <CodeBlock codeString={contextExample} />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
-        <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
+        <CodeBlock codeString={solutionCode} hideCode />
       </section>
     </ProjectPage>
   );

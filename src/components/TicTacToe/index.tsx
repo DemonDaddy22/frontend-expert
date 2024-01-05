@@ -1,9 +1,9 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
-import { PROJECT_COLORS } from '../../constants/theme';
 import QuestionDetails from '../QuestionDetails';
 import Button, { ButtonGreen } from '../UI/Button';
+import Divider from '../UI/Divider';
 
 const TOTAL_TILES = 9;
 const WINNING_COMBINATIONS = [
@@ -96,7 +96,7 @@ const TicTacToe: React.FC<Props> = () => {
   }, [isGameOver, movesCount]);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT31.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Tic Tac Toe'
         titleClassName={classes.questionTitle}
@@ -139,6 +139,7 @@ const TicTacToe: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <main className={classes.solutionContainer}>
         <section className={classes.gameContainer}>
           <h1 className={classes.gameTitle}>Tic Tac Toe</h1>

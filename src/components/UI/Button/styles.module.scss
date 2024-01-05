@@ -22,16 +22,17 @@
 
 .button {
   composes: buttonBase;
-  @include theme (color, accent1);
-  @include theme (border, accent1, 1px solid);
+  @include theme (color, contrast1);
+  @include theme (border, contrast1, 1px solid);
 
   &:hover {
-    @include theme (background-color, accent1);
-    @include theme (color, contrast1);
+    @include theme (background-color, contrast1);
+    @include theme (color, accent1);
   }
 
   &:disabled {
-    @include theme (color, accent1);
+    @include theme (color, contrast1);
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }
@@ -48,6 +49,7 @@
 
   &:disabled {
     color: $white;
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }
@@ -64,6 +66,7 @@
 
   &:disabled {
     color: $black;
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }
@@ -75,11 +78,12 @@
 
   &:hover {
     @include theme (background-color, blue1);
-    @include theme (color, contrast1);
+    @include theme (color, accent1);
   }
 
   &:disabled {
     @include theme (color, blue1);
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }
@@ -91,11 +95,12 @@
 
   &:hover {
     @include theme (background-color, red1);
-    @include theme (color, contrast1);
+    @include theme (color, accent1);
   }
 
   &:disabled {
     @include theme (color, red1);
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }
@@ -112,6 +117,7 @@
 
   &:disabled {
     @include theme (color, green1);
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }
@@ -128,6 +134,7 @@
 
   &:disabled {
     @include theme (color, yellow1);
+    filter: saturate(75%) brightness(80%);
     background-color: transparent !important;
   }
 }

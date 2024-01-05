@@ -3,14 +3,14 @@
 
 .dividerHorizontal {
   @include spacing ($margin: 0.25rem 0);
-  @include theme ($property: background-color, $key: divider, $transition: 0.25s);
+  @include theme (background-color, divider);
   height: 1px;
   align-self: stretch;
 }
 
 .dividerVertical {
   @include spacing ($margin: 0 0.25rem);
-  @include theme ($property: background-color, $key: divider, $transition: 0.25s);
+  @include theme (background-color, divider);
   width: 1px;
   align-self: stretch;
 }

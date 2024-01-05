@@ -1,0 +1,51 @@
+@import '../../../../constants/theme.scss';
+@import '../../../../utils/mixins.scss';
+
+.menu {
+  @include theme (background-color, grey4);
+  @include theme (border-right, divider, 1px solid);
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 30rem;
+  }
+}
+
+.title {
+  @include theme (background-color, grey4);
+  @include theme (color, blue1);
+  @include spacing (2rem);
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+}
+
+.menuItems {
+  @include spacing (1rem, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+.menuListItem {
+  list-style: none;
+}
+
+.menuItem {
+  @include theme (color, contrast2);
+  @include spacing (1.5rem 1rem);
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background-color: $transparent;
+  border-radius: 0.5rem;
+
+  &:hover {
+    @include theme (background-color, blue1);
+    @include theme (color, accent1);
+    cursor: pointer;
+  }
+}

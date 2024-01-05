@@ -9,6 +9,7 @@ const Board: React.FC<Props> = () => {
   const word = useRef(words[getRandomListIndex(words)]);
 
   const [currentGuess, setCurrentGuess] = useState('');
+  const [isGameOver, setIsGameOver] = useState(false);
   const [guesses, setGuesses] = useState<Array<string | null>>(
     createListOfSize(WORDLE_CONFIG.BOARD_SIZE).map(() => null)
   );
@@ -19,7 +20,8 @@ const Board: React.FC<Props> = () => {
   }, [JSON.stringify(guesses)]);
 
   const handleKeyPress = useCallback((event: KeyboardEvent) => {
-    if (currentIndex < 0) {
+    event.stopPropagation();
+    if (currentIndex < 0 || isGameOver) {
       return;
     }
 
@@ -30,13 +32,16 @@ const Board: React.FC<Props> = () => {
       setGuesses((prevGuesses) => {
         const newGuesses = [...prevGuesses];
         newGuesses.splice(currentIndex, 1, currentGuess);
+        if (word.current === currentGuess) {
+          setIsGameOver(true);
+        }
         setCurrentGuess('');
         return newGuesses;
       });
     } else if (WORDLE_CONFIG.ALPHABET_REGEX.test(key) && currentGuess.length < WORDLE_CONFIG.ROW_SIZE) {
       setCurrentGuess((prevGuess) => `${prevGuess}${key}`.toUpperCase());
     }
-  }, [currentIndex, currentGuess]);
+  }, [currentIndex, currentGuess, isGameOver]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyPress);

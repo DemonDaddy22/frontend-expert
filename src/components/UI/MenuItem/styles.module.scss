@@ -2,26 +2,25 @@
 @import '../../../utils/mixins.scss';
 
 .item {
-  cursor: pointer;
-  list-style: none;
   @include theme (background-color, accent2);
   @include spacing (0.75rem 1rem);
-  transition: all 0.25s;
+  cursor: pointer;
+  list-style: none;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     @include spacing (1rem 1.25rem);
   }
 
   &:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.25);
   }
 }
 
 .itemTitle {
-  font-size: 0.9rem;
   @include theme (color, contrast2);
+  font-size: 0.9rem;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     font-size: 1rem;
   }
 }

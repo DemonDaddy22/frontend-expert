@@ -1,17 +1,9 @@
 @import '../../constants/theme.scss';
 @import '../../utils/mixins.scss';
 
-.pageContainer {
-  @media screen and (min-width: 992px) {
-    overflow-y: hidden;
-  }
-}
-
 .questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-    max-height: 85vh;
-    overflow-y: auto;
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }
 
@@ -21,43 +13,40 @@
   white-space: break-spaces;
 
   a {
-    color: $project-highlight-36;
+    @include theme (color, ePrimaryDeep);
+
+    &:hover {
+      filter: brightness(125%);
+    }
   }
 }
 
 .questionTitle {
-  color: $project-header-36;
+  @include theme (color, ePrimary);
 }
 
 .questionDescriptionHighlight {
   @include spacing (0 0.25rem);
-  background-color: $project-highlight-36;
+  @include theme (color, contrast1Opacity90);
+  @include theme (background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing (2rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
-  border-radius: 0.25rem;
-  overflow-y: hidden;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  @media screen and (min-width: 992px) {
-    @include spacing (4rem 2rem);
-    max-height: 85vh;
-    width: 35rem;
-  }
+  @include spacing ($margin: 2rem 1rem 6rem);
+  max-width: 50rem;
 }
 
 .sudokuContainer {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .board {
@@ -65,12 +54,12 @@
 }
 
 .boardColumnGroup {
-  border: 0.25rem solid $dark;
+  border: 2px solid $dark;
 }
 
 .boardRow {
   &:nth-of-type(3n) {
-    border-bottom: 0.25rem solid $dark;
+    border-bottom: 2px solid $dark;
   }
 }
 
@@ -102,7 +91,7 @@
   top: 1px;
   right: 1px;
   font-size: 0.5rem;
-  color: $project-36-candidates;
+  color: $eCandidates;
 
   @media screen and (min-width: 1200px) {
     font-size: 0.6rem;
@@ -113,9 +102,12 @@
   @include spacing (0.75rem);
   margin-left: 0.25rem;
   height: fit-content;
-  border: 0.25px solid $dark;
+  border: 2px solid $dark;
   background-color: $light;
-  align-self: flex-start;
+
+  @media screen and (min-width: 1200px) {
+    align-self: flex-start !important;
+  }
 }
 
 .numberControls {
@@ -134,9 +126,9 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.15s;
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     filter: brightness(0.9);
   }
 }
@@ -151,7 +143,6 @@
   overflow: hidden;
   cursor: pointer;
   background-color: $blue-2 !important;
-  transition: 0.2s;
 
   &::before {
     @include square (1.8rem, $white, 50%);
@@ -166,7 +157,6 @@
     font-size: 0.85rem;
     text-indent: -115px;
     color: $white;
-    transition: 0.2s;
   }
 
   &:checked {

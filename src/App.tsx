@@ -1,10 +1,15 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import './App.scss';
+import QuestionsMenu from './components/ProjectPage/components/QuestionsMenu';
+import ProjectNavbar from './components/ProjectNavbar';
 
-function App() {
+const App = () => {
   return (
     <div className='container'>
-      <h1>Home Page coming soon...</h1>
+      <QuestionsMenu />
+      <Outlet />
+      <ProjectNavbar />
     </div>
   );
 }

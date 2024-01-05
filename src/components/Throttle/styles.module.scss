@@ -1,17 +1,9 @@
 @import '../../constants/theme.scss';
 @import '../../utils/mixins.scss';
 
-.pageContainer {
-  @media screen and (min-width: 992px) {
-    overflow-y: hidden;
-  }
-}
-
 .questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-    max-height: 85vh;
-    overflow-y: auto;
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }
 
@@ -22,7 +14,7 @@
 }
 
 .questionTitle {
-  color: $project-header-19;
+  @include theme (color, ePrimary);
 }
 
 .break {
@@ -31,7 +23,8 @@
 
 .questionDescriptionHighlight {
   @include spacing (0 0.25rem);
-  background-color: $project-highlight-19;
+  @include theme (color, contrast1Opacity90);
+  @include theme (background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
@@ -41,23 +34,11 @@
 
 .codeBlockHeader {
   @include spacing (0.5rem 0);
-  color: $white;
+  @include theme (color, contrast1);
 }
 
 .solutionContainer {
-  @include spacing (1rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  @include spacing ($margin: 1rem 0);
   border-radius: 0.25rem;
-  align-self: stretch;
-  flex: 1;
-
-  @media screen and (min-width: 992px) {
-    overflow-y: auto;
-    max-width: 60rem;
-  }
-}
-
-.fullHeight {
-  @include spacing (0, 0);
-  height: 100%;
+  max-width: 50rem;
 }

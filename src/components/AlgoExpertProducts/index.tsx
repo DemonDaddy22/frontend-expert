@@ -1,13 +1,16 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const AlgoExpertProducts: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT9.background}>
-      <QuestionDetails title='AlgoExpert Products' titleClassName={classes.questionTitle}>
+    <ProjectPage>
+      <QuestionDetails
+        title='AlgoExpert Products'
+        titleClassName={classes.questionTitle}
+        containerClassName={classes.questionDetails}>
         <p>
           You're given an HTML file containing divs representing AlgoExpert's products. Using only CSS, align the
           products in three rows following these specifications:
@@ -43,6 +46,7 @@ const AlgoExpertProducts: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.wrapper}>
         <div className={classes.productsContainer}>
           <div className={`${classes.product} ${classes.algoExpert}`}>
