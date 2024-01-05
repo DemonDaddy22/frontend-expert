@@ -14,7 +14,7 @@
     @include theme (color, contrast1Opacity90);
     margin: 0.15rem 0;
     letter-spacing: -0.2px;
-  
+
     & strong {
       @include theme (color, contrast1);
     }
@@ -26,7 +26,7 @@
   @include spacing (1rem, 2rem 0);
   border-radius: 0.5rem;
   width: 100%;
-  
+
   @media screen and (min-width: 1200px) {
     @include spacing (2rem, 2rem 0);
     max-width: 25rem;

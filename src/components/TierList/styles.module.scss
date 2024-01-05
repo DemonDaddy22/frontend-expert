@@ -83,11 +83,11 @@
   &.itemBlue {
     @include theme (background-color, blue1);
   }
-  
+
   &.itemRed {
     @include theme (background-color, red1);
   }
-  
+
   &.itemGreen {
     @include theme (background-color, green1);
   }

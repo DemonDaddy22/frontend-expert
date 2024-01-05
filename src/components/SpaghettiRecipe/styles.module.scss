@@ -9,11 +9,11 @@
   @include theme (background-color, ePrimaryMuted);
   @include spacing (0.5rem 0);
   border-radius: 0.25rem;
-  
+
   & li {
     @include theme (color, contrast1Opacity90);
     margin-left: 1.5rem;
-    
+
     @media screen and (min-width: 1200px) {
       margin-left: 2rem;
     }
@@ -24,15 +24,15 @@
   @include theme (background-color, ePrimaryMuted);
   @include spacing (0.5rem 0);
   border-radius: 0.25rem;
-  
+
   & > li {
     @include theme (color, contrast1Opacity90);
     margin-left: 2.25rem;
-    
+
     @media screen and (min-width: 1200px) {
       margin-left: 2.75rem;
     }
-    
+
     & li {
       @include theme (color, contrast1Opacity90);
       margin-left: -1rem;
