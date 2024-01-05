@@ -34,7 +34,7 @@
   list-style: none;
 }
 
-.menuItem {
+.menuItemBase {
   @include theme (color, contrast2);
   @include spacing (1.5rem 1rem);
   display: block;
@@ -42,10 +42,21 @@
   color: inherit;
   background-color: $transparent;
   border-radius: 0.5rem;
+}
+
+.menuItem {
+  composes: menuItemBase;
 
   &:hover {
-    @include theme (background-color, blue1);
-    @include theme (color, accent1);
+    @include theme (background-color, grey7);
+    @include theme (color, blue1);
     cursor: pointer;
   }
+}
+
+.menuItemActive {
+  composes: menuItemBase;
+  @include theme (background-color, blue1);
+  @include theme (color, accent1);
+  cursor: default;
 }
