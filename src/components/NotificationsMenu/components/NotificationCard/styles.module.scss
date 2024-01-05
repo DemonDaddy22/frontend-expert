@@ -28,7 +28,7 @@
       font-size: 0.9rem;
       letter-spacing: -0.1px;
       flex: 1;
-      
+
       & .cardName {
         @include theme (color, contrast1);
         font-weight: bold;

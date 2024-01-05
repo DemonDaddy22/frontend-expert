@@ -11,7 +11,7 @@
 .title {
   @include theme (color, contrast1);
   font-size: 2rem;
-  
+
   @media screen and (min-width: 1200px) {
     font-size: 3rem;
   }

@@ -29,12 +29,12 @@
     font-weight: 500;
     letter-spacing: -0.75px;
     margin-bottom: 0.5rem;
-    
+
     @media screen and (min-width: 1200px) {
       font-size: 1.75rem;
     }
   }
-  
+
   .tableCellHeading {
     @include spacing(0.75rem 1rem);
     @include theme (color, eSecondaryContrast);

@@ -4,7 +4,7 @@
 .questionDetails {
   & li {
     @include theme (color, contrast1Opacity90);
-    
+
     & strong {
       @include theme (color, contrast1Opacity90);
     }
