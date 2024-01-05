@@ -3,6 +3,7 @@
 
 .error {
   @include spacing ($margin: 0 auto);
+  @include theme (color, contrast1);
   flex: 1;
   display: flex;
   align-items: center;
@@ -11,13 +12,11 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
-  color: $light;
 }
 
 .table {
   border: 1px solid $grey-3;
   border-collapse: collapse;
-  color: white;
 
   & th,
   & td {
@@ -27,7 +26,7 @@
 
 .caption {
   @include spacing (0 0 1rem);
-  color: $light;
+  @include theme (color, contrast2);
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -49,11 +48,10 @@
 
 .headerRow {
   & th {
+    @include theme (color, ePrimary);
     @include spacing (1rem);
     text-align: left;
-    font-weight: 400;
-    color: $project-header-45;
-    filter: brightness(1.25);
+    font-weight: 600;
   }
 }
 
@@ -68,15 +66,15 @@
     flex-direction: column;
 
     & .symbol {
+      @include theme (color, contrast1);
       text-transform: uppercase;
       font-size: 0.95rem;
-      color: $white;
       font-weight: bold;
     }
 
     & .name {
+      @include theme (color, contrast1Opacity50);
       font-size: 0.75rem;
-      color: $grey-4;
       font-weight: 400;
       letter-spacing: -0.25px;
     }
@@ -96,8 +94,8 @@
   justify-content: space-between;
 
   & .price {
+    @include theme (color, contrast1);
     font-size: 0.95rem;
-    color: $white;
     font-weight: bold;
   }
 
@@ -110,15 +108,15 @@
       font-size: 0.75rem;
 
       &.tabletHigh {
-        background-color: $green-1;
-        color: $green-2;
+        @include theme (color, green1);
+        @include theme (background-color, green2);
         border-top-left-radius: 0.2rem;
         border-bottom-left-radius: 0.2rem;
       }
 
       &.tabletLow {
-        background-color: $red-1;
-        color: $red-4;
+        @include theme (color, red1);
+        @include theme (background-color, red2);
         border-top-right-radius: 0.2rem;
         border-bottom-right-radius: 0.2rem;
       }
@@ -127,8 +125,8 @@
 }
 
 .cap {
+  @include theme (color, contrast1Opacity90);
   font-size: 0.95rem;
-  color: $white;
   font-weight: bold;
 }
 

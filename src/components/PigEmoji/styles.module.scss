@@ -1,14 +1,14 @@
 @import '../../constants/theme.scss';
 @import '../../utils/mixins.scss';
 
-.questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-  }
+.questionTitle {
+  @include theme (color, eSecondary);
 }
 
-.questionTitle {
-  color: $project-header-7;
+.questionDetails {
+  & li {
+    @include theme (color, contrast1Opacity90);
+  }
 }
 
 .colourBlockBlack {
@@ -16,28 +16,17 @@
 }
 
 .emojiContainer {
-  @include spacing(1rem);
-  border: 1px dotted rgba($color: $light, $alpha: 0.5);
-  border-radius: 0.25rem;
-  width: 100%;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include spacing(2rem 4rem);
   z-index: 0;
-
-  @media screen and (min-width: 992px) {
-    max-width: 30rem;
-  }
 }
 
 .head {
-  @include circle (14rem, $project-pig-head-7);
+  @include circle (14rem, $ePigHead);
   position: relative;
   border: 5px solid $black;
 
-  .ear {
-    @include circle (4rem, $project-pig-head-7);
+  & .ear {
+    @include circle (4rem, $ePigHead);
     border: 5px solid $black;
     position: absolute;
     top: -0.6rem;
@@ -52,7 +41,7 @@
     }
   }
 
-  .eye {
+  & .eye {
     @include circle (3.5rem, $white);
     border: 2px solid $black;
     position: absolute;
@@ -74,21 +63,21 @@
     }
   }
 
-  .nose {
+  & .nose {
     position: absolute;
     bottom: 2.25rem;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 35%;
     border: 2px solid $black;
-    background-color: $project-pig-nose-7;
+    background-color: $ePigNose;
     width: 7rem;
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
-    .nostril {
+    & .nostril {
       height: 50%;
       width: 25%;
       background-color: $black;

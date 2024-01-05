@@ -2,10 +2,10 @@
 @import '../../../../utils/mixins.scss';
 
 .title {
+  @include theme (color, contrast2);
   font-size: 1.25rem;
-  color: $light;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     font-size: 1.5rem;
   }
 }
@@ -18,16 +18,16 @@
   gap: 0.75rem;
 
   & .category {
+    @include theme (color, green1);
     font-size: 0.9rem;
     font-weight: 500;
-    color: $yellow-4;
   }
-
+  
   & .difficulty {
+    @include theme (color, green1);
+    @include theme (background-color, green2);
     @include spacing (0.1rem 0.25rem);
     border-radius: 0.25rem;
-    background-color: $yellow-3;
-    color: $yellow-4;
     font-weight: 600;
     font-size: 0.75rem;
     text-transform: uppercase;

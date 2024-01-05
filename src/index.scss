@@ -1,11 +1,14 @@
+@import './utils/mixins.scss';
+
 *,
 *::before,
 *::after {
   margin: 0;
   box-sizing: border-box;
-  transition: all 0.2s;
+  transition: all 0.25s ease;
 }
 
 body {
+  @include theme (background-color, accent2);
   font-family: 'Fira Code', monospace;
 }

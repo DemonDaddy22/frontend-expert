@@ -4,20 +4,16 @@
 .pageContainer {
   @include spacing (0);
   flex-direction: column;
-
-  @media screen and (min-width: 992px) {
-    gap: 4rem;
-  }
 }
 
 .navbar {
-  background-color: $project-navbar-bg-6;
+  @include theme (background-color, eSecondaryDeep);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
   }
 }
@@ -27,39 +23,44 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
   }
 
   & li {
     @include spacing (1rem 1.5rem);
+    @include theme (color, contrast1);
     list-style: none;
     font-size: 0.9rem;
-    color: $white;
-    transition: all 0.25s;
 
     &:hover {
+      @include theme (background-color, eSecondaryMuted);
       cursor: pointer;
-      background-color: rgba($color: $project-navbar-hover-bg-6, $alpha: 0.9);
     }
 
     &:last-of-type {
       border-right: none;
     }
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       font-size: 1rem;
-      border-right: 2px solid rgba($color: $light, $alpha: 0.2);
+      border-right: 1px solid rgba($color: $light, $alpha: 0.1);
     }
   }
 }
 
 .questionDetails {
-  align-self: center;
-  border: none;
-  max-width: 40rem;
+  @include spacing (2rem);
 
-  .questionTitle {
-    color: $project-header-6;
+  @media screen and (min-width: 1200px) {
+    @include spacing (4rem);
+  }
+
+  & .questionTitle {
+    @include theme (color, ePrimary);
+  }
+
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }

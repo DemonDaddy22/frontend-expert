@@ -1,17 +1,9 @@
 @import '../../constants/theme.scss';
 @import '../../utils/mixins.scss';
 
-.pageContainer {
-  @media screen and (min-width: 992px) {
-    overflow-y: hidden;
-  }
-}
-
 .questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-    max-height: 85vh;
-    overflow-y: auto;
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }
 
@@ -22,7 +14,7 @@
 }
 
 .questionTitle {
-  color: $project-header-31;
+  @include theme (color, eSecondary);
 }
 
 .break {
@@ -31,54 +23,41 @@
 
 .questionDescriptionHighlight {
   @include spacing (0 0.25rem);
-  background-color: $project-highlight-31;
+  @include theme (color, contrast1Opacity90);
+  @include theme (background-color, ePrimaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing (1rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
-  border-radius: 0.25rem;
-  overflow-y: hidden;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (min-width: 992px) {
-    max-height: 85vh;
-    width: 30rem;
-  }
+  @include spacing ($margin: 2rem 1rem);
 }
 
 .gameContainer {
-  @include spacing (1.5rem 2rem);
-  background: linear-gradient(135deg, $project-31-game-bg-1 0%, $project-31-game-bg-2 75%);
-  min-width: 90%;
-  border-radius: 0.25rem;
+  @include spacing (2rem);
+  @include theme (background-color, eSecondaryMuted);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  max-width: 30rem;
+  border-radius: 0.5rem;
 }
 
 .gameTitle {
-  color: rgba($color: $light, $alpha: 0.8);
+  @include theme (color, contrast1Opacity70);
   font-size: 1.25rem;
   letter-spacing: -0.5px;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     font-size: 2rem;
   }
 }
 
 .gameStatus {
-  color: $white;
+  @include theme (color, contrast1);
   font-size: 1.5rem;
   letter-spacing: -0.5px;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     font-size: 2.5rem;
   }
 }
@@ -91,24 +70,24 @@
 }
 
 .tile {
+  @include theme (color, contrast1, $inlinePost: !important);
+  @include theme (border, ePrimary, 2px solid, !important);
   width: 4rem;
   height: 4rem;
   font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $white !important;
-  border: 2px solid rgba($color: $project-header-31, $alpha: 0.75) !important;
 
   &:hover {
-    background-color: rgba($color: $project-header-31, $alpha: 0.75) !important;
+    @include theme (background-color, ePrimary, $inlinePost: !important);
   }
 
   &:disabled {
-    filter: brightness(100%) !important;
+    filter: contrast(70%) brightness(80%) !important;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     width: 5rem;
     height: 5rem;
     font-size: 3rem;

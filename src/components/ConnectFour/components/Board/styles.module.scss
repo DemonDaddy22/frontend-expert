@@ -5,15 +5,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+  }
 }
 
 .title {
+  @include theme (color, contrast2);
   font-size: 2rem;
-  color: $white;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     font-size: 3rem;
   }
 }
@@ -30,7 +33,7 @@
 }
 
 .tile {
-  @include square (3rem, rgba($color: $white, $alpha: 0.05));
+  @include square (2.75rem, rgba($color: $white, $alpha: 0.05));
   border: 0.5px solid $grey-1;
   display: flex;
   align-items: center;

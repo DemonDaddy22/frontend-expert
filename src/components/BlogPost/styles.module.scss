@@ -2,83 +2,84 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  color: $project-header-4;
+  @include theme (color, ePrimary);
 }
 
 .questionDescriptionHighlight {
+  @include theme (background-color, eSecondaryDeep);
+  @include theme (color, contrast1);
   @include spacing (0.05rem 0.25rem);
-  background-color: $project-highlight-4;
   border-radius: 0.25rem;
-  font-size: 0.95em;
+  font-size: 1em;
 }
 
 .blogContainer {
-  @include spacing (1rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+  @include spacing (1rem, 2rem 0);
+  @include theme (border, contrast1Opacity20, 1px dotted);
   border-radius: 0.25rem;
   align-self: stretch;
   max-width: 40rem;
 
-  .blogTitle {
-    color: $project-header-4;
+  & .blogTitle {
+    @include theme (color, ePrimary);
     font-size: 1.75rem;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       font-size: 2rem;
     }
   }
 
-  .blogCaption {
+  & .blogCaption {
     @include spacing (0.25rem 0);
-    color: $white;
+    @include theme (color, contrast1);
     display: inline-block;
     text-align: start;
   }
 
-  .blogSection {
+  & .blogSection {
     @include spacing (1rem 0);
 
-    .blogSectionTitle {
+    & .blogSectionTitle {
       @include spacing ($margin: 0 0 0.25rem 0);
-      color: $project-section-header-4;
+      @include theme (color, eSecondary);
     }
 
-    .blogSectionContent {
-      color: rgba($color: $light, $alpha: 0.85);
+    & .blogSectionContent {
+      @include theme (color, contrast1Opacity90);
       font-size: 0.9rem;
 
-      @media screen and (min-width: 992px) {
-        font-size: 0.95rem;
+      @media screen and (min-width: 1200px) {
+        font-size: 1rem;
+      }
+
+      & strong {
+        @include theme (color, contrast1Opacity90);
+      }
+
+      & em {
+        @include theme (color, contrast1Opacity90);
       }
     }
 
     .blogLink {
-      color: $project-header-4;
-      transition: all 0.25s ease;
+      @include theme (color, ePrimary);
 
       &:hover {
-        color: $white;
-        text-shadow: 3px 3px 6px rgba($color: $project-header-4, $alpha: 0.75);
+        @include theme (color, contrast1);
+        @include theme (text-shadow, ePrimary, 2px 2px 6px);
         text-decoration: none;
       }
     }
   }
 
-  .blogSectionDivider {
-    @include spacing ($margin: 0.5rem 0);
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, $grey-1, $dark);
-  }
-
   .blogFooter {
+    @include theme (color, contrast1Opacity40);
     @include spacing ($margin: 0.5rem 0 0);
-    color: rgba($color: $white, $alpha: 0.6);
     float: right;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 
-    @media screen and (min-width: 992px) {
-      font-size: 0.95rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 0.9rem;
     }
   }
 }

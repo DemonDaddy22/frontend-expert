@@ -2,7 +2,7 @@ import React, { useCallback, useRef } from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
+import Divider from '../UI/Divider';
 
 const TierList: React.FC<Props> = () => {
   const unrankedDropZone = useRef<HTMLDivElement>(null);
@@ -33,7 +33,7 @@ const TierList: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT34.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Tier List'
         titleClassName={classes.questionTitle}
@@ -68,6 +68,7 @@ const TierList: React.FC<Props> = () => {
         </ul>
         <p>Your solution should use the standard browser drag-and-drop API.</p>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <div className={classes.tier}>
           <h3 className={classes.tierTitle}>A Tier</h3>

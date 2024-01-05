@@ -3,8 +3,8 @@
 
 .container {
   @include spacing (1rem);
+  @include theme (background-color, eSecondaryMuted);
   border-radius: 0.5rem;
-  background-color: rgba($color: $project-highlight-43, $alpha: 0.35);
   width: 100%;
   max-width: 25rem;
   overflow: hidden;
@@ -15,8 +15,8 @@
 }
 
 .divider {
+  @include theme (border-top, grey6, 1px dashed);
   margin: 2rem 0 !important;
-  border-top: 1px dashed $grey-4;
   height: 0;
 
   @media screen and (min-width: 1200px) {
@@ -32,5 +32,9 @@
 }
 
 .total {
-  color: $light;
+  @include theme (color, contrast2);
+
+  & strong {
+    @include theme (color, contrast2);
+  }
 }

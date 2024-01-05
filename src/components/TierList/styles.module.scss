@@ -1,17 +1,9 @@
 @import '../../constants/theme.scss';
 @import '../../utils/mixins.scss';
 
-.pageContainer {
-  @media screen and (min-width: 992px) {
-    overflow-y: hidden;
-  }
-}
-
 .questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
-    max-height: 85vh;
-    overflow-y: auto;
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }
 
@@ -19,45 +11,31 @@
   @include spacing (0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
-
-  a {
-    color: $project-highlight-34;
-  }
 }
 
 .questionTitle {
-  color: $project-header-34;
+  @include theme (color, ePrimary);
 }
 
 .questionDescriptionHighlight {
   @include spacing (0 0.25rem);
-  background-color: $project-highlight-34;
+  @include theme (color, contrast1Opacity90);
+  @include theme (background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing (2rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
-  border-radius: 0.25rem;
-  overflow-y: hidden;
-  align-self: stretch;
+  @include spacing ($margin: 2rem 1rem 6rem);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (min-width: 992px) {
-    @include spacing (4rem 2rem);
-    max-height: 85vh;
-    width: 35rem;
-  }
+  max-width: 35rem;
 }
 
 .tier {
+  @include theme (border, grey3, 0.25rem solid);
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 0.25rem solid $grey-3;
 
   &:not(:first-of-type) {
     border-top: none;
@@ -69,22 +47,21 @@
 }
 
 .tierTitle {
-  color: $white;
+  @include theme (color, contrast1);
   flex: 1;
-  border-bottom: 0.25rem solid $grey-3;
   text-align: center;
   @include spacing (1rem 1.5rem);
 
   @media screen and (min-width: 1200px) {
+    @include theme (border-right, grey3, 0.25rem solid);
     border-bottom: none;
-    border-right: 0.25rem solid $grey-3;
     text-align: initial;
     font-size: 1.5rem;
   }
 }
 
 .tierUnranked {
-  border-top: 0.25rem solid $grey-3 !important;
+  @include theme (border-top, grey3, 0.25rem solid, !important);
   @include spacing ($margin: 2.5rem 0 0);
 }
 
@@ -104,14 +81,14 @@
   border-radius: 0.25rem;
 
   &.itemBlue {
-    background-color: $blue-3;
+    @include theme (background-color, blue1);
   }
-
+  
   &.itemRed {
-    background-color: $red-2;
+    @include theme (background-color, red1);
   }
-
+  
   &.itemGreen {
-    background-color: $green-2;
+    @include theme (background-color, green1);
   }
 }

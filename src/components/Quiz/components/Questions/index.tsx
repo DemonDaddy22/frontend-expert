@@ -3,7 +3,7 @@ import classes from './styles.module.scss';
 import useFetch from '../../../../hooks/useFetch';
 import { QUIZ_CONFIG } from '../../../../constants';
 import { isEmptyObject } from '../../../../utils';
-import { ButtonWhite } from '../../../UI/Button';
+import Button from '../../../UI/Button';
 import Question from '../Question';
 
 const Questions: React.FC<Props> = () => {
@@ -53,16 +53,16 @@ const Questions: React.FC<Props> = () => {
         onOptionSelect={handleAnswerSelection}
       />
       <div className={classes.buttonsContainer}>
-        <ButtonWhite
+        <Button
           disabled={currentQuestionIndex <= 0}
           onClick={() => setCurrentQuestionIndex((prevIndex) => prevIndex - 1)}>
           Back
-        </ButtonWhite>
-        <ButtonWhite
+        </Button>
+        <Button
           disabled={currentQuestionIndex >= results.length - 1}
           onClick={() => setCurrentQuestionIndex((prevIndex) => prevIndex + 1)}>
           Next
-        </ButtonWhite>
+        </Button>
       </div>
     </div>
   ) : null;

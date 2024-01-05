@@ -3,40 +3,41 @@
 
 .card {
   @include spacing (0.6rem);
+  @include theme (background-color, accent1Opacity70);
   border-radius: 0.6rem;
-  background-color: rgba($color: $white, $alpha: 0.1);
   display: flex;
   gap: 0.6rem;
   align-self: stretch;
 
-  .cardImage {
+  & .cardImage {
     @include circle (4rem);
     display: inline-block;
     object-fit: contain;
     box-shadow: 1px 2px 2px rgba($color: $black, $alpha: 0.5);
   }
 
-  .cardContent {
+  & .cardContent {
     display: flex;
     flex-direction: column;
     flex: 1;
     gap: 0.25rem;
 
-    .cardDescription {
+    & .cardDescription {
       @include spacing (0.2rem 0);
-      color: $light;
+      @include theme (color, contrast1);
       font-size: 0.9rem;
       letter-spacing: -0.1px;
       flex: 1;
-
-      .cardName {
+      
+      & .cardName {
+        @include theme (color, contrast1);
         font-weight: bold;
         letter-spacing: 0;
       }
     }
 
-    .cardTime {
-      color: rgba($color: $light, $alpha: 0.3);
+    & .cardTime {
+      @include theme (color, contrast1Opacity30);
       font-size: 0.75rem;
       font-style: italic;
       align-self: flex-end;

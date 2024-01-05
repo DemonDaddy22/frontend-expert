@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
-import { PROJECT_COLORS } from '../../constants/theme';
 import QuestionDetails from '../QuestionDetails';
 import Calculator from './components/Calculator';
+import Divider from '../UI/Divider';
 
 const TipCalculator: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT43.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Tip Calculator'
         titleClassName={classes.questionTitle}
@@ -47,6 +47,7 @@ const TipCalculator: React.FC<Props> = () => {
           or a negative number for any of the inputs.
         </p>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <Calculator />
       </section>

@@ -2,13 +2,13 @@ import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlocks';
+import Divider from '../UI/Divider';
 
 const UseFetch: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT37.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Use Fetch'
         titleClassName={classes.questionTitle}
@@ -58,8 +58,9 @@ const UseFetch: React.FC<Props> = () => {
           <CodeBlock codeString={sampleUsage} />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
-        <CodeBlock codeString={solutionCode} containerClassName={classes.fullHeight} hideCode />
+        <CodeBlock codeString={solutionCode} hideCode />
       </section>
     </ProjectPage>
   );

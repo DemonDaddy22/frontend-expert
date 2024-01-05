@@ -2,15 +2,15 @@ import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import { QUIZ_CONFIG } from '../../constants';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage } from './codeBlock';
 import Questions from './components/Questions';
+import Divider from '../UI/Divider';
 
 const Quiz: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT47.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Quiz'
         titleClassName={classes.questionTitle}
@@ -59,6 +59,7 @@ const Quiz: React.FC<Props> = () => {
           <CodeBlock codeString={sampleUsage} language='xml' />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <Questions />
       </section>

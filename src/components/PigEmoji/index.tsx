@@ -1,13 +1,14 @@
 import React from 'react';
-import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const PigEmoji: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT7.background}>
+    <ProjectPage>
       <QuestionDetails
         title='Pig Emoji'
         titleClassName={classes.questionTitle}
@@ -57,6 +58,7 @@ const PigEmoji: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.emojiContainer}>
         <div className={classes.head}>
           <div>

@@ -13,8 +13,7 @@ export const LOREM_IPSUM: Array<string> = [
 ];
 
 export const AE_TESTIMONIALS = {
-  API_URI: 'https://api.instantwebtools.net/v1/passenger',
-  LIMIT: 10,
+  API_URI: 'https://reqres.in/api/users',
 };
 
 export const CRYPTO_PRICES_CONFIG = {

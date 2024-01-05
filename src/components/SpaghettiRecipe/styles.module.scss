@@ -2,69 +2,75 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  color: $project-header-3;
+  @include theme (color, eSecondary);
 }
 
-.questionDescriptionUnorderedList,
-.questionDescriptionOrderedList {
+.questionDescriptionUnorderedList {
+  @include theme (background-color, ePrimaryMuted);
   @include spacing (0.5rem 0);
-  background-color: rgba($color: $project-list-bg-3, $alpha: 0.5);
   border-radius: 0.25rem;
-
-}
-
-.questionDescriptionUnorderedList li {
-  margin-left: 1.5rem;
-
-  @media screen and (min-width: 992px) {
-    margin-left: 2rem;
-  }
-}
-
-.questionDescriptionOrderedList > li {
-  margin-left: 2.25rem;
-
-  @media screen and (min-width: 992px) {
-    margin-left: 2.75rem;
-  }
-
+  
   & li {
-    margin-left: -1rem;
+    @include theme (color, contrast1Opacity90);
+    margin-left: 1.5rem;
+    
+    @media screen and (min-width: 1200px) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.questionDescriptionOrderedList {
+  @include theme (background-color, ePrimaryMuted);
+  @include spacing (0.5rem 0);
+  border-radius: 0.25rem;
+  
+  & > li {
+    @include theme (color, contrast1Opacity90);
+    margin-left: 2.25rem;
+    
+    @media screen and (min-width: 1200px) {
+      margin-left: 2.75rem;
+    }
+    
+    & li {
+      @include theme (color, contrast1Opacity90);
+      margin-left: -1rem;
+    }
   }
 }
 
 .recipeContainer {
+  @include spacing (1rem);
   align-self: stretch;
-  padding: 1rem;
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
   border-radius: 0.25rem;
 
   .recipeTitle {
-    color: $project-header-3;
+    @include theme (color, ePrimary);
     font-size: 1.5rem;
     margin-bottom: 1rem;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       font-size: 2.5rem;
     }
   }
 
   .recipeSectionTitle {
     @include spacing ($margin: 0.5rem 0);
-    color: $project-section-title-3;
+    @include theme (color, eSecondary);
     font-size: 1.25rem;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       font-size: 1.5rem;
     }
   }
 
   & li {
-    color: rgba($color: $light, $alpha: 0.9);
-    font-size: 0.9rem;
+    @include theme (color, contrast1Opacity90);
+    font-size: 0.95rem;
 
-    @media screen and (min-width: 992px) {
-      font-size: 0.95rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1rem;
     }
   }
 }

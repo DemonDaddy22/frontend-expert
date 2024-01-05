@@ -1,13 +1,14 @@
 import React from 'react';
-import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const RobotEmoji: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT10.background}>
+    <ProjectPage>
       <QuestionDetails
         title='Robot Emoji'
         titleClassName={classes.questionTitle}
@@ -67,6 +68,7 @@ const RobotEmoji: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.emojiContainer}>
         <div className={classes.head}>
           <div className={classes.light}>

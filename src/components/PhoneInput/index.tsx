@@ -2,12 +2,12 @@ import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import PhoneInputField from './components/PhoneInputField';
+import Divider from '../UI/Divider';
 
 const PhoneInput: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT44.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Phone Input'
         titleClassName={classes.questionTitle}
@@ -37,6 +37,7 @@ const PhoneInput: React.FC<Props> = () => {
           <li>Clicking the button when it is enabled clears the input, including any formatting characters.</li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <PhoneInputField />
       </section>

@@ -2,23 +2,22 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  color: $project-header-5;
+  @include theme (color, eSecondary);
+}
+
+.questionPoint {
+  @include theme (color, contrast1Opacity90);
 }
 
 .questionPointWrapper {
+  @include theme (color, contrast1Opacity90);
   display: flex;
   align-items: center;
   gap: 0.35rem;
 }
 
 .circlesContainer {
-  @include spacing (1rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
-  border-radius: 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
+  @include spacing (1rem, 1rem 0);
 }
 
 .outerCircle {
@@ -28,29 +27,29 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     @include circle (18rem);
     border: 1.5rem solid #FF0000;
   }
 
-  .middleCircle {
+  & .middleCircle {
     @include circle (8.5em, #008000);
     border: 1.15em solid #FFFF00;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       @include circle (12em);
       border: 1.5em solid #FFFF00;
     }
 
-    .innerCircle {
+    & .innerCircle {
       @include circle (4em, #800080);
       border: 1.15em solid #0000FF;
       z-index: 1;
 
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 1200px) {
         @include circle (6em);
         border: 1.5em solid #0000FF;
       }

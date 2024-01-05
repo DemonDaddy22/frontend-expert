@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import Button from '../UI/Button';
@@ -10,7 +10,7 @@ import classes from './styles.module.scss';
 
 const NotificationsMenu: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT11.background}>
+    <ProjectPage>
       <QuestionDetails
         title='Notifications Menu'
         titleClassName={classes.questionTitle}
@@ -61,6 +61,7 @@ const NotificationsMenu: React.FC<Props> = () => {
           </li>
         </ul>
       </QuestionDetails>
+      <Divider />
       <section className={classes.notificationsContainer}>
         <h2 className={classes.notificationsHeader}>Notifications</h2>
         <Divider />
@@ -94,7 +95,7 @@ const NotificationsMenu: React.FC<Props> = () => {
           description='started a new position as CEO at AlgoExpert. Congratulate him!'
           time='4 years ago'
         />
-        <Button>View More</Button>
+        <Button className={classes.button}>View More</Button>
       </section>
     </ProjectPage>
   );

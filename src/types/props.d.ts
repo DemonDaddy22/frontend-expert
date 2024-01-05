@@ -79,6 +79,7 @@ interface IconButtonProps
 interface ITestimonial {
   id: string;
   name: string;
+  avatar: string;
 }
 
 interface IMenuItem {

@@ -1,12 +1,12 @@
 import React from 'react';
-import { PROJECT_COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
+import Divider from '../UI/Divider';
 
 const ItemCart: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT2.background}>
+    <ProjectPage>
       <QuestionDetails title='Item Cart' titleClassName={classes.questionTitle}>
         <p>Implement an item cart in HTML with the following static data:</p>
         <ul className={classes.questionPoints}>
@@ -22,6 +22,7 @@ const ItemCart: React.FC<Props> = () => {
         </ul>
         <p>Your HTML code should use a table with proper semantic markup and with Item Cart as its caption.</p>
       </QuestionDetails>
+      <Divider />
       <table className={classes.tableContainer}>
         <caption className={classes.tableCaption}>Item Cart</caption>
         <thead>

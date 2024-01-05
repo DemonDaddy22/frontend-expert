@@ -2,14 +2,14 @@ import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { PROJECT_COLORS } from '../../constants/theme';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage } from './codeBlock';
 import QuestionSections from './components/QuestionSections';
+import Divider from '../UI/Divider';
 
 const QuestionList: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT46.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Question List'
         titleClassName={classes.questionTitle}
@@ -54,6 +54,7 @@ const QuestionList: React.FC<Props> = () => {
           <CodeBlock codeString={sampleUsage} language='xml' />
         </div>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <QuestionSections />
       </section>

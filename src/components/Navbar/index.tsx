@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLORS, PROJECT_COLORS } from '../../constants/theme';
+import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
@@ -7,7 +7,7 @@ import classes from './styles.module.scss';
 
 const Navbar: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT6.background} containerClassName={classes.pageContainer}>
+    <ProjectPage containerClassName={classes.pageContainer}>
       <nav className={classes.navbar}>
         <ul className={classes.navItems}>
           <li>Product</li>

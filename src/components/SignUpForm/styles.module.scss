@@ -1,46 +1,34 @@
 @import '../../utils/mixins.scss';
 @import '../../constants/theme.scss';
 
-.questionContainer {
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
+.questionTitle {
+  @include theme (color, eSecondary);
+}
 
-  .questionTitle {
-    color: $project-header-1;
-  }
+.questionPoints {
+  @include spacing(0.75rem 0.5rem 0.75rem 2.5rem, 0.5rem 0);
+  @include theme (background-color, ePrimaryMuted);
+  border-radius: 0.25rem;
 
-  .questionDescription {
-    color: $light;
-  }
-
-  .questionPoints {
-    @include spacing(0.75rem 0.5rem 0.75rem 2.5rem, 0.5rem 0);
-    background-color: $project-list-bg-1;
-    border-radius: 0.25rem;
-
-    .questionPoint {
-      color: $light;
-      letter-spacing: -0.2px;
-      font-size: 0.85rem;
-      margin: 0.25rem 0;
-
-      strong {
-        color: $project-highlight-1;
-      }
-
-      @media screen and (min-width: 992px) {
-        font-size: 0.95rem;
-      }
+  & .questionPoint {
+    @include theme (color, contrast1Opacity90);
+    margin: 0.15rem 0;
+    letter-spacing: -0.2px;
+  
+    & strong {
+      @include theme (color, contrast1);
     }
   }
 }
 
 .formContainer {
-  padding: 1rem;
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
-  border-radius: 0.25rem;
+  @include theme (background-color, eSignupForm);
+  @include spacing (1rem, 2rem 0);
+  border-radius: 0.5rem;
   width: 100%;
-
-  @media screen and (min-width: 992px) {
+  
+  @media screen and (min-width: 1200px) {
+    @include spacing (2rem, 2rem 0);
     max-width: 25rem;
   }
 }
@@ -48,4 +36,8 @@
 .tosFormGroup {
   display: flex;
   gap: 1rem;
+}
+
+.questionDescriptionHighlight {
+  @include theme (color, contrast1Opacity90);
 }

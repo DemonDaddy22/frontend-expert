@@ -2,37 +2,35 @@
 @import '../../utils/mixins.scss';
 
 .questionDetails {
-  @media screen and (min-width: 992px) {
-    max-width: 40rem;
+  & li {
+    @include theme (color, contrast1Opacity90);
   }
 }
 
 .questionTitle {
-  color: $project-header-11;
+  @include theme (color, eSecondary);
 }
 
 .questionDescriptionHighlight {
   @include spacing (0.05rem 0.25rem);
-  background-color: $project-highlight-11;
+  @include theme (color, contrast1Opacity90);
+  @include theme (background-color, ePrimaryDeep);
   border-radius: 0.25rem;
   font-size: 0.95em;
 }
 
 .notificationsContainer {
-  @include spacing (1rem);
-  border: 1px dotted rgba($color: $white, $alpha: 0.5);
-  border-radius: 0.25rem;
+  @include spacing (1rem, 2rem 1rem);
+  @include theme (background-color, grey5);
+  border-radius: 0.5rem;
   align-self: stretch;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  max-width: 25rem;
 
-  @media screen and (min-width: 992px) {
-    max-width: 20rem;
-  }
-
-  .notificationsHeader {
-    color: $white;
+  & .notificationsHeader {
+    @include theme (color, contrast1);
     font-size: 1.4rem;
     letter-spacing: -0.5px;
   }
@@ -40,4 +38,8 @@
 
 .colourBlockBorder {
   border: 1px solid rgba($color: $light, $alpha: 0.25);
+}
+
+.button {
+  margin-top: 1rem;
 }

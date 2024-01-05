@@ -2,7 +2,7 @@ import React, { useCallback, useReducer } from 'react';
 import classes from './styles.module.scss';
 import { isEmptyList, shuffleArray } from '../../../../utils';
 import { MEMORY_CONFIG } from '../../../../constants';
-import { ButtonWhite } from '../../../UI/Button';
+import Button from '../../../UI/Button';
 
 const ACTION_TYPE = Object.freeze({
   UPDATE_BOARD: 'UPDATE_BOARD',
@@ -130,7 +130,7 @@ const Board: React.FC<Props> = () => {
         ))}
       </div>
       {state.validMovesCount === MEMORY_CONFIG.BOARD_SIZE && (
-        <ButtonWhite onClick={() => dispatch({ type: ACTION_TYPE.RESET_GAME })}>Restart</ButtonWhite>
+        <Button onClick={() => dispatch({ type: ACTION_TYPE.RESET_GAME })}>Restart</Button>
       )}
     </div>
   );

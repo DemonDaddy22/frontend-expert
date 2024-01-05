@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import classes from './styles.module.scss';
-import ProjectNavbar from '../ProjectNavbar';
 
 const ProjectPage: React.FC<ProjectPageProps> = (props) => {
   const {
@@ -17,7 +16,6 @@ const ProjectPage: React.FC<ProjectPageProps> = (props) => {
       <section className={`${classes.contentContainer} ${containerClassName}`} style={containerStyle}>
         {children}
       </section>
-      <ProjectNavbar />
     </main>
   );
 };

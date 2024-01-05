@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useReducer } from 'react';
 import classes from './styles.module.scss';
 import { CRYPTO_PRICES_CONFIG } from '../../../../constants';
 import { isEmptyList } from '../../../../utils';
-import { ButtonWhite } from '../../../UI/Button';
+import Button from '../../../UI/Button';
 
 const ACTION_TYPE: { [key in CryptoPricesActionType]: CryptoPricesActionType } = Object.freeze({
   UPDATE_PAGE: 'UPDATE_PAGE',
@@ -135,16 +135,16 @@ const PricesTable: React.FC<Props> = () => {
         </tbody>
       </table>
       <div className={classes.buttonsContainer}>
-        <ButtonWhite
+        <Button
           disabled={state.page <= 1}
           onClick={() => dispatch({ type: ACTION_TYPE.UPDATE_PAGE, value: state.page - 1 })}>
           Back
-        </ButtonWhite>
-        <ButtonWhite
+        </Button>
+        <Button
           disabled={state.page >= CRYPTO_PRICES_CONFIG.TOTAL_SIZE / CRYPTO_PRICES_CONFIG.PAGE_SIZE}
           onClick={() => dispatch({ type: ACTION_TYPE.UPDATE_PAGE, value: state.page + 1 })}>
           Next
-        </ButtonWhite>
+        </Button>
       </div>
     </>
   ) : null;

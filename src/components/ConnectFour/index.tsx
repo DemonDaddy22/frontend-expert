@@ -1,19 +1,18 @@
 import React from 'react';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
-import { PROJECT_COLORS } from '../../constants/theme';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage1, sampleUsage2 } from './codeBlock';
 import Board from './components/Board';
+import Divider from '../UI/Divider';
 
 const ConnectFour: React.FC<Props> = () => {
   return (
-    <ProjectPage background={PROJECT_COLORS.PROJECT50.background} containerClassName={classes.pageContainer}>
+    <ProjectPage>
       <QuestionDetails
         title='Connect Four'
         titleClassName={classes.questionTitle}
-        containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}>
         <p>You're given a CSS file for a Connect Four game, and you need to implement the component using React.</p>
         <p>
@@ -62,6 +61,7 @@ const ConnectFour: React.FC<Props> = () => {
           button is clicked, the game completely resets, allowing for it to be played again.
         </p>
       </QuestionDetails>
+      <Divider />
       <section className={classes.solutionContainer}>
         <Board />
       </section>
