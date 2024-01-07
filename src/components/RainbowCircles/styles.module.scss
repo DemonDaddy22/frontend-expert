@@ -2,56 +2,56 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionPoint {
-  @include theme (color, contrast1Opacity90);
+  @include theme(color, contrast1Opacity90);
 }
 
 .questionPointWrapper {
-  @include theme (color, contrast1Opacity90);
+  @include theme(color, contrast1Opacity90);
   display: flex;
   align-items: center;
   gap: 0.35rem;
 }
 
 .circlesContainer {
-  @include spacing (1rem, 1rem 0);
+  @include spacing(1rem, 1rem 0);
 }
 
 .outerCircle {
-  @include circle (13.25rem, #FFA500);
-  border: 1.15rem solid #FF0000;
+  @include circle(13.25rem, #ffa500);
+  border: 1.15rem solid #ff0000;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media screen and (min-width: 1200px) {
-    @include circle (18rem);
-    border: 1.5rem solid #FF0000;
+    @include circle(18rem);
+    border: 1.5rem solid #ff0000;
   }
 
   & .middleCircle {
-    @include circle (8.5em, #008000);
-    border: 1.15em solid #FFFF00;
+    @include circle(8.5em, #008000);
+    border: 1.15em solid #ffff00;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media screen and (min-width: 1200px) {
-      @include circle (12em);
-      border: 1.5em solid #FFFF00;
+      @include circle(12em);
+      border: 1.5em solid #ffff00;
     }
 
     & .innerCircle {
-      @include circle (4em, #800080);
-      border: 1.15em solid #0000FF;
+      @include circle(4em, #800080);
+      border: 1.15em solid #0000ff;
       z-index: 1;
 
       @media screen and (min-width: 1200px) {
-        @include circle (6em);
-        border: 1.5em solid #0000FF;
+        @include circle(6em);
+        border: 1.5em solid #0000ff;
       }
     }
   }

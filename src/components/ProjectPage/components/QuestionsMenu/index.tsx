@@ -14,10 +14,7 @@ const QuestionsMenu: React.FC<Props> = () => {
       <ul className={classes.menuItems}>
         {QUESTIONS_INFO.map((question) => (
           <li key={question.id} className={classes.menuListItem}>
-            <NavLink
-              to={`fe/exercise/${question.id}`}
-              className={({ isActive }) => isActive ? classes.menuItemActive : classes.menuItem}
-            >
+            <NavLink to={`fe/exercise/${question.id}`} className={({ isActive }) => (isActive ? classes.menuItemActive : classes.menuItem)}>
               {question.name}
             </NavLink>
           </li>

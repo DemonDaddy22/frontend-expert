@@ -25,7 +25,7 @@
 
   & p,
   & li {
-    @include theme (color, contrast1Opacity90);
-    @include spacing ($margin: 0.75rem 0);
+    @include theme(color, contrast1Opacity90);
+    @include spacing($margin: 0.75rem 0);
   }
 }

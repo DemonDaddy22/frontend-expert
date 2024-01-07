@@ -51,8 +51,8 @@ const RainbowCircles: React.FC<Props> = () => {
           </li>
         </ul>
         <p>
-          While there are a variety of ways to achieve this desired output, for the purpose of this problem all colors
-          should be achieved using background colors and/or box model properties.
+          While there are a variety of ways to achieve this desired output, for the purpose of this problem all colors should be achieved using
+          background colors and/or box model properties.
         </p>
       </QuestionDetails>
       <Divider />

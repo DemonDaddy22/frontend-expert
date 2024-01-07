@@ -7,18 +7,18 @@ $circle-divider-height: 4px;
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0.05em 0.25rem);
-  @include theme (background-color, eSecondaryDeep);
-  @include theme (color, contrast1Opacity90);
+  @include spacing(0.05em 0.25rem);
+  @include theme(background-color, eSecondaryDeep);
+  @include theme(color, contrast1Opacity90);
   border-radius: 0.25rem;
   font-size: 0.95em;
 }
@@ -28,7 +28,7 @@ $circle-divider-height: 4px;
 }
 
 .formContainer {
-  @include spacing (2rem);
+  @include spacing(2rem);
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ $circle-divider-height: 4px;
   max-width: 50rem;
 
   & ol {
-    @include spacing (0);
+    @include spacing(0);
     display: flex;
     transform: scale(0.75);
 
@@ -49,18 +49,18 @@ $circle-divider-height: 4px;
     }
 
     & li {
-      @include spacing (0 1rem);
-      @include theme (color, contrast1);
+      @include spacing(0 1rem);
+      @include theme(color, contrast1);
       counter-increment: product-count;
       position: relative;
       list-style: none;
       text-align: center;
 
       &::before {
-        @include circle ($circle-width, $grey-3);
-        @include spacing ($margin: 0 auto 0.5rem);
-        @include theme (border, contrast2, $circle-border-width solid);
-        @include theme (color, contrast1);
+        @include circle($circle-width, $grey-3);
+        @include spacing($margin: 0 auto 0.5rem);
+        @include theme(border, contrast2, $circle-border-width solid);
+        @include theme(color, contrast1);
         content: counter(product-count);
         font-size: 1.5rem;
         display: flex;
@@ -70,7 +70,7 @@ $circle-divider-height: 4px;
       }
 
       &:not(:last-of-type)::after {
-        @include theme (background-color, contrast1Opacity80);
+        @include theme(background-color, contrast1Opacity80);
         position: absolute;
         content: '';
         height: $circle-divider-height;
@@ -88,12 +88,12 @@ $circle-divider-height: 4px;
   }
 
   ul {
-    @include spacing (0);
+    @include spacing(0);
     align-self: stretch;
 
     & li {
-      @include spacing (0.75rem, 0.75rem 0);
-      @include theme (background-color, grey3);
+      @include spacing(0.75rem, 0.75rem 0);
+      @include theme(background-color, grey3);
       list-style: none;
       height: 2.5rem;
       border-radius: 0.5rem;
@@ -102,7 +102,7 @@ $circle-divider-height: 4px;
       box-sizing: content-box;
 
       & label {
-        @include spacing ($margin: 0 0 0 0.5rem);
+        @include spacing($margin: 0 0 0 0.5rem);
         font-weight: bold;
       }
     }

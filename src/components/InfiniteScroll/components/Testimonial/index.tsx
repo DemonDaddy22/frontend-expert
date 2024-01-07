@@ -22,4 +22,6 @@ const Testimonial = React.forwardRef<HTMLParagraphElement, ITestimonial>((props,
   );
 });
 
+Testimonial.displayName = 'Testimonial';
+
 export default React.memo(Testimonial);

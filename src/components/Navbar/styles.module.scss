@@ -2,12 +2,12 @@
 @import '../../constants/theme.scss';
 
 .pageContainer {
-  @include spacing (0);
+  @include spacing(0);
   flex-direction: column;
 }
 
 .navbar {
-  @include theme (background-color, eSecondaryDeep);
+  @include theme(background-color, eSecondaryDeep);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 }
 
 .navItems {
-  @include spacing (0, 0);
+  @include spacing(0, 0);
   display: flex;
   flex-direction: column;
 
@@ -28,13 +28,13 @@
   }
 
   & li {
-    @include spacing (1rem 1.5rem);
-    @include theme (color, contrast1);
+    @include spacing(1rem 1.5rem);
+    @include theme(color, contrast1);
     list-style: none;
     font-size: 0.9rem;
 
     &:hover {
-      @include theme (background-color, eSecondaryMuted);
+      @include theme(background-color, eSecondaryMuted);
       cursor: pointer;
     }
 
@@ -50,17 +50,17 @@
 }
 
 .questionDetails {
-  @include spacing (2rem);
+  @include spacing(2rem);
 
   @media screen and (min-width: 1200px) {
-    @include spacing (4rem);
+    @include spacing(4rem);
   }
 
   & .questionTitle {
-    @include theme (color, ePrimary);
+    @include theme(color, ePrimary);
   }
 
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }

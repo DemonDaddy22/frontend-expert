@@ -4,7 +4,7 @@ import { CRYPTO_PRICES_CONFIG } from '../../../../constants';
 import { isEmptyList } from '../../../../utils';
 import Button from '../../../UI/Button';
 
-const ACTION_TYPE: { [key in CryptoPricesActionType]: CryptoPricesActionType } = Object.freeze({
+const ACTION_TYPE: {[key in CryptoPricesActionType]: CryptoPricesActionType} = Object.freeze({
   UPDATE_PAGE: 'UPDATE_PAGE',
   UPDATE_DATA: 'UPDATE_DATA',
   UPDATE_ERROR: 'UPDATE_ERROR',
@@ -14,24 +14,24 @@ const reducer = (state: ICryptoPricesState, action: ICryptoPricesAction) => {
   const { type, value } = action;
 
   switch (type) {
-    case ACTION_TYPE.UPDATE_PAGE:
-      return {
-        ...state,
-        page: value,
-      };
-    case ACTION_TYPE.UPDATE_DATA:
-      return {
-        ...state,
-        data: value,
-        error: null,
-      };
-    case ACTION_TYPE.UPDATE_ERROR:
-      return {
-        ...state,
-        error: value,
-      };
-    default:
-      return state;
+  case ACTION_TYPE.UPDATE_PAGE:
+    return {
+      ...state,
+      page: value,
+    };
+  case ACTION_TYPE.UPDATE_DATA:
+    return {
+      ...state,
+      data: value,
+      error: null,
+    };
+  case ACTION_TYPE.UPDATE_ERROR:
+    return {
+      ...state,
+      error: value,
+    };
+  default:
+    return state;
   }
 };
 
@@ -80,7 +80,7 @@ const PricesTable: React.FC<Props> = () => {
         </div>
       </td>
     ),
-    []
+    [],
   );
 
   const renderPriceCell = useCallback(
@@ -95,7 +95,7 @@ const PricesTable: React.FC<Props> = () => {
         </div>
       </td>
     ),
-    []
+    [],
   );
 
   const renderMarketCapCell = useCallback(
@@ -104,7 +104,7 @@ const PricesTable: React.FC<Props> = () => {
         <p className={classes.cap}>{market_cap.toLocaleString()}</p>
       </td>
     ),
-    []
+    [],
   );
 
   if (state.error) {
@@ -137,12 +137,18 @@ const PricesTable: React.FC<Props> = () => {
       <div className={classes.buttonsContainer}>
         <Button
           disabled={state.page <= 1}
-          onClick={() => dispatch({ type: ACTION_TYPE.UPDATE_PAGE, value: state.page - 1 })}>
+          onClick={() => {
+            dispatch({ type: ACTION_TYPE.UPDATE_PAGE, value: state.page - 1 });
+          }}
+        >
           Back
         </Button>
         <Button
           disabled={state.page >= CRYPTO_PRICES_CONFIG.TOTAL_SIZE / CRYPTO_PRICES_CONFIG.PAGE_SIZE}
-          onClick={() => dispatch({ type: ACTION_TYPE.UPDATE_PAGE, value: state.page + 1 })}>
+          onClick={() => {
+            dispatch({ type: ACTION_TYPE.UPDATE_PAGE, value: state.page + 1 });
+          }}
+        >
           Next
         </Button>
       </div>

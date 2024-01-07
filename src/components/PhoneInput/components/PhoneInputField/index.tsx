@@ -19,24 +19,24 @@ const PhoneInputField: React.FC<Props> = () => {
     let phoneToSet = '';
     if (PHONE_REGEX.ONLY_DIGITS.test(value)) {
       switch (value.length) {
-        case 1:
-        case 2:
-        case 3:
-          phoneToSet = `(${value}`;
-          break;
-        case 4:
-        case 5:
-        case 6:
-          phoneToSet = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-          break;
-        case 7:
-        case 8:
-        case 9:
-        case 10:
-          phoneToSet = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6)}`;
-          break;
-        default:
-          break;
+      case 1:
+      case 2:
+      case 3:
+        phoneToSet = `(${value}`;
+        break;
+      case 4:
+      case 5:
+      case 6:
+        phoneToSet = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+        break;
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+        phoneToSet = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6)}`;
+        break;
+      default:
+        break;
       }
       if (!isEmptyString(phoneToSet)) {
         setPhone(phoneToSet);
@@ -51,7 +51,10 @@ const PhoneInputField: React.FC<Props> = () => {
       <Input type='text' placeholder='(555) 555-5555' value={phone} onChange={handlePhoneInput} />
       <ButtonBlue
         disabled={phone.replace(PHONE_REGEX.NON_DIGIT_CHARS, '').length !== PHONE_NUMBER_LENGTH}
-        onClick={() => setPhone('')}>
+        onClick={() => {
+          setPhone('');
+        }}
+      >
         Submit
       </ButtonBlue>
     </div>

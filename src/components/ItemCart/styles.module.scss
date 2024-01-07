@@ -2,29 +2,29 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .questionPoints {
   @include spacing(0.75rem 0.5rem 0.75rem 2rem, 0.5rem 0);
-  @include theme (background-color, eSecondaryMuted);
+  @include theme(background-color, eSecondaryMuted);
   border-radius: 0.25rem;
 
   & .questionPoint {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
     margin: 0.5rem 0;
     letter-spacing: -0.2px;
   }
 }
 
 .tableContainer {
-  @include theme (border-color, contrast1Opacity20);
+  @include theme(border-color, contrast1Opacity20);
   border: 1px solid;
   border-collapse: separate;
   align-self: stretch;
 
   .tableCaption {
-    @include theme (color, ePrimary);
+    @include theme(color, ePrimary);
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: -0.75px;
@@ -37,8 +37,8 @@
 
   .tableCellHeading {
     @include spacing(0.75rem 1rem);
-    @include theme (color, eSecondaryContrast);
-    @include theme (border-color, contrast1Opacity20);
+    @include theme(color, eSecondaryContrast);
+    @include theme(border-color, contrast1Opacity20);
     border: 1px dotted;
     letter-spacing: -0.25px;
     font-size: 1rem;
@@ -51,8 +51,8 @@
 
   .tableCellData {
     @include spacing(0.75rem 1rem);
-    @include theme (color, contrast1);
-    @include theme (border-color, contrast1Opacity20);
+    @include theme(color, contrast1);
+    @include theme(border-color, contrast1Opacity20);
     border: 1px dotted;
     font-size: 0.9rem;
 

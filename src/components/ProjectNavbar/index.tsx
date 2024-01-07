@@ -24,26 +24,38 @@ const ProjectNavbar: React.FC<Props> = () => {
     <nav className={classes.menu}>
       <ul className={classes.menuItems}>
         <li className={classes.menuItem}>
-          <button className={classes.menuItemButton} onClick={() => handleNavigation(URLS.HOME, false)}>
+          <button
+            className={classes.menuItemButton}
+            onClick={() => {
+              handleNavigation(URLS.HOME, false);
+            }}
+          >
             <Home color={PROJECT_NAV_ITEM_COLORS.HOME} />
           </button>
         </li>
         <li className={classes.menuItem}>
-          <button className={classes.menuItemButton} onClick={() => handleNavigation(URLS.GITHUB)}>
+          <button
+            className={classes.menuItemButton}
+            onClick={() => {
+              handleNavigation(URLS.GITHUB);
+            }}
+          >
             <GitHub color={PROJECT_NAV_ITEM_COLORS.GITHUB} />
           </button>
         </li>
         <li className={classes.menuItem}>
-          <button className={classes.menuItemButton} onClick={() => handleNavigation(URLS.PORTFOLIO)}>
+          <button
+            className={classes.menuItemButton}
+            onClick={() => {
+              handleNavigation(URLS.PORTFOLIO);
+            }}
+          >
             <User color={PROJECT_NAV_ITEM_COLORS.USER} />
           </button>
         </li>
         <li className={classes.menuItem}>
           <button className={classes.menuItemButton} onClick={toggleTheme}>
-            {theme === THEME.LIGHT
-              ? <Light color={PROJECT_NAV_ITEM_COLORS.LIGHT} />
-              : <Dark color={PROJECT_NAV_ITEM_COLORS.DARK} />
-            }
+            {theme === THEME.LIGHT ? <Light color={PROJECT_NAV_ITEM_COLORS.LIGHT} /> : <Dark color={PROJECT_NAV_ITEM_COLORS.DARK} />}
           </button>
         </li>
       </ul>

@@ -6,9 +6,7 @@ interface IProps extends ISection {
   title: string;
 }
 
-const QuestionSection: React.FC<IProps> = ({
-  title, correctCount, questions,
-}) => {
+const QuestionSection: React.FC<IProps> = ({ title, correctCount, questions }) => {
   return (
     <section className={classes.section}>
       <h2 className={classes.title}>

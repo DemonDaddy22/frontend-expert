@@ -4,12 +4,12 @@ interface IQuizQuestion {
   category: string;
   question: string;
   correct_answer: string;
-  incorrect_answers: Array<string>;
+  incorrect_answers: string[];
 }
 
 interface IQuizQuestionProps {
   question: string;
-  answers: Array<string>;
+  answers: string[];
   correctAnswer: string;
   difficulty: string;
   category: string;

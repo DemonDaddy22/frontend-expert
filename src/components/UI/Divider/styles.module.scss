@@ -2,15 +2,15 @@
 @import '../../../utils/mixins.scss';
 
 .dividerHorizontal {
-  @include spacing ($margin: 0.25rem 0);
-  @include theme (background-color, divider);
+  @include spacing($margin: 0.25rem 0);
+  @include theme(background-color, divider);
   height: 1px;
   align-self: stretch;
 }
 
 .dividerVertical {
-  @include spacing ($margin: 0 0.25rem);
-  @include theme (background-color, divider);
+  @include spacing($margin: 0 0.25rem);
+  @include theme(background-color, divider);
   width: 1px;
   align-self: stretch;
 }

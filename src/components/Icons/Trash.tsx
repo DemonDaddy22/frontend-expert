@@ -14,7 +14,8 @@ const Trash: React.FC<IconProps> = (props) => {
       fill='none'
       strokeWidth='1.5'
       strokeLinecap='round'
-      strokeLinejoin='round'>
+      strokeLinejoin='round'
+    >
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M4 7l16 0' />
       <path d='M10 11l0 6' />

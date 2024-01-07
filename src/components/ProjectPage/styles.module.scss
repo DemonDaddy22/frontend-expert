@@ -7,12 +7,12 @@
 }
 
 .contentContainer {
-  @include spacing (2rem);
+  @include spacing(2rem);
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
   @media screen and (min-width: 1200px) {
-    @include spacing (2rem 4rem);
+    @include spacing(2rem 4rem);
   }
 }

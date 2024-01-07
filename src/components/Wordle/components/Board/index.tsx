@@ -10,43 +10,46 @@ const Board: React.FC<Props> = () => {
 
   const [currentGuess, setCurrentGuess] = useState('');
   const [isGameOver, setIsGameOver] = useState(false);
-  const [guesses, setGuesses] = useState<Array<string | null>>(
-    createListOfSize(WORDLE_CONFIG.BOARD_SIZE).map(() => null)
-  );
+  const [guesses, setGuesses] = useState<Array<string | null>>(createListOfSize(WORDLE_CONFIG.BOARD_SIZE).map(() => null));
 
   const currentIndex = useMemo(() => {
     const index = guesses.findIndex((guess) => guess === null);
     return index;
   }, [JSON.stringify(guesses)]);
 
-  const handleKeyPress = useCallback((event: KeyboardEvent) => {
-    event.stopPropagation();
-    if (currentIndex < 0 || isGameOver) {
-      return;
-    }
+  const handleKeyPress = useCallback(
+    (event: KeyboardEvent) => {
+      event.stopPropagation();
+      if (currentIndex < 0 || isGameOver) {
+        return;
+      }
 
-    const key = event.key;
-    if (key === 'Backspace' && currentGuess.length) {
-      setCurrentGuess((prevGuess) => prevGuess.slice(0, -1));
-    } else if (key === 'Enter' && currentGuess.length === WORDLE_CONFIG.ROW_SIZE) {
-      setGuesses((prevGuesses) => {
-        const newGuesses = [...prevGuesses];
-        newGuesses.splice(currentIndex, 1, currentGuess);
-        if (word.current === currentGuess) {
-          setIsGameOver(true);
-        }
-        setCurrentGuess('');
-        return newGuesses;
-      });
-    } else if (WORDLE_CONFIG.ALPHABET_REGEX.test(key) && currentGuess.length < WORDLE_CONFIG.ROW_SIZE) {
-      setCurrentGuess((prevGuess) => `${prevGuess}${key}`.toUpperCase());
-    }
-  }, [currentIndex, currentGuess, isGameOver]);
+      const key = event.key;
+      if (key === 'Backspace' && currentGuess.length) {
+        setCurrentGuess((prevGuess) => prevGuess.slice(0, -1));
+      } else if (key === 'Enter' && currentGuess.length === WORDLE_CONFIG.ROW_SIZE) {
+        setGuesses((prevGuesses) => {
+          const newGuesses = [...prevGuesses];
+          newGuesses.splice(currentIndex, 1, currentGuess);
+          if (word.current === currentGuess) {
+            setIsGameOver(true);
+          }
+          setCurrentGuess('');
+          return newGuesses;
+        });
+      } else if (WORDLE_CONFIG.ALPHABET_REGEX.test(key) && currentGuess.length < WORDLE_CONFIG.ROW_SIZE) {
+        setCurrentGuess((prevGuess) => `${prevGuess}${key}`.toUpperCase());
+      }
+    },
+    [currentIndex, currentGuess, isGameOver],
+  );
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyPress);
 
-    return () => document.removeEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
   }, [handleKeyPress]);
 
   return (
@@ -57,7 +60,7 @@ const Board: React.FC<Props> = () => {
           word={word.current}
           index={index}
           currentIndex={currentIndex}
-          guess={(currentIndex === index ? currentGuess : (guess || '')).padEnd(WORDLE_CONFIG.ROW_SIZE)}
+          guess={(currentIndex === index ? currentGuess : guess || '').padEnd(WORDLE_CONFIG.ROW_SIZE)}
         />
       ))}
     </div>

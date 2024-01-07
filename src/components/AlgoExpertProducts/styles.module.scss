@@ -2,18 +2,18 @@
 @import '../../utils/mixins.scss';
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .wrapper {
-  @include spacing (1rem, 2rem 0);
-  @include theme (border, contrast1Opacity20, 1px dotted);
+  @include spacing(1rem, 2rem 0);
+  @include theme(border, contrast1Opacity20, 1px dotted);
   border-radius: 0.25rem;
   align-self: stretch;
   display: flex;
@@ -29,23 +29,23 @@
   row-gap: 0.25rem;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "systems"
-    "ml"
-    "algo"
-    "frontend"
-    "programming";
+    'systems'
+    'ml'
+    'algo'
+    'frontend'
+    'programming';
 
   @media screen and (min-width: 1200px) {
     row-gap: 1.5rem;
     grid-template-columns: 4fr 1fr 2fr 3fr;
     grid-template-areas:
-      "systems systems . ml"
-      "algo algo algo algo"
-      "frontend programming programming programming";
+      'systems systems . ml'
+      'algo algo algo algo'
+      'frontend programming programming programming';
   }
 
   .product {
-    @include spacing (0.25rem);
+    @include spacing(0.25rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,7 @@
     grid-area: algo;
 
     @media screen and (min-width: 1200px) {
-      @include spacing ($margin: 0 auto);
+      @include spacing($margin: 0 auto);
       width: 75%;
     }
   }
@@ -101,7 +101,7 @@
     grid-area: programming;
 
     @media screen and (min-width: 1200px) {
-      @include spacing ($margin: 0 0 0 0.75rem);
+      @include spacing($margin: 0 0 0 0.75rem);
       height: 5rem;
     }
   }

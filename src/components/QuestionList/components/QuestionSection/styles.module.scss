@@ -9,7 +9,7 @@
 }
 
 .title {
-  @include theme (color, contrast2);
+  @include theme(color, contrast2);
   font-size: 1.5rem;
   letter-spacing: 0.25px;
 }

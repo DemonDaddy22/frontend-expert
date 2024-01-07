@@ -3,25 +3,25 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0.05rem 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, ePrimaryDeep);
+  @include spacing(0.05rem 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, ePrimaryDeep);
   border-radius: 0.25rem;
   font-size: 0.95em;
 }
 
 .notificationsContainer {
-  @include spacing (1rem, 2rem 1rem);
-  @include theme (background-color, grey5);
+  @include spacing(1rem, 2rem 1rem);
+  @include theme(background-color, grey5);
   border-radius: 0.5rem;
   align-self: stretch;
   display: flex;
@@ -30,7 +30,7 @@
   max-width: 25rem;
 
   & .notificationsHeader {
-    @include theme (color, contrast1);
+    @include theme(color, contrast1);
     font-size: 1.4rem;
     letter-spacing: -0.5px;
   }

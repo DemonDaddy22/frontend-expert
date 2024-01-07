@@ -2,14 +2,14 @@
 @import '../../../../utils/mixins.scss';
 
 .container {
-  @include theme (background-color, ePrimaryMuted);
-  @include spacing (1rem);
+  @include theme(background-color, ePrimaryMuted);
+  @include spacing(1rem);
   border-radius: 0.5rem;
   width: 100%;
 }
 
 .options {
-  @include spacing ($margin: 0.25rem 0);
+  @include spacing($margin: 0.25rem 0);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -21,7 +21,7 @@
 }
 
 .buttonsContainer {
-  @include spacing ($margin: 1rem 0);
+  @include spacing($margin: 1rem 0);
   display: flex;
   flex-direction: column;
   gap: 1rem;

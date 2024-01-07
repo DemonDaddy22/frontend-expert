@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import SyntaxHighlighter, { SyntaxHighlighterProps } from 'react-syntax-highlighter';
+import SyntaxHighlighter, { type SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { copyTextToClipboard, isEmptyString } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
@@ -27,10 +27,16 @@ const CodeBlock: React.FC<Props> = (props) => {
   const [isCopied, setIsCopied] = useState(false);
   const [isCodeHidden, setIsCodeHidden] = useState(hideCode);
 
-  const handleCopyClick = useCallback(() => {
+  const handleCopyClick = useCallback(async () => {
     setIsCopied(true);
-    copyTextToClipboard(codeString);
-    setTimeout(() => setIsCopied(false), 2500);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2500);
+    try {
+      await copyTextToClipboard(codeString);
+    } catch (err) {
+      // Ignore for now
+    }
   }, [codeString]);
 
   const handleRevealCode = useCallback(() => {

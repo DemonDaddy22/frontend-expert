@@ -2,7 +2,7 @@
 @import '../../../../constants/theme.scss';
 
 .toast {
-  @include spacing (1rem 0.75rem);
+  @include spacing(1rem 0.75rem);
   display: flex;
   flex: 1;
   flex-direction: row;

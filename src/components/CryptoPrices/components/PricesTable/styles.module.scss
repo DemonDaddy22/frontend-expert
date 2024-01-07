@@ -2,8 +2,8 @@
 @import '../../../../utils/mixins.scss';
 
 .error {
-  @include spacing ($margin: 0 auto);
-  @include theme (color, contrast1);
+  @include spacing($margin: 0 auto);
+  @include theme(color, contrast1);
   flex: 1;
   display: flex;
   align-items: center;
@@ -25,31 +25,31 @@
 }
 
 .caption {
-  @include spacing (0 0 1rem);
-  @include theme (color, contrast2);
+  @include spacing(0 0 1rem);
+  @include theme(color, contrast2);
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .coinCell {
-  @include spacing (0.5rem 0.75rem);
+  @include spacing(0.5rem 0.75rem);
   width: 28%;
 }
 
 .priceCell {
-  @include spacing (0.5rem 0.75rem);
+  @include spacing(0.5rem 0.75rem);
   width: 44%;
 }
 
 .capCell {
-  @include spacing (0.5rem 0.75rem);
+  @include spacing(0.5rem 0.75rem);
   width: 28%;
 }
 
 .headerRow {
   & th {
-    @include theme (color, ePrimary);
-    @include spacing (1rem);
+    @include theme(color, ePrimary);
+    @include spacing(1rem);
     text-align: left;
     font-weight: 600;
   }
@@ -66,14 +66,14 @@
     flex-direction: column;
 
     & .symbol {
-      @include theme (color, contrast1);
+      @include theme(color, contrast1);
       text-transform: uppercase;
       font-size: 0.95rem;
       font-weight: bold;
     }
 
     & .name {
-      @include theme (color, contrast1Opacity50);
+      @include theme(color, contrast1Opacity50);
       font-size: 0.75rem;
       font-weight: 400;
       letter-spacing: -0.25px;
@@ -94,7 +94,7 @@
   justify-content: space-between;
 
   & .price {
-    @include theme (color, contrast1);
+    @include theme(color, contrast1);
     font-size: 0.95rem;
     font-weight: bold;
   }
@@ -104,19 +104,19 @@
     flex-direction: row;
 
     & .tablet {
-      @include spacing (0.5rem);
+      @include spacing(0.5rem);
       font-size: 0.75rem;
 
       &.tabletHigh {
-        @include theme (color, green1);
-        @include theme (background-color, green2);
+        @include theme(color, green1);
+        @include theme(background-color, green2);
         border-top-left-radius: 0.2rem;
         border-bottom-left-radius: 0.2rem;
       }
 
       &.tabletLow {
-        @include theme (color, red1);
-        @include theme (background-color, red2);
+        @include theme(color, red1);
+        @include theme(background-color, red2);
         border-top-right-radius: 0.2rem;
         border-bottom-right-radius: 0.2rem;
       }
@@ -125,13 +125,13 @@
 }
 
 .cap {
-  @include theme (color, contrast1Opacity90);
+  @include theme(color, contrast1Opacity90);
   font-size: 0.95rem;
   font-weight: bold;
 }
 
 .buttonsContainer {
-  @include spacing (1rem 0 0);
+  @include spacing(1rem 0 0);
   display: flex;
   flex-direction: row;
   align-self: flex-end;

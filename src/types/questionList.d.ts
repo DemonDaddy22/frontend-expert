@@ -6,9 +6,7 @@ interface IQuestion {
 
 interface ISection {
   correctCount: number;
-  questions: Array<IQuestion>;
+  questions: IQuestion[];
 }
 
-interface ISections {
-  [key: string]: ISection;
-}
+type ISections = Record<string, ISection>;

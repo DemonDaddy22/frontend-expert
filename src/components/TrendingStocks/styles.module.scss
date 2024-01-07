@@ -3,49 +3,49 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .break {
-  @include spacing ($margin: 0.5rem 0);
+  @include spacing($margin: 0.5rem 0);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, eSecondaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .codeBlock {
-  @include spacing (0.5rem 0.75rem, 0.5rem 0);
-  @include theme (background-color, ePrimaryDark);
+  @include spacing(0.5rem 0.75rem, 0.5rem 0);
+  @include theme(background-color, ePrimaryDark);
   overflow-x: auto;
   border-radius: 0.5rem;
 
   @media screen and (min-width: 1200px) {
-    @include spacing (0.75rem 1rem, 0.75rem 0);
+    @include spacing(0.75rem 1rem, 0.75rem 0);
   }
 }
 
 .codeWrapper {
-  @include spacing (0.5rem 0);
+  @include spacing(0.5rem 0);
 }
 
 .codeBlockHeader {
-  @include spacing (0.5rem 0);
-  @include theme (color, contrast1);
+  @include spacing(0.5rem 0);
+  @include theme(color, contrast1);
 }
 
 .comment {
@@ -59,7 +59,7 @@
 }
 
 .solutionContainer {
-  @include spacing ($margin: 1rem 0);
+  @include spacing($margin: 1rem 0);
   border-radius: 0.25rem;
   max-width: 50rem;
 }

@@ -8,13 +8,15 @@ const useInterval = (callback: () => void, delay?: number) => {
   }, [callback]);
 
   useEffect(() => {
-    let intervalId: NodeJS.Timer | undefined;
+    let intervalId: NodeJS.Timeout | undefined;
     if (delay) {
       clearInterval(intervalId);
       intervalId = setInterval(callbackRef.current, delay);
     }
 
-    return () => clearInterval(intervalId);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, [delay]);
 };
 

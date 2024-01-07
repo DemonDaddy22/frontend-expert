@@ -12,6 +12,6 @@ const App = () => {
       <ProjectNavbar />
     </div>
   );
-}
+};
 
 export default App;

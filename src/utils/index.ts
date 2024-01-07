@@ -26,8 +26,7 @@ export const isValidNumber = <T>(value: number | string | T): boolean =>
  * @returns `boolean` indicating whether `obj` is an empty list
  *
  */
-export const isEmptyList = <T>(obj: Array<T> | T): boolean =>
-  !Array.isArray(obj) || (Array.isArray(obj) && obj.length === 0);
+export const isEmptyList = <T>(obj: T[] | T): boolean => !Array.isArray(obj) || (Array.isArray(obj) && obj.length === 0);
 
 /**
  *
@@ -36,7 +35,7 @@ export const isEmptyList = <T>(obj: Array<T> | T): boolean =>
  * @returns `boolean` indicating whether `obj` is an empty object
  *
  */
-export const isEmptyObject = <T>(obj: Object | T): boolean =>
+export const isEmptyObject = <T>(obj: Record<string, T> | T): boolean =>
   !obj || typeof obj !== 'object' || Array.isArray(obj) || Object.keys(obj).length === 0;
 
 /**
@@ -60,8 +59,7 @@ export const truncateStringToLength = (value: string, length: number): string =>
  * @returns list containing integers from start to start + size - 1
  *
  */
-export const createListOfSize = (size: number, start: number = 1): number[] =>
-  size > 0 ? Array.from(Array(size)).map(() => start++) : [];
+export const createListOfSize = (size: number, start: number = 1): number[] => (size > 0 ? Array.from(Array(size)).map(() => start++) : []);
 
 /**
  *
@@ -98,11 +96,11 @@ export const getLoremIpsum = (): string => {
  * @returns number value of the index
  *
  */
-export const getRandomListIndex = <T>(list: Array<T>): number => {
+export const getRandomListIndex = <T>(list: T[]): number => {
   if (isEmptyList(list)) {
     return -1;
   }
-  const randomIndex = Math.floor(Math.random() * (list.length));
+  const randomIndex = Math.floor(Math.random() * list.length);
   return randomIndex;
 };
 
@@ -112,7 +110,7 @@ export const getRandomListIndex = <T>(list: Array<T>): number => {
  * @returns shuffled input array
  *
  */
-export const shuffleArray = <T>(array: Array<T>): Array<T> => {
+export const shuffleArray = <T>(array: T[]): T[] => {
   for (let i = array.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
     [array[i], array[randomIndex]] = [array[randomIndex], array[i]];

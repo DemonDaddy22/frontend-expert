@@ -3,33 +3,33 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .break {
-  @include spacing ($margin: 0.5rem 0);
+  @include spacing($margin: 0.5rem 0);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, eSecondaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing ($margin: 2rem 1rem);
+  @include spacing($margin: 2rem 1rem);
 }
 
 .watch {
@@ -37,7 +37,11 @@
   width: 15rem;
   border-radius: 50%;
   border: 8px solid $eStopWatch;
-  box-shadow: 0 0 8px rgba($color: $white, $alpha: 0.1), 0 0 16px rgba($color: $eStopWatch, $alpha: 0.75), 0 0 28px rgba($color: $eStopWatch, $alpha: 0.4), 0 0 52px rgba($color: $eStopWatch, $alpha: 0.15);
+  box-shadow:
+    0 0 8px rgba($color: $white, $alpha: 0.1),
+    0 0 16px rgba($color: $eStopWatch, $alpha: 0.75),
+    0 0 28px rgba($color: $eStopWatch, $alpha: 0.4),
+    0 0 52px rgba($color: $eStopWatch, $alpha: 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +54,7 @@
   }
 
   & .timer {
-    @include theme (color, contrast1);
+    @include theme(color, contrast1);
     text-shadow: 0 0 24px rgba($color: $eStopWatch, $alpha: 0.75);
     font-size: 1.75rem;
 
@@ -64,15 +68,15 @@
     gap: 1rem;
 
     & .controlStart {
-      @include theme (background-color, green2);
+      @include theme(background-color, green2);
     }
 
     & .controlStop {
-      @include theme (background-color, red2);
+      @include theme(background-color, red2);
     }
 
     & .controlReset {
-      @include theme (background-color, blue2);
+      @include theme(background-color, blue2);
     }
   }
 }
@@ -83,14 +87,26 @@
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 8px rgba($color: $white, $alpha: 0.1), 0 0 16px rgba($color: $eStopWatch, $alpha: 0.75), 0 0 28px rgba($color: $eStopWatch, $alpha: 0.4), 0 0 52px rgba($color: $eStopWatch, $alpha: 0.15);
+    box-shadow:
+      0 0 8px rgba($color: $white, $alpha: 0.1),
+      0 0 16px rgba($color: $eStopWatch, $alpha: 0.75),
+      0 0 28px rgba($color: $eStopWatch, $alpha: 0.4),
+      0 0 52px rgba($color: $eStopWatch, $alpha: 0.15);
   }
 
   50% {
-    box-shadow: 0 0 10px rgba($color: $white, $alpha: 0.1), 0 0 20px rgba($color: $eStopWatch, $alpha: 0.85), 0 0 36px rgba($color: $eStopWatch, $alpha: 0.5), 0 0 64px rgba($color: $eStopWatch, $alpha: 0.2);
+    box-shadow:
+      0 0 10px rgba($color: $white, $alpha: 0.1),
+      0 0 20px rgba($color: $eStopWatch, $alpha: 0.85),
+      0 0 36px rgba($color: $eStopWatch, $alpha: 0.5),
+      0 0 64px rgba($color: $eStopWatch, $alpha: 0.2);
   }
 
   100% {
-    box-shadow: 0 0 8px rgba($color: $white, $alpha: 0.1), 0 0 16px rgba($color: $eStopWatch, $alpha: 0.75), 0 0 28px rgba($color: $eStopWatch, $alpha: 0.4), 0 0 52px rgba($color: $eStopWatch, $alpha: 0.15);
+    box-shadow:
+      0 0 8px rgba($color: $white, $alpha: 0.1),
+      0 0 16px rgba($color: $eStopWatch, $alpha: 0.75),
+      0 0 28px rgba($color: $eStopWatch, $alpha: 0.4),
+      0 0 52px rgba($color: $eStopWatch, $alpha: 0.15);
   }
 }

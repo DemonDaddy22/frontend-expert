@@ -2,13 +2,13 @@
 @import '../../../utils/mixins.scss';
 
 .item {
-  @include theme (background-color, accent2);
-  @include spacing (0.75rem 1rem);
+  @include theme(background-color, accent2);
+  @include spacing(0.75rem 1rem);
   cursor: pointer;
   list-style: none;
 
   @media screen and (min-width: 1200px) {
-    @include spacing (1rem 1.25rem);
+    @include spacing(1rem 1.25rem);
   }
 
   &:hover {
@@ -17,7 +17,7 @@
 }
 
 .itemTitle {
-  @include theme (color, contrast2);
+  @include theme(color, contrast2);
   font-size: 0.9rem;
 
   @media screen and (min-width: 1200px) {

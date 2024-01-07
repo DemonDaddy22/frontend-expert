@@ -2,16 +2,16 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDescriptionUnorderedList {
-  @include theme (background-color, ePrimaryMuted);
-  @include spacing (0.5rem 0);
+  @include theme(background-color, ePrimaryMuted);
+  @include spacing(0.5rem 0);
   border-radius: 0.25rem;
 
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
     margin-left: 1.5rem;
 
     @media screen and (min-width: 1200px) {
@@ -21,12 +21,12 @@
 }
 
 .questionDescriptionOrderedList {
-  @include theme (background-color, ePrimaryMuted);
-  @include spacing (0.5rem 0);
+  @include theme(background-color, ePrimaryMuted);
+  @include spacing(0.5rem 0);
   border-radius: 0.25rem;
 
   & > li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
     margin-left: 2.25rem;
 
     @media screen and (min-width: 1200px) {
@@ -34,19 +34,19 @@
     }
 
     & li {
-      @include theme (color, contrast1Opacity90);
+      @include theme(color, contrast1Opacity90);
       margin-left: -1rem;
     }
   }
 }
 
 .recipeContainer {
-  @include spacing (1rem);
+  @include spacing(1rem);
   align-self: stretch;
   border-radius: 0.25rem;
 
   .recipeTitle {
-    @include theme (color, ePrimary);
+    @include theme(color, ePrimary);
     font-size: 1.5rem;
     margin-bottom: 1rem;
 
@@ -56,8 +56,8 @@
   }
 
   .recipeSectionTitle {
-    @include spacing ($margin: 0.5rem 0);
-    @include theme (color, eSecondary);
+    @include spacing($margin: 0.5rem 0);
+    @include theme(color, eSecondary);
     font-size: 1.25rem;
 
     @media screen and (min-width: 1200px) {
@@ -66,7 +66,7 @@
   }
 
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
     font-size: 0.95rem;
 
     @media screen and (min-width: 1200px) {

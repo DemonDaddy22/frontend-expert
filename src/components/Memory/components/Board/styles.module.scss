@@ -9,7 +9,7 @@
 }
 
 .title {
-  @include theme (color, contrast1);
+  @include theme(color, contrast1);
   font-size: 2rem;
 
   @media screen and (min-width: 1200px) {
@@ -28,8 +28,8 @@
 }
 
 .tile {
-  @include theme (background-color, accent1Opacity50);
-  @include theme (border, grey3, 1px solid);
+  @include theme(background-color, accent1Opacity50);
+  @include theme(border, grey3, 1px solid);
   height: 5rem;
   width: 5rem;
   border-radius: 0.25rem;

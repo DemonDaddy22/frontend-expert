@@ -7,15 +7,7 @@ import { isEmptyString } from '../../../../utils';
 
 // TODO - handle HTML codes in strings
 
-const Question: React.FC<IQuizQuestionProps> = ({
-  question,
-  answers,
-  correctAnswer,
-  difficulty,
-  category,
-  attempt,
-  onOptionSelect,
-}) => {
+const Question: React.FC<IQuizQuestionProps> = ({ question, answers, correctAnswer, difficulty, category, attempt, onOptionSelect }) => {
   const getOptionClassName = useCallback(
     (answer: string) => {
       const baseClassName = classes.option;
@@ -24,7 +16,7 @@ const Question: React.FC<IQuizQuestionProps> = ({
       }
       return baseClassName;
     },
-    [attempt, correctAnswer]
+    [attempt, correctAnswer],
   );
 
   return (
@@ -40,7 +32,9 @@ const Question: React.FC<IQuizQuestionProps> = ({
             <Input
               id={`option-${index}`}
               type='radio'
-              onChange={() => onOptionSelect(answer)}
+              onChange={() => {
+                onOptionSelect(answer);
+              }}
               checked={answer === attempt}
               fullWidth={false}
             />

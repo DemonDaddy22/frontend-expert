@@ -3,11 +3,14 @@ import { useCallback, useEffect, useState } from 'react';
 const useLocalStorage = (key: string, initialValue?: any) => {
   const [value, setValue] = useState<any>(initialValue);
 
-  const setValueInStorage = useCallback((valueToSet: any) => {
-    const stringifiedValue = JSON.stringify(valueToSet);
-    localStorage.setItem(key, stringifiedValue);
-    setValue(valueToSet);
-  }, [key]);
+  const setValueInStorage = useCallback(
+    (valueToSet: any) => {
+      const stringifiedValue = JSON.stringify(valueToSet);
+      localStorage.setItem(key, stringifiedValue);
+      setValue(valueToSet);
+    },
+    [key],
+  );
 
   useEffect(() => {
     const parsedValue = JSON.parse(localStorage.getItem(key) ?? 'null');

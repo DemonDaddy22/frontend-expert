@@ -2,10 +2,10 @@
 @import '../../../../utils/mixins.scss';
 
 .testimonial {
-  @include spacing (1rem);
-  @include theme (background-color, grey1);
-  @include theme (color, contrast2);
-  @include theme (border-left, blue1, 0.25rem solid);
+  @include spacing(1rem);
+  @include theme(background-color, grey1);
+  @include theme(color, contrast2);
+  @include theme(border-left, blue1, 0.25rem solid);
   padding-right: 0.75rem;
   border-radius: 0.5rem;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .avatar {
-  @include circle (4rem);
+  @include circle(4rem);
   align-self: center;
 
   @media screen and (min-width: 1200px) {
@@ -35,10 +35,10 @@
 }
 
 .name {
-  @include theme (color, contrast1);
+  @include theme(color, contrast1);
 }
 
 .message {
-  @include theme (color, contrast1Opacity90);
+  @include theme(color, contrast1Opacity90);
   font-size: 0.9rem;
 }

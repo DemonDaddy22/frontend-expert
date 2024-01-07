@@ -10,15 +10,11 @@ const ItemCart: React.FC<Props> = () => {
       <QuestionDetails title='Item Cart' titleClassName={classes.questionTitle}>
         <p>Implement an item cart in HTML with the following static data:</p>
         <ul className={classes.questionPoints}>
-          <li className={classes.questionPoint}>
-            There must be three columns with Item, Price and Quantity as the column headers
-          </li>
+          <li className={classes.questionPoint}>There must be three columns with Item, Price and Quantity as the column headers</li>
           <li className={classes.questionPoint}>The data for first row must be Banana, $1.00 and 3</li>
           <li className={classes.questionPoint}>The data for second row must be Burger, $6.90 and 1</li>
           <li className={classes.questionPoint}>The data for third row must be Cookie, $4.20 and 4</li>
-          <li className={classes.questionPoint}>
-            The data for last row must be Total, $12.10 and 8. Total acts as a row title for the last row.
-          </li>
+          <li className={classes.questionPoint}>The data for last row must be Total, $12.10 and 8. Total acts as a row title for the last row.</li>
         </ul>
         <p>Your HTML code should use a table with proper semantic markup and with Item Cart as its caption.</p>
       </QuestionDetails>

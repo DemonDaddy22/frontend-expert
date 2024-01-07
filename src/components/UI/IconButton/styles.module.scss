@@ -1,7 +1,7 @@
 @import '../../../utils/mixins.scss';
 
 .button {
-  @include theme (background-color, iconButton);
+  @include theme(background-color, iconButton);
   border-radius: 50%;
   border: none;
   outline: none;

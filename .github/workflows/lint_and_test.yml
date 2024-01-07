@@ -1,8 +1,8 @@
-name: "Perform Lint and Run Tests"
+name: 'Perform Lint and Run Tests'
 on:
   pull_request:
     branches:
-      - "master"
+      - 'master'
 jobs:
   test:
     strategy:

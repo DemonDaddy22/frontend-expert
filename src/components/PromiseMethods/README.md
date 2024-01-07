@@ -15,47 +15,27 @@ Without calling `Promise.race()`, `Promise.any()`, `Promise.all()`, `Promise.all
 For simplicity, you can assume the arrays of Promises passed to these functions will never be empty.
 
 ```javascript
-Promise.myRace([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.resolve(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-])
+Promise.myRace([new Promise((res) => setTimeout(() => res(0), 500)), Promise.resolve(5), new Promise((res) => setTimeout(() => res(10), 1000))])
   .then(console.log)
   .catch((error) => console.log('error: ' + error));
 
-Promise.myRace([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.reject(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-])
+Promise.myRace([new Promise((res) => setTimeout(() => res(0), 500)), Promise.reject(5), new Promise((res) => setTimeout(() => res(10), 1000))])
   .then(console.log)
   .catch((error) => console.log('error: ' + error));
 
-Promise.myAny([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.resolve(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-]).then(console.log);
+Promise.myAny([new Promise((res) => setTimeout(() => res(0), 500)), Promise.resolve(5), new Promise((res) => setTimeout(() => res(10), 1000))]).then(
+  console.log,
+);
 
-Promise.myAny([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.reject(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-])
+Promise.myAny([new Promise((res) => setTimeout(() => res(0), 500)), Promise.reject(5), new Promise((res) => setTimeout(() => res(10), 1000))])
   .then(console.log)
   .catch((error) => console.log('error: ' + error));
 
-Promise.myAll([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.resolve(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-]).then(console.log);
+Promise.myAll([new Promise((res) => setTimeout(() => res(0), 500)), Promise.resolve(5), new Promise((res) => setTimeout(() => res(10), 1000))]).then(
+  console.log,
+);
 
-Promise.myAll([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.reject(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-])
+Promise.myAll([new Promise((res) => setTimeout(() => res(0), 500)), Promise.reject(5), new Promise((res) => setTimeout(() => res(10), 1000))])
   .then(console.log)
   .catch((error) => console.log('error: ' + error));
 
@@ -65,11 +45,7 @@ Promise.myAllSettled([
   new Promise((res) => setTimeout(() => res(10), 1000)),
 ]).then(console.log);
 
-Promise.myAllSettled([
-  new Promise((res) => setTimeout(() => res(0), 500)),
-  Promise.reject(5),
-  new Promise((res) => setTimeout(() => res(10), 1000)),
-])
+Promise.myAllSettled([new Promise((res) => setTimeout(() => res(0), 500)), Promise.reject(5), new Promise((res) => setTimeout(() => res(10), 1000))])
   .then(console.log)
   .catch((error) => console.log('error: ' + error));
 ```

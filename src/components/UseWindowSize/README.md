@@ -16,5 +16,5 @@ In the event of a resize after an instance of a component using the `useWindowSi
 ### Sample Usage
 
 ```jsx
-const { width, height } = useWindowSize();
+const {width, height} = useWindowSize();
 ```
