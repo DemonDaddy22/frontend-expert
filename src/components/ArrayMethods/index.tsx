@@ -19,16 +19,16 @@ const ArrayMethods: React.FC<Props> = () => {
           Without calling <span className={classes.questionDescriptionHighlight}>Array.prototype.map()</span>,{' '}
           <span className={classes.questionDescriptionHighlight}>Array.prototype.filter()</span>,{' '}
           <span className={classes.questionDescriptionHighlight}>Array.prototype.reduce()</span>, or{' '}
-          <span className={classes.questionDescriptionHighlight}>Array.prototype.forEach()</span>, implement the
-          following three similar functions on the Array prototype:
+          <span className={classes.questionDescriptionHighlight}>Array.prototype.forEach()</span>, implement the following three similar functions on
+          the Array prototype:
         </p>
         <ol>
           <li>
             <span className={classes.questionDescriptionHighlight}>myMap(callback)</span>
             <div className={classes.break} />
             Without mutating the original array, this function should call the passed{' '}
-            <span className={classes.questionDescriptionHighlight}>callback</span> function on every element of the
-            array and return a new array containing the results of all these calls, in the corresponding order.
+            <span className={classes.questionDescriptionHighlight}>callback</span> function on every element of the array and return a new array
+            containing the results of all these calls, in the corresponding order.
             <div className={classes.break} />
             The callback function can take in up to three parameters:
             <ol className={classes.nestedList}>
@@ -41,10 +41,9 @@ const ArrayMethods: React.FC<Props> = () => {
             <span className={classes.questionDescriptionHighlight}>myFilter(callback)</span>
             <div className={classes.break} />
             Without mutating the original array, this function should call the passed{' '}
-            <span className={classes.questionDescriptionHighlight}>callback</span> function on every element of the
-            array and return a new array containing the values of the original array that, when passed to the callback
-            function, returned <span className={classes.questionDescriptionHighlight}>true</span>. These values should
-            maintain their original order.
+            <span className={classes.questionDescriptionHighlight}>callback</span> function on every element of the array and return a new array
+            containing the values of the original array that, when passed to the callback function, returned{' '}
+            <span className={classes.questionDescriptionHighlight}>true</span>. These values should maintain their original order.
             <div className={classes.break} />
             The callback function takes in the same arguments as the ones that the callback function in{' '}
             <span className={classes.questionDescriptionHighlight}>myMap</span> takes in.
@@ -53,29 +52,25 @@ const ArrayMethods: React.FC<Props> = () => {
             <span className={classes.questionDescriptionHighlight}>myReduce(callback, initialValue)</span>
             <div className={classes.break} />
             Without mutating the original array, this function should call the passed{' '}
-            <span className={classes.questionDescriptionHighlight}>callback</span> function on every element of the
-            array and return the result of the last call to the callback.
+            <span className={classes.questionDescriptionHighlight}>callback</span> function on every element of the array and return the result of the
+            last call to the callback.
             <div className={classes.break} />
             The callback function can take in up to four parameters:
             <ol className={classes.nestedList}>
               <li>
-                The accumulator, which is the return value of the previous call to the callback. On the first call to
-                the callback, the accumulator should be set to the{' '}
-                <span className={classes.questionDescriptionHighlight}>initialValue</span>. If the{' '}
+                The accumulator, which is the return value of the previous call to the callback. On the first call to the callback, the accumulator
+                should be set to the <span className={classes.questionDescriptionHighlight}>initialValue</span>. If the{' '}
                 <span className={classes.questionDescriptionHighlight}>initialValue</span> is{' '}
-                <span className={classes.questionDescriptionHighlight}>undefined</span>, then it should be set to the
-                first value of the array, and the callback should skip the first element in the array and be called
-                directly on the second element.
+                <span className={classes.questionDescriptionHighlight}>undefined</span>, then it should be set to the first value of the array, and
+                the callback should skip the first element in the array and be called directly on the second element.
               </li>
               <li>The current value in the array.</li>
               <li>The current index in the array.</li>
               <li>The array itself.</li>
             </ol>
             <p>
-              If the array contains no elements, the{' '}
-              <span className={classes.questionDescriptionHighlight}>initialValue</span> should be returned. Note that
-              this differs slightly from the{' '}
-              <span className={classes.questionDescriptionHighlight}>Array.prototype.reduce</span> function.
+              If the array contains no elements, the <span className={classes.questionDescriptionHighlight}>initialValue</span> should be returned.
+              Note that this differs slightly from the <span className={classes.questionDescriptionHighlight}>Array.prototype.reduce</span> function.
             </p>
           </li>
         </ol>
@@ -87,19 +82,19 @@ const ArrayMethods: React.FC<Props> = () => {
           <h3 className={classes.codeBlockHeader}>Sample Output</h3>
           <section className={classes.codeBlock}>
             <pre className={classes.output}>
-              <span className={classes.comment}>// Console logs:</span>
+              <span className={classes.comment}>{'// Console logs:'}</span>
             </pre>
             <pre className={classes.output}>
               [3, 5, 7]
-              <span className={classes.comment}> // From my myMap</span>
+              <span className={classes.comment}>{' // From my myMap'}</span>
             </pre>
             <pre className={classes.output}>
               [3]
-              <span className={classes.comment}> // From my myFilter</span>
+              <span className={classes.comment}>{' // From my myFilter'}</span>
             </pre>
             <pre className={classes.output}>
               18
-              <span className={classes.comment}> // From my myReduce</span>
+              <span className={classes.comment}>{' // From my myReduce'}</span>
             </pre>
           </section>
         </div>

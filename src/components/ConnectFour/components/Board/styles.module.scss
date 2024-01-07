@@ -13,7 +13,7 @@
 }
 
 .title {
-  @include theme (color, contrast2);
+  @include theme(color, contrast2);
   font-size: 2rem;
 
   @media screen and (min-width: 1200px) {
@@ -33,7 +33,7 @@
 }
 
 .tile {
-  @include square (2.75rem, rgba($color: $white, $alpha: 0.05));
+  @include square(2.75rem, rgba($color: $white, $alpha: 0.05));
   border: 0.5px solid $grey-1;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@
 }
 
 .player {
-  @include square (2rem, $transparent, 50%);
+  @include square(2rem, $transparent, 50%);
 
   @media screen and (min-width: 1200px) {
     width: 3rem;

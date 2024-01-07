@@ -48,7 +48,7 @@ promise
     (error) => {
       console.log('error: ' + error);
       return error + 20;
-    }
+    },
   )
   .then((val) => {
     console.log(val);

@@ -2,26 +2,26 @@
 @import '../../constants/theme.scss';
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .questionDescriptionHighlight {
-  @include theme (background-color, eSecondaryDeep);
-  @include theme (color, contrast1);
-  @include spacing (0.05rem 0.25rem);
+  @include theme(background-color, eSecondaryDeep);
+  @include theme(color, contrast1);
+  @include spacing(0.05rem 0.25rem);
   border-radius: 0.25rem;
   font-size: 1em;
 }
 
 .blogContainer {
-  @include spacing (1rem, 2rem 0);
-  @include theme (border, contrast1Opacity20, 1px dotted);
+  @include spacing(1rem, 2rem 0);
+  @include theme(border, contrast1Opacity20, 1px dotted);
   border-radius: 0.25rem;
   align-self: stretch;
   max-width: 40rem;
 
   & .blogTitle {
-    @include theme (color, ePrimary);
+    @include theme(color, ePrimary);
     font-size: 1.75rem;
 
     @media screen and (min-width: 1200px) {
@@ -30,22 +30,22 @@
   }
 
   & .blogCaption {
-    @include spacing (0.25rem 0);
-    @include theme (color, contrast1);
+    @include spacing(0.25rem 0);
+    @include theme(color, contrast1);
     display: inline-block;
     text-align: start;
   }
 
   & .blogSection {
-    @include spacing (1rem 0);
+    @include spacing(1rem 0);
 
     & .blogSectionTitle {
-      @include spacing ($margin: 0 0 0.25rem 0);
-      @include theme (color, eSecondary);
+      @include spacing($margin: 0 0 0.25rem 0);
+      @include theme(color, eSecondary);
     }
 
     & .blogSectionContent {
-      @include theme (color, contrast1Opacity90);
+      @include theme(color, contrast1Opacity90);
       font-size: 0.9rem;
 
       @media screen and (min-width: 1200px) {
@@ -53,28 +53,28 @@
       }
 
       & strong {
-        @include theme (color, contrast1Opacity90);
+        @include theme(color, contrast1Opacity90);
       }
 
       & em {
-        @include theme (color, contrast1Opacity90);
+        @include theme(color, contrast1Opacity90);
       }
     }
 
     .blogLink {
-      @include theme (color, ePrimary);
+      @include theme(color, ePrimary);
 
       &:hover {
-        @include theme (color, contrast1);
-        @include theme (text-shadow, ePrimary, 2px 2px 6px);
+        @include theme(color, contrast1);
+        @include theme(text-shadow, ePrimary, 2px 2px 6px);
         text-decoration: none;
       }
     }
   }
 
   .blogFooter {
-    @include theme (color, contrast1Opacity40);
-    @include spacing ($margin: 0.5rem 0 0);
+    @include theme(color, contrast1Opacity40);
+    @include spacing($margin: 0.5rem 0 0);
     float: right;
     font-size: 0.85rem;
 

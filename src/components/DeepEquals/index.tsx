@@ -16,8 +16,8 @@ const DeepEquals: React.FC<Props> = () => {
         descriptionClassName={classes.questionDescription}
       >
         <p>
-          Write a <span className={classes.questionDescriptionHighlight}>deepEquals</span> function that takes in two
-          required values and returns if those two values are deeply equal to each other.
+          Write a <span className={classes.questionDescriptionHighlight}>deepEquals</span> function that takes in two required values and returns if
+          those two values are deeply equal to each other.
         </p>
         <p>For the purpose of this problem, deep equality is defined as follows:</p>
         <ul>
@@ -30,21 +30,16 @@ const DeepEquals: React.FC<Props> = () => {
             <span className={classes.questionDescriptionHighlight}>null</span> is only equal to{' '}
             <span className={classes.questionDescriptionHighlight}>null</span>, and{' '}
             <span className={classes.questionDescriptionHighlight}>undefined</span> is only equal to{' '}
-            <span className={classes.questionDescriptionHighlight}>undefined</span>. These values are not equal to each
-            other.
+            <span className={classes.questionDescriptionHighlight}>undefined</span>. These values are not equal to each other.
           </li>
           <li>Arrays are only equal if their entries are deeply equal to each other.</li>
-          <li>
-            Objects are equal only if their keys and values are deeply equal to each other (note that the order of the
-            keys doesn't matter).
-          </li>
+          <li>Objects are equal only if their keys and values are deeply equal to each other (note that the order of the keys doesn't matter).</li>
         </ul>
         <p>You can make the following assumptions:</p>
         <ul>
           <li>
-            Functions will never be passed to <span className={classes.questionDescriptionHighlight}>deepEquals</span>{' '}
-            and will never be contained in objects or arrays passed to{' '}
-            <span className={classes.questionDescriptionHighlight}>deepEquals</span>.
+            Functions will never be passed to <span className={classes.questionDescriptionHighlight}>deepEquals</span> and will never be contained in
+            objects or arrays passed to <span className={classes.questionDescriptionHighlight}>deepEquals</span>.
           </li>
           <li>Objects will only have string keys, and their values won't be recursive references to themselves.</li>
           <li>The prototype chain doesn't need to be considered when determining if two objects are deeply equal.</li>

@@ -9,6 +9,6 @@
 }
 
 body {
-  @include theme (background-color, accent2);
+  @include theme(background-color, accent2);
   font-family: 'Fira Code', monospace;
 }

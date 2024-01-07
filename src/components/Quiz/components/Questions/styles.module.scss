@@ -2,13 +2,13 @@
 @import '../../../../utils/mixins.scss';
 
 .container {
-  @include spacing (1rem);
-  @include theme (background-color, ePrimaryMuted);
+  @include spacing(1rem);
+  @include theme(background-color, ePrimaryMuted);
   border-radius: 0.5rem;
 }
 
 .buttonsContainer {
-  @include spacing (1rem 0 0);
+  @include spacing(1rem 0 0);
   display: flex;
   flex-direction: row;
   align-self: flex-end;

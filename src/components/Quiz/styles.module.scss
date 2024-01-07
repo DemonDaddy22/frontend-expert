@@ -3,44 +3,44 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, ePrimaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, ePrimaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing ($margin: 1rem);
+  @include spacing($margin: 1rem);
   max-width: 50rem;
 }
 
 .codeBlock {
-  @include spacing (0.5rem 0.75rem);
-  @include theme (background-color, eSecondaryDark);
+  @include spacing(0.5rem 0.75rem);
+  @include theme(background-color, eSecondaryDark);
   color: $light;
   overflow-x: auto;
   border-radius: 0.5rem;
 
   @media screen and (min-width: 1200px) {
-    @include spacing (0.75rem 1rem);
+    @include spacing(0.75rem 1rem);
   }
 }
 
 .codeWrapper {
-  @include spacing (0.5rem 0);
+  @include spacing(0.5rem 0);
 }

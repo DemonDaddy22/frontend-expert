@@ -1,26 +1,23 @@
-export const THEME: { [key in Theme]: Theme } = Object.freeze({
+export const THEME: {[key in Theme]: Theme} = Object.freeze({
   LIGHT: 'LIGHT',
   DARK: 'DARK',
 });
 
 export const FE_LOCAL_STORAGE_PREFIX: string = 'FEStore';
 
-export const LOREM_IPSUM: Array<string> = [
+export const LOREM_IPSUM: string[] = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus sit amet est placerat in.',
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien faucibus et. Volutpat sed cras ornare arcu dui vivamus.',
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus suspendisse faucibus interdum posuere lorem ipsum. Aliquam eleifend mi in nulla posuere sollicitudin. Turpis massa sed elementum tempus.',
 ];
 
-export const AE_TESTIMONIALS = {
-  API_URI: 'https://reqres.in/api/users',
-};
+export const AE_TESTIMONIALS = { API_URI: 'https://reqres.in/api/users' };
 
 export const CRYPTO_PRICES_CONFIG = {
   PAGE_SIZE: 10,
   TOTAL_SIZE: 30,
-  API_URI:
-    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false&locale=en',
+  API_URI: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false&locale=en',
 };
 
 export const RAPID_MOVIESDB_HOST: string = 'moviesdatabase.p.rapidapi.com';
@@ -45,7 +42,12 @@ export const WORDLE_CONFIG = {
 };
 
 export const MEMORY_CONFIG = {
-  TILES_MAP: { red: 'red', blue: 'blue', yellow: 'yellow', green: 'green' },
+  TILES_MAP: {
+    red: 'red',
+    blue: 'blue',
+    yellow: 'yellow',
+    green: 'green',
+  },
   TILES: ['red', 'yellow', 'green', 'blue'],
   BOARD_SIZE: 8,
 };

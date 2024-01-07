@@ -17,7 +17,9 @@ const QuestionSections: React.FC<Props> = () => {
       if (submission) {
         const isSubmissionCorrect = submission.status === QUESTION_LIST_SUBMISSION_STATUS.CORRECT;
         const question = {
-          id, name, status: submission.status,
+          id,
+          name,
+          status: submission.status,
         };
         if (category in sectionData) {
           sectionData[category].questions.push(question);
@@ -36,12 +38,7 @@ const QuestionSections: React.FC<Props> = () => {
   return !isEmptyObject(sections) ? (
     <div className={classes.sections}>
       {Object.keys(sections).map((section) => (
-        <QuestionSection
-          key={section}
-          title={section}
-          correctCount={sections[section].correctCount}
-          questions={sections[section].questions}
-        />
+        <QuestionSection key={section} title={section} correctCount={sections[section].correctCount} questions={sections[section].questions} />
       ))}
     </div>
   ) : null;

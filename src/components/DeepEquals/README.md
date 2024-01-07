@@ -26,8 +26,8 @@ deepEquals(null, undefined); // false
 deepEquals([], []); // true
 deepEquals({}, {}); // true
 deepEquals([], {}); // false
-deepEquals({ a: 123, b: { c: [4, 5, 6] } }, { a: 123, b: { c: [4, 5, 6] } }); // true
-deepEquals({ a: 123, b: { c: [4, 5, 6] } }, { b: { c: [4, 5, 6] } }); // false
+deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, 5, 6]}}); // true
+deepEquals({a: 123, b: {c: [4, 5, 6]}}, {b: {c: [4, 5, 6]}}); // false
 deepEquals([1, 2, [3, 4]], [1, 2, [3, 4]]); // true
-deepEquals([1, 2, [3, 4, { a: 'abc' }]], [1, 2, [3, 4, { a: 'abc' }]]); // true
+deepEquals([1, 2, [3, 4, {a: 'abc'}]], [1, 2, [3, 4, {a: 'abc'}]]); // true
 ```

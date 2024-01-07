@@ -2,7 +2,7 @@
 @import '../../../../utils/mixins.scss';
 
 .question {
-  @include theme (background-color, accent1Opacity80);
+  @include theme(background-color, accent1Opacity80);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,8 +14,8 @@
 }
 
 .name {
-  @include spacing (0.75rem 0);
-  @include theme (color, blue1);
+  @include spacing(0.75rem 0);
+  @include theme(color, blue1);
   flex: 1;
   font-size: 1.1rem;
   letter-spacing: -0.25px;
@@ -23,13 +23,13 @@
 }
 
 .endBlock {
-  @include theme (background-color, blue1);
+  @include theme(background-color, blue1);
   width: 2rem;
   align-self: stretch;
 }
 
 .status {
-  @include square (1rem, $grey-6, 50%);
+  @include square(1rem, $grey-6, 50%);
   border: 1px solid $grey-4;
   margin-left: 0.5rem;
 

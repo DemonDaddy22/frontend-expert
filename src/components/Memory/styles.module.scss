@@ -2,23 +2,23 @@
 @import '../../utils/mixins.scss';
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, ePrimaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, ePrimaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing (1rem 0 6rem);
+  @include spacing(1rem 0 6rem);
   max-width: 50rem;
 }

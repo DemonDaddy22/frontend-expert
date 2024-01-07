@@ -23,7 +23,7 @@ You should minimize side-effects as much as possible, ensuring that `thisContext
 ### Sample Usage
 
 ```javascript
-const obj = { num: 0 };
+const obj = {num: 0};
 
 function logNums(x, y) {
   console.log(this.num, x, y);

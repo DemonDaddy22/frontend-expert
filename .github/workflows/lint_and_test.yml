@@ -1,14 +1,14 @@
-name: "Perform Lint and Run Tests"
+name: 'Perform Lint and Run Tests'
 on:
   pull_request:
     branches:
-      - "master"
+      - 'master'
 jobs:
   test:
     strategy:
       matrix:
         node-version:
-          - 14
+          - 20.10.x
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Perform linting
         run: npm run lint:fix
       - name: Run Tests

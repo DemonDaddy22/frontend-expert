@@ -2,8 +2,8 @@
 @import '../../../utils/mixins.scss';
 
 .input {
-  @include theme (border, contrast2, 1px solid);
-  @include theme (color, contrast1);
+  @include theme(border, contrast2, 1px solid);
+  @include theme(color, contrast1);
   background-color: transparent;
   outline: none;
   border-radius: 0.25rem;
@@ -14,17 +14,17 @@
   }
 
   &::placeholder {
-    @include theme (color, contrast1Opacity30);
+    @include theme(color, contrast1Opacity30);
   }
 
   &:hover,
   &:focus {
-    @include theme (border, blue1, 1px solid);
+    @include theme(border, blue1, 1px solid);
   }
 
   &:disabled {
-    @include theme (border, grey3, 1px solid);
-    @include theme (color, grey3);
+    @include theme(border, grey3, 1px solid);
+    @include theme(color, grey3);
   }
 }
 

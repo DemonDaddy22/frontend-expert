@@ -22,18 +22,18 @@ const reducer = (state: IState, action: IAction) => {
   const { value, type } = action;
 
   switch (type) {
-    case ACTION_TYPE.UPDATE_HEIGHT:
-      return {
-        ...state,
-        height: value,
-      };
-    case ACTION_TYPE.UPDATE_WIDTH:
-      return {
-        ...state,
-        width: value,
-      };
-    default:
-      return state;
+  case ACTION_TYPE.UPDATE_HEIGHT:
+    return {
+      ...state,
+      height: value,
+    };
+  case ACTION_TYPE.UPDATE_WIDTH:
+    return {
+      ...state,
+      width: value,
+    };
+  default:
+    return state;
   }
 };
 
@@ -48,7 +48,9 @@ const useWindowSize = () => {
 
     window.addEventListener('resize', handleWindowResize);
 
-    return () => window.removeEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
   }, []);
 
   return { ...state };

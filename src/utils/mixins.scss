@@ -1,11 +1,11 @@
 @import '../constants/theme.scss';
 
-@mixin spacing ($padding: 0, $margin: 0) {
+@mixin spacing($padding: 0, $margin: 0) {
   padding: $padding;
   margin: $margin;
 }
 
-@mixin square ($size, $bg: none, $borderRadius: 0) {
+@mixin square($size, $bg: none, $borderRadius: 0) {
   height: $size;
   width: $size;
 
@@ -18,7 +18,7 @@
   }
 }
 
-@mixin circle ($size, $bg: none) {
+@mixin circle($size, $bg: none) {
   @include square($size, $bg, 50%);
 }
 
@@ -30,9 +30,7 @@
       @at-root [theme-mode='DARK'] #{&} {
         #{$property}: #{$inlinePre} #{$value} #{$inlinePost};
       }
-    }
-
-    @else {
+    } @else {
       @at-root :root #{&} {
         #{$property}: #{$inlinePre} #{$value} #{$inlinePost};
       }

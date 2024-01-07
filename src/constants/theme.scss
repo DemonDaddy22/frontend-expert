@@ -1,40 +1,40 @@
 $black: #000000;
-$dark: #0D0E0E;
+$dark: #0d0e0e;
 
-$white: #FFFFFF;
-$light: #F4F5F6;
+$white: #ffffff;
+$light: #f4f5f6;
 
 $transparent: #00000000;
 
 $grey-1: #505050;
-$grey-2: #2F2F2F;
+$grey-2: #2f2f2f;
 $grey-3: #777777;
-$grey-4: #B7B7B7;
-$grey-5: #CFCFCF;
-$grey-6: #EFEFEF;
+$grey-4: #b7b7b7;
+$grey-5: #cfcfcf;
+$grey-6: #efefef;
 
-$blue-1: #02203C;
-$blue-2: #0C3F6F;
-$blue-3: #8CC4F9;
+$blue-1: #02203c;
+$blue-2: #0c3f6f;
+$blue-3: #8cc4f9;
 
-$green-1: #233B08;
-$green-2: #9AE346;
-$green-3:#29C01B;
+$green-1: #233b08;
+$green-2: #9ae346;
+$green-3: #29c01b;
 
-$red-1: #5E0618;
-$red-2: #F44064;
-$red-3: #E33526;
-$red-4: #FF6868;
+$red-1: #5e0618;
+$red-2: #f44064;
+$red-3: #e33526;
+$red-4: #ff6868;
 
-$yellow-1: #F4D33E;
-$yellow-2:#DBB311;
-$yellow-3:#493B05;
-$yellow-4:#EFDE7E;
+$yellow-1: #f4d33e;
+$yellow-2: #dbb311;
+$yellow-3: #493b05;
+$yellow-4: #efde7e;
 
 $LIGHT: (
   accent1: $white,
   accent2: $light,
-  accent3: #F7F7F7,
+  accent3: #f7f7f7,
   contrast1: $black,
   contrast2: $dark,
   accent1Opacity10: rgba(255, 255, 255, 0.1),
@@ -55,9 +55,21 @@ $LIGHT: (
   contrast1Opacity70: rgba(0, 0, 0, 0.7),
   contrast1Opacity80: rgba(0, 0, 0, 0.8),
   contrast1Opacity90: rgba(0, 0, 0, 0.9),
-  contrast3: rgba($color: $dark, $alpha: 0.75),
-  divider: rgba($color: $dark, $alpha: 0.1),
-  iconButton: rgba($color: $black, $alpha: 0.1),
+  contrast3:
+    rgba(
+      $color: $dark,
+      $alpha: 0.75,
+    ),
+  divider:
+    rgba(
+      $color: $dark,
+      $alpha: 0.1,
+    ),
+  iconButton:
+    rgba(
+      $color: $black,
+      $alpha: 0.1,
+    ),
   grey1: rgba(225, 225, 225, 0.25),
   grey2: rgba(240, 240, 240, 0.2),
   grey3: rgba(200, 200, 200, 0.5),
@@ -66,29 +78,28 @@ $LIGHT: (
   grey6: rgba(100, 100, 100, 1),
   grey7: rgba(210, 210, 210, 0.95),
   blue1: #214789,
-  red1: #9D092B,
-  green1: #60A911,
-  yellow1: #D9C913,
-  blue2: #B9D1FB,
-  red2: #F4AABB,
-  green2: #C9F699,
-  yellow2: #F5ED95,
-  errorScreenBG: linear-gradient(40deg, #DFE6F3, #E5DAF6, $light),
-
+  red1: #9d092b,
+  green1: #60a911,
+  yellow1: #d9c913,
+  blue2: #b9d1fb,
+  red2: #f4aabb,
+  green2: #c9f699,
+  yellow2: #f5ed95,
+  errorScreenBG: linear-gradient(40deg, #dfe6f3, #e5daf6, $light),
   // ------ exercise values ------
-  ePrimary: #1F9FC5,
-  ePrimaryMuted: #E4EFF1,
+  ePrimary: #1f9fc5,
+  ePrimaryMuted: #e4eff1,
   ePrimaryContrast: #062237,
-  ePrimaryDeep: #1690EE,
-  ePrimaryDark: #092F4D,
-  eSecondary: #75D30B,
-  eSecondaryMuted: #E7EDE0,
+  ePrimaryDeep: #1690ee,
+  ePrimaryDark: #092f4d,
+  eSecondary: #75d30b,
+  eSecondaryMuted: #e7ede0,
   eSecondaryContrast: #043825,
-  eSecondaryDeep: #0FBE7E,
+  eSecondaryDeep: #0fbe7e,
   eSecondaryDark: #083626,
 
   eSignupForm: rgba(215, 215, 215, 0.25),
-  eTodoItem: #4A0B91,
+  eTodoItem: #4a0b91,
 );
 
 $DARK: (
@@ -115,9 +126,21 @@ $DARK: (
   contrast1Opacity70: rgba(255, 255, 255, 0.7),
   contrast1Opacity80: rgba(255, 255, 255, 0.8),
   contrast1Opacity90: rgba(255, 255, 255, 0.9),
-  contrast3: rgba($color: $light, $alpha: 0.75),
-  divider: rgba($color: $light, $alpha: 0.1),
-  iconButton: rgba($color: $white, $alpha: 0.1),
+  contrast3:
+    rgba(
+      $color: $light,
+      $alpha: 0.75,
+    ),
+  divider:
+    rgba(
+      $color: $light,
+      $alpha: 0.1,
+    ),
+  iconButton:
+    rgba(
+      $color: $white,
+      $alpha: 0.1,
+    ),
   grey1: rgba(100, 100, 100, 0.25),
   grey2: rgba(75, 75, 75, 0.2),
   grey3: rgba(75, 75, 75, 0.6),
@@ -125,48 +148,47 @@ $DARK: (
   grey5: rgba(30, 30, 30, 1),
   grey6: rgba(150, 150, 150, 1),
   grey7: rgba(90, 90, 90, 0.9),
-  blue1: #7CB9E8,
-  red1: #F55757,
-  green1: #93F30C,
-  yellow1: #F2E639,
-  blue2: #08275D,
-  red2: #5C0A1D,
-  green2: #1F3408,
-  yellow2: #3D390A,
-  errorScreenBG: linear-gradient(40deg, #021026, #0E021F, $dark),
-
+  blue1: #7cb9e8,
+  red1: #f55757,
+  green1: #93f30c,
+  yellow1: #f2e639,
+  blue2: #08275d,
+  red2: #5c0a1d,
+  green2: #1f3408,
+  yellow2: #3d390a,
+  errorScreenBG: linear-gradient(40deg, #021026, #0e021f, $dark),
   // ------ exercise values ------
-  ePrimary: #55C1E2,
-  ePrimaryMuted: #19232A,
-  ePrimaryContrast: #B7DDFB,
-  ePrimaryDeep: #16517F,
-  ePrimaryDark: #052C49,
-  eSecondary: #A3F545,
-  eSecondaryMuted: #141F18,
-  eSecondaryContrast: #BEF6D2,
+  ePrimary: #55c1e2,
+  ePrimaryMuted: #19232a,
+  ePrimaryContrast: #b7ddfb,
+  ePrimaryDeep: #16517f,
+  ePrimaryDark: #052c49,
+  eSecondary: #a3f545,
+  eSecondaryMuted: #141f18,
+  eSecondaryContrast: #bef6d2,
   eSecondaryDeep: #106244,
   eSecondaryDark: #042519,
 
   eSignupForm: rgba(0, 0, 0, 0.25),
-  eTodoItem: #722DC0,
+  eTodoItem: #722dc0,
 );
 
 $themes: ($LIGHT, $DARK);
 
-$eStopWatch: #F46E26;
-$ePigHead: #FFC0CB;
-$ePigNose: #F57187;
-$eProductBlue: #8C96F6;
-$eProductRed: #E64970;
-$eProductOrange: #F37F1B;
-$eProductBrightRed: #F21B3E;
-$eProductGreen: #25B59B;
+$eStopWatch: #f46e26;
+$ePigHead: #ffc0cb;
+$ePigNose: #f57187;
+$eProductBlue: #8c96f6;
+$eProductRed: #e64970;
+$eProductOrange: #f37f1b;
+$eProductBrightRed: #f21b3e;
+$eProductGreen: #25b59b;
 $eProductSelected: #279600;
-$eEmojiBg: #A4D9EB;
-$eEmojiBorder: #9BBCC2;
+$eEmojiBg: #a4d9eb;
+$eEmojiBorder: #9bbcc2;
 $eEmojiStickBg: #808080;
-$eEmojiBulbBg: #FFA500;
-$eEmojiEarBg: #C90A0A;
-$eEmojiEyeBorder: #00B3FF;
-$eEmojiMouthBg: #DEDEDE;
+$eEmojiBulbBg: #ffa500;
+$eEmojiEarBg: #c90a0a;
+$eEmojiEyeBorder: #00b3ff;
+$eEmojiMouthBg: #dedede;
 $eCandidates: #061802;

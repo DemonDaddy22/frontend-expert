@@ -2,7 +2,7 @@
 @import '../../utils/mixins.scss';
 
 .menu {
-  @include spacing (1rem 2rem);
+  @include spacing(1rem 2rem);
   background-color: rgba($color: $white, $alpha: 0.025);
   position: fixed;
   bottom: 1rem;
@@ -12,7 +12,7 @@
   backdrop-filter: blur(4px) saturate(120%) contrast(80%) brightness(120%);
 
   @media screen and (min-width: 1200px) {
-    @include spacing (2rem 1rem);
+    @include spacing(2rem 1rem);
     bottom: 50%;
     right: 0;
     transform: translate(-50%, 50%);
@@ -20,7 +20,7 @@
 }
 
 .menuItems {
-  @include spacing (0);
+  @include spacing(0);
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -8,8 +8,7 @@ interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<H
   fullWidth?: boolean;
 }
 
-interface ButtonProps
-  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
+interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
 
 interface FormGroupProps {
   style?: React.CSSProperties;
@@ -62,7 +61,7 @@ interface CodeBlockProps {
   className?: string;
   containerClassName?: string;
   hideCode?: boolean;
-  style?: { [key: string]: React.CSSProperties };
+  style?: Record<string, React.CSSProperties>;
 }
 
 interface IconProps {
@@ -71,10 +70,9 @@ interface IconProps {
   width?: number;
 }
 
-interface IconButtonProps
-  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    size?: number;
-  }
+interface IconButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+  size?: number;
+}
 
 interface ITestimonial {
   id: string;
@@ -85,12 +83,12 @@ interface ITestimonial {
 interface IMenuItem {
   id: string;
   title?: string;
-  data?: { [key: string]: any };
+  data?: Record<string, any>;
 }
 
 interface MenuProps {
   defaultTitle?: string;
-  items: Array<IMenuItem>;
+  items: IMenuItem[];
   isOpen: boolean;
   shouldCloseOnItemClick?: boolean;
   className?: string;

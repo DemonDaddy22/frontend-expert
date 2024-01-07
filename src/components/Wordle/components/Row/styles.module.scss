@@ -8,9 +8,9 @@
 }
 
 .box {
-  @include theme (background-color, accent1Opacity80);
-  @include theme (border, grey1, 1px solid);
-  @include theme (color, contrast1);
+  @include theme(background-color, accent1Opacity80);
+  @include theme(border, grey1, 1px solid);
+  @include theme(color, contrast1);
   height: 3rem;
   width: 3rem;
   border-radius: 0.25rem;
@@ -21,7 +21,7 @@
   font-weight: bold;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     height: 4rem;
     width: 4rem;
     height: 4rem;

@@ -3,29 +3,29 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (background-color, ePrimaryDeep);
-  @include theme (color, contrast1Opacity90);
+  @include spacing(0 0.25rem);
+  @include theme(background-color, ePrimaryDeep);
+  @include theme(color, contrast1Opacity90);
   border-radius: 0.25rem;
 }
 
 .break {
-  @include spacing ($margin: 0.5rem 0);
+  @include spacing($margin: 0.5rem 0);
 }
 
 .nestedList {
@@ -33,27 +33,27 @@
   padding-bottom: 0.75rem;
 
   & li {
-    @include spacing ($margin: 0.25rem -0.5rem);
+    @include spacing($margin: 0.25rem -0.5rem);
   }
 }
 
 .codeWrapper {
-  @include spacing (0.5rem 0);
+  @include spacing(0.5rem 0);
 }
 
 .codeBlockHeader {
-  @include spacing (0.5rem 0);
-  @include theme (color, contrast1);
+  @include spacing(0.5rem 0);
+  @include theme(color, contrast1);
 }
 
 .codeBlock {
-  @include spacing (0.5rem 0.75rem);
-  @include theme (background-color, eSecondaryDark);
+  @include spacing(0.5rem 0.75rem);
+  @include theme(background-color, eSecondaryDark);
   overflow-x: auto;
   border-radius: 0.5rem;
 
   @media screen and (min-width: 1200px) {
-    @include spacing (0.75rem 1rem);
+    @include spacing(0.75rem 1rem);
   }
 }
 
@@ -69,7 +69,7 @@
 }
 
 .solutionContainer {
-  @include spacing ($margin: 1rem 0);
+  @include spacing($margin: 1rem 0);
   border-radius: 0.25rem;
   max-width: 50rem;
 }

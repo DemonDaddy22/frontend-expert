@@ -2,8 +2,8 @@
 @import '../../../../utils/mixins.scss';
 
 .menu {
-  @include theme (background-color, grey4);
-  @include theme (border-right, divider, 1px solid);
+  @include theme(background-color, grey4);
+  @include theme(border-right, divider, 1px solid);
   height: 100%;
   width: 100%;
   overflow-y: auto;
@@ -16,16 +16,16 @@
 }
 
 .title {
-  @include theme (background-color, grey4);
-  @include theme (color, blue1);
-  @include spacing (2rem);
+  @include theme(background-color, grey4);
+  @include theme(color, blue1);
+  @include spacing(2rem);
   font-size: 2rem;
   position: sticky;
   top: 0;
 }
 
 .menuItems {
-  @include spacing (1rem, 0);
+  @include spacing(1rem, 0);
   display: flex;
   flex-direction: column;
 }
@@ -35,8 +35,8 @@
 }
 
 .menuItemBase {
-  @include theme (color, contrast2);
-  @include spacing (1.5rem 1rem);
+  @include theme(color, contrast2);
+  @include spacing(1.5rem 1rem);
   display: block;
   text-decoration: none;
   color: inherit;
@@ -48,15 +48,15 @@
   composes: menuItemBase;
 
   &:hover {
-    @include theme (background-color, grey7);
-    @include theme (color, blue1);
+    @include theme(background-color, grey7);
+    @include theme(color, blue1);
     cursor: pointer;
   }
 }
 
 .menuItemActive {
   composes: menuItemBase;
-  @include theme (background-color, blue1);
-  @include theme (color, accent1);
+  @include theme(background-color, blue1);
+  @include theme(color, accent1);
   cursor: default;
 }

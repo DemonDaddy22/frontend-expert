@@ -6,24 +6,17 @@ import MenuItem from '../MenuItem';
 // TODO - animate opening/closing of menu
 
 const Menu: React.FC<MenuProps> = (props) => {
-  const {
-    defaultTitle,
-    items,
-    isOpen,
-    shouldCloseOnItemClick = true,
-    className = '',
-    style = {},
-    onClose,
-    onItemClick,
-    renderItem,
-  } = props;
+  const { defaultTitle, items, isOpen, shouldCloseOnItemClick = true, className = '', style = {}, onClose, onItemClick, renderItem } = props;
 
-  const handleItemClick = useCallback((item: IMenuItem) => {
-    onItemClick(item);
-    if (shouldCloseOnItemClick) {
-      setTimeout(onClose, 150);
-    }
-  }, [shouldCloseOnItemClick, onItemClick, onClose]);
+  const handleItemClick = useCallback(
+    (item: IMenuItem) => {
+      onItemClick(item);
+      if (shouldCloseOnItemClick) {
+        setTimeout(onClose, 150);
+      }
+    },
+    [shouldCloseOnItemClick, onItemClick, onClose],
+  );
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -39,29 +32,22 @@ const Menu: React.FC<MenuProps> = (props) => {
     };
   }, [onClose]);
 
-  if (
-    !isOpen
-    || (isEmptyList(items) && isEmptyString(defaultTitle))
-  ) {
+  if (!isOpen || (isEmptyList(items) && isEmptyString(defaultTitle))) {
     return null;
   }
 
   if (isEmptyList(items)) {
     return (
-      <p className={`${classes.defaultItem} ${className}`} style={style}>{defaultTitle}</p>
-    )
+      <p className={`${classes.defaultItem} ${className}`} style={style}>
+        {defaultTitle}
+      </p>
+    );
   }
 
   return (
     <ul className={`${classes.menu} ${className}`} style={style}>
       {items.map((item) => (
-        <MenuItem
-          key={item.id}
-          item={item}
-          onItemClick={handleItemClick}
-          renderItem={renderItem}
-          className={classes.menuItem}
-        />
+        <MenuItem key={item.id} item={item} onItemClick={handleItemClick} renderItem={renderItem} className={classes.menuItem} />
       ))}
     </ul>
   );

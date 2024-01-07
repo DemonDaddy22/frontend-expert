@@ -8,10 +8,10 @@ import Question from '../Question';
 
 const Questions: React.FC<Props> = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [questionAttempt, setQuestionAttempt] = useState<{ [key: string]: string }>({});
+  const [questionAttempt, setQuestionAttempt] = useState<Record<string, string>>({});
 
   const { responseJSON } = useFetch(QUIZ_CONFIG.API_URI, { mode: 'cors' });
-  const results: Array<IQuizQuestion> = responseJSON?.results ?? [];
+  const results: IQuizQuestion[] = responseJSON?.results ?? [];
   const currentQuestion = results?.[currentQuestionIndex] ?? {};
 
   const answers = useMemo(() => {
@@ -38,7 +38,7 @@ const Questions: React.FC<Props> = () => {
         };
       });
     },
-    [currentQuestionIndex]
+    [currentQuestionIndex],
   );
 
   return !isEmptyObject(currentQuestion) ? (
@@ -55,12 +55,18 @@ const Questions: React.FC<Props> = () => {
       <div className={classes.buttonsContainer}>
         <Button
           disabled={currentQuestionIndex <= 0}
-          onClick={() => setCurrentQuestionIndex((prevIndex) => prevIndex - 1)}>
+          onClick={() => {
+            setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+          }}
+        >
           Back
         </Button>
         <Button
           disabled={currentQuestionIndex >= results.length - 1}
-          onClick={() => setCurrentQuestionIndex((prevIndex) => prevIndex + 1)}>
+          onClick={() => {
+            setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+          }}
+        >
           Next
         </Button>
       </div>

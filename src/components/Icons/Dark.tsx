@@ -14,7 +14,8 @@ const Dark: React.FC<IconProps> = (props) => {
       stroke={color}
       fill='none'
       strokeLinecap='round'
-      strokeLinejoin='round'>
+      strokeLinejoin='round'
+    >
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M3 3l18 18' />
       <path d='M16 12a4 4 0 0 0 -4 -4m-2.834 1.177a4 4 0 0 0 5.66 5.654' />

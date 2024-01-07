@@ -28,7 +28,10 @@ const useMap = (initialValue?: Array<[any, any]>) => {
   }, []);
 
   return {
-    map, set: setValue, delete: deleteValue, clear: clearMap,
+    map,
+    set: setValue,
+    delete: deleteValue,
+    clear: clearMap,
   };
 };
 

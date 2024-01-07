@@ -3,38 +3,38 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .break {
-  @include spacing ($margin: 0.5rem 0);
+  @include spacing($margin: 0.5rem 0);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, ePrimaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, ePrimaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing ($margin: 2rem 1rem);
+  @include spacing($margin: 2rem 1rem);
 }
 
 .gameContainer {
-  @include spacing (2rem);
-  @include theme (background-color, eSecondaryMuted);
+  @include spacing(2rem);
+  @include theme(background-color, eSecondaryMuted);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .gameTitle {
-  @include theme (color, contrast1Opacity70);
+  @include theme(color, contrast1Opacity70);
   font-size: 1.25rem;
   letter-spacing: -0.5px;
 
@@ -53,7 +53,7 @@
 }
 
 .gameStatus {
-  @include theme (color, contrast1);
+  @include theme(color, contrast1);
   font-size: 1.5rem;
   letter-spacing: -0.5px;
 
@@ -63,15 +63,15 @@
 }
 
 .board {
-  @include spacing ($margin: 2rem 0);
+  @include spacing($margin: 2rem 0);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem;
 }
 
 .tile {
-  @include theme (color, contrast1, $inlinePost: !important);
-  @include theme (border, ePrimary, 2px solid, !important);
+  @include theme(color, contrast1, $inlinePost: !important);
+  @include theme(border, ePrimary, 2px solid, !important);
   width: 4rem;
   height: 4rem;
   font-size: 2.5rem;
@@ -80,7 +80,7 @@
   justify-content: center;
 
   &:hover {
-    @include theme (background-color, ePrimary, $inlinePost: !important);
+    @include theme(background-color, ePrimary, $inlinePost: !important);
   }
 
   &:disabled {

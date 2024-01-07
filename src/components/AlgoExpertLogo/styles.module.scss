@@ -2,12 +2,12 @@
 @import '../../utils/mixins.scss';
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .questionDetailsContainer {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
@@ -16,14 +16,14 @@
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (background-color, eSecondaryDeep);
-  @include theme (color, contrast1Opacity90);
+  @include spacing(0 0.25rem);
+  @include theme(background-color, eSecondaryDeep);
+  @include theme(color, contrast1Opacity90);
   border-radius: 0.25rem;
 }
 
 .logoContainer {
-  @include spacing (1rem, 2rem 1rem);
+  @include spacing(1rem, 2rem 1rem);
   background-color: $blue-1;
   border-radius: 0.5rem;
   align-self: stretch;
@@ -49,7 +49,7 @@
     }
 
     .logo {
-      @include circle (0.6rem);
+      @include circle(0.6rem);
       box-sizing: initial;
       border: 5px solid $white;
       display: flex;

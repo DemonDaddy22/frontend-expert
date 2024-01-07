@@ -4,11 +4,12 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import Router from './router';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+// eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <Router />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

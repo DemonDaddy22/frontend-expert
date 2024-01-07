@@ -8,13 +8,10 @@ const SpaghettiRecipe: React.FC<Props> = () => {
   return (
     <ProjectPage>
       <QuestionDetails title='Spaghetti Recipe' titleClassName={classes.questionTitle}>
+        <p>You've been provided with a recipe for spaghetti as raw text, and you need to convert this recipe into a properly marked-up HTML file.</p>
         <p>
-          You've been provided with a recipe for spaghetti as raw text, and you need to convert this recipe into a
-          properly marked-up HTML file.
-        </p>
-        <p>
-          The recipe should have a primary heading of "Spaghetti Recipe", and it should be divided into two sections,
-          the ingredients and the instructions, with the headings "Ingredients" and "Instructions", respectively.
+          The recipe should have a primary heading of "Spaghetti Recipe", and it should be divided into two sections, the ingredients and the
+          instructions, with the headings "Ingredients" and "Instructions", respectively.
         </p>
         <p>The ingredients are an unordered list with the following contents:</p>
         <ul className={classes.questionDescriptionUnorderedList}>
@@ -38,8 +35,8 @@ const SpaghettiRecipe: React.FC<Props> = () => {
           <li>Enjoy!</li>
         </ol>
         <p>
-          Note that "Add salt to taste." and "Cook for 10 minutes, stirring occasionally." are in a sub-ordered list
-          under the second instruction. Your HTML code should use proper semantic markup.
+          Note that "Add salt to taste." and "Cook for 10 minutes, stirring occasionally." are in a sub-ordered list under the second instruction.
+          Your HTML code should use proper semantic markup.
         </p>
       </QuestionDetails>
       <Divider />

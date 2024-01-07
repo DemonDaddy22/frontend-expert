@@ -16,14 +16,14 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
     let toastMessage = message;
     if (isEmptyString(toastMessage)) {
       switch (type) {
-        case 'success':
-          toastMessage = 'Success!';
-          break;
-        case 'error':
-          toastMessage = 'Error.';
-          break;
-        default:
-          break;
+      case 'success':
+        toastMessage = 'Success!';
+        break;
+      case 'error':
+        toastMessage = 'Error.';
+        break;
+      default:
+        break;
       }
     }
     addToast({
@@ -43,7 +43,9 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
           id='message'
           value={message}
           placeholder='Enter toast message...'
-          onChange={(e) => setMessage(e.currentTarget.value)}
+          onChange={(e) => {
+            setMessage(e.currentTarget.value);
+          }}
           type='text'
         />
       </FormGroup>
@@ -53,7 +55,9 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
           id='duration'
           type='number'
           value={duration}
-          onChange={(e) => setDuration(Number(e.currentTarget.value))}
+          onChange={(e) => {
+            setDuration(Number(e.currentTarget.value));
+          }}
         />
       </FormGroup>
       <div className={classes.typeContainer}>
@@ -62,7 +66,9 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
           <Input
             id='success'
             type='radio'
-            onChange={(e) => setType('success')}
+            onChange={(e) => {
+              setType('success');
+            }}
             checked={type === 'success'}
             fullWidth={false}
           />
@@ -72,7 +78,9 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
           <Input
             id='error'
             type='radio'
-            onChange={(e) => setType('error')}
+            onChange={(e) => {
+              setType('error');
+            }}
             checked={type === 'error'}
             fullWidth={false}
           />
@@ -83,7 +91,9 @@ const ToastCreator: React.FC<IToastCreatorProps> = ({ addToast, clearToasts }) =
         <Input
           id='cancelable'
           type='checkbox'
-          onChange={(e) => setIsCancelable(e.currentTarget.checked)}
+          onChange={(e) => {
+            setIsCancelable(e.currentTarget.checked);
+          }}
           fullWidth={false}
         />
       </FormGroup>

@@ -2,17 +2,15 @@ import { useEffect, useState } from 'react';
 import { AE_TESTIMONIALS } from '../../constants';
 
 const useFetchTestimonials = (page: number) => {
-  const [testimonials, setTestimonials] = useState<Array<ITestimonial>>([]);
+  const [testimonials, setTestimonials] = useState<ITestimonial[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
   const [hasNext, setHasNext] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    fetch(`${AE_TESTIMONIALS.API_URI}?page=${page}`, {
-        mode: 'cors',
-      })
-      .then((res) => res.json())
+    fetch(`${AE_TESTIMONIALS.API_URI}?page=${page}`, { mode: 'cors' })
+      .then(async (res) => await res.json())
       .then((res) => {
         setTestimonials((prevTestimonials) => [
           ...prevTestimonials,
@@ -28,10 +26,17 @@ const useFetchTestimonials = (page: number) => {
       .catch((err) => {
         setError(err);
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }, [page]);
 
-  return { testimonials, loading, error, hasNext };
+  return {
+    testimonials,
+    loading,
+    error,
+    hasNext,
+  };
 };
 
 export default useFetchTestimonials;

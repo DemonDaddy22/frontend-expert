@@ -41,29 +41,28 @@ const TestingFramework: React.FC<Props> = () => {
             This function defines a single check in a test case and is called within an{' '}
             <span className={classes.questionDescriptionHighlight}>it</span>'s callback{' '}
             <span className={classes.questionDescriptionHighlight}>func</span>. It takes in an arbitrary parameter{' '}
-            <span className={classes.questionDescriptionHighlight}>actual</span> and returns an object with the
-            following three functions that are used to compare{' '}
-            <span className={classes.questionDescriptionHighlight}>actual</span> to other values:
+            <span className={classes.questionDescriptionHighlight}>actual</span> and returns an object with the following three functions that are
+            used to compare <span className={classes.questionDescriptionHighlight}>actual</span> to other values:
             <ol>
               <li>
                 <span className={classes.questionDescriptionHighlight}>expect(actual).toExist()</span>
                 <div className={classes.break} />
-                This function checks that <span className={classes.questionDescriptionHighlight}>actual</span> is
-                neither <span className={classes.questionDescriptionHighlight}>null</span> nor{' '}
+                This function checks that <span className={classes.questionDescriptionHighlight}>actual</span> is neither{' '}
+                <span className={classes.questionDescriptionHighlight}>null</span> nor{' '}
                 <span className={classes.questionDescriptionHighlight}>undefined</span>.
               </li>
               <li>
                 <span className={classes.questionDescriptionHighlight}>expect(actual).toBe(expected)</span>
                 <div className={classes.break} />
-                This function checks that <span className={classes.questionDescriptionHighlight}>actual</span> is
-                strictly equal to <span className={classes.questionDescriptionHighlight}>expected</span>.
+                This function checks that <span className={classes.questionDescriptionHighlight}>actual</span> is strictly equal to{' '}
+                <span className={classes.questionDescriptionHighlight}>expected</span>.
               </li>
               <li>
                 <span className={classes.questionDescriptionHighlight}>expect(actual).toBeType(type)</span>
                 <div className={classes.break} />
-                This function checks that <span className={classes.questionDescriptionHighlight}>actual</span> is of the
-                type <span className={classes.questionDescriptionHighlight}>type</span>, which can be any string
-                returned by the <span className={classes.questionDescriptionHighlight}>typeof</span> operator.
+                This function checks that <span className={classes.questionDescriptionHighlight}>actual</span> is of the type{' '}
+                <span className={classes.questionDescriptionHighlight}>type</span>, which can be any string returned by the{' '}
+                <span className={classes.questionDescriptionHighlight}>typeof</span> operator.
               </li>
             </ol>
           </li>
@@ -89,8 +88,7 @@ const TestingFramework: React.FC<Props> = () => {
           <pre className={classes.caseWrapper}>
             <p className={classes.comment}>When a test suite fails (because a check in one of its test cases fails):</p>
             <p className={classes.outputString}>
-              "failed running test suite {`{testSuiteName}`} on test case {`{testCaseName}`} with error message{' '}
-              {`{errorMessage}`}"{' '}
+              "failed running test suite {`{testSuiteName}`} on test case {`{testCaseName}`} with error message {`{errorMessage}`}"{' '}
             </p>
           </pre>
           <pre className={classes.caseWrapper}>
@@ -113,17 +111,16 @@ const TestingFramework: React.FC<Props> = () => {
         <p>When a check fails, the following things should happen:</p>
         <ol>
           <li>
-            The relevant <span className={classes.questionDescriptionHighlight}>expect</span> function should throw the
-            appropriate <span className={classes.questionDescriptionHighlight}>errorMessage</span>.
+            The relevant <span className={classes.questionDescriptionHighlight}>expect</span> function should throw the appropriate{' '}
+            <span className={classes.questionDescriptionHighlight}>errorMessage</span>.
           </li>
           <li>
-            The relevant <span className={classes.questionDescriptionHighlight}>it</span> function should throw an
-            arbitrary error, and its execution should stop.
+            The relevant <span className={classes.questionDescriptionHighlight}>it</span> function should throw an arbitrary error, and its execution
+            should stop.
           </li>
           <li>
-            The relevant <span className={classes.questionDescriptionHighlight}>describe</span> function should print
-            the failure string with <span className={classes.questionDescriptionHighlight}>console.error</span> (all
-            other strings should be printed with{' '}
+            The relevant <span className={classes.questionDescriptionHighlight}>describe</span> function should print the failure string with{' '}
+            <span className={classes.questionDescriptionHighlight}>console.error</span> (all other strings should be printed with{' '}
             <span className={classes.questionDescriptionHighlight}>console.log</span>), and its execution should stop.
           </li>
         </ol>
@@ -131,24 +128,19 @@ const TestingFramework: React.FC<Props> = () => {
         <ul>
           <li>All output strings should be in lowercase letters, with no punctuation whatsoever.</li>
           <li>
-            No modifications should be made to{' '}
-            <span className={classes.questionDescriptionHighlight}>testSuiteName</span> and{' '}
-            <span className={classes.questionDescriptionHighlight}>testCaseName</span> values (they shouldn't be
-            lowercased).
+            No modifications should be made to <span className={classes.questionDescriptionHighlight}>testSuiteName</span> and{' '}
+            <span className={classes.questionDescriptionHighlight}>testCaseName</span> values (they shouldn't be lowercased).
           </li>
           <li>
             When <span className={classes.questionDescriptionHighlight}>actual</span> and{' '}
-            <span className={classes.questionDescriptionHighlight}>expected</span> values are printed within error
-            messages, they should be stringified with{' '}
-            <span className={classes.questionDescriptionHighlight}>JSON.stringify()</span>.
+            <span className={classes.questionDescriptionHighlight}>expected</span> values are printed within error messages, they should be
+            stringified with <span className={classes.questionDescriptionHighlight}>JSON.stringify()</span>.
           </li>
         </ul>
         <p>
-          Note that this question's tests naturally check that{' '}
-          <span className={classes.questionDescriptionHighlight}>console.log</span> and{' '}
-          <span className={classes.questionDescriptionHighlight}>console.error</span> are correctly called; this means
-          that debugging your solution with <span className={classes.questionDescriptionHighlight}>console.log</span>{' '}
-          will unavoidably make your solution fail some tests.
+          Note that this question's tests naturally check that <span className={classes.questionDescriptionHighlight}>console.log</span> and{' '}
+          <span className={classes.questionDescriptionHighlight}>console.error</span> are correctly called; this means that debugging your solution
+          with <span className={classes.questionDescriptionHighlight}>console.log</span> will unavoidably make your solution fail some tests.
         </p>
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Usage #1</h3>
@@ -157,7 +149,7 @@ const TestingFramework: React.FC<Props> = () => {
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Output #1</h3>
           <section className={classes.codeBlock}>
-            <pre className={classes.comment}>// Console logs:</pre>
+            <pre className={classes.comment}>{'// Console logs:'}</pre>
             <pre className={classes.output}>beginning test suite Passing Test Suite </pre>
             <pre className={classes.output}>beginning test case Passing Test Case #1 </pre>
             <pre className={classes.output}>successfully completed test case Passing Test Case #1 </pre>
@@ -173,15 +165,14 @@ const TestingFramework: React.FC<Props> = () => {
         <div className={classes.codeWrapper}>
           <h3 className={classes.codeBlockHeader}>Sample Output #2</h3>
           <section className={classes.codeBlock}>
-            <pre className={classes.comment}>// Console logs:</pre>
+            <pre className={classes.comment}>{'// Console logs:'}</pre>
             <pre className={classes.output}>beginning test suite Failing Test Suite </pre>
             <pre className={classes.output}>beginning test case Passing Test Case </pre>
             <pre className={classes.output}>successfully completed test case Passing Test Case </pre>
             <pre className={classes.output}>beginning test case Failing Test Case </pre>
-            <pre className={classes.comment}>// Console errors:</pre>
+            <pre className={classes.comment}>{'// Console errors:'}</pre>
             <pre className={classes.output}>
-              failing running test suite Failing Test Suite on test case Failing Test Case with error message expected
-              true to be false{' '}
+              failing running test suite Failing Test Suite on test case Failing Test Case with error message expected true to be false{' '}
             </pre>
           </section>
         </div>

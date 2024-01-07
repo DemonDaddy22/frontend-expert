@@ -31,7 +31,7 @@ export const COLORS = {
   BLACK_WITH_OPACITY_90: 'rgba(0, 0, 0, 0.9)',
 };
 
-export const THEME_COLORS: { [key in Theme]: ITheme } = {
+export const THEME_COLORS: {[key in Theme]: ITheme} = {
   LIGHT: {
     accent1: COLORS.WHITE,
     accent2: COLORS.LIGHT,

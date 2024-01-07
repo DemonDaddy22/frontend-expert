@@ -5,7 +5,9 @@ test('createListOfSize with no start argument and positive size', () => {
   const list = createListOfSize(size);
   expect(list).toBeInstanceOf(Array);
   expect(list.length).toBe(size);
-  list.forEach((val, index) => expect(val).toBe(index + 1));
+  list.forEach((val, index) => {
+    expect(val).toBe(index + 1);
+  });
 });
 
 test('createListOfSize with no start argument and 0 size', () => {
@@ -28,5 +30,7 @@ test('createListOfSize with start argument', () => {
   const list = createListOfSize(size, start);
   expect(list).toBeInstanceOf(Array);
   expect(list.length).toBe(size);
-  list.forEach((val, index) => expect(val).toBe(start + index));
+  list.forEach((val, index) => {
+    expect(val).toBe(start + index);
+  });
 });

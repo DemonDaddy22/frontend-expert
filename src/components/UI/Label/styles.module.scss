@@ -2,14 +2,14 @@
 @import '../../../utils/mixins.scss';
 
 .label {
-    @include theme (color, contrast1);
-    display: block;
-    margin: 0.25rem 0;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.25px;
+  @include theme(color, contrast1);
+  display: block;
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25px;
 
-    @media screen and (min-width: 1200px) {
-        font-size: 1rem;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 1rem;
+  }
 }

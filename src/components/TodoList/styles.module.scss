@@ -3,42 +3,42 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .break {
-  @include spacing ($margin: 0.5rem 0);
+  @include spacing($margin: 0.5rem 0);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, eSecondaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing ($margin: 2rem 0);
+  @include spacing($margin: 2rem 0);
 }
 
 .codeWrapper {
-  @include spacing (0.5rem 0);
+  @include spacing(0.5rem 0);
 }
 
 .todoListWrapper {
-  @include spacing (1rem, 1rem);
-  @include theme (background-color, ePrimaryMuted);
+  @include spacing(1rem, 1rem);
+  @include theme(background-color, ePrimaryMuted);
   border-radius: 0.5rem;
   max-width: 50rem;
   height: 40rem;
@@ -46,7 +46,7 @@
 }
 
 .todoListHeader {
-  @include theme (color, contrast1);
+  @include theme(color, contrast1);
   font-size: 1.75rem;
   letter-spacing: -0.6px;
   text-align: center;
@@ -57,7 +57,7 @@
 }
 
 .todoListInputWrapper {
-  @include spacing ($margin: 1rem 0);
+  @include spacing($margin: 1rem 0);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -77,22 +77,24 @@
 }
 
 .todosWrapper {
-  @include spacing ($margin: 1rem 0);
+  @include spacing($margin: 1rem 0);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .todoItem {
-  @include spacing (1rem 0.75rem);
-  @include theme (background-color, eTodoItem);
+  @include spacing(1rem 0.75rem);
+  @include theme(background-color, eTodoItem);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  box-shadow: rgba($color: $black, $alpha: 0.9) 1px 1px 0px, rgba($color: $black, $alpha: 0.75) 1px 1px 3px;
+  box-shadow:
+    rgba($color: $black, $alpha: 0.9) 1px 1px 0px,
+    rgba($color: $black, $alpha: 0.75) 1px 1px 3px;
   transition: box-shadow 0.3s;
 
   &:hover {

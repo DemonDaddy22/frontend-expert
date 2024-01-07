@@ -18,7 +18,7 @@ In the event that the `url` changes before the previous `fetch` request returns,
 
 ```jsx
 function Fetcher() {
-  const { responseJSON, isLoading, error } = useFetch(url);
+  const {responseJSON, isLoading, error} = useFetch(url);
   const [url, setUrl] = useState('');
   return (
     <>

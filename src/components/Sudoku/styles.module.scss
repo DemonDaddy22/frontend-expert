@@ -3,17 +3,17 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 
   a {
-    @include theme (color, ePrimaryDeep);
+    @include theme(color, ePrimaryDeep);
 
     &:hover {
       filter: brightness(125%);
@@ -22,18 +22,18 @@
 }
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, eSecondaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing ($margin: 2rem 1rem 6rem);
+  @include spacing($margin: 2rem 1rem 6rem);
   max-width: 50rem;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .cell {
-  @include square (2.5rem, $light);
+  @include square(2.5rem, $light);
   position: relative;
   border: 1px solid $dark;
   padding: 0;
@@ -76,7 +76,7 @@
   overflow: hidden;
 
   @media screen and (min-width: 1200px) {
-    @include square (2.75rem, $light);
+    @include square(2.75rem, $light);
     font-size: 1.25rem;
   }
 }
@@ -99,7 +99,7 @@
 }
 
 .controls {
-  @include spacing (0.75rem);
+  @include spacing(0.75rem);
   margin-left: 0.25rem;
   height: fit-content;
   border: 2px solid $dark;
@@ -119,7 +119,7 @@
 }
 
 .numberControl {
-  @include square (3rem, $grey-5);
+  @include square(3rem, $grey-5);
   font-size: 1.5rem;
   border: 1px solid $dark;
   display: flex;
@@ -145,8 +145,8 @@
   background-color: $blue-2 !important;
 
   &::before {
-    @include square (1.8rem, $white, 50%);
-    content: "Candidate Move              Normal Move";
+    @include square(1.8rem, $white, 50%);
+    content: 'Candidate Move              Normal Move';
     display: flex;
     align-items: center;
     position: absolute;

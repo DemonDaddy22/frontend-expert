@@ -2,12 +2,12 @@
 @import '../../utils/mixins.scss';
 
 .questionTitle {
-  @include theme (color, eSecondary);
+  @include theme(color, eSecondary);
 }
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
@@ -21,12 +21,12 @@
 }
 
 .head {
-  @include circle (14rem, $ePigHead);
+  @include circle(14rem, $ePigHead);
   position: relative;
   border: 5px solid $black;
 
   & .ear {
-    @include circle (4rem, $ePigHead);
+    @include circle(4rem, $ePigHead);
     border: 5px solid $black;
     position: absolute;
     top: -0.6rem;
@@ -42,7 +42,7 @@
   }
 
   & .eye {
-    @include circle (3.5rem, $white);
+    @include circle(3.5rem, $white);
     border: 2px solid $black;
     position: absolute;
     top: 2.5rem;
@@ -59,7 +59,7 @@
     }
 
     .pupil {
-      @include circle (1.5rem, $black);
+      @include circle(1.5rem, $black);
     }
   }
 

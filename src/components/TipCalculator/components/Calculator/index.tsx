@@ -26,23 +26,23 @@ const reducer = (state: IState, action: IAction) => {
   const { type, value } = action;
 
   switch (type) {
-    case ACTION_TYPE.UPDATE_BILL:
-      return {
-        ...state,
-        bill: value,
-      };
-    case ACTION_TYPE.UPDATE_TIP:
-      return {
-        ...state,
-        tip: value,
-      };
-    case ACTION_TYPE.UPDATE_PEOPLE:
-      return {
-        ...state,
-        people: value,
-      };
-    default:
-      return state;
+  case ACTION_TYPE.UPDATE_BILL:
+    return {
+      ...state,
+      bill: value,
+    };
+  case ACTION_TYPE.UPDATE_TIP:
+    return {
+      ...state,
+      tip: value,
+    };
+  case ACTION_TYPE.UPDATE_PEOPLE:
+    return {
+      ...state,
+      people: value,
+    };
+  default:
+    return state;
   }
 };
 
@@ -62,7 +62,9 @@ const Calculator: React.FC<Props> = () => {
           type='number'
           value={state.bill}
           min={0}
-          onChange={(e) => dispatch({ type: ACTION_TYPE.UPDATE_BILL, value: Number(e.currentTarget.value || 0) })}
+          onChange={(e) => {
+            dispatch({ type: ACTION_TYPE.UPDATE_BILL, value: Number(e.currentTarget.value || 0) });
+          }}
         />
       </FormGroup>
       <FormGroup>
@@ -72,7 +74,9 @@ const Calculator: React.FC<Props> = () => {
           type='number'
           value={state.tip}
           min={0}
-          onChange={(e) => dispatch({ type: ACTION_TYPE.UPDATE_TIP, value: Number(e.currentTarget.value || 0) })}
+          onChange={(e) => {
+            dispatch({ type: ACTION_TYPE.UPDATE_TIP, value: Number(e.currentTarget.value || 0) });
+          }}
         />
       </FormGroup>
       <FormGroup>
@@ -82,7 +86,9 @@ const Calculator: React.FC<Props> = () => {
           type='number'
           value={state.people}
           min={1}
-          onChange={(e) => dispatch({ type: ACTION_TYPE.UPDATE_PEOPLE, value: Number(e.currentTarget.value || 1) })}
+          onChange={(e) => {
+            dispatch({ type: ACTION_TYPE.UPDATE_PEOPLE, value: Number(e.currentTarget.value || 1) });
+          }}
         />
       </FormGroup>
       <Divider className={classes.divider} />

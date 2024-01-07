@@ -2,8 +2,8 @@
 @import '../../../../utils/mixins.scss';
 
 .container {
-  @include spacing (1.5rem);
-  @include theme (background-color, ePrimaryMuted);
+  @include spacing(1.5rem);
+  @include theme(background-color, ePrimaryMuted);
   border-radius: 0.5rem;
   display: flex;
   gap: 1rem;

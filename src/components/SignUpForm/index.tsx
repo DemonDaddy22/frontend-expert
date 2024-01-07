@@ -34,9 +34,8 @@ const SignUpForm: React.FC<Props> = () => {
           </li>
         </ol>
         <p>
-          There should also be a <strong className={classes.questionDescriptionHighlight}>Sign Up</strong> button at the
-          bottom of the form. When clicked on (and if required fields have been filled), the button should submit the
-          form using default browser behaviour.
+          There should also be a <strong className={classes.questionDescriptionHighlight}>Sign Up</strong> button at the bottom of the form. When
+          clicked on (and if required fields have been filled), the button should submit the form using default browser behaviour.
         </p>
       </QuestionDetails>
       <Divider />

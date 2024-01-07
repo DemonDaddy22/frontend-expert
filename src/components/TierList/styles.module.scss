@@ -3,36 +3,36 @@
 
 .questionDetails {
   & li {
-    @include theme (color, contrast1Opacity90);
+    @include theme(color, contrast1Opacity90);
   }
 }
 
 .questionDescription {
-  @include spacing (0 0.25rem);
+  @include spacing(0 0.25rem);
   word-break: break-word;
   white-space: break-spaces;
 }
 
 .questionTitle {
-  @include theme (color, ePrimary);
+  @include theme(color, ePrimary);
 }
 
 .questionDescriptionHighlight {
-  @include spacing (0 0.25rem);
-  @include theme (color, contrast1Opacity90);
-  @include theme (background-color, eSecondaryDeep);
+  @include spacing(0 0.25rem);
+  @include theme(color, contrast1Opacity90);
+  @include theme(background-color, eSecondaryDeep);
   border-radius: 0.25rem;
 }
 
 .solutionContainer {
-  @include spacing ($margin: 2rem 1rem 6rem);
+  @include spacing($margin: 2rem 1rem 6rem);
   display: flex;
   flex-direction: column;
   max-width: 35rem;
 }
 
 .tier {
-  @include theme (border, grey3, 0.25rem solid);
+  @include theme(border, grey3, 0.25rem solid);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -47,13 +47,13 @@
 }
 
 .tierTitle {
-  @include theme (color, contrast1);
+  @include theme(color, contrast1);
   flex: 1;
   text-align: center;
-  @include spacing (1rem 1.5rem);
+  @include spacing(1rem 1.5rem);
 
   @media screen and (min-width: 1200px) {
-    @include theme (border-right, grey3, 0.25rem solid);
+    @include theme(border-right, grey3, 0.25rem solid);
     border-bottom: none;
     text-align: initial;
     font-size: 1.5rem;
@@ -61,12 +61,12 @@
 }
 
 .tierUnranked {
-  @include theme (border-top, grey3, 0.25rem solid, !important);
-  @include spacing ($margin: 2.5rem 0 0);
+  @include theme(border-top, grey3, 0.25rem solid, !important);
+  @include spacing($margin: 2.5rem 0 0);
 }
 
 .dropZone {
-  @include spacing (0.5rem 1.5rem);
+  @include spacing(0.5rem 1.5rem);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -81,14 +81,14 @@
   border-radius: 0.25rem;
 
   &.itemBlue {
-    @include theme (background-color, blue1);
+    @include theme(background-color, blue1);
   }
 
   &.itemRed {
-    @include theme (background-color, red1);
+    @include theme(background-color, red1);
   }
 
   &.itemGreen {
-    @include theme (background-color, green1);
+    @include theme(background-color, green1);
   }
 }

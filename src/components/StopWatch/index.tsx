@@ -90,16 +90,13 @@ const StopWatch: React.FC<Props> = () => {
         title='Stop Watch'
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
-        descriptionClassName={classes.questionDescription}>
+        descriptionClassName={classes.questionDescription}
+      >
+        <p>You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using JavaScript.</p>
         <p>
-          You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using
-          JavaScript.
-        </p>
-        <p>
-          The stopwatch has a timer, which is meant to be controlled by the stopwatch's three buttons: a start button, a
-          stop button, and a reset button. The stopwatch starts out in its idle state, with the timer at{' '}
-          <span className={classes.questionDescriptionHighlight}>00:00:00</span> and the start button as the only
-          enabled button.
+          The stopwatch has a timer, which is meant to be controlled by the stopwatch's three buttons: a start button, a stop button, and a reset
+          button. The stopwatch starts out in its idle state, with the timer at <span className={classes.questionDescriptionHighlight}>00:00:00</span>{' '}
+          and the start button as the only enabled button.
         </p>
         <p>The stopwatch should have the following functionality:</p>
         <ul>
@@ -107,33 +104,18 @@ const StopWatch: React.FC<Props> = () => {
             When the start button is pressed from the idle state, the timer should start counting up from{' '}
             <span className={classes.questionDescriptionHighlight}>00:00:00</span>.
           </li>
-          <li>
-            While the timer is counting up, the stop button should be enabled, and the start and reset buttons should be
-            disabled.
-          </li>
+          <li>While the timer is counting up, the stop button should be enabled, and the start and reset buttons should be disabled.</li>
           <li>When the stop button is pressed, the timer should pause.</li>
+          <li>While the timer is paused, the stop button should be disabled, and the start and reset buttons should be enabled.</li>
+          <li>When the start button is pressed from the paused state, the timer should resume counting up from its previous time.</li>
+          <li>When the reset button is pressed from the paused state, the entire stopwatch should go back to its original idle state.</li>
           <li>
-            While the timer is paused, the stop button should be disabled, and the start and reset buttons should be
-            enabled.
+            The timer should be in the format <span className={classes.questionDescriptionHighlight}>minutes:seconds:milliseconds</span>, with minutes
+            and seconds having two digits and milliseconds having three digits. For example, if 2 minutes, 15 seconds, and 350 milliseconds have
+            elapsed, the timer should read <span className={classes.questionDescriptionHighlight}>02:15:350</span>.
           </li>
           <li>
-            When the start button is pressed from the paused state, the timer should resume counting up from its
-            previous time.
-          </li>
-          <li>
-            When the reset button is pressed from the paused state, the entire stopwatch should go back to its original
-            idle state.
-          </li>
-          <li>
-            The timer should be in the format{' '}
-            <span className={classes.questionDescriptionHighlight}>minutes:seconds:milliseconds</span>, with minutes and
-            seconds having two digits and milliseconds having three digits. For example, if 2 minutes, 15 seconds, and
-            350 milliseconds have elapsed, the timer should read{' '}
-            <span className={classes.questionDescriptionHighlight}>02:15:350</span>.
-          </li>
-          <li>
-            You don't need to handle times greater than{' '}
-            <span className={classes.questionDescriptionHighlight}>59:59:999</span>.
+            You don't need to handle times greater than <span className={classes.questionDescriptionHighlight}>59:59:999</span>.
           </li>
         </ul>
       </QuestionDetails>
@@ -146,21 +128,24 @@ const StopWatch: React.FC<Props> = () => {
               ref={startControlButtonRef}
               onClick={!startControlButtonRef.current?.disabled ? handleTimerStart : NO_OP}
               className={classes.controlStart}
-              size={CONTROL_BUTTON_SIZE * 1.5}>
+              size={CONTROL_BUTTON_SIZE * 1.5}
+            >
               <Play color={getThemeValue('green1')} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
             <IconButton
               ref={stopControlButtonRef}
               onClick={!stopControlButtonRef.current?.disabled ? handleTimerStop : NO_OP}
               className={classes.controlStop}
-              size={CONTROL_BUTTON_SIZE * 1.5}>
+              size={CONTROL_BUTTON_SIZE * 1.5}
+            >
               <Stop color={getThemeValue('red1')} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
             <IconButton
               ref={resetControlButtonRef}
               onClick={!resetControlButtonRef.current?.disabled ? handleTimerReset : NO_OP}
               className={classes.controlReset}
-              size={CONTROL_BUTTON_SIZE * 1.5}>
+              size={CONTROL_BUTTON_SIZE * 1.5}
+            >
               <Reset color={getThemeValue('blue1')} height={CONTROL_BUTTON_SIZE} width={CONTROL_BUTTON_SIZE} />
             </IconButton>
           </div>

@@ -1,9 +1,7 @@
 interface IMemoryBoardState {
-  board: Array<string>;
+  board: string[];
   validMovesCount: number;
-  moves: {
-    [key: string]: Array<number>;
-  };
+  moves: Record<string, number[]>;
 }
 
 interface IMemoryBoardAction {

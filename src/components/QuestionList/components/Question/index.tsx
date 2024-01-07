@@ -11,14 +11,14 @@ const Question: React.FC<IProps> = ({ name, status }) => {
   const statusClassName = useMemo(() => {
     const baseClassName = classes.status;
     switch (status) {
-      case QUESTION_LIST_SUBMISSION_STATUS.CORRECT:
-        return `${baseClassName} ${classes.statusCorrect}`;
-      case QUESTION_LIST_SUBMISSION_STATUS.PARTIALLY_CORRECT:
-        return `${baseClassName} ${classes.statusPartiallyCorrect}`;
-      case QUESTION_LIST_SUBMISSION_STATUS.INCORRECT:
-        return `${baseClassName} ${classes.statusIncorrect}`;
-      default:
-        return baseClassName;
+    case QUESTION_LIST_SUBMISSION_STATUS.CORRECT:
+      return `${baseClassName} ${classes.statusCorrect}`;
+    case QUESTION_LIST_SUBMISSION_STATUS.PARTIALLY_CORRECT:
+      return `${baseClassName} ${classes.statusPartiallyCorrect}`;
+    case QUESTION_LIST_SUBMISSION_STATUS.INCORRECT:
+      return `${baseClassName} ${classes.statusIncorrect}`;
+    default:
+      return baseClassName;
     }
   }, [status]);
 
