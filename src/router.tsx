@@ -4,6 +4,7 @@ import App from './App';
 import Error from './screens/Error';
 import ThemeContextProvider from './context/ThemeContext';
 import { QUESTIONS_INFO } from './constants/questions';
+import IndexRoute from './components/IndexRoute';
 
 const getExerciseRoutes = () =>
   QUESTIONS_INFO.map((question) => ({
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <Error />,
-    children: getExerciseRoutes(),
+    children: [{ index: true, element: <IndexRoute /> }, ...getExerciseRoutes()],
   },
 ]);
 
