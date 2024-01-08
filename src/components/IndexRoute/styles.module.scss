@@ -1,0 +1,40 @@
+@import '../../constants/theme.scss';
+@import '../../utils/mixins.scss';
+
+.container {
+  @include spacing(3rem 2rem);
+  max-width: 60rem;
+
+  @media screen and (min-width: 1200px) {
+    @include spacing(4rem 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & p {
+    @include theme(color, contrast1Opacity90);
+    @include spacing(0.5rem 0);
+
+    & a {
+      @include theme(color, yellow1);
+
+      &:hover {
+        filter: brightness(80%);
+      }
+    }
+  }
+}
+
+.title {
+  @include theme(color, red1);
+  @include spacing(1rem 0);
+  font-size: 3rem;
+  letter-spacing: -0.5px;
+  word-spacing: -1rem;
+
+  @media screen and (min-width: 1200px) {
+    @include spacing(2rem 0);
+    font-size: 4rem;
+  }
+}

@@ -17,7 +17,7 @@ module.exports = {
   globals: {},
   extends: ['eslint:recommended', 'plugin:react/recommended', 'standard-with-typescript', 'plugin:import/typescript', 'plugin:prettier/recommended'],
   plugins: ['react', 'react-hooks', 'prettier'],
-  ignorePatterns: ['tsconfig.json', '.eslintrc.js', 'todos.ts'],
+  ignorePatterns: ['tsconfig.json', '.eslintrc.js', 'todos.ts', 'build/'],
   rules: {
     'prettier/prettier': 0,
     semi: 0,

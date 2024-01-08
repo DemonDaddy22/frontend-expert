@@ -5,7 +5,7 @@
 ![GitHub repo forks](https://img.shields.io/github/forks/DemonDaddy22/frontend-expert?color=%238BC7E6&style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/demondaddy22/frontend-expert?color=%236495ED&style=for-the-badge)
 
-**Frontend-Expert** contains bunch of exercises available in the [FrontendExpert](https://www.algoexpert.io/frontend/product) course. All the implementations have been done in ReactJS for consistency. A CI/CD pipeline will be setup soon and exercises done up till that point can be easily viewed as a part of the deployed website. Detailed description can be found in each exercise's README.
+**Frontend-Expert** contains bunch of exercises available in the [FrontendExpert](https://www.algoexpert.io/frontend/product) course. All the implementations have been done in ReactJS for consistency. All the exercises can be viewed in this [deployed website](https://frontend-expert-demondaddy22.vercel.app/fe/exercise/array-methods). Detailed description can be found in each exercise's README.
 
 ## Exercises
 
