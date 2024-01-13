@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { CRYPTO_PRICES_CONFIG } from '../../constants';
+import { CONTENT_VARIANTS, CRYPTO_PRICES_CONFIG } from '../../constants';
 import PricesTable from './components/PricesTable';
 import Divider from '../UI/Divider';
 
@@ -31,9 +32,9 @@ const CryptoPrices: React.FC<Props> = () => {
         </p>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <PricesTable />
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import Button from '../UI/Button';
@@ -7,6 +8,7 @@ import Input from '../UI/Input';
 import Label from '../UI/Label';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const SignUpForm: React.FC<Props> = () => {
   return (
@@ -34,12 +36,13 @@ const SignUpForm: React.FC<Props> = () => {
           </li>
         </ol>
         <p>
-          There should also be a <strong className={classes.questionDescriptionHighlight}>Sign Up</strong> button at the bottom of the form. When
-          clicked on (and if required fields have been filled), the button should submit the form using default browser behaviour.
+          There should also be a <strong className={classes.questionDescriptionHighlight}>Sign Up</strong> button at the
+          bottom of the form. When clicked on (and if required fields have been filled), the button should submit the
+          form using default browser behaviour.
         </p>
       </QuestionDetails>
       <Divider />
-      <form className={classes.formContainer}>
+      <motion.form variants={CONTENT_VARIANTS} className={classes.formContainer}>
         <FormGroup>
           <Label htmlFor='username'>Username</Label>
           <Input id='username' type='text' required />
@@ -65,7 +68,7 @@ const SignUpForm: React.FC<Props> = () => {
           <Input id='tos' type='checkbox' name='tos' fullWidth={false} />
         </FormGroup>
         <Button>Sign Up</Button>
-      </form>
+      </motion.form>
     </ProjectPage>
   );
 };

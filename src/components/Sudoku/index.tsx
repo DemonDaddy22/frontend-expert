@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import Input from '../UI/Input';
 import './vanillaStyles.css';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const Sudoku: React.FC<Props> = () => {
   const getGivenNumberCell = useCallback((value: number) => <td className={`${classes.cell} ${classes.givenNumber} givenCell`}>{value}</td>, []);
@@ -139,7 +141,7 @@ const Sudoku: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <div className={classes.sudokuContainer}>
           <table className={classes.board} role='grid'>
             <colgroup span={3} className={classes.boardColumnGroup}></colgroup>
@@ -280,7 +282,7 @@ const Sudoku: React.FC<Props> = () => {
             <Input id='switch' type='checkbox' className={classes.candidateSwitch} aria-label='Is candidate move' />
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

@@ -1,10 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const PigEmoji: React.FC<Props> = () => {
   return (
@@ -52,7 +54,7 @@ const PigEmoji: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.emojiContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.emojiContainer}>
         <div className={classes.head}>
           <div>
             <div className={classes.ear}></div>
@@ -71,7 +73,7 @@ const PigEmoji: React.FC<Props> = () => {
             <div className={classes.nostril}></div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

@@ -1,11 +1,12 @@
 import React, { useCallback, useState } from 'react';
 import { debounce } from 'lodash';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleCode, sampleResponse } from './codeBlocks';
-import { RAPID_MOVIESDB_HOST } from '../../constants';
+import { CONTENT_VARIANTS, RAPID_MOVIESDB_HOST } from '../../constants';
 import { isEmptyObject, isEmptyString } from '../../utils';
 import Menu from '../UI/Menu';
 import Input from '../UI/Input';
@@ -141,7 +142,7 @@ const TypeAhead: React.FC<Props> = () => {
         </p>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <Input
           type='text'
           placeholder='Search for a movie or TV series...'
@@ -159,7 +160,7 @@ const TypeAhead: React.FC<Props> = () => {
           className={classes.menuContainer}
           defaultTitle={error ?? 'Try searching for something else...'}
         />
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

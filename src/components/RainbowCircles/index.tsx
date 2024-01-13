@@ -1,9 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const RainbowCircles: React.FC<Props> = () => {
   return (
@@ -56,13 +58,13 @@ const RainbowCircles: React.FC<Props> = () => {
         </p>
       </QuestionDetails>
       <Divider />
-      <section className={classes.circlesContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.circlesContainer}>
         <div className={classes.outerCircle}>
           <div className={classes.middleCircle}>
             <div className={classes.innerCircle}></div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

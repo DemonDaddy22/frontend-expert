@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import IconButton from '../../../UI/IconButton';
 import Close from '../../../Icons/Close';
+import { CONTENT_VARIANTS } from '../../../../constants';
 
 const Toast: React.FC<IToastProps> = ({ toast, onRemove }) => {
   const toastTypeClass = useMemo(() => {
@@ -16,7 +18,7 @@ const Toast: React.FC<IToastProps> = ({ toast, onRemove }) => {
   }, [toast.state]);
 
   return (
-    <div className={`${classes.toast} ${toastTypeClass}`}>
+    <motion.div variants={CONTENT_VARIANTS} className={`${classes.toast} ${toastTypeClass}`}>
       <p className={classes.message}>{toast.message}</p>
       {toast.isCancelable ? (
         <IconButton
@@ -29,7 +31,7 @@ const Toast: React.FC<IToastProps> = ({ toast, onRemove }) => {
           <Close />
         </IconButton>
       ) : null}
-    </div>
+    </motion.div>
   );
 };
 

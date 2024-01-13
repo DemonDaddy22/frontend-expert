@@ -5,8 +5,6 @@ import Input from '../../../UI/Input';
 import Label from '../../../UI/Label';
 import { isEmptyString } from '../../../../utils';
 
-// TODO - handle HTML codes in strings
-
 const Question: React.FC<IQuizQuestionProps> = ({ question, answers, correctAnswer, difficulty, category, attempt, onOptionSelect }) => {
   const getOptionClassName = useCallback(
     (answer: string) => {

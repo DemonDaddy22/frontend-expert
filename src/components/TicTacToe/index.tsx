@@ -1,9 +1,11 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import Button, { ButtonGreen } from '../UI/Button';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const TOTAL_TILES = 9;
 const WINNING_COMBINATIONS = [
@@ -16,8 +18,6 @@ const WINNING_COMBINATIONS = [
   new Set([0, 4, 8]),
   new Set([2, 4, 6]),
 ];
-
-// TODO - add line indicator when game is won
 
 const TicTacToe: React.FC<Props> = () => {
   const [, setMoves] = useState<Record<string, number[]>>({ x: [], o: [] });
@@ -133,7 +133,7 @@ const TicTacToe: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <main className={classes.solutionContainer}>
+      <motion.main variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <section className={classes.gameContainer}>
           <h1 className={classes.gameTitle}>Tic Tac Toe</h1>
           {renderGameStatus}
@@ -157,7 +157,7 @@ const TicTacToe: React.FC<Props> = () => {
           </div>
           {isGameOver && <ButtonGreen onClick={handleResetGame}>Restart Game</ButtonGreen>}
         </section>
-      </main>
+      </motion.main>
     </ProjectPage>
   );
 };

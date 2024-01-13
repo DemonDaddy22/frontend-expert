@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -6,6 +7,7 @@ import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage } from './codeBlock';
 import QuestionSections from './components/QuestionSections';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const QuestionList: React.FC<Props> = () => {
   return (
@@ -52,9 +54,9 @@ const QuestionList: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <QuestionSections />
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useCallback, useState, type ChangeEvent } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -10,9 +11,18 @@ import IconButton from '../UI/IconButton';
 import Trash from '../Icons/Trash';
 import { isEmptyString } from '../../utils';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
-// TODO - on clicking a todo item, user can strike it off and it moves below the non striked out items
-// TODO - animate TODOs in the view
+const todoVariants = {
+  hidden: {
+    opacity: 0,
+    y: -10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 interface Todo {
   text: string;
@@ -36,12 +46,12 @@ const TodoItem: React.FC<TodoItemProps> = (props) => {
   );
 
   return (
-    <div className={classes.todoItem} onClick={onClick}>
+    <motion.div variants={todoVariants} className={classes.todoItem} onClick={onClick}>
       <p className={`${classes.todoItemText} ${isSelected ? classes.todoItemSelected : ''}`}>{text}</p>
       <IconButton onClick={handleDeleteClick} className={classes.deleteButton}>
         <Trash />
       </IconButton>
-    </div>
+    </motion.div>
   );
 };
 
@@ -132,7 +142,7 @@ const TodoList: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <div className={classes.todoListWrapper}>
           <h1 className={classes.todoListHeader}>Todo List</h1>
           <div className={classes.todoListInputWrapper}>
@@ -172,7 +182,7 @@ const TodoList: React.FC<Props> = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

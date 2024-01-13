@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -7,6 +8,7 @@ import ColourBlock from '../UI/ColourBlock';
 import Divider from '../UI/Divider';
 import NotificationCard from './components/NotificationCard';
 import classes from './styles.module.scss';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const NotificationsMenu: React.FC<Props> = () => {
   return (
@@ -54,7 +56,7 @@ const NotificationsMenu: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.notificationsContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.notificationsContainer}>
         <h2 className={classes.notificationsHeader}>Notifications</h2>
         <Divider />
         <NotificationCard
@@ -88,7 +90,7 @@ const NotificationsMenu: React.FC<Props> = () => {
           time='4 years ago'
         />
         <Button className={classes.button}>View More</Button>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

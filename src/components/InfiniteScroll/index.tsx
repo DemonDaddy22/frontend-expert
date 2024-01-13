@@ -1,4 +1,5 @@
 import React, { useCallback, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import CodeBlock from '../UI/CodeBlock';
@@ -8,6 +9,7 @@ import classes from './styles.module.scss';
 import useFetchTestimonials from './useFetchTestimonials';
 import Divider from '../UI/Divider';
 import { isEmptyList } from '../../utils';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const InfiniteScroll: React.FC<Props> = () => {
   const [page, setPage] = useState<number>(0);
@@ -120,7 +122,7 @@ const InfiniteScroll: React.FC<Props> = () => {
       </QuestionDetails>
       <Divider />
       {!isEmptyList(testimonials) && (
-        <main className={classes.solutionContainer}>
+        <motion.main variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
           <h2 className={classes.solutionHeader}>Testimonials</h2>
           <section className={classes.testimonialsContainer}>
             {testimonials.map((testimonial, index) => (
@@ -133,7 +135,7 @@ const InfiniteScroll: React.FC<Props> = () => {
               />
             ))}
           </section>
-        </main>
+        </motion.main>
       )}
     </ProjectPage>
   );

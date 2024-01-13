@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const BlogPost: React.FC<Props> = () => {
   return (
@@ -33,7 +35,7 @@ const BlogPost: React.FC<Props> = () => {
         <p>Your HTML code should use proper semantic markup.</p>
       </QuestionDetails>
       <Divider />
-      <article className={classes.blogContainer}>
+      <motion.article variants={CONTENT_VARIANTS} className={classes.blogContainer}>
         <h1 className={classes.blogTitle}>Introducing AlgoCoin</h1>
         <p className={classes.blogCaption}>The future of decentralized meme currency is here</p>
         <section className={classes.blogSection}>
@@ -61,7 +63,7 @@ const BlogPost: React.FC<Props> = () => {
         <footer className={classes.blogFooter}>
           <em>Copyright 3022 AlgoCoin. All rights reserved.</em>
         </footer>
-      </article>
+      </motion.article>
     </ProjectPage>
   );
 };

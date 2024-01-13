@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import SyntaxHighlighter, { type SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { motion } from 'framer-motion';
 import { copyTextToClipboard, isEmptyString } from '../../../utils';
 import ClipBoard from '../../Icons/Clipboard';
 import ClipBoardChecked from '../../Icons/ClipboardChecked';
@@ -8,6 +9,7 @@ import { ButtonWhite } from '../Button';
 import IconButton from '../IconButton';
 import classes from './styles.module.scss';
 import { COLORS } from '../../../constants/theme';
+import { CONTENT_VARIANTS } from '../../../constants';
 
 interface Props extends CodeBlockProps, Partial<SyntaxHighlighterProps> {}
 
@@ -48,7 +50,7 @@ const CodeBlock: React.FC<Props> = (props) => {
   }, [hideCode]);
 
   return !isEmptyString(codeString) ? (
-    <section className={`${classes.wrapper} ${containerClassName}`}>
+    <motion.section variants={CONTENT_VARIANTS} className={`${classes.wrapper} ${containerClassName}`}>
       <SyntaxHighlighter
         language={language}
         style={style}
@@ -69,7 +71,7 @@ const CodeBlock: React.FC<Props> = (props) => {
           Show Solution
         </ButtonWhite>
       ) : null}
-    </section>
+    </motion.section>
   ) : null;
 };
 
