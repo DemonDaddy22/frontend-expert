@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 
 const projectVariants = {
-  visible: {
-    transition: { staggerChildren: 0.5, delayChildren: 0.15 },
-  },
+  visible: { transition: { staggerChildren: 0.5, delayChildren: 0.15 } },
   hidden: {},
 };
 
