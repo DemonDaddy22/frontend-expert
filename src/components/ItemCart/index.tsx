@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const ItemCart: React.FC<Props> = () => {
   return (
@@ -19,7 +21,7 @@ const ItemCart: React.FC<Props> = () => {
         <p>Your HTML code should use a table with proper semantic markup and with Item Cart as its caption.</p>
       </QuestionDetails>
       <Divider />
-      <table className={classes.tableContainer}>
+      <motion.table variants={CONTENT_VARIANTS} className={classes.tableContainer}>
         <caption className={classes.tableCaption}>Item Cart</caption>
         <thead>
           <tr className={classes.tableRow}>
@@ -52,7 +54,7 @@ const ItemCart: React.FC<Props> = () => {
             <td className={classes.tableCellData}>8</td>
           </tr>
         </tfoot>
-      </table>
+      </motion.table>
     </ProjectPage>
   );
 };

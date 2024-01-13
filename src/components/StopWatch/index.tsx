@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Play from '../Icons/Play';
 import Reset from '../Icons/Reset';
 import Stop from '../Icons/Stop';
@@ -6,7 +7,7 @@ import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import IconButton from '../UI/IconButton';
 import classes from './styles.module.scss';
-import { NO_OP } from '../../constants';
+import { CONTENT_VARIANTS, NO_OP } from '../../constants';
 import Divider from '../UI/Divider';
 import { ThemeContext } from '../../context/ThemeContext';
 
@@ -92,11 +93,15 @@ const StopWatch: React.FC<Props> = () => {
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}
       >
-        <p>You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using JavaScript.</p>
         <p>
-          The stopwatch has a timer, which is meant to be controlled by the stopwatch's three buttons: a start button, a stop button, and a reset
-          button. The stopwatch starts out in its idle state, with the timer at <span className={classes.questionDescriptionHighlight}>00:00:00</span>{' '}
-          and the start button as the only enabled button.
+          You're given HTML and CSS files for a simple stopwatch, and you need to make the stopwatch functional using
+          JavaScript.
+        </p>
+        <p>
+          The stopwatch has a timer, which is meant to be controlled by the stopwatch's three buttons: a start button, a
+          stop button, and a reset button. The stopwatch starts out in its idle state, with the timer at{' '}
+          <span className={classes.questionDescriptionHighlight}>00:00:00</span> and the start button as the only
+          enabled button.
         </p>
         <p>The stopwatch should have the following functionality:</p>
         <ul>
@@ -104,23 +109,38 @@ const StopWatch: React.FC<Props> = () => {
             When the start button is pressed from the idle state, the timer should start counting up from{' '}
             <span className={classes.questionDescriptionHighlight}>00:00:00</span>.
           </li>
-          <li>While the timer is counting up, the stop button should be enabled, and the start and reset buttons should be disabled.</li>
-          <li>When the stop button is pressed, the timer should pause.</li>
-          <li>While the timer is paused, the stop button should be disabled, and the start and reset buttons should be enabled.</li>
-          <li>When the start button is pressed from the paused state, the timer should resume counting up from its previous time.</li>
-          <li>When the reset button is pressed from the paused state, the entire stopwatch should go back to its original idle state.</li>
           <li>
-            The timer should be in the format <span className={classes.questionDescriptionHighlight}>minutes:seconds:milliseconds</span>, with minutes
-            and seconds having two digits and milliseconds having three digits. For example, if 2 minutes, 15 seconds, and 350 milliseconds have
-            elapsed, the timer should read <span className={classes.questionDescriptionHighlight}>02:15:350</span>.
+            While the timer is counting up, the stop button should be enabled, and the start and reset buttons should be
+            disabled.
+          </li>
+          <li>When the stop button is pressed, the timer should pause.</li>
+          <li>
+            While the timer is paused, the stop button should be disabled, and the start and reset buttons should be
+            enabled.
           </li>
           <li>
-            You don't need to handle times greater than <span className={classes.questionDescriptionHighlight}>59:59:999</span>.
+            When the start button is pressed from the paused state, the timer should resume counting up from its
+            previous time.
+          </li>
+          <li>
+            When the reset button is pressed from the paused state, the entire stopwatch should go back to its original
+            idle state.
+          </li>
+          <li>
+            The timer should be in the format{' '}
+            <span className={classes.questionDescriptionHighlight}>minutes:seconds:milliseconds</span>, with minutes and
+            seconds having two digits and milliseconds having three digits. For example, if 2 minutes, 15 seconds, and
+            350 milliseconds have elapsed, the timer should read{' '}
+            <span className={classes.questionDescriptionHighlight}>02:15:350</span>.
+          </li>
+          <li>
+            You don't need to handle times greater than{' '}
+            <span className={classes.questionDescriptionHighlight}>59:59:999</span>.
           </li>
         </ul>
       </QuestionDetails>
       <Divider />
-      <main className={classes.solutionContainer}>
+      <motion.main variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <section className={`${classes.watch} ${isTimerRunning && classes.watchGlow}`}>
           <h4 className={classes.timer}>{timerText}</h4>
           <div className={classes.controls}>
@@ -150,7 +170,7 @@ const StopWatch: React.FC<Props> = () => {
             </IconButton>
           </div>
         </section>
-      </main>
+      </motion.main>
     </ProjectPage>
   );
 };

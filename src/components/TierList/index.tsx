@@ -1,8 +1,10 @@
 import React, { useCallback, useRef } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const TierList: React.FC<Props> = () => {
   const unrankedDropZone = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ const TierList: React.FC<Props> = () => {
         <p>Your solution should use the standard browser drag-and-drop API.</p>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <div className={classes.tier}>
           <h3 className={classes.tierTitle}>A Tier</h3>
           <div className={classes.dropZone} onDrop={handleItemDrop} onDragOver={handleItemDragOver}></div>
@@ -95,7 +97,7 @@ const TierList: React.FC<Props> = () => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

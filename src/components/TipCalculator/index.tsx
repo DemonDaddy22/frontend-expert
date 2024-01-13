@@ -1,9 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import Calculator from './components/Calculator';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const TipCalculator: React.FC<Props> = () => {
   return (
@@ -44,9 +46,9 @@ const TipCalculator: React.FC<Props> = () => {
         </p>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <Calculator />
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import { isEmptyList, isEmptyString } from '../../../utils';
 import MenuItem from '../MenuItem';
-
-// TODO - animate opening/closing of menu
+import { CONTENT_VARIANTS } from '../../../constants';
 
 const Menu: React.FC<MenuProps> = (props) => {
   const { defaultTitle, items, isOpen, shouldCloseOnItemClick = true, className = '', style = {}, onClose, onItemClick, renderItem } = props;
@@ -45,11 +45,11 @@ const Menu: React.FC<MenuProps> = (props) => {
   }
 
   return (
-    <ul className={`${classes.menu} ${className}`} style={style}>
+    <motion.ul variants={CONTENT_VARIANTS} className={`${classes.menu} ${className}`} style={style}>
       {items.map((item) => (
         <MenuItem key={item.id} item={item} onItemClick={handleItemClick} renderItem={renderItem} className={classes.menuItem} />
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 

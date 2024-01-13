@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const AlgoExpertProducts: React.FC<Props> = () => {
   return (
@@ -41,7 +43,7 @@ const AlgoExpertProducts: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.wrapper}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.wrapper}>
         <div className={classes.productsContainer}>
           <div className={`${classes.product} ${classes.algoExpert}`}>
             <p>AlgoExpert</p>
@@ -59,7 +61,7 @@ const AlgoExpertProducts: React.FC<Props> = () => {
             <p>ProgrammingExpert</p>
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

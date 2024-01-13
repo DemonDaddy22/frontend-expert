@@ -4,8 +4,6 @@ import classes from './styles.module.scss';
 import Divider from '../../../UI/Divider';
 import { QUESTIONS_INFO } from '../../../../constants/questions';
 
-// TODO - set active list item based on current question opened
-
 const QuestionsMenu: React.FC<Props> = () => {
   return (
     <aside className={classes.menu}>

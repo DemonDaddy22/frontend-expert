@@ -1,10 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const PurchaseForm: React.FC<Props> = () => {
   return (
@@ -88,7 +90,7 @@ const PurchaseForm: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.formContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.formContainer}>
         <ol>
           <li className={classes.selected}>Product Selection</li>
           <li>Payment Method</li>
@@ -113,7 +115,7 @@ const PurchaseForm: React.FC<Props> = () => {
             <label htmlFor='frontendExpert'>FrontendExpert</label>
           </li>
         </ul>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

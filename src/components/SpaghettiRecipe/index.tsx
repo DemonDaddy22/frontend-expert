@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const SpaghettiRecipe: React.FC<Props> = () => {
   return (
@@ -40,7 +42,7 @@ const SpaghettiRecipe: React.FC<Props> = () => {
         </p>
       </QuestionDetails>
       <Divider />
-      <section className={classes.recipeContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.recipeContainer}>
         <header>
           <h1 className={classes.recipeTitle}>Spaghetti Recipe</h1>
         </header>
@@ -69,7 +71,7 @@ const SpaghettiRecipe: React.FC<Props> = () => {
             <li>Enjoy!</li>
           </ol>
         </section>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

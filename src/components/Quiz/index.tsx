@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
-import { QUIZ_CONFIG } from '../../constants';
+import { CONTENT_VARIANTS, QUIZ_CONFIG } from '../../constants';
 import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage } from './codeBlock';
 import Questions from './components/Questions';
@@ -52,9 +53,9 @@ const Quiz: React.FC<Props> = () => {
         </div>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <Questions />
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

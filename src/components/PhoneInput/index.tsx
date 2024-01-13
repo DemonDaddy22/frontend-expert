@@ -1,9 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import PhoneInputField from './components/PhoneInputField';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const PhoneInput: React.FC<Props> = () => {
   return (
@@ -37,9 +39,9 @@ const PhoneInput: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <PhoneInputField />
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

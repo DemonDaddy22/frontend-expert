@@ -1,10 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COLORS } from '../../constants/theme';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
 import ColourBlock from '../UI/ColourBlock';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const RobotEmoji: React.FC<Props> = () => {
   return (
@@ -58,7 +60,7 @@ const RobotEmoji: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.emojiContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.emojiContainer}>
         <div className={classes.head}>
           <div className={classes.light}>
             <div className={classes.bulb}></div>
@@ -80,7 +82,7 @@ const RobotEmoji: React.FC<Props> = () => {
             <div className={classes.tooth}></div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

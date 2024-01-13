@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 import ProjectPage from '../ProjectPage';
 import QuestionDetails from '../QuestionDetails';
@@ -7,8 +8,7 @@ import { sampleToastItem } from './codeBlock';
 import ToastCreator from './components/ToastCreator';
 import Toast from './components/Toast';
 import Divider from '../UI/Divider';
-
-// TODO - handle toasts animation using framer
+import { CONTENT_VARIANTS } from '../../constants';
 
 const Toasts: React.FC<Props> = () => {
   const [toasts, setToasts] = useState<IToast[]>([]);
@@ -105,14 +105,14 @@ const Toasts: React.FC<Props> = () => {
         </ul>
       </QuestionDetails>
       <Divider />
-      <section className={classes.solutionContainer}>
+      <motion.section variants={CONTENT_VARIANTS} className={classes.solutionContainer}>
         <ToastCreator addToast={handleAddToast} clearToasts={handleClearToasts} />
         <div className={classes.toastsContainer}>
           {toasts.map((toast) => (
             <Toast key={toast.id} toast={toast} onRemove={handleRemoveToast} />
           ))}
         </div>
-      </section>
+      </motion.section>
     </ProjectPage>
   );
 };

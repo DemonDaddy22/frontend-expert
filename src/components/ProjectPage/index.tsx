@@ -1,14 +1,33 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
 
-const ProjectPage: React.FC<ProjectPageProps> = (props) => {
-  const { background = '', pageClassName = '', pageStyle = {}, containerClassName = '', containerStyle = {}, children } = props;
+const projectVariants = {
+  visible: { transition: { staggerChildren: 0.5, delayChildren: 0.15 } },
+  hidden: {},
+};
+
+const ProjectPage: React.FC<ProjectPageProps> = props => {
+  const {
+    background = '',
+    pageClassName = '',
+    pageStyle = {},
+    containerClassName = '',
+    containerStyle = {},
+    children,
+  } = props;
 
   return (
     <main className={`${classes.page} ${pageClassName}`} style={{ ...pageStyle, background }}>
-      <section className={`${classes.contentContainer} ${containerClassName}`} style={containerStyle}>
+      <motion.section
+        variants={projectVariants}
+        initial='hidden'
+        animate='visible'
+        className={`${classes.contentContainer} ${containerClassName}`}
+        style={containerStyle}
+      >
         {children}
-      </section>
+      </motion.section>
     </main>
   );
 };
