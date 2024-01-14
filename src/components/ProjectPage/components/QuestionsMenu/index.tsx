@@ -20,14 +20,14 @@ const menuContainerVariants = {
     opacity: 1,
     height: '100%',
     transition: {
-      staggerChildren: 0.1, delayChildren: 0.5, when: 'beforeChildren' 
+      staggerChildren: 0.1, delayChildren: 0.5, when: 'beforeChildren'
     },
   },
   hidden: {
     opacity: 0,
     height: 0,
     transition: {
-      staggerChildren: 0.4, staggerDirection: -1, when: 'afterChildren' 
+      staggerChildren: 0.4, staggerDirection: -1, when: 'afterChildren'
     },
   },
 };
@@ -35,8 +35,8 @@ const menuContainerVariants = {
 const menuVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.05, delayChildren: 0.1, delay: 0.2 
-    }, 
+      staggerChildren: 0.05, delayChildren: 0.1, delay: 0.2
+    },
   },
   hidden: { transition: { staggerChildren: 0.01, staggerDirection: -1 } },
 };
