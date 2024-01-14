@@ -25,7 +25,7 @@
 }
 
 .solutionContainer {
-  @include spacing($margin: 2rem 1rem 6rem);
+  @include spacing($margin: 2rem 1rem);
   display: flex;
   flex-direction: column;
   max-width: 35rem;

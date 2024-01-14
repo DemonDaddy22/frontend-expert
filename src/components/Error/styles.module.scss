@@ -5,9 +5,9 @@
   @include theme(background-color, accent3);
   display: flex;
   flex-direction: column;
+  height: 100vh;
 
   @media screen and (min-width: 1200px) {
-    height: 100vh;
     width: 100vw;
     overflow: hidden;
     flex-direction: row;
@@ -20,6 +20,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  height: 100%;
 
   @media screen and (min-width: 1200px) {
     @include spacing(4rem 6rem);

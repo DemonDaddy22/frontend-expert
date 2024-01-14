@@ -3,15 +3,20 @@
 
 .menu {
   @include theme(background-color, grey4);
-  @include theme(border-right, divider, 1px solid);
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
 
   @media screen and (min-width: 1200px) {
-    max-width: 30rem;
+    @include theme(border-right, divider, 1px solid);
+    position: relative;
+    height: 100vh !important;
+    width: 25rem;
   }
 }
 
@@ -22,6 +27,7 @@
   font-size: 2rem;
   position: sticky;
   top: 0;
+  z-index: 60;
 }
 
 .menuItems {
@@ -59,4 +65,16 @@
   @include theme(background-color, blue1);
   @include theme(color, accent1);
   cursor: default;
+}
+
+.menuButton {
+  display: block;
+  position: fixed;
+  top: 1rem;
+  right: 0.5rem;
+  z-index: 100;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }

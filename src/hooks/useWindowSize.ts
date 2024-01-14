@@ -38,7 +38,7 @@ const reducer = (state: IState, action: IAction) => {
 };
 
 const useWindowSize = () => {
-  const [state, dispatch] = useReducer(reducer, { width: 0, height: 0 });
+  const [state, dispatch] = useReducer(reducer, { width: window.innerWidth, height: window.innerHeight });
 
   useEffect(() => {
     const handleWindowResize = throttle(() => {

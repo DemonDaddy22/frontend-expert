@@ -20,21 +20,13 @@ const QuestionDetails: React.FC<QuestionDetailsProps> = (props) => {
     children,
   } = props;
   return (
-    <motion.section
-      variants={questionDetailVariants}
-      className={`${classes.questionContainer} ${containerClassName}`}
-      style={containerStyle}
-    >
+    <motion.section variants={questionDetailVariants} className={`${classes.questionContainer} ${containerClassName}`} style={containerStyle}>
       <motion.div variants={CONTENT_VARIANTS}>
         <h1 className={`${classes.questionTitle} ${titleClassName}`} style={titleStyle}>
           {title}
         </h1>
       </motion.div>
-      <motion.div
-        variants={CONTENT_VARIANTS}
-        className={`${classes.questionDescription} ${descriptionClassName}`}
-        style={descriptionStyle}
-      >
+      <motion.div variants={CONTENT_VARIANTS} className={`${classes.questionDescription} ${descriptionClassName}`} style={descriptionStyle}>
         {children}
       </motion.div>
     </motion.section>

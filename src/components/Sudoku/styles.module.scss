@@ -33,7 +33,7 @@
 }
 
 .solutionContainer {
-  @include spacing($margin: 2rem 1rem 6rem);
+  @include spacing($margin: 2rem 1rem);
   max-width: 50rem;
 }
 
