@@ -1,25 +1,27 @@
 import React from 'react';
 import { Link, useRouteError } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import classes from './styles.module.scss';
-import QuestionsMenu from '../../components/ProjectPage/components/QuestionsMenu';
-import ProjectNavbar from '../../components/ProjectNavbar';
+import QuestionsMenu from '../ProjectPage/components/QuestionsMenu';
+import ProjectNavbar from '../ProjectNavbar';
+import { CONTENT_VARIANTS } from '../../constants';
 
 const Error: React.FC<Props> = () => {
   const error: any = useRouteError();
 
   return (
-    <div className='container'>
+    <motion.div initial='hidden' animate='visible' className='container'>
       <QuestionsMenu />
-      <div className={classes.error}>
+      <motion.div variants={CONTENT_VARIANTS} className={classes.error}>
         <h1 className={classes.title}>Oops!</h1>
         <p className={classes.subtitle}>Sorry, an unexpected error has occurred.</p>
         <p className={classes.description}>{error.statusText || error.message}</p>
         <Link to='/' className={classes.redirection}>
           Go to Home
         </Link>
-      </div>
+      </motion.div>
       <ProjectNavbar />
-    </div>
+    </motion.div>
   );
 };
 

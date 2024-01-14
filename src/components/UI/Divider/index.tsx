@@ -13,7 +13,7 @@ const dividerVariants = {
   },
 };
 
-const Divider: React.FC<DividerProps> = props => {
+const Divider: React.FC<DividerProps> = (props) => {
   const { isVertical = false, className = '', style = {} } = props;
 
   return (

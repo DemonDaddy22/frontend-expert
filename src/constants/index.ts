@@ -1,4 +1,4 @@
-export const THEME: { [key in Theme]: Theme } = Object.freeze({
+export const THEME: {[key in Theme]: Theme} = Object.freeze({
   LIGHT: 'LIGHT',
   DARK: 'DARK',
 });
@@ -17,8 +17,7 @@ export const AE_TESTIMONIALS = { API_URI: 'https://reqres.in/api/users' };
 export const CRYPTO_PRICES_CONFIG = {
   PAGE_SIZE: 10,
   TOTAL_SIZE: 30,
-  API_URI:
-    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false&locale=en',
+  API_URI: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false&locale=en',
 };
 
 export const RAPID_MOVIESDB_HOST: string = 'moviesdatabase.p.rapidapi.com';
@@ -79,3 +78,19 @@ export const CONTENT_VARIANTS = {
     opacity: 0,
   },
 };
+
+export const ICON_PATH_VARIANTS = {
+  visible: {
+    opacity: 1,
+    pathLength: 1,
+    transition: { duration: 0.1 },
+  },
+  hidden: {
+    opacity: 0,
+    pathLength: 0,
+  },
+};
+
+export const RESPONSIVE_BREAKPOINT_WIDTH = 1200;
+
+export const MENU_BUTTON_SIZE = 48;
