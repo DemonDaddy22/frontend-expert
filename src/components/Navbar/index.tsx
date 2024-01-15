@@ -17,9 +17,9 @@ const navbarVariants = {
   },
 };
 
-const Navbar: React.FC<Props> = () => {
+const Navbar: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage containerClassName={classes.pageContainer}>
+    <ProjectPage title={title} containerClassName={classes.pageContainer}>
       <motion.nav variants={navbarVariants} className={classes.navbar}>
         <ul className={classes.navItems}>
           <li>Product</li>
@@ -31,7 +31,7 @@ const Navbar: React.FC<Props> = () => {
           <li>Contact Us</li>
         </ul>
       </motion.nav>
-      <QuestionDetails title='Navbar' containerClassName={classes.questionDetails} titleClassName={classes.questionTitle}>
+      <QuestionDetails title={title} containerClassName={classes.questionDetails} titleClassName={classes.questionTitle}>
         <p>
           You're given an HTML file for the top navigation bar of a website. The navigation bar consists of two unordered lists, containing three and
           two list items, respectively.

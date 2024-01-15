@@ -6,10 +6,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const BlogPost: React.FC<Props> = () => {
+const BlogPost: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Blog Post' titleClassName={classes.questionTitle}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle}>
         <p>You've been provided with a blog post as raw text, and you need to convert this post into a properly marked-up HTML file.</p>
         <p>
           The post should have a primary heading of <span className={classes.questionDescriptionHighlight}>Introducing AlgoCoin</span> with a tagline

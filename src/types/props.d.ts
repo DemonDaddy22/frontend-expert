@@ -1,5 +1,6 @@
 interface Props {
   children?: React.ReactNode;
+  title?: string;
 }
 
 interface LabelProps extends React.DetailedHTMLProps<React.LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement> {}
@@ -25,7 +26,6 @@ interface ProjectPageProps extends Props {
 }
 
 interface QuestionDetailsProps extends Props {
-  title: string;
   containerStyle?: React.CSSProperties;
   containerClassName?: string;
   titleStyle?: React.CSSProperties;

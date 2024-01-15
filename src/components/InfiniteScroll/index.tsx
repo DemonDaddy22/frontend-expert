@@ -11,7 +11,7 @@ import Divider from '../UI/Divider';
 import { isEmptyList } from '../../utils';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const InfiniteScroll: React.FC<Props> = () => {
+const InfiniteScroll: React.FC<Props> = ({ title }) => {
   const [page, setPage] = useState<number>(0);
 
   const { testimonials, hasNext } = useFetchTestimonials(page);
@@ -36,9 +36,9 @@ const InfiniteScroll: React.FC<Props> = () => {
   );
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Infinite Scroll'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

@@ -9,11 +9,11 @@ import QuestionSections from './components/QuestionSections';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const QuestionList: React.FC<Props> = () => {
+const QuestionList: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Question List'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

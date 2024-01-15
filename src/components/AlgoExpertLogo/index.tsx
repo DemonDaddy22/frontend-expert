@@ -8,10 +8,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const AlgoExpertLogo: React.FC<Props> = () => {
+const AlgoExpertLogo: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='AlgoExpert Logo' titleClassName={classes.questionTitle} containerClassName={classes.questionDetailsContainer}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} containerClassName={classes.questionDetailsContainer}>
         <p>
           You're given an HTML file containing the markup for the AlgoExpert logo. Using only CSS, replicate the expected output following these
           specifications:

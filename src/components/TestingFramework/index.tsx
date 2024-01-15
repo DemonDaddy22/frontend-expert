@@ -6,11 +6,11 @@ import { sampleUsage1, sampleUsage2, solutionCode } from './codeBlocks';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const TestingFramework: React.FC<Props> = () => {
+const TestingFramework: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Testing Framework'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

@@ -6,10 +6,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const ItemCart: React.FC<Props> = () => {
+const ItemCart: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Item Cart' titleClassName={classes.questionTitle}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle}>
         <p>Implement an item cart in HTML with the following static data:</p>
         <ul className={classes.questionPoints}>
           <li className={classes.questionPoint}>There must be three columns with Item, Price and Quantity as the column headers</li>

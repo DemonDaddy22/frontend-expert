@@ -6,11 +6,11 @@ import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlock';
 import Divider from '../UI/Divider';
 
-const UseWindowSize: React.FC<Props> = () => {
+const UseWindowSize: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Use Window Size'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

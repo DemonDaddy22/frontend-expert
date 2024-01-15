@@ -8,7 +8,7 @@ import './vanillaStyles.css';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const Sudoku: React.FC<Props> = () => {
+const Sudoku: React.FC<Props> = ({ title }) => {
   const getGivenNumberCell = useCallback((value: number) => <td className={`${classes.cell} ${classes.givenNumber} givenCell`}>{value}</td>, []);
 
   const getCellToFill = useCallback(
@@ -85,9 +85,9 @@ const Sudoku: React.FC<Props> = () => {
   }, [handleCellSelection, handleNumberControlSelection]);
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Sudoku'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

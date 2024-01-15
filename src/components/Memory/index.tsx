@@ -9,10 +9,10 @@ import Board from './components/Board';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const Memory: React.FC<Props> = () => {
+const Memory: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Memory' titleClassName={classes.questionTitle} descriptionClassName={classes.questionDescription}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} descriptionClassName={classes.questionDescription}>
         <p>You're given a CSS file for a memory game, and you need to implement the component using React.</p>
         <p>
           When the component first mounts, it should render an <span className={classes.questionDescriptionHighlight}>h1</span> with the text content

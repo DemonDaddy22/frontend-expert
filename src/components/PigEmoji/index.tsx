@@ -8,10 +8,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const PigEmoji: React.FC<Props> = () => {
+const PigEmoji: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Pig Emoji' titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
         <p>You're given an HTML file with the markup for a pig emoji.</p>
         <p>Using only CSS, style the HTML to have the appearance of a pig emoji with the following characteristics:</p>
         <ul>

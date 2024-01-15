@@ -10,7 +10,7 @@ import Toast from './components/Toast';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const Toasts: React.FC<Props> = () => {
+const Toasts: React.FC<Props> = ({ title }) => {
   const [toasts, setToasts] = useState<IToast[]>([]);
 
   const handleRemoveToast = useCallback((id: number) => {
@@ -46,9 +46,9 @@ const Toasts: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Toasts'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

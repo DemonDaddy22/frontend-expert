@@ -6,11 +6,11 @@ import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlock';
 import Divider from '../UI/Divider';
 
-const UseStateWithHistory: React.FC<Props> = () => {
+const UseStateWithHistory: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Use State With History'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

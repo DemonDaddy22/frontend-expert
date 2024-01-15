@@ -6,7 +6,7 @@ import QuestionDetails from '../QuestionDetails';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const TierList: React.FC<Props> = () => {
+const TierList: React.FC<Props> = ({ title }) => {
   const unrankedDropZone = useRef<HTMLDivElement>(null);
   const draggedItem = useRef<HTMLDivElement | null>(null);
 
@@ -35,9 +35,9 @@ const TierList: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Tier List'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

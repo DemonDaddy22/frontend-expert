@@ -8,10 +8,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const PurchaseForm: React.FC<Props> = () => {
+const PurchaseForm: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Purchase Form' titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
         <p>You're given an HTML file with the markup for a purchase form, similar to the actual purchase form on AlgoExpert.</p>
         <p>Using only CSS, style the purchase form to have the following characteristics:</p>
         <ul>

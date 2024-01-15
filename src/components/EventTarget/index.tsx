@@ -6,11 +6,11 @@ import { sampleUsage, solutionCode } from './codeBlock';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const EventTarget: React.FC<Props> = () => {
+const EventTarget: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Event Target'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

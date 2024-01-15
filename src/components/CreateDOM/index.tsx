@@ -6,11 +6,11 @@ import { sampleUsage, solutionCode } from './codeBlocks';
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const CreateDOM: React.FC<Props> = () => {
+const CreateDOM: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Create DOM'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

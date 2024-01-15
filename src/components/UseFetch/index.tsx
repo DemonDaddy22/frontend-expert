@@ -6,11 +6,11 @@ import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlocks';
 import Divider from '../UI/Divider';
 
-const UseFetch: React.FC<Props> = () => {
+const UseFetch: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Use Fetch'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}
