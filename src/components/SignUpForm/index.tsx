@@ -10,10 +10,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const SignUpForm: React.FC<Props> = () => {
+const SignUpForm: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Sign-Up Form' titleClassName={classes.questionTitle}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle}>
         <p>Implement a sign-up form in HTML with the following six input fields, each with an appropriate label:</p>
         <ol className={classes.questionPoints}>
           <li className={classes.questionPoint}>

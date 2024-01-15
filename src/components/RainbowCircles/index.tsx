@@ -7,10 +7,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const RainbowCircles: React.FC<Props> = () => {
+const RainbowCircles: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Rainbow Circles' titleClassName={classes.questionTitle}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle}>
         <p>You're given an HTML file with three nested divs, each with a unique ID.</p>
         <p>Using only CSS, style the HTML to have the appearance of six concentric colored circles.</p>
         <p>From outside to inside, the circles should have the following characteristics:</p>

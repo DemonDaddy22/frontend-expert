@@ -6,6 +6,8 @@
   margin: 0;
   box-sizing: border-box;
   transition: all 0.25s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 body {

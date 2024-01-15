@@ -9,7 +9,7 @@ import Error from './components/Error';
 const getExerciseRoutes = () =>
   QUESTIONS_INFO.map((question) => ({
     path: `fe/exercise/${question.id}`,
-    element: <question.component />,
+    element: <question.component title={question.name} />,
   }));
 
 const router = createBrowserRouter([

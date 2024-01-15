@@ -6,11 +6,11 @@ import { sampleUsage, solutionCode, stockMarketCapsResponse, stockPricesResponse
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const TrendingStocks: React.FC<Props> = () => {
+const TrendingStocks: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Trending Stocks'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

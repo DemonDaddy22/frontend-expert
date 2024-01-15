@@ -16,7 +16,7 @@ const CONTROL_BUTTON_SIZE = 28;
 let watchTimerId: NodeJS.Timeout;
 let startTime = Date.now();
 
-const StopWatch: React.FC<Props> = () => {
+const StopWatch: React.FC<Props> = ({ title }) => {
   const { getThemeValue } = useContext(ThemeContext);
 
   const [timeElapsed, setTimeElapsed] = useState(0);
@@ -86,9 +86,9 @@ const StopWatch: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Stop Watch'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

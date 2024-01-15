@@ -55,7 +55,7 @@ const TodoItem: React.FC<TodoItemProps> = (props) => {
   );
 };
 
-const TodoList: React.FC<Props> = () => {
+const TodoList: React.FC<Props> = ({ title }) => {
   const [todoText, setTodoText] = useState('');
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -106,9 +106,9 @@ const TodoList: React.FC<Props> = () => {
   );
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Todo List'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

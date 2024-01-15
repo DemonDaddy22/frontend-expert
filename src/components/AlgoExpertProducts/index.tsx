@@ -6,10 +6,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const AlgoExpertProducts: React.FC<Props> = () => {
+const AlgoExpertProducts: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='AlgoExpert Products' titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
         <p>
           You're given an HTML file containing divs representing AlgoExpert's products. Using only CSS, align the products in three rows following
           these specifications:

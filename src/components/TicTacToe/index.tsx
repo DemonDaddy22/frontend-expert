@@ -19,7 +19,7 @@ const WINNING_COMBINATIONS = [
   new Set([2, 4, 6]),
 ];
 
-const TicTacToe: React.FC<Props> = () => {
+const TicTacToe: React.FC<Props> = ({ title }) => {
   const [, setMoves] = useState<Record<string, number[]>>({ x: [], o: [] });
   const [board, setBoard] = useState<Record<number, string>>({});
   const [isGameOver, setIsGameOver] = useState(false);
@@ -97,9 +97,9 @@ const TicTacToe: React.FC<Props> = () => {
   }, [isGameOver, movesCount]);
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Tic Tac Toe'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

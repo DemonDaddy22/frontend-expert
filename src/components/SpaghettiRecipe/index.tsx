@@ -6,10 +6,10 @@ import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const SpaghettiRecipe: React.FC<Props> = () => {
+const SpaghettiRecipe: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Spaghetti Recipe' titleClassName={classes.questionTitle}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle}>
         <p>You've been provided with a recipe for spaghetti as raw text, and you need to convert this recipe into a properly marked-up HTML file.</p>
         <p>
           The recipe should have a primary heading of "Spaghetti Recipe", and it should be divided into two sections, the ingredients and the

@@ -6,11 +6,11 @@ import CodeBlock from '../UI/CodeBlock';
 import { sampleUsage, solutionCode } from './codeBlock';
 import Divider from '../UI/Divider';
 
-const UseInterval: React.FC<Props> = () => {
+const UseInterval: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Use Interval'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

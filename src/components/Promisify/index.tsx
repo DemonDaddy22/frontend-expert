@@ -6,11 +6,11 @@ import { adder, contextExample, promisifiedAdder, solutionCode } from './codeBlo
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const Promisify: React.FC<Props> = () => {
+const Promisify: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Promisify'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

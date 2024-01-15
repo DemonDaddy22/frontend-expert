@@ -9,10 +9,10 @@ import Board from './components/Board';
 import Divider from '../UI/Divider';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const ConnectFour: React.FC<Props> = () => {
+const ConnectFour: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Connect Four' titleClassName={classes.questionTitle} descriptionClassName={classes.questionDescription}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} descriptionClassName={classes.questionDescription}>
         <p>You're given a CSS file for a Connect Four game, and you need to implement the component using React.</p>
         <p>
           Connect Four is a simple 2 player game using a board with 7 columns and 6 rows. Each player takes turns, placing one tile at a time. When a

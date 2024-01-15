@@ -9,11 +9,11 @@ import { sampleUsage } from './codeBlock';
 import Questions from './components/Questions';
 import Divider from '../UI/Divider';
 
-const Quiz: React.FC<Props> = () => {
+const Quiz: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Quiz'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

@@ -6,11 +6,11 @@ import { contextExample, sampleUsage1, sampleUsage2, solutionCode } from './code
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const Throttle: React.FC<Props> = () => {
+const Throttle: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Throttle'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

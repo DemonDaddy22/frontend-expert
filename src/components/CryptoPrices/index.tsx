@@ -7,11 +7,11 @@ import { CONTENT_VARIANTS, CRYPTO_PRICES_CONFIG } from '../../constants';
 import PricesTable from './components/PricesTable';
 import Divider from '../UI/Divider';
 
-const CryptoPrices: React.FC<Props> = () => {
+const CryptoPrices: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Crypto Prices'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

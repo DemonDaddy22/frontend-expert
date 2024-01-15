@@ -10,11 +10,24 @@ const containerVariants = {
   hidden: {},
 };
 
+const handVariants = {
+  visible: {
+    rotate: [0, -45, 45, -45, 45, 0],
+    transition: {
+      repeat: Infinity,
+      repeatDelay: 4,
+      duration: 1,
+      delay: 1,
+    },
+  },
+  hidden: {},
+};
+
 const IndexRoute: React.FC<Props> = () => {
   return (
     <motion.section variants={containerVariants} initial='hidden' animate='visible' className={classes.container}>
       <motion.h1 variants={CONTENT_VARIANTS} className={classes.title}>
-        Hey there! 👋🏼
+        Hey there! <motion.span className={classes.hand} variants={handVariants}>👋🏼</motion.span>
       </motion.h1>
       <motion.p variants={CONTENT_VARIANTS}>
         The FrontendExpert course takes you through the essential technologies and concepts of the frontend ecosystem. The course can be purchased

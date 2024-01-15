@@ -12,7 +12,7 @@ import Menu from '../UI/Menu';
 import Input from '../UI/Input';
 import Divider from '../UI/Divider';
 
-const TypeAhead: React.FC<Props> = () => {
+const TypeAhead: React.FC<Props> = ({ title }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [keyword, setKeyword] = useState('');
   const [results, setResults] = useState<IMenuItem[]>([]);
@@ -73,9 +73,9 @@ const TypeAhead: React.FC<Props> = () => {
   }, []);
 
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Type Ahead'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

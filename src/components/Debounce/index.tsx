@@ -6,11 +6,11 @@ import { contextExample, sampleUsage1, sampleUsage2, solutionCode } from './code
 import classes from './styles.module.scss';
 import Divider from '../UI/Divider';
 
-const Debounce: React.FC<Props> = () => {
+const Debounce: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
+    <ProjectPage title={title}>
       <QuestionDetails
-        title='Debounce'
+        title={title}
         titleClassName={classes.questionTitle}
         containerClassName={classes.questionDetails}
         descriptionClassName={classes.questionDescription}

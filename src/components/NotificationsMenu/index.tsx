@@ -10,10 +10,10 @@ import NotificationCard from './components/NotificationCard';
 import classes from './styles.module.scss';
 import { CONTENT_VARIANTS } from '../../constants';
 
-const NotificationsMenu: React.FC<Props> = () => {
+const NotificationsMenu: React.FC<Props> = ({ title }) => {
   return (
-    <ProjectPage>
-      <QuestionDetails title='Notifications Menu' titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
+    <ProjectPage title={title}>
+      <QuestionDetails title={title} titleClassName={classes.questionTitle} containerClassName={classes.questionDetails}>
         <p>
           You're given an HTML file containing the markup for a notifications menu. Using only CSS, replicate the expected output following these
           specifications:
