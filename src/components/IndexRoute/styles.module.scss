@@ -5,6 +5,7 @@
   @include spacing(3rem 2rem);
   max-width: 60rem;
   height: 100vh;
+  overflow-y: auto;
 
   @media screen and (min-width: 1200px) {
     @include spacing(4rem 8rem);
@@ -42,4 +43,8 @@
     @include spacing(2rem 0);
     font-size: 4rem;
   }
+}
+
+.hand {
+  display: inline-block;
 }
